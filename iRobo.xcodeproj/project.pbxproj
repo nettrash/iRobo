@@ -22,6 +22,71 @@
 		E50E64A018E1CF5700D9883F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50E648418E1CF5700D9883F /* CoreData.framework */; };
 		E50E64A818E1CF5700D9883F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E50E64A618E1CF5700D9883F /* InfoPlist.strings */; };
 		E50E64AA18E1CF5700D9883F /* iRoboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64A918E1CF5700D9883F /* iRoboTests.m */; };
+		E50E653718E2CF2900D9883F /* Soap+Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64B618E2CF2900D9883F /* Soap+Prefix.m */; };
+		E50E653818E2CF2900D9883F /* svcArrayOfCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64B818E2CF2900D9883F /* svcArrayOfCard.m */; };
+		E50E653918E2CF2900D9883F /* svcArrayOfCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64BA18E2CF2900D9883F /* svcArrayOfCheck.m */; };
+		E50E653A18E2CF2900D9883F /* svcArrayOfCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64BC18E2CF2900D9883F /* svcArrayOfCurrency.m */; };
+		E50E653B18E2CF2900D9883F /* svcArrayOfDeviceStatItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64BE18E2CF2900D9883F /* svcArrayOfDeviceStatItem.m */; };
+		E50E653C18E2CF2900D9883F /* svcArrayOfFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64C018E2CF2900D9883F /* svcArrayOfFavorite.m */; };
+		E50E653D18E2CF2900D9883F /* svcArrayOfHistoryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64C218E2CF2900D9883F /* svcArrayOfHistoryOperation.m */; };
+		E50E653E18E2CF2900D9883F /* svcArrayOfMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64C418E2CF2900D9883F /* svcArrayOfMessage.m */; };
+		E50E653F18E2CF2900D9883F /* svcArrayOfParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64C618E2CF2900D9883F /* svcArrayOfParameter.m */; };
+		E50E654018E2CF2900D9883F /* svcArrayOfRoumingMobileOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64C818E2CF2900D9883F /* svcArrayOfRoumingMobileOperator.m */; };
+		E50E654118E2CF2900D9883F /* svcArrayOfShopCatalogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64CA18E2CF2900D9883F /* svcArrayOfShopCatalogItem.m */; };
+		E50E654218E2CF2900D9883F /* svcArrayOfShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64CC18E2CF2900D9883F /* svcArrayOfShopItem.m */; };
+		E50E654318E2CF2900D9883F /* svcArrayOfString.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64CE18E2CF2900D9883F /* svcArrayOfString.m */; };
+		E50E654418E2CF2900D9883F /* svcArrayOfTerminal.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64D018E2CF2900D9883F /* svcArrayOfTerminal.m */; };
+		E50E654518E2CF2900D9883F /* svcArrayOfTopCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64D218E2CF2900D9883F /* svcArrayOfTopCurrency.m */; };
+		E50E654618E2CF2900D9883F /* svcCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64D418E2CF2900D9883F /* svcCard.m */; };
+		E50E654718E2CF2900D9883F /* svcCardStat.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64D618E2CF2900D9883F /* svcCardStat.m */; };
+		E50E654818E2CF2900D9883F /* svcCharity.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64D818E2CF2900D9883F /* svcCharity.m */; };
+		E50E654918E2CF2900D9883F /* svcCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64DA18E2CF2900D9883F /* svcCheck.m */; };
+		E50E654A18E2CF2900D9883F /* svcCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64DC18E2CF2900D9883F /* svcCurrency.m */; };
+		E50E654B18E2CF2900D9883F /* svcDeviceStatItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64DE18E2CF2900D9883F /* svcDeviceStatItem.m */; };
+		E50E654C18E2CF2900D9883F /* svcFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64E018E2CF2900D9883F /* svcFavorite.m */; };
+		E50E654D18E2CF2900D9883F /* svcHistoryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64E218E2CF2900D9883F /* svcHistoryOperation.m */; };
+		E50E654E18E2CF2900D9883F /* svcMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64E418E2CF2900D9883F /* svcMessage.m */; };
+		E50E654F18E2CF2900D9883F /* svcOperationState.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64E618E2CF2900D9883F /* svcOperationState.m */; };
+		E50E655018E2CF2900D9883F /* svcParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64E818E2CF2900D9883F /* svcParameter.m */; };
+		E50E655118E2CF2900D9883F /* svcRedirectTo.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64EA18E2CF2900D9883F /* svcRedirectTo.m */; };
+		E50E655218E2CF2900D9883F /* svcRoumingMobileOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64EC18E2CF2900D9883F /* svcRoumingMobileOperator.m */; };
+		E50E655318E2CF2900D9883F /* svcSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64EE18E2CF2900D9883F /* svcSettings.m */; };
+		E50E655418E2CF2900D9883F /* svcShopCatalogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64F018E2CF2900D9883F /* svcShopCatalogItem.m */; };
+		E50E655518E2CF2900D9883F /* svcShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64F218E2CF2900D9883F /* svcShopItem.m */; };
+		E50E655618E2CF2900D9883F /* svcSudzc.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64F418E2CF2900D9883F /* svcSudzc.m */; };
+		E50E655718E2CF2900D9883F /* svcTerminal.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64F618E2CF2900D9883F /* svcTerminal.m */; };
+		E50E655818E2CF2900D9883F /* svcTopCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64F818E2CF2900D9883F /* svcTopCurrency.m */; };
+		E50E655918E2CF2900D9883F /* svcWSMobileBANK.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64FA18E2CF2900D9883F /* svcWSMobileBANK.m */; };
+		E50E655A18E2CF2900D9883F /* svcWSResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64FC18E2CF2900D9883F /* svcWSResponse.m */; };
+		E50E655B18E2CF2900D9883F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E64FF18E2CF2900D9883F /* NSData+Base64.m */; };
+		E50E655C18E2CF2900D9883F /* NSMutableArray+Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E650118E2CF2900D9883F /* NSMutableArray+Soap.m */; };
+		E50E655D18E2CF2900D9883F /* Soap.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E650318E2CF2900D9883F /* Soap.m */; };
+		E50E655E18E2CF2900D9883F /* SoapArray.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E650518E2CF2900D9883F /* SoapArray.m */; };
+		E50E655F18E2CF2900D9883F /* SoapDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E650818E2CF2900D9883F /* SoapDictionary.m */; };
+		E50E656018E2CF2900D9883F /* SoapFault.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E650A18E2CF2900D9883F /* SoapFault.m */; };
+		E50E656118E2CF2900D9883F /* SoapHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E650C18E2CF2900D9883F /* SoapHandler.m */; };
+		E50E656218E2CF2900D9883F /* SoapLiteral.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E650E18E2CF2900D9883F /* SoapLiteral.m */; };
+		E50E656318E2CF2900D9883F /* SoapNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651018E2CF2900D9883F /* SoapNil.m */; };
+		E50E656418E2CF2900D9883F /* SoapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651218E2CF2900D9883F /* SoapObject.m */; };
+		E50E656518E2CF2900D9883F /* SoapParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651418E2CF2900D9883F /* SoapParameter.m */; };
+		E50E656618E2CF2900D9883F /* SoapReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651618E2CF2900D9883F /* SoapReachability.m */; };
+		E50E656718E2CF2900D9883F /* SoapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651818E2CF2900D9883F /* SoapRequest.m */; };
+		E50E656818E2CF2900D9883F /* SoapService.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651A18E2CF2900D9883F /* SoapService.m */; };
+		E50E656918E2CF2900D9883F /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651D18E2CF2900D9883F /* CTidy.m */; };
+		E50E656A18E2CF2900D9883F /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E651F18E2CF2900D9883F /* CXHTMLDocument.m */; };
+		E50E656B18E2CF2900D9883F /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652118E2CF2900D9883F /* CXMLDocument.m */; };
+		E50E656C18E2CF2900D9883F /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652318E2CF2900D9883F /* CXMLDocument_CreationExtensions.m */; };
+		E50E656D18E2CF2900D9883F /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652518E2CF2900D9883F /* CXMLDocument_PrivateExtensions.m */; };
+		E50E656E18E2CF2900D9883F /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652718E2CF2900D9883F /* CXMLElement.m */; };
+		E50E656F18E2CF2900D9883F /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652918E2CF2900D9883F /* CXMLElement_CreationExtensions.m */; };
+		E50E657018E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652B18E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.m */; };
+		E50E657118E2CF2900D9883F /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652D18E2CF2900D9883F /* CXMLNamespaceNode.m */; };
+		E50E657218E2CF2900D9883F /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E652F18E2CF2900D9883F /* CXMLNode.m */; };
+		E50E657318E2CF2900D9883F /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E653118E2CF2900D9883F /* CXMLNode_CreationExtensions.m */; };
+		E50E657418E2CF2900D9883F /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E653318E2CF2900D9883F /* CXMLNode_PrivateExtensions.m */; };
+		E50E657518E2CF2900D9883F /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E653518E2CF2900D9883F /* CXMLNode_XPathExtensions.m */; };
+		E5D9EE0718E33ED700B60781 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9EE0618E33ED700B60781 /* UserProfile.m */; };
+		E5D9EE0A18E33FB800B60781 /* UserProfileEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9EE0918E33FB800B60781 /* UserProfileEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +118,138 @@
 		E50E64A518E1CF5700D9883F /* iRoboTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRoboTests-Info.plist"; sourceTree = "<group>"; };
 		E50E64A718E1CF5700D9883F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E50E64A918E1CF5700D9883F /* iRoboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRoboTests.m; sourceTree = "<group>"; };
+		E50E64B518E2CF2900D9883F /* Soap+Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Soap+Prefix.h"; sourceTree = "<group>"; };
+		E50E64B618E2CF2900D9883F /* Soap+Prefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Soap+Prefix.m"; sourceTree = "<group>"; };
+		E50E64B718E2CF2900D9883F /* svcArrayOfCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfCard.h; sourceTree = "<group>"; };
+		E50E64B818E2CF2900D9883F /* svcArrayOfCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfCard.m; sourceTree = "<group>"; };
+		E50E64B918E2CF2900D9883F /* svcArrayOfCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfCheck.h; sourceTree = "<group>"; };
+		E50E64BA18E2CF2900D9883F /* svcArrayOfCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfCheck.m; sourceTree = "<group>"; };
+		E50E64BB18E2CF2900D9883F /* svcArrayOfCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfCurrency.h; sourceTree = "<group>"; };
+		E50E64BC18E2CF2900D9883F /* svcArrayOfCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfCurrency.m; sourceTree = "<group>"; };
+		E50E64BD18E2CF2900D9883F /* svcArrayOfDeviceStatItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfDeviceStatItem.h; sourceTree = "<group>"; };
+		E50E64BE18E2CF2900D9883F /* svcArrayOfDeviceStatItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfDeviceStatItem.m; sourceTree = "<group>"; };
+		E50E64BF18E2CF2900D9883F /* svcArrayOfFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfFavorite.h; sourceTree = "<group>"; };
+		E50E64C018E2CF2900D9883F /* svcArrayOfFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfFavorite.m; sourceTree = "<group>"; };
+		E50E64C118E2CF2900D9883F /* svcArrayOfHistoryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfHistoryOperation.h; sourceTree = "<group>"; };
+		E50E64C218E2CF2900D9883F /* svcArrayOfHistoryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfHistoryOperation.m; sourceTree = "<group>"; };
+		E50E64C318E2CF2900D9883F /* svcArrayOfMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfMessage.h; sourceTree = "<group>"; };
+		E50E64C418E2CF2900D9883F /* svcArrayOfMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfMessage.m; sourceTree = "<group>"; };
+		E50E64C518E2CF2900D9883F /* svcArrayOfParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfParameter.h; sourceTree = "<group>"; };
+		E50E64C618E2CF2900D9883F /* svcArrayOfParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfParameter.m; sourceTree = "<group>"; };
+		E50E64C718E2CF2900D9883F /* svcArrayOfRoumingMobileOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfRoumingMobileOperator.h; sourceTree = "<group>"; };
+		E50E64C818E2CF2900D9883F /* svcArrayOfRoumingMobileOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfRoumingMobileOperator.m; sourceTree = "<group>"; };
+		E50E64C918E2CF2900D9883F /* svcArrayOfShopCatalogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfShopCatalogItem.h; sourceTree = "<group>"; };
+		E50E64CA18E2CF2900D9883F /* svcArrayOfShopCatalogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfShopCatalogItem.m; sourceTree = "<group>"; };
+		E50E64CB18E2CF2900D9883F /* svcArrayOfShopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfShopItem.h; sourceTree = "<group>"; };
+		E50E64CC18E2CF2900D9883F /* svcArrayOfShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfShopItem.m; sourceTree = "<group>"; };
+		E50E64CD18E2CF2900D9883F /* svcArrayOfString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfString.h; sourceTree = "<group>"; };
+		E50E64CE18E2CF2900D9883F /* svcArrayOfString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfString.m; sourceTree = "<group>"; };
+		E50E64CF18E2CF2900D9883F /* svcArrayOfTerminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfTerminal.h; sourceTree = "<group>"; };
+		E50E64D018E2CF2900D9883F /* svcArrayOfTerminal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfTerminal.m; sourceTree = "<group>"; };
+		E50E64D118E2CF2900D9883F /* svcArrayOfTopCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcArrayOfTopCurrency.h; sourceTree = "<group>"; };
+		E50E64D218E2CF2900D9883F /* svcArrayOfTopCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcArrayOfTopCurrency.m; sourceTree = "<group>"; };
+		E50E64D318E2CF2900D9883F /* svcCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcCard.h; sourceTree = "<group>"; };
+		E50E64D418E2CF2900D9883F /* svcCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcCard.m; sourceTree = "<group>"; };
+		E50E64D518E2CF2900D9883F /* svcCardStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcCardStat.h; sourceTree = "<group>"; };
+		E50E64D618E2CF2900D9883F /* svcCardStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcCardStat.m; sourceTree = "<group>"; };
+		E50E64D718E2CF2900D9883F /* svcCharity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcCharity.h; sourceTree = "<group>"; };
+		E50E64D818E2CF2900D9883F /* svcCharity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcCharity.m; sourceTree = "<group>"; };
+		E50E64D918E2CF2900D9883F /* svcCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcCheck.h; sourceTree = "<group>"; };
+		E50E64DA18E2CF2900D9883F /* svcCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcCheck.m; sourceTree = "<group>"; };
+		E50E64DB18E2CF2900D9883F /* svcCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcCurrency.h; sourceTree = "<group>"; };
+		E50E64DC18E2CF2900D9883F /* svcCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcCurrency.m; sourceTree = "<group>"; };
+		E50E64DD18E2CF2900D9883F /* svcDeviceStatItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcDeviceStatItem.h; sourceTree = "<group>"; };
+		E50E64DE18E2CF2900D9883F /* svcDeviceStatItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcDeviceStatItem.m; sourceTree = "<group>"; };
+		E50E64DF18E2CF2900D9883F /* svcFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcFavorite.h; sourceTree = "<group>"; };
+		E50E64E018E2CF2900D9883F /* svcFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcFavorite.m; sourceTree = "<group>"; };
+		E50E64E118E2CF2900D9883F /* svcHistoryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcHistoryOperation.h; sourceTree = "<group>"; };
+		E50E64E218E2CF2900D9883F /* svcHistoryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcHistoryOperation.m; sourceTree = "<group>"; };
+		E50E64E318E2CF2900D9883F /* svcMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcMessage.h; sourceTree = "<group>"; };
+		E50E64E418E2CF2900D9883F /* svcMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcMessage.m; sourceTree = "<group>"; };
+		E50E64E518E2CF2900D9883F /* svcOperationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcOperationState.h; sourceTree = "<group>"; };
+		E50E64E618E2CF2900D9883F /* svcOperationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcOperationState.m; sourceTree = "<group>"; };
+		E50E64E718E2CF2900D9883F /* svcParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcParameter.h; sourceTree = "<group>"; };
+		E50E64E818E2CF2900D9883F /* svcParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcParameter.m; sourceTree = "<group>"; };
+		E50E64E918E2CF2900D9883F /* svcRedirectTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcRedirectTo.h; sourceTree = "<group>"; };
+		E50E64EA18E2CF2900D9883F /* svcRedirectTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcRedirectTo.m; sourceTree = "<group>"; };
+		E50E64EB18E2CF2900D9883F /* svcRoumingMobileOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcRoumingMobileOperator.h; sourceTree = "<group>"; };
+		E50E64EC18E2CF2900D9883F /* svcRoumingMobileOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcRoumingMobileOperator.m; sourceTree = "<group>"; };
+		E50E64ED18E2CF2900D9883F /* svcSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcSettings.h; sourceTree = "<group>"; };
+		E50E64EE18E2CF2900D9883F /* svcSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcSettings.m; sourceTree = "<group>"; };
+		E50E64EF18E2CF2900D9883F /* svcShopCatalogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcShopCatalogItem.h; sourceTree = "<group>"; };
+		E50E64F018E2CF2900D9883F /* svcShopCatalogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcShopCatalogItem.m; sourceTree = "<group>"; };
+		E50E64F118E2CF2900D9883F /* svcShopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcShopItem.h; sourceTree = "<group>"; };
+		E50E64F218E2CF2900D9883F /* svcShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcShopItem.m; sourceTree = "<group>"; };
+		E50E64F318E2CF2900D9883F /* svcSudzc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcSudzc.h; sourceTree = "<group>"; };
+		E50E64F418E2CF2900D9883F /* svcSudzc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcSudzc.m; sourceTree = "<group>"; };
+		E50E64F518E2CF2900D9883F /* svcTerminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcTerminal.h; sourceTree = "<group>"; };
+		E50E64F618E2CF2900D9883F /* svcTerminal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcTerminal.m; sourceTree = "<group>"; };
+		E50E64F718E2CF2900D9883F /* svcTopCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcTopCurrency.h; sourceTree = "<group>"; };
+		E50E64F818E2CF2900D9883F /* svcTopCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcTopCurrency.m; sourceTree = "<group>"; };
+		E50E64F918E2CF2900D9883F /* svcWSMobileBANK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcWSMobileBANK.h; sourceTree = "<group>"; };
+		E50E64FA18E2CF2900D9883F /* svcWSMobileBANK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcWSMobileBANK.m; sourceTree = "<group>"; };
+		E50E64FB18E2CF2900D9883F /* svcWSResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svcWSResponse.h; sourceTree = "<group>"; };
+		E50E64FC18E2CF2900D9883F /* svcWSResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = svcWSResponse.m; sourceTree = "<group>"; };
+		E50E64FE18E2CF2900D9883F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		E50E64FF18E2CF2900D9883F /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		E50E650018E2CF2900D9883F /* NSMutableArray+Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Soap.h"; sourceTree = "<group>"; };
+		E50E650118E2CF2900D9883F /* NSMutableArray+Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Soap.m"; sourceTree = "<group>"; };
+		E50E650218E2CF2900D9883F /* Soap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Soap.h; sourceTree = "<group>"; };
+		E50E650318E2CF2900D9883F /* Soap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Soap.m; sourceTree = "<group>"; };
+		E50E650418E2CF2900D9883F /* SoapArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapArray.h; sourceTree = "<group>"; };
+		E50E650518E2CF2900D9883F /* SoapArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapArray.m; sourceTree = "<group>"; };
+		E50E650618E2CF2900D9883F /* SoapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDelegate.h; sourceTree = "<group>"; };
+		E50E650718E2CF2900D9883F /* SoapDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDictionary.h; sourceTree = "<group>"; };
+		E50E650818E2CF2900D9883F /* SoapDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapDictionary.m; sourceTree = "<group>"; };
+		E50E650918E2CF2900D9883F /* SoapFault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapFault.h; sourceTree = "<group>"; };
+		E50E650A18E2CF2900D9883F /* SoapFault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapFault.m; sourceTree = "<group>"; };
+		E50E650B18E2CF2900D9883F /* SoapHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapHandler.h; sourceTree = "<group>"; };
+		E50E650C18E2CF2900D9883F /* SoapHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapHandler.m; sourceTree = "<group>"; };
+		E50E650D18E2CF2900D9883F /* SoapLiteral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapLiteral.h; sourceTree = "<group>"; };
+		E50E650E18E2CF2900D9883F /* SoapLiteral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapLiteral.m; sourceTree = "<group>"; };
+		E50E650F18E2CF2900D9883F /* SoapNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapNil.h; sourceTree = "<group>"; };
+		E50E651018E2CF2900D9883F /* SoapNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapNil.m; sourceTree = "<group>"; };
+		E50E651118E2CF2900D9883F /* SoapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapObject.h; sourceTree = "<group>"; };
+		E50E651218E2CF2900D9883F /* SoapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapObject.m; sourceTree = "<group>"; };
+		E50E651318E2CF2900D9883F /* SoapParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapParameter.h; sourceTree = "<group>"; };
+		E50E651418E2CF2900D9883F /* SoapParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapParameter.m; sourceTree = "<group>"; };
+		E50E651518E2CF2900D9883F /* SoapReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapReachability.h; sourceTree = "<group>"; };
+		E50E651618E2CF2900D9883F /* SoapReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapReachability.m; sourceTree = "<group>"; };
+		E50E651718E2CF2900D9883F /* SoapRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapRequest.h; sourceTree = "<group>"; };
+		E50E651818E2CF2900D9883F /* SoapRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapRequest.m; sourceTree = "<group>"; };
+		E50E651918E2CF2900D9883F /* SoapService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapService.h; sourceTree = "<group>"; };
+		E50E651A18E2CF2900D9883F /* SoapService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapService.m; sourceTree = "<group>"; };
+		E50E651C18E2CF2900D9883F /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		E50E651D18E2CF2900D9883F /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		E50E651E18E2CF2900D9883F /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		E50E651F18E2CF2900D9883F /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		E50E652018E2CF2900D9883F /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		E50E652118E2CF2900D9883F /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		E50E652218E2CF2900D9883F /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		E50E652318E2CF2900D9883F /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		E50E652418E2CF2900D9883F /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		E50E652518E2CF2900D9883F /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		E50E652618E2CF2900D9883F /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		E50E652718E2CF2900D9883F /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		E50E652818E2CF2900D9883F /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		E50E652918E2CF2900D9883F /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		E50E652A18E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		E50E652B18E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		E50E652C18E2CF2900D9883F /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		E50E652D18E2CF2900D9883F /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		E50E652E18E2CF2900D9883F /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		E50E652F18E2CF2900D9883F /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		E50E653018E2CF2900D9883F /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		E50E653118E2CF2900D9883F /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		E50E653218E2CF2900D9883F /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		E50E653318E2CF2900D9883F /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		E50E653418E2CF2900D9883F /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		E50E653518E2CF2900D9883F /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		E50E653618E2CF2900D9883F /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		E5D9EE0518E33ED700B60781 /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfile.h; path = Common/UserProfile.h; sourceTree = "<group>"; };
+		E5D9EE0618E33ED700B60781 /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfile.m; path = Common/UserProfile.m; sourceTree = "<group>"; };
+		E5D9EE0818E33FB800B60781 /* UserProfileEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileEntity.h; sourceTree = "<group>"; };
+		E5D9EE0918E33FB800B60781 /* UserProfileEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +281,9 @@
 		E50E647218E1CF5700D9883F = {
 			isa = PBXGroup;
 			children = (
+				E5D9EE0118E33D6E00B60781 /* Common */,
+				E50E657618E2D0ED00D9883F /* Content */,
+				E50E64B318E2CF1400D9883F /* SOAP */,
 				E50E648618E1CF5700D9883F /* iRobo */,
 				E50E64A318E1CF5700D9883F /* iRoboTests */,
 				E50E647D18E1CF5700D9883F /* Frameworks */,
@@ -119,6 +319,8 @@
 				E50E649018E1CF5700D9883F /* AppDelegate.m */,
 				E50E649518E1CF5700D9883F /* Images.xcassets */,
 				E50E649218E1CF5700D9883F /* iRobo.xcdatamodeld */,
+				E5D9EE0818E33FB800B60781 /* UserProfileEntity.h */,
+				E5D9EE0918E33FB800B60781 /* UserProfileEntity.m */,
 				E50E648718E1CF5700D9883F /* Supporting Files */,
 			);
 			path = iRobo;
@@ -151,6 +353,208 @@
 				E50E64A618E1CF5700D9883F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E50E64B318E2CF1400D9883F /* SOAP */ = {
+			isa = PBXGroup;
+			children = (
+				E50E64B418E2CF2900D9883F /* Generated */,
+				E50E64FD18E2CF2900D9883F /* Soap */,
+				E50E651B18E2CF2900D9883F /* TouchXML */,
+			);
+			name = SOAP;
+			sourceTree = "<group>";
+		};
+		E50E64B418E2CF2900D9883F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E50E64B518E2CF2900D9883F /* Soap+Prefix.h */,
+				E50E64B618E2CF2900D9883F /* Soap+Prefix.m */,
+				E50E64B718E2CF2900D9883F /* svcArrayOfCard.h */,
+				E50E64B818E2CF2900D9883F /* svcArrayOfCard.m */,
+				E50E64B918E2CF2900D9883F /* svcArrayOfCheck.h */,
+				E50E64BA18E2CF2900D9883F /* svcArrayOfCheck.m */,
+				E50E64BB18E2CF2900D9883F /* svcArrayOfCurrency.h */,
+				E50E64BC18E2CF2900D9883F /* svcArrayOfCurrency.m */,
+				E50E64BD18E2CF2900D9883F /* svcArrayOfDeviceStatItem.h */,
+				E50E64BE18E2CF2900D9883F /* svcArrayOfDeviceStatItem.m */,
+				E50E64BF18E2CF2900D9883F /* svcArrayOfFavorite.h */,
+				E50E64C018E2CF2900D9883F /* svcArrayOfFavorite.m */,
+				E50E64C118E2CF2900D9883F /* svcArrayOfHistoryOperation.h */,
+				E50E64C218E2CF2900D9883F /* svcArrayOfHistoryOperation.m */,
+				E50E64C318E2CF2900D9883F /* svcArrayOfMessage.h */,
+				E50E64C418E2CF2900D9883F /* svcArrayOfMessage.m */,
+				E50E64C518E2CF2900D9883F /* svcArrayOfParameter.h */,
+				E50E64C618E2CF2900D9883F /* svcArrayOfParameter.m */,
+				E50E64C718E2CF2900D9883F /* svcArrayOfRoumingMobileOperator.h */,
+				E50E64C818E2CF2900D9883F /* svcArrayOfRoumingMobileOperator.m */,
+				E50E64C918E2CF2900D9883F /* svcArrayOfShopCatalogItem.h */,
+				E50E64CA18E2CF2900D9883F /* svcArrayOfShopCatalogItem.m */,
+				E50E64CB18E2CF2900D9883F /* svcArrayOfShopItem.h */,
+				E50E64CC18E2CF2900D9883F /* svcArrayOfShopItem.m */,
+				E50E64CD18E2CF2900D9883F /* svcArrayOfString.h */,
+				E50E64CE18E2CF2900D9883F /* svcArrayOfString.m */,
+				E50E64CF18E2CF2900D9883F /* svcArrayOfTerminal.h */,
+				E50E64D018E2CF2900D9883F /* svcArrayOfTerminal.m */,
+				E50E64D118E2CF2900D9883F /* svcArrayOfTopCurrency.h */,
+				E50E64D218E2CF2900D9883F /* svcArrayOfTopCurrency.m */,
+				E50E64D318E2CF2900D9883F /* svcCard.h */,
+				E50E64D418E2CF2900D9883F /* svcCard.m */,
+				E50E64D518E2CF2900D9883F /* svcCardStat.h */,
+				E50E64D618E2CF2900D9883F /* svcCardStat.m */,
+				E50E64D718E2CF2900D9883F /* svcCharity.h */,
+				E50E64D818E2CF2900D9883F /* svcCharity.m */,
+				E50E64D918E2CF2900D9883F /* svcCheck.h */,
+				E50E64DA18E2CF2900D9883F /* svcCheck.m */,
+				E50E64DB18E2CF2900D9883F /* svcCurrency.h */,
+				E50E64DC18E2CF2900D9883F /* svcCurrency.m */,
+				E50E64DD18E2CF2900D9883F /* svcDeviceStatItem.h */,
+				E50E64DE18E2CF2900D9883F /* svcDeviceStatItem.m */,
+				E50E64DF18E2CF2900D9883F /* svcFavorite.h */,
+				E50E64E018E2CF2900D9883F /* svcFavorite.m */,
+				E50E64E118E2CF2900D9883F /* svcHistoryOperation.h */,
+				E50E64E218E2CF2900D9883F /* svcHistoryOperation.m */,
+				E50E64E318E2CF2900D9883F /* svcMessage.h */,
+				E50E64E418E2CF2900D9883F /* svcMessage.m */,
+				E50E64E518E2CF2900D9883F /* svcOperationState.h */,
+				E50E64E618E2CF2900D9883F /* svcOperationState.m */,
+				E50E64E718E2CF2900D9883F /* svcParameter.h */,
+				E50E64E818E2CF2900D9883F /* svcParameter.m */,
+				E50E64E918E2CF2900D9883F /* svcRedirectTo.h */,
+				E50E64EA18E2CF2900D9883F /* svcRedirectTo.m */,
+				E50E64EB18E2CF2900D9883F /* svcRoumingMobileOperator.h */,
+				E50E64EC18E2CF2900D9883F /* svcRoumingMobileOperator.m */,
+				E50E64ED18E2CF2900D9883F /* svcSettings.h */,
+				E50E64EE18E2CF2900D9883F /* svcSettings.m */,
+				E50E64EF18E2CF2900D9883F /* svcShopCatalogItem.h */,
+				E50E64F018E2CF2900D9883F /* svcShopCatalogItem.m */,
+				E50E64F118E2CF2900D9883F /* svcShopItem.h */,
+				E50E64F218E2CF2900D9883F /* svcShopItem.m */,
+				E50E64F318E2CF2900D9883F /* svcSudzc.h */,
+				E50E64F418E2CF2900D9883F /* svcSudzc.m */,
+				E50E64F518E2CF2900D9883F /* svcTerminal.h */,
+				E50E64F618E2CF2900D9883F /* svcTerminal.m */,
+				E50E64F718E2CF2900D9883F /* svcTopCurrency.h */,
+				E50E64F818E2CF2900D9883F /* svcTopCurrency.m */,
+				E50E64F918E2CF2900D9883F /* svcWSMobileBANK.h */,
+				E50E64FA18E2CF2900D9883F /* svcWSMobileBANK.m */,
+				E50E64FB18E2CF2900D9883F /* svcWSResponse.h */,
+				E50E64FC18E2CF2900D9883F /* svcWSResponse.m */,
+			);
+			name = Generated;
+			path = SOAP/Generated;
+			sourceTree = "<group>";
+		};
+		E50E64FD18E2CF2900D9883F /* Soap */ = {
+			isa = PBXGroup;
+			children = (
+				E50E64FE18E2CF2900D9883F /* NSData+Base64.h */,
+				E50E64FF18E2CF2900D9883F /* NSData+Base64.m */,
+				E50E650018E2CF2900D9883F /* NSMutableArray+Soap.h */,
+				E50E650118E2CF2900D9883F /* NSMutableArray+Soap.m */,
+				E50E650218E2CF2900D9883F /* Soap.h */,
+				E50E650318E2CF2900D9883F /* Soap.m */,
+				E50E650418E2CF2900D9883F /* SoapArray.h */,
+				E50E650518E2CF2900D9883F /* SoapArray.m */,
+				E50E650618E2CF2900D9883F /* SoapDelegate.h */,
+				E50E650718E2CF2900D9883F /* SoapDictionary.h */,
+				E50E650818E2CF2900D9883F /* SoapDictionary.m */,
+				E50E650918E2CF2900D9883F /* SoapFault.h */,
+				E50E650A18E2CF2900D9883F /* SoapFault.m */,
+				E50E650B18E2CF2900D9883F /* SoapHandler.h */,
+				E50E650C18E2CF2900D9883F /* SoapHandler.m */,
+				E50E650D18E2CF2900D9883F /* SoapLiteral.h */,
+				E50E650E18E2CF2900D9883F /* SoapLiteral.m */,
+				E50E650F18E2CF2900D9883F /* SoapNil.h */,
+				E50E651018E2CF2900D9883F /* SoapNil.m */,
+				E50E651118E2CF2900D9883F /* SoapObject.h */,
+				E50E651218E2CF2900D9883F /* SoapObject.m */,
+				E50E651318E2CF2900D9883F /* SoapParameter.h */,
+				E50E651418E2CF2900D9883F /* SoapParameter.m */,
+				E50E651518E2CF2900D9883F /* SoapReachability.h */,
+				E50E651618E2CF2900D9883F /* SoapReachability.m */,
+				E50E651718E2CF2900D9883F /* SoapRequest.h */,
+				E50E651818E2CF2900D9883F /* SoapRequest.m */,
+				E50E651918E2CF2900D9883F /* SoapService.h */,
+				E50E651A18E2CF2900D9883F /* SoapService.m */,
+			);
+			name = Soap;
+			path = SOAP/Soap;
+			sourceTree = "<group>";
+		};
+		E50E651B18E2CF2900D9883F /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				E50E651C18E2CF2900D9883F /* CTidy.h */,
+				E50E651D18E2CF2900D9883F /* CTidy.m */,
+				E50E651E18E2CF2900D9883F /* CXHTMLDocument.h */,
+				E50E651F18E2CF2900D9883F /* CXHTMLDocument.m */,
+				E50E652018E2CF2900D9883F /* CXMLDocument.h */,
+				E50E652118E2CF2900D9883F /* CXMLDocument.m */,
+				E50E652218E2CF2900D9883F /* CXMLDocument_CreationExtensions.h */,
+				E50E652318E2CF2900D9883F /* CXMLDocument_CreationExtensions.m */,
+				E50E652418E2CF2900D9883F /* CXMLDocument_PrivateExtensions.h */,
+				E50E652518E2CF2900D9883F /* CXMLDocument_PrivateExtensions.m */,
+				E50E652618E2CF2900D9883F /* CXMLElement.h */,
+				E50E652718E2CF2900D9883F /* CXMLElement.m */,
+				E50E652818E2CF2900D9883F /* CXMLElement_CreationExtensions.h */,
+				E50E652918E2CF2900D9883F /* CXMLElement_CreationExtensions.m */,
+				E50E652A18E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.h */,
+				E50E652B18E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.m */,
+				E50E652C18E2CF2900D9883F /* CXMLNamespaceNode.h */,
+				E50E652D18E2CF2900D9883F /* CXMLNamespaceNode.m */,
+				E50E652E18E2CF2900D9883F /* CXMLNode.h */,
+				E50E652F18E2CF2900D9883F /* CXMLNode.m */,
+				E50E653018E2CF2900D9883F /* CXMLNode_CreationExtensions.h */,
+				E50E653118E2CF2900D9883F /* CXMLNode_CreationExtensions.m */,
+				E50E653218E2CF2900D9883F /* CXMLNode_PrivateExtensions.h */,
+				E50E653318E2CF2900D9883F /* CXMLNode_PrivateExtensions.m */,
+				E50E653418E2CF2900D9883F /* CXMLNode_XPathExtensions.h */,
+				E50E653518E2CF2900D9883F /* CXMLNode_XPathExtensions.m */,
+				E50E653618E2CF2900D9883F /* TouchXML.h */,
+			);
+			name = TouchXML;
+			path = SOAP/TouchXML;
+			sourceTree = "<group>";
+		};
+		E50E657618E2D0ED00D9883F /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				E50E657918E2D10A00D9883F /* Common */,
+				E50E657818E2D10100D9883F /* iPad */,
+				E50E657718E2D0F900D9883F /* iPhone */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		E50E657718E2D0F900D9883F /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		E50E657818E2D10100D9883F /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		E50E657918E2D10A00D9883F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		E5D9EE0118E33D6E00B60781 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E5D9EE0518E33ED700B60781 /* UserProfile.h */,
+				E5D9EE0618E33ED700B60781 /* UserProfile.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +604,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = ROBOKASSA;
 				TargetAttributes = {
+					E50E647A18E1CF5700D9883F = {
+						DevelopmentTeam = 9J4X6PJX56;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
+					};
 					E50E649A18E1CF5700D9883F = {
 						TestTargetID = E50E647A18E1CF5700D9883F;
 					};
@@ -248,9 +660,74 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50E657418E2CF2900D9883F /* CXMLNode_PrivateExtensions.m in Sources */,
+				E50E654E18E2CF2900D9883F /* svcMessage.m in Sources */,
+				E50E655418E2CF2900D9883F /* svcShopCatalogItem.m in Sources */,
+				E50E655C18E2CF2900D9883F /* NSMutableArray+Soap.m in Sources */,
+				E50E656918E2CF2900D9883F /* CTidy.m in Sources */,
+				E5D9EE0718E33ED700B60781 /* UserProfile.m in Sources */,
+				E50E657518E2CF2900D9883F /* CXMLNode_XPathExtensions.m in Sources */,
+				E50E655218E2CF2900D9883F /* svcRoumingMobileOperator.m in Sources */,
+				E50E653B18E2CF2900D9883F /* svcArrayOfDeviceStatItem.m in Sources */,
+				E50E654018E2CF2900D9883F /* svcArrayOfRoumingMobileOperator.m in Sources */,
+				E50E654718E2CF2900D9883F /* svcCardStat.m in Sources */,
+				E50E655618E2CF2900D9883F /* svcSudzc.m in Sources */,
+				E50E655E18E2CF2900D9883F /* SoapArray.m in Sources */,
+				E50E655318E2CF2900D9883F /* svcSettings.m in Sources */,
+				E50E656618E2CF2900D9883F /* SoapReachability.m in Sources */,
+				E5D9EE0A18E33FB800B60781 /* UserProfileEntity.m in Sources */,
+				E50E653F18E2CF2900D9883F /* svcArrayOfParameter.m in Sources */,
+				E50E653718E2CF2900D9883F /* Soap+Prefix.m in Sources */,
+				E50E654318E2CF2900D9883F /* svcArrayOfString.m in Sources */,
+				E50E653A18E2CF2900D9883F /* svcArrayOfCurrency.m in Sources */,
+				E50E654F18E2CF2900D9883F /* svcOperationState.m in Sources */,
+				E50E656718E2CF2900D9883F /* SoapRequest.m in Sources */,
+				E50E656F18E2CF2900D9883F /* CXMLElement_CreationExtensions.m in Sources */,
+				E50E657118E2CF2900D9883F /* CXMLNamespaceNode.m in Sources */,
+				E50E655D18E2CF2900D9883F /* Soap.m in Sources */,
+				E50E654618E2CF2900D9883F /* svcCard.m in Sources */,
+				E50E656B18E2CF2900D9883F /* CXMLDocument.m in Sources */,
+				E50E656818E2CF2900D9883F /* SoapService.m in Sources */,
+				E50E655518E2CF2900D9883F /* svcShopItem.m in Sources */,
 				E50E649118E1CF5700D9883F /* AppDelegate.m in Sources */,
+				E50E654A18E2CF2900D9883F /* svcCurrency.m in Sources */,
+				E50E654818E2CF2900D9883F /* svcCharity.m in Sources */,
+				E50E653D18E2CF2900D9883F /* svcArrayOfHistoryOperation.m in Sources */,
+				E50E654C18E2CF2900D9883F /* svcFavorite.m in Sources */,
+				E50E657018E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				E50E654918E2CF2900D9883F /* svcCheck.m in Sources */,
+				E50E656218E2CF2900D9883F /* SoapLiteral.m in Sources */,
+				E50E654B18E2CF2900D9883F /* svcDeviceStatItem.m in Sources */,
+				E50E656318E2CF2900D9883F /* SoapNil.m in Sources */,
+				E50E656A18E2CF2900D9883F /* CXHTMLDocument.m in Sources */,
+				E50E654518E2CF2900D9883F /* svcArrayOfTopCurrency.m in Sources */,
+				E50E655018E2CF2900D9883F /* svcParameter.m in Sources */,
+				E50E655A18E2CF2900D9883F /* svcWSResponse.m in Sources */,
+				E50E653C18E2CF2900D9883F /* svcArrayOfFavorite.m in Sources */,
+				E50E656118E2CF2900D9883F /* SoapHandler.m in Sources */,
+				E50E657218E2CF2900D9883F /* CXMLNode.m in Sources */,
+				E50E656518E2CF2900D9883F /* SoapParameter.m in Sources */,
+				E50E656E18E2CF2900D9883F /* CXMLElement.m in Sources */,
+				E50E654218E2CF2900D9883F /* svcArrayOfShopItem.m in Sources */,
+				E50E654118E2CF2900D9883F /* svcArrayOfShopCatalogItem.m in Sources */,
+				E50E654418E2CF2900D9883F /* svcArrayOfTerminal.m in Sources */,
+				E50E655818E2CF2900D9883F /* svcTopCurrency.m in Sources */,
+				E50E655718E2CF2900D9883F /* svcTerminal.m in Sources */,
+				E50E656D18E2CF2900D9883F /* CXMLDocument_PrivateExtensions.m in Sources */,
+				E50E655918E2CF2900D9883F /* svcWSMobileBANK.m in Sources */,
+				E50E656418E2CF2900D9883F /* SoapObject.m in Sources */,
 				E50E649418E1CF5700D9883F /* iRobo.xcdatamodeld in Sources */,
+				E50E655F18E2CF2900D9883F /* SoapDictionary.m in Sources */,
+				E50E657318E2CF2900D9883F /* CXMLNode_CreationExtensions.m in Sources */,
 				E50E648D18E1CF5700D9883F /* main.m in Sources */,
+				E50E653918E2CF2900D9883F /* svcArrayOfCheck.m in Sources */,
+				E50E654D18E2CF2900D9883F /* svcHistoryOperation.m in Sources */,
+				E50E653E18E2CF2900D9883F /* svcArrayOfMessage.m in Sources */,
+				E50E655B18E2CF2900D9883F /* NSData+Base64.m in Sources */,
+				E50E653818E2CF2900D9883F /* svcArrayOfCard.m in Sources */,
+				E50E655118E2CF2900D9883F /* svcRedirectTo.m in Sources */,
+				E50E656C18E2CF2900D9883F /* CXMLDocument_CreationExtensions.m in Sources */,
+				E50E656018E2CF2900D9883F /* SoapFault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +846,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRobo/iRobo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "iRobo/iRobo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -382,10 +870,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRobo/iRobo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "iRobo/iRobo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -449,6 +948,7 @@
 				E50E64AF18E1CF5700D9883F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E50E64B018E1CF5700D9883F /* Build configuration list for PBXNativeTarget "iRoboTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +957,7 @@
 				E50E64B218E1CF5700D9883F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
