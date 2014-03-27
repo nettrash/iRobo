@@ -6,4 +6,5 @@
   Copyright (c) 2014 ROBOKASSA. All rights reserved.
 */
 "Register_Title" = "РЕГИСТРАЦИЯ";
-"Register_Text" = "Intro(Ru).rtf";
+"Register_IntroText" = "Intro(Ru)";
+"Register_EnterPhone_Title" = "Телефон";

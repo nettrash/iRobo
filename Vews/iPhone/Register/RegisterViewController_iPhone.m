@@ -7,10 +7,13 @@
 //
 
 #import "RegisterViewController_iPhone.h"
+#import "EnterPhoneViewController_iPhone.h"
 
 @interface RegisterViewController_iPhone ()
 
 @property (nonatomic, retain) IBOutlet UITextView *tvIntro;
+
+- (IBAction)btnContinue_Click:(id)sender;
 
 @end
 
@@ -31,19 +34,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSError *err = nil;
-    NSString *fileContents = [NSString stringWithContentsOfFile:NSLocalizedString(@"Register_IntroText", @"Register_IntroText") encoding:NSUTF8StringEncoding error:&err];
-    if (fileContents == nil) {
-        NSLog(@"Register Text Error reading %@: %@", NSLocalizedString(@"Register_IntroText", @"Register_IntroText"), err);
-    } else {
-        self.tvIntro.text = fileContents;
-    }
+    NSURL* filePath = [[NSBundle mainBundle] URLForResource:NSLocalizedString(@"Register_IntroText", @"Register_IntroText") withExtension:@"rtf"];
+    self.tvIntro.attributedText = [[NSAttributedString alloc] initWithFileURL:filePath options:nil documentAttributes:nil error:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnContinue_Click:(id)sender
+{
+    [self.navigationController pushViewController:[[EnterPhoneViewController_iPhone alloc] initWithNibName:@"EnterPhoneViewController_iPhone" bundle:nil] animated:YES];
 }
 
 @end

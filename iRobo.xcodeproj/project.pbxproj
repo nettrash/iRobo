@@ -91,6 +91,9 @@
 		E5D9EE1618E39C3F00B60781 /* RegisterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE1418E39C3F00B60781 /* RegisterViewController_iPhone.xib */; };
 		E5D9EE1818E39E6000B60781 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE1718E39E6000B60781 /* Localizable.strings */; };
 		E5D9EE1B18E45F8200B60781 /* Intro(Ru).rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE1A18E45F8200B60781 /* Intro(Ru).rtf */; };
+		E5D9EE1D18E4634300B60781 /* ROBOKASSA.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE1C18E4634300B60781 /* ROBOKASSA.png */; };
+		E5D9EE2118E4872B00B60781 /* EnterPhoneViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9EE1F18E4872B00B60781 /* EnterPhoneViewController_iPhone.m */; };
+		E5D9EE2218E4872B00B60781 /* EnterPhoneViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE2018E4872B00B60781 /* EnterPhoneViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +263,10 @@
 		E5D9EE1418E39C3F00B60781 /* RegisterViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController_iPhone.xib; path = Vews/iPhone/Register/RegisterViewController_iPhone.xib; sourceTree = "<group>"; };
 		E5D9EE1718E39E6000B60781 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E5D9EE1A18E45F8200B60781 /* Intro(Ru).rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "Intro(Ru).rtf"; path = "Content/Common/RTF/Intro(Ru).rtf"; sourceTree = "<group>"; };
+		E5D9EE1C18E4634300B60781 /* ROBOKASSA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ROBOKASSA.png; path = Content/Common/ROBOKASSA.png; sourceTree = "<group>"; };
+		E5D9EE1E18E4872B00B60781 /* EnterPhoneViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnterPhoneViewController_iPhone.h; path = Vews/iPhone/Register/EnterPhoneViewController_iPhone.h; sourceTree = "<group>"; };
+		E5D9EE1F18E4872B00B60781 /* EnterPhoneViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnterPhoneViewController_iPhone.m; path = Vews/iPhone/Register/EnterPhoneViewController_iPhone.m; sourceTree = "<group>"; };
+		E5D9EE2018E4872B00B60781 /* EnterPhoneViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EnterPhoneViewController_iPhone.xib; path = Vews/iPhone/Register/EnterPhoneViewController_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,6 +564,7 @@
 		E50E657918E2D10A00D9883F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E5D9EE1C18E4634300B60781 /* ROBOKASSA.png */,
 				E5D9EE1918E45F6C00B60781 /* RTF */,
 			);
 			name = Common;
@@ -601,6 +609,9 @@
 				E5D9EE1218E39C3F00B60781 /* RegisterViewController_iPhone.h */,
 				E5D9EE1318E39C3F00B60781 /* RegisterViewController_iPhone.m */,
 				E5D9EE1418E39C3F00B60781 /* RegisterViewController_iPhone.xib */,
+				E5D9EE1E18E4872B00B60781 /* EnterPhoneViewController_iPhone.h */,
+				E5D9EE1F18E4872B00B60781 /* EnterPhoneViewController_iPhone.m */,
+				E5D9EE2018E4872B00B60781 /* EnterPhoneViewController_iPhone.xib */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -705,6 +716,8 @@
 				E5D9EE1B18E45F8200B60781 /* Intro(Ru).rtf in Resources */,
 				E5D9EE1818E39E6000B60781 /* Localizable.strings in Resources */,
 				E5D9EE1618E39C3F00B60781 /* RegisterViewController_iPhone.xib in Resources */,
+				E5D9EE1D18E4634300B60781 /* ROBOKASSA.png in Resources */,
+				E5D9EE2218E4872B00B60781 /* EnterPhoneViewController_iPhone.xib in Resources */,
 				E50E648B18E1CF5700D9883F /* InfoPlist.strings in Resources */,
 				E50E649618E1CF5700D9883F /* Images.xcassets in Resources */,
 			);
@@ -766,6 +779,7 @@
 				E50E654B18E2CF2900D9883F /* svcDeviceStatItem.m in Sources */,
 				E50E656318E2CF2900D9883F /* SoapNil.m in Sources */,
 				E50E656A18E2CF2900D9883F /* CXHTMLDocument.m in Sources */,
+				E5D9EE2118E4872B00B60781 /* EnterPhoneViewController_iPhone.m in Sources */,
 				E50E654518E2CF2900D9883F /* svcArrayOfTopCurrency.m in Sources */,
 				E50E655018E2CF2900D9883F /* svcParameter.m in Sources */,
 				E50E655A18E2CF2900D9883F /* svcWSResponse.m in Sources */,
