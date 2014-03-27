@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AppDelegate.h"
 
 @interface UserProfile : NSObject
 
@@ -16,6 +17,6 @@
 @property (nonatomic) BOOL phoneApproved;
 @property (nonatomic) BOOL hasPassword;
 
-+ (UserProfile *)load;
++ (UserProfile *)load : (AppDelegate *) app;
 
 @end

@@ -87,6 +87,10 @@
 		E50E657518E2CF2900D9883F /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E653518E2CF2900D9883F /* CXMLNode_XPathExtensions.m */; };
 		E5D9EE0718E33ED700B60781 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9EE0618E33ED700B60781 /* UserProfile.m */; };
 		E5D9EE0A18E33FB800B60781 /* UserProfileEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9EE0918E33FB800B60781 /* UserProfileEntity.m */; };
+		E5D9EE1518E39C3F00B60781 /* RegisterViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9EE1318E39C3F00B60781 /* RegisterViewController_iPhone.m */; };
+		E5D9EE1618E39C3F00B60781 /* RegisterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE1418E39C3F00B60781 /* RegisterViewController_iPhone.xib */; };
+		E5D9EE1818E39E6000B60781 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE1718E39E6000B60781 /* Localizable.strings */; };
+		E5D9EE1B18E45F8200B60781 /* Intro(Ru).rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D9EE1A18E45F8200B60781 /* Intro(Ru).rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +254,12 @@
 		E5D9EE0618E33ED700B60781 /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfile.m; path = Common/UserProfile.m; sourceTree = "<group>"; };
 		E5D9EE0818E33FB800B60781 /* UserProfileEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileEntity.h; sourceTree = "<group>"; };
 		E5D9EE0918E33FB800B60781 /* UserProfileEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileEntity.m; sourceTree = "<group>"; };
+		E5D9EE0D18E3949C00B60781 /* iRobo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iRobo.entitlements; sourceTree = "<group>"; };
+		E5D9EE1218E39C3F00B60781 /* RegisterViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController_iPhone.h; path = Vews/iPhone/Register/RegisterViewController_iPhone.h; sourceTree = "<group>"; };
+		E5D9EE1318E39C3F00B60781 /* RegisterViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController_iPhone.m; path = Vews/iPhone/Register/RegisterViewController_iPhone.m; sourceTree = "<group>"; };
+		E5D9EE1418E39C3F00B60781 /* RegisterViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController_iPhone.xib; path = Vews/iPhone/Register/RegisterViewController_iPhone.xib; sourceTree = "<group>"; };
+		E5D9EE1718E39E6000B60781 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E5D9EE1A18E45F8200B60781 /* Intro(Ru).rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "Intro(Ru).rtf"; path = "Content/Common/RTF/Intro(Ru).rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +291,7 @@
 		E50E647218E1CF5700D9883F = {
 			isa = PBXGroup;
 			children = (
+				E5D9EE0E18E39B5500B60781 /* Views */,
 				E5D9EE0118E33D6E00B60781 /* Common */,
 				E50E657618E2D0ED00D9883F /* Content */,
 				E50E64B318E2CF1400D9883F /* SOAP */,
@@ -315,6 +326,7 @@
 		E50E648618E1CF5700D9883F /* iRobo */ = {
 			isa = PBXGroup;
 			children = (
+				E5D9EE0D18E3949C00B60781 /* iRobo.entitlements */,
 				E50E648F18E1CF5700D9883F /* AppDelegate.h */,
 				E50E649018E1CF5700D9883F /* AppDelegate.m */,
 				E50E649518E1CF5700D9883F /* Images.xcassets */,
@@ -322,6 +334,7 @@
 				E5D9EE0818E33FB800B60781 /* UserProfileEntity.h */,
 				E5D9EE0918E33FB800B60781 /* UserProfileEntity.m */,
 				E50E648718E1CF5700D9883F /* Supporting Files */,
+				E5D9EE1718E39E6000B60781 /* Localizable.strings */,
 			);
 			path = iRobo;
 			sourceTree = "<group>";
@@ -544,6 +557,7 @@
 		E50E657918E2D10A00D9883F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E5D9EE1918E45F6C00B60781 /* RTF */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -555,6 +569,48 @@
 				E5D9EE0618E33ED700B60781 /* UserProfile.m */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		E5D9EE0E18E39B5500B60781 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5D9EE1018E39B8600B60781 /* iPad */,
+				E5D9EE0F18E39B7800B60781 /* iPhone */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E5D9EE0F18E39B7800B60781 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				E5D9EE1118E39BC200B60781 /* Register */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		E5D9EE1018E39B8600B60781 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		E5D9EE1118E39BC200B60781 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				E5D9EE1218E39C3F00B60781 /* RegisterViewController_iPhone.h */,
+				E5D9EE1318E39C3F00B60781 /* RegisterViewController_iPhone.m */,
+				E5D9EE1418E39C3F00B60781 /* RegisterViewController_iPhone.xib */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		E5D9EE1918E45F6C00B60781 /* RTF */ = {
+			isa = PBXGroup;
+			children = (
+				E5D9EE1A18E45F8200B60781 /* Intro(Ru).rtf */,
+			);
+			name = RTF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,6 +664,12 @@
 						DevelopmentTeam = 9J4X6PJX56;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+							com.apple.iOS = {
 								enabled = 0;
 							};
 						};
@@ -640,6 +702,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5D9EE1B18E45F8200B60781 /* Intro(Ru).rtf in Resources */,
+				E5D9EE1818E39E6000B60781 /* Localizable.strings in Resources */,
+				E5D9EE1618E39C3F00B60781 /* RegisterViewController_iPhone.xib in Resources */,
 				E50E648B18E1CF5700D9883F /* InfoPlist.strings in Resources */,
 				E50E649618E1CF5700D9883F /* Images.xcassets in Resources */,
 			);
@@ -695,6 +760,7 @@
 				E50E653D18E2CF2900D9883F /* svcArrayOfHistoryOperation.m in Sources */,
 				E50E654C18E2CF2900D9883F /* svcFavorite.m in Sources */,
 				E50E657018E2CF2900D9883F /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				E5D9EE1518E39C3F00B60781 /* RegisterViewController_iPhone.m in Sources */,
 				E50E654918E2CF2900D9883F /* svcCheck.m in Sources */,
 				E50E656218E2CF2900D9883F /* SoapLiteral.m in Sources */,
 				E50E654B18E2CF2900D9883F /* svcDeviceStatItem.m in Sources */,
@@ -846,8 +912,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
+				CODE_SIGN_ENTITLEMENTS = iRobo/iRobo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRobo/iRobo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -870,8 +937,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
+				CODE_SIGN_ENTITLEMENTS = iRobo/iRobo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRobo/iRobo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

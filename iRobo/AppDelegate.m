@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UserProfile.h"
+#import "RegisterViewController_iPhone.h"
 
 @implementation AppDelegate
 
@@ -19,9 +20,16 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UserProfile *profile = [UserProfile load];
+    UserProfile *profile = [UserProfile load:self];
     
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    if (!profile.emailApproved || !profile.phoneApproved)
+    {
+        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[RegisterViewController_iPhone alloc] initWithNibName:@"RegisterViewController_iPhone" bundle:nil]];
+        [self.window setRootViewController:nc];
+    }
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

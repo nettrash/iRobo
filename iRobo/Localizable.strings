@@ -1,0 +1,9 @@
+/* 
+  Localized.strings
+  iRobo
+
+  Created by Ivan Alekseev on 27.03.14.
+  Copyright (c) 2014 ROBOKASSA. All rights reserved.
+*/
+"Register_Title" = "РЕГИСТРАЦИЯ";
+"Register_Text" = "Intro(Ru).rtf";
