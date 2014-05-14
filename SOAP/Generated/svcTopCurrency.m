@@ -7,6 +7,7 @@
 
 @implementation svcTopCurrency
 	@synthesize Label = _Label;
+    @synthesize Name = _Name;
 	@synthesize Count = _Count;
 	@synthesize Parameters = _Parameters;
 
@@ -15,8 +16,9 @@
 		if(self = [super init])
 		{
 			self.Label = nil;
+            self.Name = nil;
 			self.Parameters = nil;
-
+            self.OutPossibleValues = nil;
 		}
 		return self;
 	}
@@ -31,8 +33,10 @@
 		if(self = [super initWithNode: node])
 		{
 			self.Label = [Soap getNodeValue: node withName: @"Label"];
+			self.Name = [Soap getNodeValue: node withName: @"Name"];
 			self.Count = [[Soap getNodeValue: node withName: @"Count"] intValue];
 			self.Parameters = [Soap getNodeValue: node withName: @"Parameters"];
+			self.OutPossibleValues = [Soap getNodeValue: node withName: @"OutPossibleValues"];
 		}
 		return self;
 	}
@@ -57,8 +61,10 @@
 	{
 		NSMutableString* s = [super serializeElements];
 		if (self.Label != nil) [s appendFormat: @"<Label>%@</Label>", [[self.Label stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
+		if (self.Name != nil) [s appendFormat: @"<Name>%@</Name>", [[self.Name stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		[s appendFormat: @"<Count>%@</Count>", [NSString stringWithFormat: @"%i", self.Count]];
 		if (self.Parameters != nil) [s appendFormat: @"<Parameters>%@</Parameters>", [[self.Parameters stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
+		if (self.OutPossibleValues != nil) [s appendFormat: @"<OutPossibleValues>%@</OutPossibleValues>", [[self.OutPossibleValues stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 
 		return s;
 	}

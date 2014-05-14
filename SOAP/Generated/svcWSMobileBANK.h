@@ -120,8 +120,8 @@
 
 	// Returns svcWSResponse*
 	/* Получение списка карт устройства */
-	- (SoapRequest*) GetCards: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash;
-	- (SoapRequest*) GetCards: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash;
+    - (SoapRequest*) GetCards: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash NotIncludeRemoved: (BOOL)NotIncludeRemoved NotIncludeNotAuthorized: (BOOL)NotIncludeNotAuthorized;
+	- (SoapRequest*) GetCards: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash NotIncludeRemoved: (BOOL)NotIncludeRemoved NotIncludeNotAuthorized: (BOOL)NotIncludeNotAuthorized;
 
 	// Returns svcWSResponse*
 	/* Регистрация карты на устройстве */
@@ -158,6 +158,11 @@
 	- (SoapRequest*) GetCardStat: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE cardId: (int) cardId;
 	- (SoapRequest*) GetCardStat: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId;
 
+    // Returns svcWSResponse*
+    /* Получение статистики по карте */
+    - (SoapRequest*) GetCard: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE cardId: (int) cardId;
+    - (SoapRequest*) GetCard: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId;
+
 	// Returns svcWSResponse*
 	/* Получение списка избранных платежей */
 	- (SoapRequest*) GetFavorites: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash;
@@ -188,7 +193,17 @@
 	- (SoapRequest*) GetCatalog: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE version: (int) version;
 	- (SoapRequest*) GetCatalog: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE version: (int) version;
 
-	// Returns svcWSResponse*
+    // Returns svcWSResponse*
+    /* Получение каталога часто используемых методов платежа */
+    - (SoapRequest*) GetTopCatalog: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE;
+    - (SoapRequest*) GetTopCatalog: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE;
+
+    // Returns svcWSResponse*
+    /* Поиск методов платежа по каталогу */
+    - (SoapRequest*) SearchCatalog: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Part: (NSString*) Part;
+    - (SoapRequest*) SearchCatalog: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE Part: (NSString*) Part;
+
+    // Returns svcWSResponse*
 	/* Получение параметров для совершения оплаты */
 	- (SoapRequest*) GetParameters: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency;
 	- (SoapRequest*) GetParameters: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency;
@@ -327,6 +342,11 @@
 	/* Получение списка операторов зарубежных мобильных телефонов */
 	- (SoapRequest*) GetRoumingMobileOperators: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP;
 	- (SoapRequest*) GetRoumingMobileOperators: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP;
+
+    // Returns svcWSResponse*
+    /* Перевод с карты не карту */
+    - (SoapRequest*) Card2CardTransfer: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE fromCardId: (int) fromCardId toCardId: (int) toCardId toCardNumber: (NSString *) toCardNumber summ: (NSDecimalNumber*) summ fromCardCVC : (NSString *) fromCardCVC;
+    - (SoapRequest*) Card2CardTransfer: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE fromCardId: (int) fromCardId toCardId: (int) toCardId toCardNumber: (NSString *) toCardNumber summ: (NSDecimalNumber*) summ fromCardCVC : (NSString *) fromCardCVC;
 
 	// Returns svcWSResponse*
 	/* Авторизация в личном кабинете */

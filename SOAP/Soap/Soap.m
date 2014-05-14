@@ -268,7 +268,7 @@
 		
 		// Return as long
 		if([type isEqualToString:@"long"] || [type isEqualToString:@"unsignedlong"]) {
-			return [NSNumber numberWithLong:[value longLongValue]];
+			return [NSNumber numberWithLongLong:[value longLongValue]];
 		}
 		
 		// Return as short
@@ -431,7 +431,7 @@
 		return [NSNumber numberWithInt:[value intValue]];
 	}
 	if([toType isEqualToString: @"long"]) {
-		return [NSNumber numberWithLong:[value longLongValue]];
+		return [NSNumber numberWithLongLong:[value longLongValue]];
 	}
 	if([toType isEqualToString: @"double"]) {
 		return [NSNumber numberWithDouble:[value doubleValue]];

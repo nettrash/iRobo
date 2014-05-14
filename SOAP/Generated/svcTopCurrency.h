@@ -10,14 +10,18 @@
 @interface svcTopCurrency : SoapObject
 {
 	NSString* _Label;
+    NSString* _Name;
 	int _Count;
 	NSString* _Parameters;
+    NSString* _OutPossibleValues;
 	
 }
 		
-	@property (retain, nonatomic) NSString* Label;
+    @property (retain, nonatomic) NSString* Label;
+    @property (retain, nonatomic) NSString* Name;
 	@property int Count;
 	@property (retain, nonatomic) NSString* Parameters;
+    @property (retain, nonatomic) NSString* OutPossibleValues;
 
 	+ (svcTopCurrency*) createWithNode: (CXMLNode*) node;
 	- (id) initWithNode: (CXMLNode*) node;

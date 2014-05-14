@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ROBOKASSA. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "RegisterViewController_iPhone.h"
 #import "EnterPhoneViewController_iPhone.h"
 
@@ -38,6 +39,13 @@
     self.tvIntro.attributedText = [[NSAttributedString alloc] initWithFileURL:filePath options:nil documentAttributes:nil error:nil];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app personVoiceForGroup:@"Registration" andAction:@"Intro"];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -46,6 +54,8 @@
 
 - (IBAction)btnContinue_Click:(id)sender
 {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app stopSound];
     [self.navigationController pushViewController:[[EnterPhoneViewController_iPhone alloc] initWithNibName:@"EnterPhoneViewController_iPhone" bundle:nil] animated:YES];
 }
 

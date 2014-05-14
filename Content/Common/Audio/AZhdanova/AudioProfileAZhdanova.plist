@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Registration</key>
+	<dict>
+		<key>Intro</key>
+		<array>
+			<string>azIntro</string>
+		</array>
+	</dict>
+	<key>Welcome</key>
+	<dict>
+		<key>Any</key>
+		<array>
+			<string>azwelcome</string>
+			<string>azwelcome1</string>
+			<string>azwelcome2</string>
+			<string>azwelcome3</string>
+			<string>azwelcome4</string>
+			<string>azwelcome5</string>
+			<string>azwelcome6</string>
+			<string>azwelcome7</string>
+			<string>azwelcome8</string>
+			<string>azwelcome9</string>
+			<string>azwelcome10</string>
+			<string>azwelcome11</string>
+			<string>azwelcome12</string>
+			<string>azwelcome13</string>
+			<string>azwelcome14</string>
+			<string>azwelcome15</string>
+			<string>azwelcome16</string>
+		</array>
+		<key>79653250000</key>
+		<array>
+			<string>aznettrash</string>
+			<string>aznettrash1</string>
+			<string>aznettrash2</string>
+		</array>
+		<key>79686725343</key>
+		<array>
+			<string>azmum</string>
+		</array>
+		<key>79166712314</key>
+		<array>
+			<string>ndemyashova</string>
+		</array>
+		<key>79255052626</key>
+		<array>
+			<string>azpoker</string>
+			<string>azpoker1</string>
+		</array>
+		<key>79257722322</key>
+		<array>
+			<string>azpol</string>
+		</array>
+		<key>79265561457</key>
+		<array>
+			<string>azdogorodnikova</string>
+		</array>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OperationStateViewController_iPhone">
+            <connections>
+                <outlet property="lblComments" destination="162-5p-JNE" id="oCd-av-Qbt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wvComments" destination="p3z-Wm-YHw" id="vZL-Ju-L0S"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Произвожу оплату..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="162-5p-JNE">
+                    <rect key="frame" x="20" y="345" width="280" height="170"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="TDd-Ty-BCV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="b1m-7M-6wQ">
+                    <rect key="frame" x="142" y="274" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3z-Wm-YHw">
+                    <rect key="frame" x="0.0" y="62" width="320" height="506"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <dataDetectorType key="dataDetectorTypes"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="162-5p-JNE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="2e9-1i-gq9"/>
+                <constraint firstItem="p3z-Wm-YHw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="Am5-FR-Ljd"/>
+                <constraint firstAttribute="bottom" secondItem="p3z-Wm-YHw" secondAttribute="bottom" id="b3I-Kd-co3"/>
+                <constraint firstItem="162-5p-JNE" firstAttribute="centerX" secondItem="b1m-7M-6wQ" secondAttribute="centerX" id="cKb-Z3-5WG"/>
+                <constraint firstItem="162-5p-JNE" firstAttribute="top" secondItem="b1m-7M-6wQ" secondAttribute="bottom" constant="34" id="cMR-4T-Uqw"/>
+                <constraint firstAttribute="bottom" secondItem="162-5p-JNE" secondAttribute="bottom" constant="53" id="fEU-0M-Sbe"/>
+                <constraint firstItem="p3z-Wm-YHw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="joo-FQ-1fi"/>
+                <constraint firstAttribute="trailing" secondItem="162-5p-JNE" secondAttribute="trailing" constant="20" symbolic="YES" id="kYS-Li-hTb"/>
+                <constraint firstItem="p3z-Wm-YHw" firstAttribute="centerX" secondItem="162-5p-JNE" secondAttribute="centerX" id="soN-UG-w2v"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

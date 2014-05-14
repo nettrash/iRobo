@@ -202,7 +202,8 @@ NSString* const SoapRequestProgressKey = @"progress";
 		
 		if(self.action == nil) { self.action = @selector(onload:); }
 		if(self.handler != nil && [self.handler respondsToSelector: self.action]) {
-			objc_msgSend(self.handler, self.action, output);
+            [self.handler performSelectorOnMainThread:self.action withObject:output waitUntilDone:NO];
+			//objc_msgSend(self.handler, self.action, output);
 		} else if(self.defaultHandler != nil && [self.defaultHandler respondsToSelector:@selector(onload:)]) {
 			[self.defaultHandler onload:output];
 		}

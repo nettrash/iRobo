@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TerminalsViewController_iPhone">
+            <connections>
+                <outlet property="map" destination="SWi-ga-TCJ" id="7S5-Bw-y0u"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWi-ga-TCJ">
+                    <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="460" id="KiA-fC-nso"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="iGr-he-zn6"/>
+                    </connections>
+                </mapView>
+                <searchBar contentMode="redraw" placeholder="Россия, Москва, Кремль" translatesAutoresizingMaskIntoConstraints="NO" id="dCL-ra-nZ0">
+                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="gH1-gB-LQc"/>
+                    </connections>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SWi-ga-TCJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Yw-9J-ECa"/>
+                <constraint firstItem="dCL-ra-nZ0" firstAttribute="trailing" secondItem="SWi-ga-TCJ" secondAttribute="trailing" id="JqT-lE-OzW"/>
+                <constraint firstAttribute="trailing" secondItem="SWi-ga-TCJ" secondAttribute="trailing" id="chF-yp-l5N"/>
+                <constraint firstItem="dCL-ra-nZ0" firstAttribute="leading" secondItem="SWi-ga-TCJ" secondAttribute="leading" id="dD5-OQ-TH3"/>
+                <constraint firstItem="dCL-ra-nZ0" firstAttribute="bottom" secondItem="SWi-ga-TCJ" secondAttribute="top" id="hQk-YY-JiA"/>
+                <constraint firstAttribute="bottom" secondItem="SWi-ga-TCJ" secondAttribute="bottom" id="y7z-uG-bq6"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

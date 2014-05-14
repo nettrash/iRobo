@@ -344,17 +344,19 @@
 
 	// Returns svcWSResponse*
 	/* Получение списка карт устройства */
-	- (SoapRequest*) GetCards: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash
+	- (SoapRequest*) GetCards: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash NotIncludeRemoved: (BOOL)NotIncludeRemoved NotIncludeNotAuthorized: (BOOL)NotIncludeNotAuthorized
 	{
-		return [self GetCards: handler action: nil UNIQUE: UNIQUE Hash: Hash];
+		return [self GetCards: handler action: nil UNIQUE: UNIQUE Hash: Hash NotIncludeRemoved: NotIncludeRemoved NotIncludeNotAuthorized:NotIncludeNotAuthorized];
 	}
 
-	- (SoapRequest*) GetCards: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash
+	- (SoapRequest*) GetCards: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash NotIncludeRemoved: (BOOL)NotIncludeRemoved NotIncludeNotAuthorized: (BOOL)NotIncludeNotAuthorized
 		{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
 		[_params addObject: [[SoapParameter alloc] initWithValue: Hash forName: @"Hash"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithBool: NotIncludeRemoved] forName: @"NotIncludeRemoved"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithBool: NotIncludeNotAuthorized] forName: @"NotIncludeNotAuthorized"]];
 		NSString* _envelope = [Soap createEnvelope: @"GetCards" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
 		SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/GetCards" postData: _envelope deserializeTo: [svcWSResponse alloc]];
 		[_request send];
@@ -501,7 +503,26 @@
 		return _request;
 	}
 
-	// Returns svcWSResponse*
+    // Returns svcWSResponse*
+    /* Получение данных по карте */
+    - (SoapRequest*) GetCard: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE cardId: (int) cardId
+    {
+        return [self GetCard: handler action: nil UNIQUE: UNIQUE cardId: cardId];
+    }
+
+    - (SoapRequest*) GetCard: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId
+    {
+        NSMutableArray* _params = [NSMutableArray array];
+    
+        [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithInt: cardId] forName: @"cardId"]];
+        NSString* _envelope = [Soap createEnvelope: @"GetCard" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
+        SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/GetCard" postData:_envelope deserializeTo: [svcWSResponse alloc]];
+        [_request send];
+        return _request;
+    }
+
+    // Returns svcWSResponse*
 	/* Получение списка избранных платежей */
 	- (SoapRequest*) GetFavorites: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash
 	{
@@ -624,6 +645,43 @@
 		[_request send];
 		return _request;
 	}
+
+    // Returns svcWSResponse*
+    /* Получение каталога часто используемых методов платежа */
+    - (SoapRequest*) GetTopCatalog: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE
+    {
+        return [self GetTopCatalog: handler action: nil UNIQUE: UNIQUE];
+    }
+
+    - (SoapRequest*) GetTopCatalog: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE
+    {
+        NSMutableArray* _params = [NSMutableArray array];
+    
+        [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
+        NSString* _envelope = [Soap createEnvelope: @"GetTopCatalog" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
+        SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/GetTopCatalog" postData: _envelope deserializeTo: [svcWSResponse alloc]];
+        [_request send];
+        return _request;
+    }
+
+    // Returns svcWSResponse*
+    /* Поиск методов платежа по каталогу */
+    - (SoapRequest*) SearchCatalog: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Part: (NSString*) Part
+    {
+        return [self SearchCatalog: handler action: nil UNIQUE: UNIQUE Part: Part];
+    }
+
+    - (SoapRequest*) SearchCatalog: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Part: (NSString*) Part
+    {
+        NSMutableArray* _params = [NSMutableArray array];
+    
+        [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: Part forName: @"Part"]];
+        NSString* _envelope = [Soap createEnvelope: @"SearchCatalog" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
+        SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/SearchCatalog" postData: _envelope deserializeTo: [svcWSResponse alloc]];
+        [_request send];
+        return _request;
+    }
 
 	// Returns svcWSResponse*
 	/* Получение параметров для совершения оплаты */
@@ -1212,6 +1270,27 @@
 		return _request;
 	}
 
+    // Returns svcWSResponse*
+    /* Перевод с карты не карту */
+    - (SoapRequest*) Card2CardTransfer: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE fromCardId: (int) fromCardId toCardId: (int) toCardId toCardNumber: (NSString *) toCardNumber summ: (NSDecimalNumber*) summ fromCardCVC : (NSString *) fromCardCVC
+    {
+        return [self Card2CardTransfer: handler action: nil UNIQUE:UNIQUE fromCardId:fromCardId toCardId:toCardId toCardNumber:toCardNumber summ:summ fromCardCVC:fromCardCVC];
+    }
+
+    - (SoapRequest*) Card2CardTransfer: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE fromCardId: (int) fromCardId toCardId: (int) toCardId toCardNumber: (NSString *) toCardNumber summ: (NSDecimalNumber*) summ fromCardCVC : (NSString *) fromCardCVC
+    {
+		NSMutableArray* _params = [NSMutableArray array];
+		
+		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
+		[_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithInt: fromCardId] forName: @"fromCardId"]];
+		[_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithInt: toCardId] forName: @"toCardId"]];
+		[_params addObject: [[SoapParameter alloc] initWithValue: toCardNumber forName: @"toCardNumber"]];
+		[_params addObject: [[SoapParameter alloc] initWithValue: summ forName: @"summ"]];
+		[_params addObject: [[SoapParameter alloc] initWithValue: fromCardCVC forName: @"fromCardCVC"]];
+		NSString* _envelope = [Soap createEnvelope: @"Card2CardTransfer" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
+		SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/Card2CardTransfer" postData: _envelope deserializeTo: [svcWSResponse alloc]];
+		[_request send];
+		return _request;
+    }
 
 @end
-	
