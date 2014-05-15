@@ -23,6 +23,7 @@
 #import "ScanViewController_iPhone.h"
 #import "NSString+Checkers.h"
 #import "NSString+RegEx.h"
+#import "PayCharityViewController_iPhone.h"
 
 @interface MainViewController_iPhone ()
 
@@ -215,6 +216,9 @@
                 return 1;
         }
         case 1: {
+            NSArray *videoDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+            if ([videoDevices count] > 0)
+                return 4;
             return 3;
         }
         case 2: {
@@ -242,7 +246,7 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MainCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     }
     
     switch (indexPath.section) {
@@ -313,6 +317,11 @@
                     break;
                 }
                 case 3: {
+                    cell.textLabel.text = NSLocalizedString(@"MainTable_Section_Helpers_Scan_Title", @"MainTable_Section_Helpers_Scan_Title");
+                    cell.detailTextLabel.text = NSLocalizedString(@"MainTable_Section_Helpers_Scan_Details", @"MainTable_Section_Helpers_Scan_Details");
+                    cell.imageView.image = [UIImage imageNamed:@"MainScanIcon.png"];
+                    cell.accessoryView = nil;
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                     break;
                 }
                 default:
@@ -436,6 +445,7 @@
                     break;
                 }
                 case 3: {
+                    [self scan:nil];
                     break;
                 }
                 default:
@@ -478,6 +488,7 @@
         default:
             break;
     }
+    [self.tblPayments.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -543,6 +554,7 @@
         if (resp.result && resp.checks && resp.checks != nil && [resp.checks count] > 0)
         {
             _checks = resp.checks;
+            [self.tblPayments.tableView reloadData];
             for (svcCheck *c in resp.checks)
             {
                 if (c.checkId == resp.checkId)
@@ -553,6 +565,36 @@
                     [self.navigationController pushViewController:pp animated:YES];
                     return;
                 }
+            }
+        }
+    }
+}
+
+- (void)payCharity:(NSString *)CharityID
+{
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app showWait:NSLocalizedString(@"PayCharityByCommand_WaitMessage", @"PayCharityByCommand_WaitMessage")];
+    svcWSMobileBANK *svc = [svcWSMobileBANK service];
+    svc.logging = YES;
+    [svc GetCharity:self action:@selector(payCharityHandler:) UNIQUE:[app.userProfile uid] charityId:[CharityID intValue]];
+}
+
+- (void)payCharityHandler:(id)response
+{
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app hideWait];
+    if ([response isKindOfClass:[svcWSResponse class]])
+    {
+        svcWSResponse *resp = (svcWSResponse *)response;
+        if (resp.result)
+        {
+            if (resp.charity && resp.charity != nil)
+            {
+                [self.navigationController popToRootViewControllerAnimated:NO];
+                PayCharityViewController_iPhone *pp = [[PayCharityViewController_iPhone alloc] initWithNibName:@"PayCharityViewController_iPhone" bundle:nil withCharity:resp.charity];
+                pp.delegate = self;
+                [self.navigationController pushViewController:pp animated:YES];
+                return;
             }
         }
     }

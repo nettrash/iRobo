@@ -266,3 +266,7 @@
 "URLCommand_Unsupported_Title" = "ПОСТУПИЛА КОМАНДА";
 "URLCommand_Unsupported_Message" = "Увы но я не смогла распознать поступившую команду. Либо я больше не поддерживаю этот тип команд, либо меня нужно срочно обновить...";
 "PayCheckByCommand_WaitMessage" = "Готовлюсь к оплате счёта...";
+"MainTable_Section_Helpers_Scan_Title" = "СКАНИРОВАТЬ КОД";
+"MainTable_Section_Helpers_Scan_Details" = "Просканируй код, детали внутри";
+"PayCharityByCommand_WaitMessage" = "Получаю данные о пожертвовании...";
+"PayCharity_Title" = "ПОЖЕРТВОВАНИЕ";

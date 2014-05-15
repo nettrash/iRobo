@@ -11,6 +11,10 @@
 		E51F44AF1925301600A9D6EB /* LampOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44AB1925301600A9D6EB /* LampOff@2x.png */; };
 		E51F44B01925301600A9D6EB /* LampOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44AC1925301600A9D6EB /* LampOn.png */; };
 		E51F44B11925301600A9D6EB /* LampOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44AD1925301600A9D6EB /* LampOn@2x.png */; };
+		E51F44B41925377700A9D6EB /* MainScanIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44B21925377700A9D6EB /* MainScanIcon.png */; };
+		E51F44B51925377700A9D6EB /* MainScanIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44B31925377700A9D6EB /* MainScanIcon@2x.png */; };
+		E51F44B91925428300A9D6EB /* PayCharityViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */; };
+		E51F44BA1925428300A9D6EB /* PayCharityViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */; };
 		E5448B3D190919D90025C9E7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5448B3C190919D90025C9E7 /* Settings.bundle */; };
 		E5448B4019091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png in Resources */ = {isa = PBXBuildFile; fileRef = E5448B3E19091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png */; };
 		E5448B4119091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5448B3F19091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png */; };
@@ -528,6 +532,11 @@
 		E51F44AB1925301600A9D6EB /* LampOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LampOff@2x.png"; path = "Content/Common/LampOff@2x.png"; sourceTree = "<group>"; };
 		E51F44AC1925301600A9D6EB /* LampOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LampOn.png; path = Content/Common/LampOn.png; sourceTree = "<group>"; };
 		E51F44AD1925301600A9D6EB /* LampOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LampOn@2x.png"; path = "Content/Common/LampOn@2x.png"; sourceTree = "<group>"; };
+		E51F44B21925377700A9D6EB /* MainScanIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScanIcon.png; sourceTree = "<group>"; };
+		E51F44B31925377700A9D6EB /* MainScanIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainScanIcon@2x.png"; sourceTree = "<group>"; };
+		E51F44B61925428300A9D6EB /* PayCharityViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCharityViewController_iPhone.h; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.h; sourceTree = "<group>"; };
+		E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCharityViewController_iPhone.m; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.m; sourceTree = "<group>"; };
+		E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PayCharityViewController_iPhone.xib; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.xib; sourceTree = "<group>"; };
 		E5448B3C190919D90025C9E7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E5448B3E19091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsMinTimeoutForPassword.png; path = Content/Common/SettingsMinTimeoutForPassword.png; sourceTree = "<group>"; };
 		E5448B3F19091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SettingsMinTimeoutForPassword@2x.png"; path = "Content/Common/SettingsMinTimeoutForPassword@2x.png"; sourceTree = "<group>"; };
@@ -1350,6 +1359,9 @@
 				E5B6F62C191A689300EAA3C4 /* PayViewController_iPhone.h */,
 				E5B6F62D191A689300EAA3C4 /* PayViewController_iPhone.m */,
 				E5B6F62E191A689300EAA3C4 /* PayViewController_iPhone.xib */,
+				E51F44B61925428300A9D6EB /* PayCharityViewController_iPhone.h */,
+				E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */,
+				E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */,
 			);
 			name = Operation;
 			sourceTree = "<group>";
@@ -1651,6 +1663,8 @@
 		E5B6F5AE190E702F00EAA3C4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E51F44B21925377700A9D6EB /* MainScanIcon.png */,
+				E51F44B31925377700A9D6EB /* MainScanIcon@2x.png */,
 				E5B6F634191B58FE00EAA3C4 /* CatalogSearchIcon.png */,
 				E5B6F635191B58FE00EAA3C4 /* CatalogSearchIcon@2x.png */,
 				E5B6F5C3190E7E6C00EAA3C4 /* MainCheckIcon.png */,
@@ -2061,6 +2075,7 @@
 				E5B6F64C191B984000EAA3C4 /* azwelcome9.m4a in Resources */,
 				E5B6F5B6190E70AB00EAA3C4 /* MainPhoneIcon@2x.png in Resources */,
 				E599ECFB18F580270019A74E /* History@2x.png in Resources */,
+				E51F44B41925377700A9D6EB /* MainScanIcon.png in Resources */,
 				E556D8BC19067E8C002BD048 /* MoneySendBackground@2x.png in Resources */,
 				E599E9DB18E768A90019A74E /* Oferta(Ru).rtf in Resources */,
 				E5B6F5BA190E74CF00EAA3C4 /* MainCard2CardIcon@2x.png in Resources */,
@@ -2077,9 +2092,11 @@
 				E5448B6D1909AD600025C9E7 /* AudioProfiles.plist in Resources */,
 				E5448B851909B4450025C9E7 /* AudioProfileAZhdanova.plist in Resources */,
 				E599ED1718F58AD90019A74E /* Payments@2x.png in Resources */,
+				E51F44BA1925428300A9D6EB /* PayCharityViewController_iPhone.xib in Resources */,
 				E556D88F19015A8B002BD048 /* CardAuthorizeViewController_iPhone.xib in Resources */,
 				E5448B881909B8360025C9E7 /* nettrash.m4a in Resources */,
 				E599ED0618F5827B0019A74E /* Settings.png in Resources */,
+				E51F44B51925377700A9D6EB /* MainScanIcon@2x.png in Resources */,
 				E5B6F5F419180F2200EAA3C4 /* SelectedCardCellView_iPhone.xib in Resources */,
 				E5B6F660191B9B3700EAA3C4 /* azpoker.m4a in Resources */,
 				E599ED1318F5882F0019A74E /* Terminals@2x.png in Resources */,
@@ -2233,6 +2250,7 @@
 				E599E9E118E768CF0019A74E /* svcArrayOfDeviceStatItem.m in Sources */,
 				E599E9D318E7687E0019A74E /* AcceptOfertaViewController_iPhone.m in Sources */,
 				E5B6F5CA190EA46800EAA3C4 /* PayPhoneViewController_iPhone.m in Sources */,
+				E51F44B91925428300A9D6EB /* PayCharityViewController_iPhone.m in Sources */,
 				E5EE650418FDA7BA0013819A /* NSNumber+MonthNames.m in Sources */,
 				E599EA0918E769760019A74E /* SoapNil.m in Sources */,
 				E599E99018E760980019A74E /* AppDelegate.m in Sources */,

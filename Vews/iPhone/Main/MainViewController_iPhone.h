@@ -22,6 +22,7 @@
 
 - (void)payCheckById:(int)check_Id;
 - (void)payCheckByOpKey:(NSString *)OpKey;
+- (void)payCharity:(NSString *)CharityID;
 
 @end
 

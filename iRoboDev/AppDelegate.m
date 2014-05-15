@@ -616,6 +616,13 @@
         {
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
             [_revealViewController pushFrontViewController:navigationController animated:YES];
+            
+            NSString *prm = [_launchURL parameterValue:@"CharityID"];
+            if (prm && prm != nil)
+            {
+                [(MainViewController_iPhone *)frontNavigationController.topViewController payCharity:prm];
+                return;
+            }
         }
         return;
     }
