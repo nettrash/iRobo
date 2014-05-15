@@ -87,7 +87,7 @@
 
 - (BOOL)needToRegister
 {
-    return !self.hasPassword;
+    return !self.hasPassword || !self.ofertaAccepted;
 }
 
 - (BOOL)needToApprove
@@ -182,12 +182,16 @@
         self.firstName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"firstName"];
         self.secondName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"secondName"];
         self.address = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"address"];
+        self.ofertaAccepted = [[[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"ofertaAccepted"] isEqualToString:@"YES"];
+//        self.ofertaAccepted = YES;
+//        [self storeUserDataToCloud];
     }
     @catch (NSException *exception) {
         self.lastName = @"";
         self.firstName = @"";
         self.secondName = @"";
         self.address = @"";
+        self.ofertaAccepted = NO;
     }
     @finally {
     }
@@ -200,6 +204,7 @@
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self firstName] forKey:@"firstName"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self secondName] forKey:@"secondName"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self address] forKey:@"address"];
+        [[NSUbiquitousKeyValueStore defaultStore] setString:[self ofertaAccepted] ? @"YES" : @"NO" forKey:@"ofertaAccepted"];
     }
     @catch (NSException *exception) {
     }

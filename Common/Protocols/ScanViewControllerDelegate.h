@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 ROBOKASSA. All rights reserved.
 //
 
-#import "ZXingObjC.h"
+#import <AVFoundation/AVFoundation.h>
 
 #ifndef iRobo_ScanViewControllerDelegate_h
 #define iRobo_ScanViewControllerDelegate_h
 
 @protocol ScanViewControllerDelegate
 
-- (void)scanResult:(UIViewController *)controller success:(BOOL)success result:(ZXResult *)result;
+- (void)scanResult:(UIViewController *)controller success:(BOOL)success result:(AVMetadataMachineReadableCodeObject *)result;
 
 @end
 

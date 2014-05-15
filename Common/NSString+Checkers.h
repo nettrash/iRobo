@@ -12,5 +12,7 @@
 
 - (BOOL)isHTML;
 - (NSString *)HTMLWithSystemFont;
+- (BOOL)isPossibleMoscowGKU;
+- (BOOL)isPossibleMGTS;
 
 @end

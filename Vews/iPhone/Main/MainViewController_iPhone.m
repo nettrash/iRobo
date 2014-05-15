@@ -21,6 +21,8 @@
 #import "PayViewController_iPhone.h"
 #import "SearchCatalogViewController_iPhone.h"
 #import "ScanViewController_iPhone.h"
+#import "NSString+Checkers.h"
+#import "NSString+RegEx.h"
 
 @interface MainViewController_iPhone ()
 
@@ -41,7 +43,9 @@
         _topCatalogRefreshing = NO;
         _checks = nil;
         self.navigationItem.title = NSLocalizedString(@"MainTitle", @"MainTitle");
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(scan:)];
+        NSArray *videoDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+        if ([videoDevices count] > 0)
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(scan:)];
         SWRevealViewController *revealViewController = [self revealViewController];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon"] style:UIBarButtonItemStylePlain target:revealViewController action:@selector(revealToggle:)];
     }
@@ -75,8 +79,12 @@
 
 - (void)scan:(id)sender
 {
-    ScanViewController_iPhone *v = [[ScanViewController_iPhone alloc] initWithNibName:@"ScanViewController_iPhone" bundle:nil delegate:self];
-    [self presentViewController:v animated:YES completion:nil];
+    NSArray *videoDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    if ([videoDevices count] > 0)
+    {
+        ScanViewController_iPhone *v = [[ScanViewController_iPhone alloc] initWithNibName:@"ScanViewController_iPhone" bundle:nil delegate:self];
+        [self presentViewController:v animated:YES completion:nil];
+    }
 }
 
 - (void)refresh:(id)sender
@@ -552,20 +560,51 @@
 
 #pragma mark ScanProcessing
 
-- (void)processScanResult:(ZXResult *)result
+- (void)processScanResult:(AVMetadataMachineReadableCodeObject *)result
 {
-    switch (result.barcodeFormat) {
-        case kBarcodeFormatQRCode: {
-            AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            [app performSelector:@selector(applyScanedURL:) withObject:[NSURL URLWithString:result.text] afterDelay:.1];
-            break;
-        }
-        case kBarcodeFormatCode128:
-        case kBarcodeFormatEan8: {
-            
-            if (result.text && result.text != nil && [result.text length] == 28) {
+    NSLog(@"%@", result.type);
+    NSString *resultText = [result stringValue];
+    if ([result.type isEqualToString:@"org.iso.QRCode"])
+    {
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [app performSelector:@selector(applyScanedURL:) withObject:[NSURL URLWithString:resultText] afterDelay:.1];
+    }
+    if ([result.type isEqualToString:@"org.iso.Code39"])
+    {
+        if ([resultText isPossibleMGTS]) {
             /*
-             ЖКУ - Москва 
+             МГТС
+             
+             Label QiwiS31
+             Name МГТС
+             P5918_account Номер телефона
+             
+             OutPossibleValue сумма через ;
+             
+             Пример 495420050901250048100
+             
+             Номер 4954200509
+             Квартира 0125
+             Сумма 0048100
+             */
+            svcTopCurrency *c = [svcTopCurrency alloc];
+            c.Label = @"QiwiS31";
+            c.Name = @"МГТС";
+            c.Parameters = [NSString stringWithFormat:@"P5918_account:%@", [resultText substringWithRange:NSMakeRange(0, 10)]];
+            c.OutPossibleValues = [NSString stringWithFormat:@"%i.%@;", [[resultText substringWithRange:NSMakeRange(14, 5)] intValue], [resultText substringWithRange:NSMakeRange(19, 2)]];
+            
+            [self.navigationController popToRootViewControllerAnimated:NO];
+            
+            PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:c];
+            pp.delegate = self;
+            [self.navigationController pushViewController:pp animated:YES];
+        }
+    }
+    if ([result.type isEqualToString:@"org.iso.Code128"])
+    {
+        if ([resultText isPossibleMoscowGKU]) {
+            /*
+             ЖКУ - Москва
              
              Labe QiwiS265
              Name ЖКУ Москва
@@ -580,29 +619,24 @@
              Сумма без страховки 0358114 3581.14
              Сумма со страховкой 0367153 3671.53
              */
-                svcTopCurrency *c = [svcTopCurrency alloc];
-                c.Label = @"QiwiS265";
-                c.Name = @"ЖКУ Москва";
-                c.Parameters = [NSString stringWithFormat:@"P5929_account[0]:%@;P5929_account[1]:%@", [result.text substringWithRange:NSMakeRange(0, 10)], [result.text substringWithRange:NSMakeRange(10, 4)]];
-                c.OutPossibleValues = [NSString stringWithFormat:@"%@.%@;%@.%@", [result.text substringWithRange:NSMakeRange(14, 5)], [result.text substringWithRange:NSMakeRange(19, 2)], [result.text substringWithRange:NSMakeRange(21, 5)], [result.text substringWithRange:NSMakeRange(26, 2)]];
-                
-                [self.navigationController popToRootViewControllerAnimated:NO];
-                
-                PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:c];
-                pp.delegate = self;
-                [self.navigationController pushViewController:pp animated:YES];
-
-            }
-            break;
+            svcTopCurrency *c = [svcTopCurrency alloc];
+            c.Label = @"QiwiS265";
+            c.Name = @"ЖКУ Москва";
+            c.Parameters = [NSString stringWithFormat:@"P5929_account[0]:%@;P5929_account[1]:%@", [resultText substringWithRange:NSMakeRange(0, 10)], [resultText substringWithRange:NSMakeRange(10, 4)]];
+            c.OutPossibleValues = [NSString stringWithFormat:@"%i.%@;%i.%@", [[resultText substringWithRange:NSMakeRange(14, 5)] intValue], [resultText substringWithRange:NSMakeRange(19, 2)], [[resultText substringWithRange:NSMakeRange(21, 5)] intValue], [resultText substringWithRange:NSMakeRange(26, 2)]];
+            
+            [self.navigationController popToRootViewControllerAnimated:NO];
+            
+            PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:c];
+            pp.delegate = self;
+            [self.navigationController pushViewController:pp animated:YES];
         }
-        default:
-            break;
     }
 }
 
 #pragma mark ScanViewControllerDelegate
 
-- (void)scanResult:(UIViewController *)controller success:(BOOL)success result:(ZXResult *)result
+- (void)scanResult:(UIViewController *)controller success:(BOOL)success result:(AVMetadataMachineReadableCodeObject *)result
 {
     [self dismissViewControllerAnimated:NO completion:nil];
     if (success)

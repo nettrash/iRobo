@@ -6,8 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanViewController_iPhone">
             <connections>
-                <outlet property="decodedLabel" destination="Ia5-Ho-Hqy" id="OZ9-NK-hvs"/>
-                <outlet property="scanRectView" destination="UIy-6S-8fH" id="Yj7-j7-NNa"/>
+                <outlet property="btnCancel" destination="uv1-fx-wia" id="dRq-0u-Erd"/>
+                <outlet property="btnInfo" destination="mys-il-ISF" id="i2B-y5-EMz"/>
+                <outlet property="lblInfoText" destination="C7B-5O-7qj" id="aSZ-NJ-Uyg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,47 +17,68 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIy-6S-8fH">
-                    <rect key="frame" x="10" y="40" width="300" height="440"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="0.14999999999999999" colorSpace="calibratedWhite"/>
-                </view>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поместите сканируемый код перед камерой так чтобы он был полностью виден!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="Ia5-Ho-Hqy">
-                    <rect key="frame" x="10" y="394" width="300" height="70"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="70" id="er9-wi-7sc"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv1-fx-wia">
                     <rect key="frame" x="20" y="518" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="ДА НУ ЕГО, НЕ БУДУ СКАНИРОВАТЬ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="btnClose_Click:" destination="-1" eventType="touchUpInside" id="9lS-5b-kRW"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mys-il-ISF">
+                    <rect key="frame" x="20" y="24" width="22" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnInfo_Click:" destination="-1" eventType="touchUpInside" id="KDZ-2I-lUs"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-5O-7qj">
+                    <rect key="frame" x="20" y="54" width="280" height="456"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="456" id="fpd-TA-ah3"/>
+                    </constraints>
+                    <string key="text">Сейчас ты можешь просканировать код (штрихкод или двухмерный QR-код). Я понимаю все системы кодирования информации. Ты можешь просканировать код со страницы оплаты и оплатить покупку через меня. Просканируй штрихкод с единого платежного документа и оплати его без ручного ввода. Также ты можешь просканировать код с квитанции МГТС. И многих многих других провайдеров.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiI-dz-pHe">
+                    <rect key="frame" x="268" y="19" width="32" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="LampOff.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="LampOn.png"/>
+                    <connections>
+                        <action selector="btnTorch_Click:" destination="-1" eventType="touchUpInside" id="vdt-y9-yCr"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="UIy-6S-8fH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="158-OB-dAK"/>
-                <constraint firstItem="UIy-6S-8fH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="87m-73-QCS"/>
-                <constraint firstAttribute="bottom" secondItem="uv1-fx-wia" secondAttribute="bottom" constant="20" symbolic="YES" id="D5K-dD-9JH"/>
-                <constraint firstItem="uv1-fx-wia" firstAttribute="leading" secondItem="UIy-6S-8fH" secondAttribute="leading" constant="10" id="LVG-E7-4V9"/>
-                <constraint firstItem="uv1-fx-wia" firstAttribute="trailing" secondItem="UIy-6S-8fH" secondAttribute="trailing" constant="-10" id="LXV-o4-Hau"/>
-                <constraint firstItem="uv1-fx-wia" firstAttribute="top" secondItem="Ia5-Ho-Hqy" secondAttribute="bottom" constant="54" id="gyK-nh-Xjo"/>
-                <constraint firstItem="Ia5-Ho-Hqy" firstAttribute="centerX" secondItem="uv1-fx-wia" secondAttribute="centerX" id="nyH-GR-XRg"/>
-                <constraint firstAttribute="bottom" secondItem="UIy-6S-8fH" secondAttribute="bottom" constant="88" id="snX-8J-G37"/>
-                <constraint firstAttribute="trailing" secondItem="UIy-6S-8fH" secondAttribute="trailing" constant="10" id="tsO-BW-Wvh"/>
-                <constraint firstItem="Ia5-Ho-Hqy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="y7p-6P-hH9"/>
+                <constraint firstItem="mys-il-ISF" firstAttribute="leading" secondItem="C7B-5O-7qj" secondAttribute="leading" id="0vs-ow-ZoO"/>
+                <constraint firstAttribute="bottom" secondItem="uv1-fx-wia" secondAttribute="bottom" constant="20" symbolic="YES" id="CXb-Fa-ijL"/>
+                <constraint firstItem="C7B-5O-7qj" firstAttribute="top" secondItem="mys-il-ISF" secondAttribute="bottom" constant="8" symbolic="YES" id="Jbh-V7-P6Y"/>
+                <constraint firstItem="uv1-fx-wia" firstAttribute="leading" secondItem="C7B-5O-7qj" secondAttribute="leading" id="O2a-9m-dzl"/>
+                <constraint firstItem="uv1-fx-wia" firstAttribute="top" secondItem="C7B-5O-7qj" secondAttribute="bottom" constant="8" symbolic="YES" id="QqQ-VU-tPl"/>
+                <constraint firstItem="uv1-fx-wia" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="V3s-vr-bgD"/>
+                <constraint firstAttribute="trailing" secondItem="uv1-fx-wia" secondAttribute="trailing" constant="20" symbolic="YES" id="hDr-R2-zba"/>
+                <constraint firstItem="uv1-fx-wia" firstAttribute="trailing" secondItem="C7B-5O-7qj" secondAttribute="trailing" id="qzK-oO-LRm"/>
             </constraints>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="LampOff.png" width="32" height="32"/>
+        <image name="LampOn.png" width="32" height="32"/>
+    </resources>
 </document>

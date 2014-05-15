@@ -151,6 +151,9 @@
                 self.text = phone;
             }
             [self.parameter setDefaultValue:self.text];
+            if (self.delegate && self.delegate != nil && [self.delegate conformsToProtocol:@protocol(UITextFieldDelegate)] && [self.delegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
+                [self.delegate textFieldShouldEndEditing:self];
+            }
             [[[[[UIApplication sharedApplication] delegate] window]rootViewController] dismissViewControllerAnimated:YES completion:nil];
         }
         else

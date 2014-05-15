@@ -22,6 +22,7 @@
 @property (nonatomic, retain) NSString *firstName;
 @property (nonatomic, retain) NSString *secondName;
 @property (nonatomic, retain) NSString *address;
+@property (nonatomic) BOOL ofertaAccepted;
 
 + (UserProfile *)load:(NSManagedObjectContext*)objectContext;
 

@@ -7,6 +7,7 @@
 //
 
 #import "NSString+Checkers.h"
+#import "NSString+RegEx.h"
 
 @implementation NSString (Checkers)
 
@@ -28,6 +29,16 @@
 - (NSString *)HTMLWithSystemFont
 {
     return [NSString stringWithFormat:@"<font face=\"Gotham, Helvetica Neue, Helvetica, Arial, sans-serif\" size=\"+4\">%@</font>", self];
+}
+
+- (BOOL)isPossibleMoscowGKU
+{
+    return self && self != nil && [self length] == 28 && [self checkFormat:@"^\\d{28}$"];
+}
+
+- (BOOL)isPossibleMGTS
+{
+    return self && self != nil && [self length] == 21 && [self checkFormat:@"^\\d{21}$"];
 }
 
 @end

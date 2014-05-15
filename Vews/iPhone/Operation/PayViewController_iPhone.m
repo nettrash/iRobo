@@ -582,6 +582,11 @@
     return NO;
 }
 
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    [self validate];
+    return YES;
+}
 #pragma mark CardsViewControllerDelegate
 
 - (void)cardSelected:(svcCard *)card controller:(UIViewController *)controller
@@ -653,7 +658,12 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [[_topCurrency.OutPossibleValues componentsSeparatedByString:@";"] count];
+    int cnt = 0;
+    for (NSString *s in [_topCurrency.OutPossibleValues componentsSeparatedByString:@";"])
+    {
+        if (s && s != nil && ![s isEqualToString:@""]) cnt++;
+    }
+    return cnt;
 }
 
 #pragma mark UIPickerViewDelegate

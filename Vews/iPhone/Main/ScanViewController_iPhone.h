@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZXingObjC.h"
 #import "ScanViewControllerDelegate.h"
 
-@interface ScanViewController_iPhone : UIViewController <ZXCaptureDelegate>
+@interface ScanViewController_iPhone : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id<ScanViewControllerDelegate>)delegate;
 

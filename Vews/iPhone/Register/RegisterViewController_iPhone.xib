@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icn-aP-8u4">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999987" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icn-aP-8u4">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,9 +29,12 @@
                     </attributedString>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEz-nH-tYP">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEz-nH-tYP">
                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="wRN-pW-ZGG"/>
+                    </constraints>
                     <state key="normal" title="ПРОДОЛЖИТЬ">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -41,6 +44,15 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="icn-aP-8u4" firstAttribute="trailing" secondItem="wEz-nH-tYP" secondAttribute="trailing" id="1fl-BX-hb1"/>
+                <constraint firstAttribute="trailing" secondItem="wEz-nH-tYP" secondAttribute="trailing" id="Qc1-te-OK5"/>
+                <constraint firstItem="icn-aP-8u4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gH8-es-61f"/>
+                <constraint firstItem="wEz-nH-tYP" firstAttribute="top" secondItem="icn-aP-8u4" secondAttribute="bottom" constant="8" symbolic="YES" id="k8t-b6-4WG"/>
+                <constraint firstItem="wEz-nH-tYP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o43-ov-OK5"/>
+                <constraint firstItem="icn-aP-8u4" firstAttribute="leading" secondItem="wEz-nH-tYP" secondAttribute="leading" id="yle-JF-xnp"/>
+                <constraint firstAttribute="bottom" secondItem="wEz-nH-tYP" secondAttribute="bottom" id="zoX-ap-Abe"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

@@ -642,6 +642,12 @@
     return NO;
 }
 
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    [self validate];
+    return YES;
+}
+
 #pragma mark CardsViewControllerDelegate
 
 - (void)cardSelected:(svcCard *)card controller:(UIViewController *)controller
