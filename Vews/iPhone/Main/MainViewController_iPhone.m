@@ -559,7 +559,6 @@
             {
                 if (c.checkId == resp.checkId)
                 {
-                    [self.navigationController popToRootViewControllerAnimated:NO];
                     PayCheckViewController_iPhone *pp = [[PayCheckViewController_iPhone alloc] initWithNibName:@"PayCheckViewController_iPhone" bundle:nil withCheck:c];
                     pp.delegate = self;
                     [self.navigationController pushViewController:pp animated:YES];
@@ -590,7 +589,6 @@
         {
             if (resp.charity && resp.charity != nil)
             {
-                [self.navigationController popToRootViewControllerAnimated:NO];
                 PayCharityViewController_iPhone *pp = [[PayCharityViewController_iPhone alloc] initWithNibName:@"PayCharityViewController_iPhone" bundle:nil withCharity:resp.charity];
                 pp.delegate = self;
                 [self.navigationController pushViewController:pp animated:YES];
@@ -610,6 +608,7 @@
     {
         AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [app performSelector:@selector(applyScanedURL:) withObject:[NSURL URLWithString:resultText] afterDelay:.1];
+        return;
     }
     if ([result.type isEqualToString:@"org.iso.Code39"])
     {
@@ -640,6 +639,7 @@
             PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:c];
             pp.delegate = self;
             [self.navigationController pushViewController:pp animated:YES];
+            return;
         }
     }
     if ([result.type isEqualToString:@"org.iso.Code128"])
@@ -672,6 +672,7 @@
             PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:c];
             pp.delegate = self;
             [self.navigationController pushViewController:pp animated:YES];
+            return;
         }
     }
 }

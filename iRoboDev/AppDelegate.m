@@ -570,7 +570,7 @@
         if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
         {
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
-            [_revealViewController pushFrontViewController:navigationController animated:YES];
+            [_revealViewController pushFrontViewController:navigationController animated:NO];
         }
         return;
     }
@@ -581,7 +581,7 @@
         if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
         {
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
-            [_revealViewController pushFrontViewController:navigationController animated:YES];
+            [_revealViewController pushFrontViewController:navigationController animated:NO];
         }
         NSString *prm = [_launchURL parameterValue:@"checkId"];
         if (prm && prm != nil)
@@ -604,7 +604,7 @@
         if ( ![frontNavigationController.topViewController isKindOfClass:[CardsViewController_iPhone class]] )
         {
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[CardsViewController_iPhone alloc] initWithNibName:@"CardsViewController_iPhone" bundle:nil showUnauthorizedCards:YES withFormType:CardsViewFormTypeFullView]];
-            [_revealViewController pushFrontViewController:navigationController animated:YES];
+            [_revealViewController pushFrontViewController:navigationController animated:NO];
         }
         return;
     }
@@ -612,17 +612,16 @@
     //Оплата благотворительности
     if ([[[_launchURL host] uppercaseString] isEqualToString:@"CHARITY"]) {
         UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
-        if ( ![frontNavigationController.topViewController isKindOfClass:[CardsViewController_iPhone class]] )
+        if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
         {
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
-            [_revealViewController pushFrontViewController:navigationController animated:YES];
-            
-            NSString *prm = [_launchURL parameterValue:@"CharityID"];
-            if (prm && prm != nil)
-            {
-                [(MainViewController_iPhone *)frontNavigationController.topViewController payCharity:prm];
-                return;
-            }
+            [_revealViewController pushFrontViewController:navigationController animated:NO];
+        }
+        NSString *prm = [_launchURL parameterValue:@"CharityID"];
+        if (prm && prm != nil)
+        {
+            [(MainViewController_iPhone *)frontNavigationController.topViewController payCharity:prm];
+            return;
         }
         return;
     }

@@ -119,7 +119,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tblPayment.view removeFromSuperview];
     self.tblPayment.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 20);
+    if (_keyboardIsShowing) {
+        CGRect frame = self.tblPayment.view.frame;
+        frame.size.height -= [_keyboardHeight floatValue];
+        self.tblPayment.view.frame = frame;
+	}
+    
     [self.view addSubview:self.tblPayment.view];
 
     [[NSNotificationCenter defaultCenter]

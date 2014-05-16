@@ -57,7 +57,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setupScanner];
-    [self startScanning];
+    [self performSelector:@selector(startScanning) withObject:nil afterDelay:.5];
 }
 
 - (NSUInteger)supportedInterfaceOrientations

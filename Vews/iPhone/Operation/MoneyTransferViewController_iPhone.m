@@ -149,6 +149,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _needToShowDoneButton = NO;
     self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
     self.cvcView.delegate = self;
 
@@ -169,7 +170,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tblPrms.view removeFromSuperview];
     self.tblPrms.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 20);
+    if (_keyboardIsShowing) {
+        CGRect frame = self.tblPrms.view.frame;
+        frame.size.height -= [_keyboardHeight floatValue];
+        self.tblPrms.view.frame = frame;
+	}
+
     [self.view addSubview:self.tblPrms.view];
 
     [[NSNotificationCenter defaultCenter]
@@ -530,7 +538,7 @@
             break;
         }
         case 2: {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"MTAdvItemCell"];
+            cell = nil;//[tableView dequeueReusableCellWithIdentifier:@"MTAdvItemCell"];
             BOOL dequeued = YES;
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"MTAdvItemCell"];

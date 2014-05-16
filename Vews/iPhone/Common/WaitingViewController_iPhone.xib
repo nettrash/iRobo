@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -23,51 +23,81 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999964" contentMode="scaleAspectFill" fixedFrame="YES" image="ROBOKASSA.png" translatesAutoresizingMaskIntoConstraints="NO" id="w6U-Th-zMx">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999964" contentMode="scaleAspectFill" image="ROBOKASSA.png" translatesAutoresizingMaskIntoConstraints="NO" id="w6U-Th-zMx">
                     <rect key="frame" x="56" y="191" width="209" height="185"/>
                     <autoresizingMask key="autoresizingMask"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="185" id="l9v-UF-nAz"/>
+                    </constraints>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmg-eM-yR3">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmg-eM-yR3">
                     <rect key="frame" x="61" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="hAN-PV-JX8">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="hAN-PV-JX8">
                     <rect key="frame" x="186" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="NtY-ku-edS">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="NtY-ku-edS">
                     <rect key="frame" x="86" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="N8v-b4-3wp">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="N8v-b4-3wp">
                     <rect key="frame" x="161" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="dd5-uB-Vp3">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="dd5-uB-Vp3">
                     <rect key="frame" x="236" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="OJQ-5A-HUV">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="OJQ-5A-HUV">
                     <rect key="frame" x="211" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lj4-rB-j1T">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Orange.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lj4-rB-j1T">
                     <rect key="frame" x="111" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="MfW-DH-fdy">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Loading_Round_Red.png" translatesAutoresizingMaskIntoConstraints="NO" id="MfW-DH-fdy">
                     <rect key="frame" x="136" y="352" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1r-7a-cnk">
-                    <rect key="frame" x="20" y="384" width="280" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="B1r-7a-cnk">
+                    <rect key="frame" x="20" y="384" width="280" height="58"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="IhW-32-Uy2"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="w6U-Th-zMx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="4mY-4e-meA"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="w6U-Th-zMx" secondAttribute="bottom" constant="8" symbolic="YES" id="9Td-wu-B8g"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="hAN-PV-JX8" secondAttribute="bottom" constant="8" symbolic="YES" id="Afv-94-iVv"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="N8v-b4-3wp" secondAttribute="bottom" constant="8" symbolic="YES" id="D3E-f2-Fbz"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="dd5-uB-Vp3" secondAttribute="bottom" constant="8" symbolic="YES" id="FO5-yV-YlH"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="OJQ-5A-HUV" secondAttribute="bottom" constant="8" symbolic="YES" id="M3S-cC-Jbh"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="NtY-ku-edS" secondAttribute="bottom" constant="8" symbolic="YES" id="Mui-9J-eqR"/>
+                <constraint firstItem="dmg-eM-yR3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="Omv-qZ-j3Q"/>
+                <constraint firstItem="N8v-b4-3wp" firstAttribute="leading" secondItem="MfW-DH-fdy" secondAttribute="trailing" constant="1" id="XCm-ka-CfN"/>
+                <constraint firstItem="NtY-ku-edS" firstAttribute="leading" secondItem="dmg-eM-yR3" secondAttribute="trailing" constant="1" id="YdB-ET-vNh"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="centerX" secondItem="w6U-Th-zMx" secondAttribute="centerX" id="YzM-PO-qUK"/>
+                <constraint firstItem="OJQ-5A-HUV" firstAttribute="leading" secondItem="hAN-PV-JX8" secondAttribute="trailing" constant="1" id="aoY-Iz-10d"/>
+                <constraint firstItem="w6U-Th-zMx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="azP-Vd-xJh"/>
+                <constraint firstItem="MfW-DH-fdy" firstAttribute="leading" secondItem="Lj4-rB-j1T" secondAttribute="trailing" constant="1" id="cLr-H5-7Sc"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="MfW-DH-fdy" secondAttribute="bottom" constant="8" symbolic="YES" id="gWt-u3-6xL"/>
+                <constraint firstItem="dd5-uB-Vp3" firstAttribute="leading" secondItem="OJQ-5A-HUV" secondAttribute="trailing" constant="1" id="hQQ-ZI-Za5"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="i78-dW-VN2"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="dmg-eM-yR3" secondAttribute="bottom" constant="8" symbolic="YES" id="pHQ-JS-kRp"/>
+                <constraint firstItem="hAN-PV-JX8" firstAttribute="leading" secondItem="N8v-b4-3wp" secondAttribute="trailing" constant="1" id="sb3-BI-sqP"/>
+                <constraint firstItem="B1r-7a-cnk" firstAttribute="top" secondItem="Lj4-rB-j1T" secondAttribute="bottom" constant="8" symbolic="YES" id="scS-pj-RH3"/>
+                <constraint firstItem="w6U-Th-zMx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="191" id="tQd-dM-zbd"/>
+                <constraint firstItem="Lj4-rB-j1T" firstAttribute="leading" secondItem="NtY-ku-edS" secondAttribute="trailing" constant="1" id="z3x-hy-eLy"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

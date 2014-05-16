@@ -91,7 +91,15 @@
 {
     [super viewWillAppear:animated];
     
+    [self.tblCheck.view removeFromSuperview];
+    
     self.tblCheck.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 20);
+    if (_keyboardIsShowing) {
+        CGRect frame = self.tblCheck.view.frame;
+        frame.size.height -= [_keyboardHeight floatValue];
+        self.tblCheck.view.frame = frame;
+	}
+    
     [self.view addSubview:self.tblCheck.view];
 
     [[NSNotificationCenter defaultCenter]
