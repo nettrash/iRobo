@@ -12,6 +12,7 @@
 
 @synthesize blurWhenBackground = _blurWhenBackground;
 @synthesize passwordTimeout = _passwordTimeout;
+@synthesize useSound = _useSound;
 
 - (void)loadSettings
 {
@@ -20,7 +21,7 @@
     {
         self.blurWhenBackground = [ud boolForKey:@"blur_preference"];
         self.passwordTimeout = [ud integerForKey:@"timeout_preference"];
-    
+        self.useSound = [ud boolForKey:@"sound_preference"];
         if (self.passwordTimeout == 0)
             self.passwordTimeout = 1;
     }

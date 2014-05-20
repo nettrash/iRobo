@@ -39,6 +39,7 @@
         _summa = summ;
         _card_Id = card_Id;
         _backImageName = @"Comission.png";
+        _isInc = NO;
     }
     return self;
 }
@@ -51,6 +52,33 @@
         _summa = summ;
         _card_Id = card_Id;
         _backImageName = backImageName;
+        _isInc = NO;
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil currency:(NSString*)curr IncSumma:(NSDecimalNumber *)summ cardId:(int)card_Id
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _currency = curr;
+        _summa = summ;
+        _card_Id = card_Id;
+        _backImageName = @"Comission.png";
+        _isInc = YES;
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil currency:(NSString*)curr IncSumma:(NSDecimalNumber *)summ cardId:(int)card_Id andBackground:(NSString *)backImageName
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _currency = curr;
+        _summa = summ;
+        _card_Id = card_Id;
+        _backImageName = backImageName;
+        _isInc = YES;
     }
     return self;
 }
@@ -81,7 +109,7 @@
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     svcWSMobileBANK *svc = [svcWSMobileBANK service];
     svc.logging = YES;
-    [svc CalcSumWithCard:self action:@selector(calculateComissionHandler:) UNIQUE:[app.userProfile uid] currency:_currency IsInc:NO summ:_summa cardId:_card_Id];
+    [svc CalcSumWithCard:self action:@selector(calculateComissionHandler:) UNIQUE:[app.userProfile uid] currency:_currency IsInc:_isInc summ:_summa cardId:_card_Id];
 }
 
 - (void)calculateComissionHandler:(id)response

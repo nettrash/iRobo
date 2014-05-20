@@ -14,6 +14,7 @@
 	int _Count;
 	NSString* _Parameters;
     NSString* _OutPossibleValues;
+    BOOL _zeroComission;
 	
 }
 		
@@ -22,6 +23,7 @@
 	@property int Count;
 	@property (retain, nonatomic) NSString* Parameters;
     @property (retain, nonatomic) NSString* OutPossibleValues;
+    @property (nonatomic) BOOL zeroComission;
 
 	+ (svcTopCurrency*) createWithNode: (CXMLNode*) node;
 	- (id) initWithNode: (CXMLNode*) node;

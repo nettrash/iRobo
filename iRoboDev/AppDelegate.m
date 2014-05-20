@@ -271,6 +271,7 @@
 
 - (void)playSound:(NSURL *)audioURL
 {
+    if (!_settings.useSound) return;
     if (self.audioPlayer && self.audioPlayer.isPlaying)
     {
         [self.audioPlayer stop];
@@ -282,6 +283,7 @@
 
 - (void)resumeSound
 {
+    if (!_settings.useSound) return;
     if (self.audioPlayer && !self.audioPlayer.isPlaying)
     {
         [self.audioPlayer play];
@@ -290,6 +292,7 @@
 
 - (void)stopSound
 {
+    if (!_settings.useSound) return;
     if (self.audioPlayer && self.audioPlayer.isPlaying)
     {
         [self.audioPlayer stop];
@@ -298,6 +301,7 @@
 
 - (void)personVoiceForGroup:(NSString *)group andAction:(NSString *)action
 {
+    if (!_settings.useSound) return;
     @try {
         NSDictionary *dGroup = (NSDictionary *)[_audioProfile objectForKey:group];
         if (dGroup && dGroup != nil)
@@ -321,6 +325,7 @@
 
 - (void)playProfileSound
 {
+    if (!_settings.useSound) return;
     NSString *phoneKey = self.userProfile.phone;
     if ([phoneKey hasPrefix:@"+"])
     {

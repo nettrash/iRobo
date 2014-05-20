@@ -12,6 +12,7 @@
 
 @property (nonatomic) BOOL blurWhenBackground;
 @property (nonatomic) NSInteger passwordTimeout;
+@property (nonatomic) BOOL useSound;
 
 - (void)loadSettings;
 

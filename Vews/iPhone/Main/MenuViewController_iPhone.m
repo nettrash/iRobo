@@ -68,7 +68,7 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MenuItemCall"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     }
 
     switch (indexPath.section) {
@@ -208,6 +208,7 @@
             break;
     }
     [revealController revealToggle:self];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

@@ -416,6 +416,14 @@
     [_comissionViewController performSelector:@selector(addToViewController:) withObject:self.navigationController.topViewController afterDelay:.1];
 }
 
+- (void)showOceanComission
+{
+    [self hideKeyboard];
+    _comissionViewController = [[ComissionViewController_iPhone alloc] initWithNibName:@"ComissionViewController_iPhone" bundle:nil currency:_currencyLabel OutSumma:_summa cardId:[_card card_Id] andBackground:@"OCEANComission"];
+    _comissionViewController.delegate = self;
+    [_comissionViewController performSelector:@selector(addToViewController:) withObject:self.navigationController.topViewController afterDelay:.1];
+}
+
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -612,7 +620,10 @@
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];
         _cvc = cvcValue;
         if ([_card card_IsOCEAN])
-            [self startOperation:cvcValue];
+            if (_topCurrency.zeroComission)
+                [self startOperation:cvcValue];
+            else
+                [self showOceanComission];
         else
             [self showComission];
     }

@@ -15,12 +15,15 @@
     NSDecimalNumber *_summa;
     int _card_Id;
     NSString *_backImageName;
+    BOOL _isInc;
 }
 
 @property (nonatomic, retain) id<ComissionAcceptDelegate> delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil currency:(NSString*)curr OutSumma:(NSDecimalNumber *)summ cardId:(int)card_Id;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil currency:(NSString*)curr OutSumma:(NSDecimalNumber *)summ cardId:(int)card_Id andBackground:(NSString *)backImageName;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil currency:(NSString*)curr IncSumma:(NSDecimalNumber *)summ cardId:(int)card_Id;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil currency:(NSString*)curr IncSumma:(NSDecimalNumber *)summ cardId:(int)card_Id andBackground:(NSString *)backImageName;
 - (void)addToViewController:(UIViewController *)controller;
 - (void)removeFromViewController;
 

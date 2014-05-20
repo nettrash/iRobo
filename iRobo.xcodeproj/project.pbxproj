@@ -332,6 +332,8 @@
 		E5B6F68A1923922300EAA3C4 /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B6F6891923922300EAA3C4 /* NSURL+Parameters.m */; };
 		E5B6F68F19239CE300EAA3C4 /* ScanViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B6F68D19239CE300EAA3C4 /* ScanViewController_iPhone.m */; };
 		E5B6F69019239CE300EAA3C4 /* ScanViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5B6F68E19239CE300EAA3C4 /* ScanViewController_iPhone.xib */; };
+		E5D96059192A7B44008AD81B /* OCEANComission.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D96057192A7B44008AD81B /* OCEANComission.png */; };
+		E5D9605A192A7B44008AD81B /* OCEANComission@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D96058192A7B44008AD81B /* OCEANComission@2x.png */; };
 		E5EC350318F602670089A43F /* TerminalAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EC350218F602670089A43F /* TerminalAnnotation.m */; };
 		E5EE64F218FD77420013819A /* NSNumber+Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EE64F118FD77420013819A /* NSNumber+Currency.m */; };
 		E5EE64F718FD85A30013819A /* NSDate+MonthNames.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EE64F618FD85A30013819A /* NSDate+MonthNames.m */; };
@@ -811,6 +813,8 @@
 		E5B6F68D19239CE300EAA3C4 /* ScanViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScanViewController_iPhone.m; path = Vews/iPhone/Main/ScanViewController_iPhone.m; sourceTree = "<group>"; };
 		E5B6F68E19239CE300EAA3C4 /* ScanViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScanViewController_iPhone.xib; path = Vews/iPhone/Main/ScanViewController_iPhone.xib; sourceTree = "<group>"; };
 		E5B6F6921923A62700EAA3C4 /* ScanViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ScanViewControllerDelegate.h; path = Common/Protocols/ScanViewControllerDelegate.h; sourceTree = "<group>"; };
+		E5D96057192A7B44008AD81B /* OCEANComission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OCEANComission.png; path = Content/iPhone/OCEANComission.png; sourceTree = "<group>"; };
+		E5D96058192A7B44008AD81B /* OCEANComission@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "OCEANComission@2x.png"; path = "Content/iPhone/OCEANComission@2x.png"; sourceTree = "<group>"; };
 		E5D9EE0518E33ED700B60781 /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfile.h; path = Common/UserProfile.h; sourceTree = "<group>"; };
 		E5D9EE0618E33ED700B60781 /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfile.m; path = Common/UserProfile.m; sourceTree = "<group>"; };
 		E5D9EE1218E39C3F00B60781 /* RegisterViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController_iPhone.h; path = Vews/iPhone/Register/RegisterViewController_iPhone.h; sourceTree = "<group>"; };
@@ -1172,6 +1176,8 @@
 		E50E657718E2D0F900D9883F /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				E5D96057192A7B44008AD81B /* OCEANComission.png */,
+				E5D96058192A7B44008AD81B /* OCEANComission@2x.png */,
 				E5B6F67C1923898900EAA3C4 /* iPhoneAppIcon.png */,
 				E5B6F67D1923898900EAA3C4 /* iPhoneSettingsIcon.png */,
 				E5B6F67E1923898900EAA3C4 /* iPhoneSplashPortrait.png */,
@@ -2095,6 +2101,7 @@
 				E51F44BA1925428300A9D6EB /* PayCharityViewController_iPhone.xib in Resources */,
 				E556D88F19015A8B002BD048 /* CardAuthorizeViewController_iPhone.xib in Resources */,
 				E5448B881909B8360025C9E7 /* nettrash.m4a in Resources */,
+				E5D9605A192A7B44008AD81B /* OCEANComission@2x.png in Resources */,
 				E599ED0618F5827B0019A74E /* Settings.png in Resources */,
 				E51F44B51925377700A9D6EB /* MainScanIcon@2x.png in Resources */,
 				E5B6F5F419180F2200EAA3C4 /* SelectedCardCellView_iPhone.xib in Resources */,
@@ -2171,6 +2178,7 @@
 				E5B6F6131918CC4000EAA3C4 /* CardRefreshBalanceActivityMiniIcon.png in Resources */,
 				E599ECFA18F580270019A74E /* History.png in Resources */,
 				E5B6F64D191B984000EAA3C4 /* azwelcome10.m4a in Resources */,
+				E5D96059192A7B44008AD81B /* OCEANComission.png in Resources */,
 				E599E9CE18E7686A0019A74E /* EnterEMailViewController_iPhone.xib in Resources */,
 				E599E99518E760980019A74E /* Images.xcassets in Resources */,
 				E599ED4E18F5F7600019A74E /* WWW.png in Resources */,
@@ -2529,7 +2537,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EEB90A33-4B55-4441-A826-033A90100CDE";
+				PROVISIONING_PROFILE = "1C9F8117-FAC1-47BC-BC80-0B116BB9F9EE";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2564,7 +2572,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EEB90A33-4B55-4441-A826-033A90100CDE";
+				PROVISIONING_PROFILE = "1C9F8117-FAC1-47BC-BC80-0B116BB9F9EE";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

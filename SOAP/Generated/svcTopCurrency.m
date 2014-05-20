@@ -10,6 +10,7 @@
     @synthesize Name = _Name;
 	@synthesize Count = _Count;
 	@synthesize Parameters = _Parameters;
+    @synthesize zeroComission = _zeroComission;
 
 	- (id) init
 	{
@@ -37,6 +38,7 @@
 			self.Count = [[Soap getNodeValue: node withName: @"Count"] intValue];
 			self.Parameters = [Soap getNodeValue: node withName: @"Parameters"];
 			self.OutPossibleValues = [Soap getNodeValue: node withName: @"OutPossibleValues"];
+			self.zeroComission = [[Soap getNodeValue: node withName: @"zeroComission"] boolValue];
 		}
 		return self;
 	}
@@ -65,6 +67,7 @@
 		[s appendFormat: @"<Count>%@</Count>", [NSString stringWithFormat: @"%i", self.Count]];
 		if (self.Parameters != nil) [s appendFormat: @"<Parameters>%@</Parameters>", [[self.Parameters stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		if (self.OutPossibleValues != nil) [s appendFormat: @"<OutPossibleValues>%@</OutPossibleValues>", [[self.OutPossibleValues stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
+		[s appendFormat: @"<zeroComission>%@</zeroComission>", (self.zeroComission)?@"true":@"false"];
 
 		return s;
 	}
