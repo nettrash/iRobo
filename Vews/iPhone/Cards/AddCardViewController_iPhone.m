@@ -152,15 +152,18 @@
 
 - (void)registerCard
 {
+    NSString *cType = [self.cardNumber hasPrefix:@"4"] ? @"VISA" : @"MASTERCARD";
     NSString *cName = self.cardName;
     if (!cName || cName == nil || [cName length] < 1 || [cName isEqualToString:@""])
     {
-        cName = self.cardHolder;
+        cName = [NSString stringWithFormat:@"%@ *%@", cType, [self.cardNumber substringWithRange:NSMakeRange(self.cardNumber.length - 4, 4)]];
     }
-    NSString *cType = [self.cardNumber hasPrefix:@"4"] ? @"VISA" : @"MASTERCARD";
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     svcWSMobileBANK *svc = [svcWSMobileBANK service];
     svc.logging = YES;
+    NSString *ccHolder = self.cardHolder;
+    if (!ccHolder || ccHolder != nil || [ccHolder isEqualToString:@""])
+        ccHolder = @"CARD HOLDER";
     [svc RegisterCard:self action:@selector(registerCardHandler:) UNIQUE:[app.userProfile uid] cardName:cName cardNumber:self.cardNumber cardType:cType cardYear:(int)self.cardExpiryYear cardMonth:(int)self.cardExpiryMonth cardHolder:self.cardHolder];
 }
 
@@ -272,19 +275,19 @@
 - (void)showCardExpiry
 {
     if (self.cardExpiryMonth > 0 && self.cardExpiryYear == 0) {
-        _tfCardExpiry.text = [NSString stringWithFormat:@"%02i/", self.cardExpiryMonth];
+        _tfCardExpiry.text = [NSString stringWithFormat:@"%02li/", (long)self.cardExpiryMonth];
     }
     if (self.cardExpiryMonth == 0 && self.cardExpiryYear > 0) {
-        _tfCardExpiry.text = [NSString stringWithFormat:@"/%02i", self.cardExpiryYear];
+        _tfCardExpiry.text = [NSString stringWithFormat:@"/%02li", (long)self.cardExpiryYear];
     }
     if (self.cardExpiryMonth > 0 && self.cardExpiryYear > 0) {
-        _tfCardExpiry.text = [NSString stringWithFormat:@"%02i/%i", self.cardExpiryMonth, self.cardExpiryYear];
+        _tfCardExpiry.text = [NSString stringWithFormat:@"%02li/%li", (long)self.cardExpiryMonth, (long)self.cardExpiryYear];
     }
 }
 
 - (BOOL)checkExpire
 {
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
     NSInteger m = [components month];
     NSInteger y = [components year];
     return ((self.cardExpiryYear > y) && self.cardExpiryMonth > 0 && self.cardExpiryMonth < 13) || ((self.cardExpiryYear == y) && self.cardExpiryMonth < 13 && self.cardExpiryMonth >= m);
@@ -300,9 +303,9 @@
         BOOL vExp = [self checkExpire];
         
         /*Проверяем владельца карты*/
-        BOOL vCardHolder = self.cardHolder ? [self.cardHolder length] > 2 && [self.cardHolder rangeOfString:@" "].location != NSNotFound && [self checkFormat: self.cardHolder withFormat:@"^[A-Z][A-Z ]{1,24}[A-Z]$"] : NO;
+        //BOOL vCardHolder = self.cardHolder ? [self.cardHolder length] > 2 && [self.cardHolder rangeOfString:@" "].location != NSNotFound && [self checkFormat: self.cardHolder withFormat:@"^[A-Z][A-Z ]{1,24}[A-Z]$"] : NO;
         
-        self.navigationItem.rightBarButtonItem.enabled = vCardNumber && vExp && vCardHolder;
+        self.navigationItem.rightBarButtonItem.enabled = vCardNumber && vExp;// && vCardHolder;
     }
     @catch (NSException *exception) {
         NSLog(@"%@", exception.description);
@@ -474,7 +477,7 @@
             }
         }
         case 1: {
-            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
             NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
             return [NSString stringWithFormat:@"%i", [components year] + row];
         }
@@ -488,14 +491,14 @@
     switch (component) {
         case 0: {
             self.cardExpiryMonth = row + 1;
-            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
             NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
             self.cardExpiryYear = [components year] + [pickerView selectedRowInComponent:1];
             [self showCardExpiry];
             break;
         }
         case 1: {
-            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
             NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
             self.cardExpiryYear = [components year] + row;
             self.cardExpiryMonth = [pickerView selectedRowInComponent:0] + 1;

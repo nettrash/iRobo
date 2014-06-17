@@ -11,6 +11,7 @@
 #import "svcWSMobileBANK.h"
 #import "svcWSResponse.h"
 #import "NSString+Checkers.h"
+#import "AdditionalParametersViewController_iPhone.h"
 
 @interface OperationStateViewController_iPhone ()
 
@@ -58,6 +59,29 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)showAdditionalParameters:(NSArray *)parameters
+{
+    AdditionalParametersViewController_iPhone *pp = [[AdditionalParametersViewController_iPhone alloc] initWithNibName:@"AdditionalParametersViewController_iPhone" bundle:nil withParameters:parameters];
+    pp.delegate = self;
+    [self.navigationController pushViewController:pp animated:YES];
+}
+
+- (void)applyParameters:(NSArray *)parameters
+{
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    svcWSMobileBANK *svc = [svcWSMobileBANK service];
+    svc.logging = YES;
+    
+    NSMutableArray *a = [NSMutableArray arrayWithCapacity:0];
+    for (svcParameter *p in parameters)
+    {
+        [a addObject:[NSString stringWithFormat:@"%@:%@", p.Name, p.DefaultValue]];
+    }
+    NSString *prms = [a componentsJoinedByString:@";"];
+    
+    [svc ApproveParameters:self action:@selector(checkOperationHandle:) UNIQUE:[app.userProfile uid] OpKey:_opKey parameters:prms];
+}
+
 - (void)checkOperation:(id)sender
 {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -96,6 +120,11 @@
                 [self.view addSubview:wv3D];
                 [self.view bringSubviewToFront:wv3D];
             }
+            if (resp.parameters && resp.parameters != nil && [resp.parameters count] > 0)
+            {
+                [self showAdditionalParameters:resp.parameters];
+                return;
+            }
             NSString *pc = self.lblComments.text;
             self.lblComments.text = [resp.operationState.Comments componentsJoinedByString:@"\n"];
             if (![pc isEqualToString:self.lblComments.text]) {
@@ -125,6 +154,19 @@
         webView.hidden = YES;
         [webView loadHTMLString:@"" baseURL:nil];
     }
+}
+
+#pragma mark AdditionalParametersDelegate
+
+- (void)parametersEntered:(UIViewController *)controller parameters:(NSArray *)parameters
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    [self applyParameters:parameters];
+}
+
+- (void)userCancelAction:(UIViewController *)controller
+{
+    [self.delegate operationIsComplete:self success:NO];
 }
 
 @end

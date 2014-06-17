@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "OperationStateDelegate.h"
+#import "AdditionalParametersDelegate.h"
 
-@interface OperationStateViewController_iPhone : UIViewController <UIWebViewDelegate>
+@interface OperationStateViewController_iPhone : UIViewController <UIWebViewDelegate, AdditionalParametersDelegate>
 {
     NSString *_opKey;
     BOOL _3DShowed;

@@ -160,7 +160,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.tblCatalog.refreshControl.isRefreshing) return 1;
+    if (_isRefreshing) return 1;
     if (_catalog && _catalog != nil && [_catalog count] > 0)
         return [_catalog count];
     else
@@ -232,7 +232,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate searchResult:self withCurrency:(svcTopCurrency *)[_catalog objectAtIndex:indexPath.row]];
+    if (!_isRefreshing && _catalog && _catalog != nil && [_catalog count] > 0) {
+        [self.delegate searchResult:self withCurrency:(svcTopCurrency *)[_catalog objectAtIndex:indexPath.row]];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath

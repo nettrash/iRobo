@@ -289,3 +289,6 @@
 "CHARITY_InActive" = "В данный это доброе дело испольнить нельзя :(";
 "CHARITY_ActiveLabel" = "Состояние доброго дела";
 "CHARITY_NoLinkToUrl" = "Нет расширенной информации в интернете";
+"AdditionalParameters_Title" = "УТОЧНЕНИЕ";
+"NoCard_NeedToAddCard_Message" = "Добавь карту и я смогу с ней работать! Помни что я работаю только с подтвержденными картами!";
+"NoCard_NeedToAddCard_Title" = "НЕТ КАРТ";

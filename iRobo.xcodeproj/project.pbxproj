@@ -334,6 +334,10 @@
 		E5B6F69019239CE300EAA3C4 /* ScanViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5B6F68E19239CE300EAA3C4 /* ScanViewController_iPhone.xib */; };
 		E5D96059192A7B44008AD81B /* OCEANComission.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D96057192A7B44008AD81B /* OCEANComission.png */; };
 		E5D9605A192A7B44008AD81B /* OCEANComission@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D96058192A7B44008AD81B /* OCEANComission@2x.png */; };
+		E5D96060192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9605E192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.m */; };
+		E5D96061192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5D9605F192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib */; };
+		E5EAAE771939141E00B6B832 /* MapPinTerminal.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EAAE751939141E00B6B832 /* MapPinTerminal.png */; };
+		E5EAAE781939141E00B6B832 /* MapPinTerminal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EAAE761939141E00B6B832 /* MapPinTerminal@2x.png */; };
 		E5EC350318F602670089A43F /* TerminalAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EC350218F602670089A43F /* TerminalAnnotation.m */; };
 		E5EE64F218FD77420013819A /* NSNumber+Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EE64F118FD77420013819A /* NSNumber+Currency.m */; };
 		E5EE64F718FD85A30013819A /* NSDate+MonthNames.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EE64F618FD85A30013819A /* NSDate+MonthNames.m */; };
@@ -815,6 +819,10 @@
 		E5B6F6921923A62700EAA3C4 /* ScanViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ScanViewControllerDelegate.h; path = Common/Protocols/ScanViewControllerDelegate.h; sourceTree = "<group>"; };
 		E5D96057192A7B44008AD81B /* OCEANComission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OCEANComission.png; path = Content/iPhone/OCEANComission.png; sourceTree = "<group>"; };
 		E5D96058192A7B44008AD81B /* OCEANComission@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "OCEANComission@2x.png"; path = "Content/iPhone/OCEANComission@2x.png"; sourceTree = "<group>"; };
+		E5D9605D192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdditionalParametersViewController_iPhone.h; path = Vews/iPhone/Operation/AdditionalParametersViewController_iPhone.h; sourceTree = "<group>"; };
+		E5D9605E192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdditionalParametersViewController_iPhone.m; path = Vews/iPhone/Operation/AdditionalParametersViewController_iPhone.m; sourceTree = "<group>"; };
+		E5D9605F192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AdditionalParametersViewController_iPhone.xib; path = Vews/iPhone/Operation/AdditionalParametersViewController_iPhone.xib; sourceTree = "<group>"; };
+		E5D96062192BA861008AD81B /* AdditionalParametersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdditionalParametersDelegate.h; path = Common/Protocols/AdditionalParametersDelegate.h; sourceTree = "<group>"; };
 		E5D9EE0518E33ED700B60781 /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfile.h; path = Common/UserProfile.h; sourceTree = "<group>"; };
 		E5D9EE0618E33ED700B60781 /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfile.m; path = Common/UserProfile.m; sourceTree = "<group>"; };
 		E5D9EE1218E39C3F00B60781 /* RegisterViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController_iPhone.h; path = Vews/iPhone/Register/RegisterViewController_iPhone.h; sourceTree = "<group>"; };
@@ -859,6 +867,8 @@
 		E5D9EE9818E602B000B60781 /* Loading_Round_Orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Loading_Round_Orange@2x.png"; path = "Content/Common/Loading_Round_Orange@2x.png"; sourceTree = "<group>"; };
 		E5D9EE9918E602B000B60781 /* Loading_Round_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Loading_Round_Red.png; path = Content/Common/Loading_Round_Red.png; sourceTree = "<group>"; };
 		E5D9EE9A18E602B000B60781 /* Loading_Round_Red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Loading_Round_Red@2x.png"; path = "Content/Common/Loading_Round_Red@2x.png"; sourceTree = "<group>"; };
+		E5EAAE751939141E00B6B832 /* MapPinTerminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapPinTerminal.png; sourceTree = "<group>"; };
+		E5EAAE761939141E00B6B832 /* MapPinTerminal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapPinTerminal@2x.png"; sourceTree = "<group>"; };
 		E5EC350118F602670089A43F /* TerminalAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerminalAnnotation.h; path = Vews/iPhone/Terminals/TerminalAnnotation.h; sourceTree = "<group>"; };
 		E5EC350218F602670089A43F /* TerminalAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerminalAnnotation.m; path = Vews/iPhone/Terminals/TerminalAnnotation.m; sourceTree = "<group>"; };
 		E5EE64F018FD77420013819A /* NSNumber+Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Currency.h"; path = "Common/NSNumber+Currency.h"; sourceTree = "<group>"; };
@@ -1214,6 +1224,7 @@
 		E50E657918E2D10A00D9883F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E5EAAE741939141E00B6B832 /* Map */,
 				E51F44AA1925301600A9D6EB /* LampOff.png */,
 				E51F44AB1925301600A9D6EB /* LampOff@2x.png */,
 				E51F44AC1925301600A9D6EB /* LampOn.png */,
@@ -1337,6 +1348,7 @@
 				E5B6F66A191BDB2600EAA3C4 /* SearchCatalogDelegate.h */,
 				E5B6F67B19237E1F00EAA3C4 /* CheckPasswordDelegate.h */,
 				E5B6F6921923A62700EAA3C4 /* ScanViewControllerDelegate.h */,
+				E5D96062192BA861008AD81B /* AdditionalParametersDelegate.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1368,6 +1380,9 @@
 				E51F44B61925428300A9D6EB /* PayCharityViewController_iPhone.h */,
 				E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */,
 				E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */,
+				E5D9605D192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.h */,
+				E5D9605E192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.m */,
+				E5D9605F192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib */,
 			);
 			name = Operation;
 			sourceTree = "<group>";
@@ -1862,6 +1877,16 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		E5EAAE741939141E00B6B832 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E5EAAE751939141E00B6B832 /* MapPinTerminal.png */,
+				E5EAAE761939141E00B6B832 /* MapPinTerminal@2x.png */,
+			);
+			name = Map;
+			path = Content/Common/Map;
+			sourceTree = "<group>";
+		};
 		E5EE651D19003E150013819A /* Activities */ = {
 			isa = PBXGroup;
 			children = (
@@ -2045,6 +2070,7 @@
 				E599ECFE18F581370019A74E /* Stat.png in Resources */,
 				E5B6F623191A631A00EAA3C4 /* QiwiOutOceanR@2x.png in Resources */,
 				E599EA2118E76BF50019A74E /* Localizable.strings in Resources */,
+				E5EAAE771939141E00B6B832 /* MapPinTerminal.png in Resources */,
 				E5448B8E1909BC490025C9E7 /* Oferta.m4a in Resources */,
 				E5B6F6851923898900EAA3C4 /* iPhoneSplashPortrait@2x.png in Resources */,
 				E5B6F597190AAC5500EAA3C4 /* azmum.m4a in Resources */,
@@ -2089,6 +2115,7 @@
 				E5B6F64A191B984000EAA3C4 /* azwelcome7.m4a in Resources */,
 				E5B6F62A191A67C100EAA3C4 /* QiwiSMegafon.png in Resources */,
 				E5B6F5DC1911121F00EAA3C4 /* MoneyTransferViewController_iPhone.xib in Resources */,
+				E5D96061192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib in Resources */,
 				E599ED1218F5882F0019A74E /* Terminals.png in Resources */,
 				E5B6F652191B984000EAA3C4 /* azwelcome15.m4a in Resources */,
 				E5EE653119004B630013819A /* CardRequestSupportActivityIcon@2x.png in Resources */,
@@ -2180,6 +2207,7 @@
 				E5B6F64D191B984000EAA3C4 /* azwelcome10.m4a in Resources */,
 				E5D96059192A7B44008AD81B /* OCEANComission.png in Resources */,
 				E599E9CE18E7686A0019A74E /* EnterEMailViewController_iPhone.xib in Resources */,
+				E5EAAE781939141E00B6B832 /* MapPinTerminal@2x.png in Resources */,
 				E599E99518E760980019A74E /* Images.xcassets in Resources */,
 				E599ED4E18F5F7600019A74E /* WWW.png in Resources */,
 				E5B6F5BD190E780500EAA3C4 /* MainTransferIcon.png in Resources */,
@@ -2311,6 +2339,7 @@
 				E599ED2218F5A6470019A74E /* TerminalsViewController_iPhone.m in Sources */,
 				E599EA1118E769950019A74E /* CXMLDocument.m in Sources */,
 				E5B6F5DB1911121F00EAA3C4 /* MoneyTransferViewController_iPhone.m in Sources */,
+				E5D96060192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.m in Sources */,
 				E599ED3A18F5A86D0019A74E /* ProfileViewController_iPhone.m in Sources */,
 				E556D8B8190674EF002BD048 /* ActivityAction.m in Sources */,
 				E599EA2818EB72820019A74E /* UITextFieldWithDelete.m in Sources */,
@@ -2526,7 +2555,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "iRoboDev/iRoboDev-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					../card.io,
 					/Users/nettrash/Develop/iOS/card.io,
@@ -2537,8 +2566,8 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1C9F8117-FAC1-47BC-BC80-0B116BB9F9EE";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "B3E21E01-E26A-419F-B211-F97A8FB930BA";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2561,7 +2590,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "iRoboDev/iRoboDev-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					../card.io,
 					/Users/nettrash/Develop/iOS/card.io,
@@ -2572,8 +2601,8 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1C9F8117-FAC1-47BC-BC80-0B116BB9F9EE";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "B3E21E01-E26A-419F-B211-F97A8FB930BA";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

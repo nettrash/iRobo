@@ -223,6 +223,11 @@
 	- (SoapRequest*) StartOperation: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE cardId: (int) cardId summa: (NSDecimalNumber*) summa currency: (NSString*) currency parameters: (NSString*) parameters CVC: (NSString*) CVC;
 	- (SoapRequest*) StartOperation: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId summa: (NSDecimalNumber*) summa currency: (NSString*) currency parameters: (NSString*) parameters CVC: (NSString*) CVC;
 
+    // Returns svcWSResponse*
+    /* Применение страничных параметров */
+    - (SoapRequest*) ApproveParameters: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey parameters: (NSString*) parameters;
+    - (SoapRequest*) ApproveParameters: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey parameters: (NSString*) parameters;
+
 	// Returns svcWSResponse*
 	/* Рассчитать сумму для операции (Если IsInc истина, то на выходе выходная сумма, иначе - входная сумма) */
 	- (SoapRequest*) CalcSum: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency IsInc: (BOOL) IsInc summ: (NSDecimalNumber*) summ;

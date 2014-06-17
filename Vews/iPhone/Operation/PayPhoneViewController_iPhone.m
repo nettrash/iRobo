@@ -313,41 +313,31 @@
     UIView* keyboard;
     for (int i=0; i<[tempWindow.subviews count]; i++) {
         keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-            if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-                [keyboard addSubview:self.doneButton];
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+            if([[keyboard description] hasPrefix:@"<UIInputSetContainerView"] == YES) {
+                NSArray *a = [(UIView *)keyboard subviews];
+                [(UIView *)[a objectAtIndex:0] addSubview:self.doneButton];
+                [(UIView *)[a objectAtIndex:0] bringSubviewToFront:self.doneButton];
+            }
         } else {
-            if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                [keyboard addSubview:self.doneButton];
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
+                if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES) {
+                    [keyboard addSubview:self.doneButton];
+                    [keyboard bringSubviewToFront:self.doneButton];
+                }
+            } else {
+                if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
+                    [keyboard addSubview:self.doneButton];
+            }
         }
     }
 }
 
 - (void)removeDoneButtonFromNumberPadKeyboard
 {
-	if (!_keyboardIsShowing) return;
-	
-    UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-    UIView* keyboard;
-    for (int i=0; i<[tempWindow.subviews count]; i++) {
-        keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-            if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-                break;
-        } else {
-            if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                break;
-        }
-    }
-	for ( int i = 0; i < [keyboard.subviews count]; i++) {
-		if ([[keyboard.subviews objectAtIndex:i] isKindOfClass:[UIButton class]]) {
-			UIButton *btnDone = (UIButton *)[keyboard.subviews objectAtIndex:i];
-			if (btnDone == self.doneButton) {
-				[self.doneButton removeFromSuperview];
-				return;
-			}
-		}
-	}
+    if (!_keyboardIsShowing) return;
+    
+    [self.doneButton removeFromSuperview];
 }
 
 #pragma mark UITextFieldDelegate
@@ -375,6 +365,8 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSString *str = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    UITextRange *prevTextRange = [textField selectedTextRange];
+    NSUInteger offset = [string isEqualToString:@""] ? -1 : range.length + 1;
     //Если строка содержит что-то кроме цифр, то нет
     //тут код проверки RegEx
     if ([textField.text length] > [str length])
@@ -383,6 +375,8 @@
         if (textField == self.tfPhoneNumber && [str length] == 0)
         {
             textField.text = str;
+            UITextPosition *cursorPosition = [textField positionFromPosition:prevTextRange.start offset:offset];
+            [textField setSelectedTextRange:[textField textRangeFromPosition:cursorPosition toPosition:cursorPosition]];
             [self.tfPhoneCode becomeFirstResponder];
             return NO;
         }
@@ -394,13 +388,18 @@
         {
             if ([str length] != 3) return NO;
             textField.text = str;
+            UITextPosition *cursorPosition = [textField positionFromPosition:prevTextRange.start offset:offset];
+            [textField setSelectedTextRange:[textField textRangeFromPosition:cursorPosition toPosition:cursorPosition]];
             [self.tfPhoneNumber becomeFirstResponder];
             return NO;
         }
         if (textField == self.tfPhoneNumber && [str length] > 6)
         {
-            if ([str length] == 7)
+            if ([str length] == 7) {
                 textField.text = str;
+                UITextPosition *cursorPosition = [textField positionFromPosition:prevTextRange.start offset:offset];
+                [textField setSelectedTextRange:[textField textRangeFromPosition:cursorPosition toPosition:cursorPosition]];
+            }
             [self.tfPhoneNumber resignFirstResponder];
             [self refreshPeople:[NSString stringWithFormat:@"%@%@%@", self.tfPhoneCountry.text, self.tfPhoneCode.text, self.tfPhoneNumber.text]];
             return NO;

@@ -14,5 +14,7 @@
 - (NSString *)HTMLWithSystemFont;
 - (BOOL)isPossibleMoscowGKU;
 - (BOOL)isPossibleMGTS;
+- (BOOL)isPossibleMosenergosbut;
+- (BOOL)isPossibleGIBDD;
 
 @end

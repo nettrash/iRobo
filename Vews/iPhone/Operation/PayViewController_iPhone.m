@@ -51,6 +51,7 @@
         _comissionViewController = nil;
         _summa = [NSDecimalNumber decimalNumberWithString:@"0,00"];
         self.navigationItem.title = [_topCurrency.Name uppercaseString];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PayButton_Title", @"PayButton_Title") style:UIBarButtonItemStyleDone target:self action:@selector(chooseCard:)];
 
         self.tfSumma = [[UITextField alloc] initWithFrame:CGRectMake(15, 6, 285, 30)];
         self.tfSumma.adjustsFontSizeToFitWidth = YES;
@@ -217,12 +218,22 @@
     UIView* keyboard;
     for (int i=0; i<[tempWindow.subviews count]; i++) {
         keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-            if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-                [keyboard addSubview:self.doneButton];
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+            if([[keyboard description] hasPrefix:@"<UIInputSetContainerView"] == YES) {
+                NSArray *a = [(UIView *)keyboard subviews];
+                [(UIView *)[a objectAtIndex:0] addSubview:self.doneButton];
+                [(UIView *)[a objectAtIndex:0] bringSubviewToFront:self.doneButton];
+            }
         } else {
-            if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                [keyboard addSubview:self.doneButton];
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
+                if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES) {
+                    [keyboard addSubview:self.doneButton];
+                    [keyboard bringSubviewToFront:self.doneButton];
+                }
+            } else {
+                if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
+                    [keyboard addSubview:self.doneButton];
+            }
         }
     }
 }
@@ -230,28 +241,8 @@
 - (void)removeDoneButtonFromNumberPadKeyboard
 {
 	if (!_keyboardIsShowing) return;
-	
-    UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-    UIView* keyboard;
-    for (int i=0; i<[tempWindow.subviews count]; i++) {
-        keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-            if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-                break;
-        } else {
-            if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                break;
-        }
-    }
-	for ( int i = 0; i < [keyboard.subviews count]; i++) {
-		if ([[keyboard.subviews objectAtIndex:i] isKindOfClass:[UIButton class]]) {
-			UIButton *btnDone = (UIButton *)[keyboard.subviews objectAtIndex:i];
-			if (btnDone == self.doneButton) {
-				[self.doneButton removeFromSuperview];
-				return;
-			}
-		}
-	}
+
+    [self.doneButton removeFromSuperview];
 }
 
 - (void)getParameters:(id)sender
@@ -340,10 +331,7 @@
             bValidParams = NO;
     }
     
-    if (bValidSumma && bValidParams)
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PayButton_Title", @"PayButton_Title") style:UIBarButtonItemStyleDone target:self action:@selector(chooseCard:)];
-    else
-        self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItem.enabled = (bValidSumma && bValidParams);
 }
 
 - (void)startOperation:(NSString *)cvc
@@ -372,19 +360,19 @@
         svcWSResponse *resp = (svcWSResponse *)response;
         if (resp.result && resp.OpKey && ![resp.OpKey isEqualToString:@""])
         {
-            if ([_card card_IsOCEAN])
-            {
+//            if ([_card card_IsOCEAN])
+//            {
                 //Завершаем с сообщением что распоряжение принято
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"PaymentByOCEANStart_Title", @"PaymentByOCEANStart_Title") message:NSLocalizedString(@"PaymentByOCEANStart_Message", @"PaymentByOCEANStart_Message") delegate:nil cancelButtonTitle:NSLocalizedString(@"Button_Continue", @"Button_Continue") otherButtonTitles:nil];
-                [alert show];
-                [self.delegate finishPay:self];
-            }
-            else
-            {
+//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"PaymentByOCEANStart_Title", @"PaymentByOCEANStart_Title") message:NSLocalizedString(@"PaymentByOCEANStart_Message", @"PaymentByOCEANStart_Message") delegate:nil cancelButtonTitle:NSLocalizedString(@"Button_Continue", @"Button_Continue") otherButtonTitles:nil];
+//                [alert show];
+//                [self.delegate finishPay:self];
+//            }
+//            else
+//            {
                 OperationStateViewController_iPhone *ov = [[OperationStateViewController_iPhone alloc] initWithNibName:@"OperationStateViewController_iPhone" bundle:nil OpKey:resp.OpKey];
                 ov.delegate = self;
                 [self.navigationController pushViewController:ov animated:YES];
-            }
+//            }
         }
         else
         {
@@ -588,7 +576,11 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSString *str = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    UITextRange *prevTextRange = [textField selectedTextRange];
+    NSUInteger offset = [string isEqualToString:@""] ? -1 : range.length + 1;
     textField.text = str;
+    UITextPosition *cursorPosition = [textField positionFromPosition:prevTextRange.start offset:offset];
+    [textField setSelectedTextRange:[textField textRangeFromPosition:cursorPosition toPosition:cursorPosition]];
     if ([textField isKindOfClass:[UIParameterTextField class]])
     {
         [(UIParameterTextField *)textField parameter].DefaultValue = str;

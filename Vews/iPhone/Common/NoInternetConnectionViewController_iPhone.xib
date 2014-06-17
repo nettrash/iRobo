@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoInternetConnectionViewController_iPhone">
@@ -16,14 +16,18 @@
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет сети... Совсем нет... " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bq0-Uq-6hN">
                     <rect key="frame" x="20" y="351" width="280" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="gRd-B4-XFz"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Не знаешь, скоро будет? Нет? Ну ладно, подождём..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVX-s1-a8A">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не знаешь, скоро будет? Нет? Ну ладно, подождём..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVX-s1-a8A">
                     <rect key="frame" x="20" y="380" width="280" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="GV3-MA-8ha"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -31,12 +35,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Bq0-Uq-6hN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="1U9-eb-nNd"/>
-                <constraint firstItem="Bq0-Uq-6hN" firstAttribute="leading" secondItem="VVX-s1-a8A" secondAttribute="leading" id="4vR-Fk-1gg"/>
-                <constraint firstAttribute="bottom" secondItem="Bq0-Uq-6hN" secondAttribute="bottom" constant="196" id="E5V-zU-h7I"/>
-                <constraint firstItem="Bq0-Uq-6hN" firstAttribute="trailing" secondItem="VVX-s1-a8A" secondAttribute="trailing" id="KKD-Ka-Nln"/>
-                <constraint firstAttribute="trailing" secondItem="Bq0-Uq-6hN" secondAttribute="trailing" constant="20" symbolic="YES" id="QZj-Lc-3ce"/>
-                <constraint firstItem="VVX-s1-a8A" firstAttribute="top" secondItem="Bq0-Uq-6hN" secondAttribute="bottom" constant="8" symbolic="YES" id="kTJ-g4-Pbu"/>
+                <constraint firstAttribute="trailing" secondItem="Bq0-Uq-6hN" secondAttribute="trailing" constant="20" symbolic="YES" id="1mY-xO-Hw8"/>
+                <constraint firstItem="Bq0-Uq-6hN" firstAttribute="trailing" secondItem="VVX-s1-a8A" secondAttribute="trailing" id="Fe5-nF-1Cm"/>
+                <constraint firstItem="Bq0-Uq-6hN" firstAttribute="leading" secondItem="VVX-s1-a8A" secondAttribute="leading" id="NJI-cm-9Rc"/>
+                <constraint firstItem="Bq0-Uq-6hN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="OmN-AS-mGm"/>
+                <constraint firstItem="VVX-s1-a8A" firstAttribute="top" secondItem="Bq0-Uq-6hN" secondAttribute="bottom" constant="8" symbolic="YES" id="QqD-JQ-q3x"/>
+                <constraint firstAttribute="bottom" secondItem="VVX-s1-a8A" secondAttribute="bottom" constant="167" id="xyg-Mp-S4N"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

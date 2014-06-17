@@ -741,6 +741,26 @@
 		return _request;
 	}
 
+    // Returns svcWSResponse*
+    /* Применение страничных параметров */
+    - (SoapRequest*) ApproveParameters: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey parameters: (NSString*) parameters
+    {
+        return [self ApproveParameters: handler action: nil UNIQUE: UNIQUE OpKey: OpKey parameters: parameters];
+    }
+
+    - (SoapRequest*) ApproveParameters: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey parameters: (NSString*) parameters
+    {
+        NSMutableArray* _params = [NSMutableArray array];
+    
+        [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: OpKey forName: @"OpKey"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: parameters forName: @"parameters"]];
+        NSString* _envelope = [Soap createEnvelope: @"ApproveParameters" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
+        SoapRequest* _request = [SoapRequest create: target action: action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/ApproveParameters" postData: _envelope deserializeTo: [svcWSResponse alloc]];
+        [_request send];
+        return _request;
+    }
+
 	// Returns svcWSResponse*
 	/* Запуск операции на исполнение */
 	- (SoapRequest*) StartOperation: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE cardId: (int) cardId summa: (NSDecimalNumber*) summa currency: (NSString*) currency parameters: (NSString*) parameters CVC: (NSString*) CVC

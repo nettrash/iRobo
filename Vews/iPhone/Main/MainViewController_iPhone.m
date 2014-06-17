@@ -415,7 +415,7 @@
 {
     switch (indexPath.section) {
         case 0: {
-            if (_checks && _checks != nil && [_checks count] > 0)
+            if (_checks && _checks != nil && [_checks count] > 0 && !_checksRefreshing)
             {
                 svcCheck *chk = (svcCheck *)[_checks objectAtIndex:indexPath.row];
                 PayCheckViewController_iPhone *pp = [[PayCheckViewController_iPhone alloc] initWithNibName:@"PayCheckViewController_iPhone" bundle:nil withCheck:chk];
@@ -454,10 +454,12 @@
             break;
         }
         case 2: {
-            svcTopCurrency *curr = (svcTopCurrency *)[_topCatalog objectAtIndex:indexPath.row];
-            PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:curr];
-            pp.delegate = self;
-            [self.navigationController pushViewController:pp animated:YES];
+            if (!_topCatalogRefreshing) {
+                svcTopCurrency *curr = (svcTopCurrency *)[_topCatalog objectAtIndex:indexPath.row];
+                PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:curr];
+                pp.delegate = self;
+                [self.navigationController pushViewController:pp animated:YES];
+            }
             break;
         }
         case 3: {
@@ -641,6 +643,42 @@
             [self.navigationController pushViewController:pp animated:YES];
             return;
         }
+        if ([resultText isPossibleMosenergosbut]) {
+            /*
+             МОСЭНЕРГОСБЫТ
+             
+             Label QiwiS330
+             Name Мосэнергосбыт
+             P86259_account Номер лицевого счета
+             
+             OutPossibleValues сумма через ;
+             
+             Пример 1996120112505301371110649
+             
+             Код РР 199
+             Лицевой счет 61201125
+             
+             053 - Не ясно что это
+             
+             Рубли 01371
+             Копейки 11
+             Код платежа 06
+             
+             49 - не ясно что это такое
+             */
+            svcTopCurrency *c = [svcTopCurrency alloc];
+            c.Label = @"QiwiS330";
+            c.Name = @"Мосэнергосбыт";
+            c.Parameters = [NSString stringWithFormat:@"P86259_account:%@", [resultText substringWithRange:NSMakeRange(3, 8)]];
+            c.OutPossibleValues = [NSString stringWithFormat:@"%i.%@;", [[resultText substringWithRange:NSMakeRange(14, 5)] intValue], [resultText substringWithRange:NSMakeRange(19, 2)]];
+            
+            [self.navigationController popToRootViewControllerAnimated:NO];
+            
+            PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:c];
+            pp.delegate = self;
+            [self.navigationController pushViewController:pp animated:YES];
+            return;
+        }
     }
     if ([result.type isEqualToString:@"org.iso.Code128"])
     {
@@ -673,6 +711,19 @@
             pp.delegate = self;
             [self.navigationController pushViewController:pp animated:YES];
             return;
+        }
+        if ([resultText isPossibleGIBDD]) {
+            /*
+             Штраф ГИБДД
+             
+             Label
+             Name
+             P...
+             
+             OutPossibleValues ...
+             
+             Пример 18810168140430001964
+             */
         }
     }
 }

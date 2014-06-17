@@ -41,4 +41,14 @@
     return self && self != nil && [self length] == 21 && [self checkFormat:@"^\\d{21}$"];
 }
 
+- (BOOL)isPossibleMosenergosbut
+{
+    return self && self != nil && [self length] == 25 && [self checkFormat:@"^\\d{25}$"];
+}
+
+- (BOOL)isPossibleGIBDD
+{
+    return self && self != nil && [self length] == 20 && [self checkFormat:@"^\\d{20}$"];
+}
+
 @end

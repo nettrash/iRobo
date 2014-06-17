@@ -15,6 +15,7 @@
 #import "NSNumber+Currency.h"
 #import "NSString+RegEx.h"
 #import "OperationStateViewController_iPhone.h"
+#import "AddCardViewController_iPhone.h"
 
 @interface Card2CardTransferViewController_iPhone ()
 
@@ -204,41 +205,31 @@
     UIView* keyboard;
     for (int i=0; i<[tempWindow.subviews count]; i++) {
         keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-            if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-                [keyboard addSubview:self.doneButton];
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+            if([[keyboard description] hasPrefix:@"<UIInputSetContainerView"] == YES) {
+                NSArray *a = [(UIView *)keyboard subviews];
+                [(UIView *)[a objectAtIndex:0] addSubview:self.doneButton];
+                [(UIView *)[a objectAtIndex:0] bringSubviewToFront:self.doneButton];
+            }
         } else {
-            if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                [keyboard addSubview:self.doneButton];
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
+                if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES) {
+                    [keyboard addSubview:self.doneButton];
+                    [keyboard bringSubviewToFront:self.doneButton];
+                }
+            } else {
+                if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
+                    [keyboard addSubview:self.doneButton];
+            }
         }
     }
 }
 
 - (void)removeDoneButtonFromNumberPadKeyboard
 {
-	if (!_keyboardIsShowing) return;
-	
-    UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-    UIView* keyboard;
-    for (int i=0; i<[tempWindow.subviews count]; i++) {
-        keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-            if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES)
-                break;
-        } else {
-            if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                break;
-        }
-    }
-	for ( int i = 0; i < [keyboard.subviews count]; i++) {
-		if ([[keyboard.subviews objectAtIndex:i] isKindOfClass:[UIButton class]]) {
-			UIButton *btnDone = (UIButton *)[keyboard.subviews objectAtIndex:i];
-			if (btnDone == self.doneButton) {
-				[self.doneButton removeFromSuperview];
-				return;
-			}
-		}
-	}
+    if (!_keyboardIsShowing) return;
+    
+    [self.doneButton removeFromSuperview];
 }
 
 - (void)getCards
@@ -256,16 +247,34 @@
     if ([response isKindOfClass:[svcWSResponse class]])
     {
         svcWSResponse *resp = (svcWSResponse *)response;
-        if (resp.result && resp.cards && resp.cards != nil && [resp.cards count] > 0)
+        if (resp.result)
         {
-            _cards = [NSArray arrayWithArray:resp.cards];
-            self.fromCard = (svcCard *)[_cards objectAtIndex:0];
-            [self refreshFromCardText];
-            [self.tfFromCard becomeFirstResponder];
-            return;
+            if (resp.cards && resp.cards != nil && [resp.cards count] > 0)
+            {
+                _cards = [NSArray arrayWithArray:resp.cards];
+                self.fromCard = (svcCard *)[_cards objectAtIndex:0];
+                [self refreshFromCardText];
+                [self.tfFromCard becomeFirstResponder];
+                return;
+            }
+            else
+            {
+                //Нет карт, перенаправляем на страницу добавления карты
+                //Одновременно показывая сообщение о том что карт нет и надо добавить
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"NoCard_NeedToAddCard_Title",@"NoCard_NeedToAddCard_Title") message:NSLocalizedString(@"NoCard_NeedToAddCard_Message",@"NoCard_NeedToAddCard_Message") delegate:nil cancelButtonTitle:NSLocalizedString(@"Button_Continue",@"Button_Continue") otherButtonTitles:nil];
+                [alert show];
+                [self gotoAddCard];
+            }
         }
     }
     [self.delegate finishPay:self];
+}
+
+- (void)gotoAddCard
+{
+    AddCardViewController_iPhone *addCardViewController = [[AddCardViewController_iPhone alloc] initWithNibName:@"AddCardViewController_iPhone" bundle:nil];
+    addCardViewController.delegate = self;
+    [self.navigationController pushViewController:addCardViewController animated:YES];
 }
 
 - (void)refreshFromCardText
@@ -634,5 +643,16 @@
     }
     [self.delegate finishPay:self];
 }
+
+#pragma mark AddCardViewControllerDelegate
+
+- (void)addCardFinished:(UIViewController *)controller withResult:(BOOL)result
+{
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app showWait:NSLocalizedString(@"Card2CardTransfer_WaitMessage", @"Card2CardTransfer_WaitMessage")];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self performSelector:@selector(getCards) withObject:nil afterDelay:.1];
+}
+
 
 @end

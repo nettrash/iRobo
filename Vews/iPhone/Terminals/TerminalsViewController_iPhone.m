@@ -142,6 +142,28 @@
     [self updateTerminalsWithDelta];
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+        NSString *identifier = @"PinLocation";
+        if ([annotation isKindOfClass:[TerminalAnnotation class]]) {
+            identifier = @"TerminalLocation";
+            MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+            if (annotationView == nil) {
+                annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            } else {
+                annotationView.annotation = annotation;
+            }
+            
+            annotationView.enabled = YES;
+            annotationView.canShowCallout = YES;
+            annotationView.image = [UIImage imageNamed:@"MapPinTerminal.png"];
+            
+            return annotationView;
+        }
+        
+        return nil;
+}
+
 #pragma mark UISearchBarDelegate
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar
