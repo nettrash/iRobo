@@ -15,6 +15,8 @@
 	@synthesize summa = _summa;
 	@synthesize UNIQUE = _UNIQUE;
 	@synthesize sortOrder = _sortOrder;
+    @synthesize zeroComission = _zeroComission;
+    @synthesize OutPossibleValues = _OutPossibleValues;
 
 	- (id) init
 	{
@@ -26,7 +28,7 @@
 			self.parameters = nil;
 			self.summa = nil;
 			self.UNIQUE = nil;
-
+            self.OutPossibleValues = nil;
 		}
 		return self;
 	}
@@ -49,6 +51,8 @@
 			self.summa = [NSDecimalNumber decimalNumberWithString: [Soap getNodeValue: node withName: @"summa"]];
 			self.UNIQUE = [Soap getNodeValue: node withName: @"UNIQUE"];
 			self.sortOrder = [[Soap getNodeValue: node withName: @"sortOrder"] intValue];
+            self.OutPossibleValues = [Soap getNodeValue: node withName: @"OutPossibleValues"];
+            self.zeroComission = [[Soap getNodeValue: node withName: @"zeroComission"] boolValue];
 		}
 		return self;
 	}
@@ -81,6 +85,8 @@
 		if (self.summa != nil) [s appendFormat: @"<summa>%@</summa>", [NSString stringWithFormat: @"%@", self.summa]];
 		if (self.UNIQUE != nil) [s appendFormat: @"<UNIQUE>%@</UNIQUE>", [[self.UNIQUE stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		[s appendFormat: @"<sortOrder>%@</sortOrder>", [NSString stringWithFormat: @"%i", self.sortOrder]];
+        if (self.OutPossibleValues != nil) [s appendFormat: @"<OutPossibleValues>%@</OutPossibleValues>", [[self.OutPossibleValues stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
+        [s appendFormat: @"<zeroComission>%@</zeroComission>", (self.zeroComission)?@"true":@"false"];
 
 		return s;
 	}

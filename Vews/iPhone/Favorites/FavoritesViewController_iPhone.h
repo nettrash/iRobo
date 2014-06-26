@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PayViewControllerDelegate.h"
 
-@interface FavoritesViewController_iPhone : UIViewController
+@interface FavoritesViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate>
+{
+    NSMutableArray *_favorites;
+}
 
 @end

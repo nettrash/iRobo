@@ -49,6 +49,7 @@
         _cvc = nil;
         _needToShowDoneButton = NO;
         _comissionViewController = nil;
+        _activateSummaField = YES;
         _summa = [NSDecimalNumber decimalNumberWithString:@"0,00"];
         self.navigationItem.title = [_topCurrency.Name uppercaseString];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PayButton_Title", @"PayButton_Title") style:UIBarButtonItemStyleDone target:self action:@selector(chooseCard:)];
@@ -60,6 +61,37 @@
         self.tfSumma.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
         self.tfSumma.delegate = self;
         self.tfSumma.text = @"0,00";
+        [self.tfSumma setTextAlignment:NSTextAlignmentRight];
+        self.tfSumma.clearsOnBeginEditing = YES;
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withTopCurrency:(svcTopCurrency *)currency andSumma:(NSDecimalNumber *)summa
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _firstInitialize = NO;
+        _isRefreshing = NO;
+        _parameters = nil;
+        _topCurrency = currency;
+        _currencyLabel = _topCurrency.Label;
+        _card = nil;
+        _cvc = nil;
+        _needToShowDoneButton = NO;
+        _comissionViewController = nil;
+        _activateSummaField = NO;
+        _summa = summa;
+        self.navigationItem.title = [_topCurrency.Name uppercaseString];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PayButton_Title", @"PayButton_Title") style:UIBarButtonItemStyleDone target:self action:@selector(chooseCard:)];
+        
+        self.tfSumma = [[UITextField alloc] initWithFrame:CGRectMake(15, 6, 285, 30)];
+        self.tfSumma.adjustsFontSizeToFitWidth = YES;
+        self.tfSumma.textColor = [UIColor darkGrayColor];
+        self.tfSumma.keyboardType = UIKeyboardTypeDecimalPad;
+        self.tfSumma.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
+        self.tfSumma.delegate = self;
+        self.tfSumma.text = [_summa stringValue];
         [self.tfSumma setTextAlignment:NSTextAlignmentRight];
         self.tfSumma.clearsOnBeginEditing = YES;
     }
@@ -92,7 +124,8 @@
         self.tfSumma.clearsOnBeginEditing = NO;
         self.tfSumma.text = (NSString *)[[_topCurrency.OutPossibleValues componentsSeparatedByString:@";"] objectAtIndex:0];
     }
-    [self.tfSumma performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:1];
+    if (_activateSummaField)
+        [self.tfSumma performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:1];
     [self validate];
 }
 

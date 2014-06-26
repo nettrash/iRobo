@@ -31,6 +31,7 @@
     BOOL _netIsWiFi;
     BOOL _noInternet;
     BOOL _fromBackground;
+    BOOL _firstInitialization;
     
     Reachability *_internetReach;
     AppSettings *_settings;
@@ -83,5 +84,7 @@
 - (void)playProfileSound;
 
 - (void)applyScanedURL:(NSURL *)url;
+
+- (void)firstTimeInitializationComplete;
 
 @end

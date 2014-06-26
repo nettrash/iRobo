@@ -53,6 +53,7 @@
     [super viewWillAppear:animated];
     self.map.showsPointsOfInterest = YES;
     self.map.showsBuildings = YES;
+    self.map.userTrackingMode = MKUserTrackingModeFollow;
 }
 
 - (void)didReceiveMemoryWarning
@@ -139,7 +140,8 @@
 
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
-    [self updateTerminalsWithDelta];
+    if (!_firstZoom)
+        [self updateTerminalsWithDelta];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation

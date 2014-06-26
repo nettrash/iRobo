@@ -18,7 +18,8 @@
 	NSDecimalNumber* _summa;
 	NSString* _UNIQUE;
 	int _sortOrder;
-	
+    NSString* _OutPossibleValues;
+    BOOL _zeroComission;
 }
 		
 	@property int favoriteId;
@@ -30,6 +31,8 @@
 	@property (retain, nonatomic) NSDecimalNumber* summa;
 	@property (retain, nonatomic) NSString* UNIQUE;
 	@property int sortOrder;
+    @property (retain, nonatomic) NSString* OutPossibleValues;
+    @property (nonatomic) BOOL zeroComission;
 
 	+ (svcFavorite*) createWithNode: (CXMLNode*) node;
 	- (id) initWithNode: (CXMLNode*) node;

@@ -554,7 +554,9 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSString *str = [textField.text stringByReplacingCharactersInRange:range withString:[string capitalizedString]];
-    
+    UITextRange *prevTextRange = [textField selectedTextRange];
+    NSUInteger offset = [string isEqualToString:@""] ? -1 : range.length + 1;
+
     /*Переход назад*/
     if ([string length] == 0)
     {
@@ -599,6 +601,8 @@
         }
     }
     
+    UITextPosition *cursorPosition = [textField positionFromPosition:prevTextRange.start offset:offset];
+    [textField setSelectedTextRange:[textField textRangeFromPosition:cursorPosition toPosition:cursorPosition]];
     [self validate];
     return NO;
 }

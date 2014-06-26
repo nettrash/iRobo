@@ -112,8 +112,10 @@
 - (void)getChecksHandler:(id)response
 {
     _checksRefreshing = NO;
-    if (!_checksRefreshing && !_topCatalogRefreshing)
+    if (!_checksRefreshing && !_topCatalogRefreshing) {
         [self.tblPayments.refreshControl endRefreshing];
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] firstTimeInitializationComplete];
+    }
     if ([response isKindOfClass:[svcWSResponse class]])
     {
         svcWSResponse *resp = (svcWSResponse *)response;
@@ -169,8 +171,10 @@
 - (void)getTopCurrencyListHandler:(id)response
 {
     _topCatalogRefreshing = NO;
-    if (!_checksRefreshing && !_topCatalogRefreshing)
+    if (!_checksRefreshing && !_topCatalogRefreshing) {
         [self.tblPayments.refreshControl endRefreshing];
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] firstTimeInitializationComplete];
+    }
     if ([response isKindOfClass:[svcWSResponse class]])
     {
         svcWSResponse *resp = (svcWSResponse *)response;
@@ -347,7 +351,7 @@
                     svcTopCurrency *curr = (svcTopCurrency *)[_topCatalog objectAtIndex:indexPath.row];
                     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", curr.Label]];
                     if (cell.imageView.image == nil)
-                        cell.imageView.image = [UIImage imageNamed:@"MainNoChecksIcon.png"];;
+                        cell.imageView.image = [UIImage imageNamed:@"MainNoChecksIcon.png"];
                     cell.textLabel.text = [curr.Name uppercaseString];
                     cell.detailTextLabel.text = @"";
                     cell.accessoryView = nil;
@@ -401,8 +405,8 @@
             break;
     }
 
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:10];
+    //cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
+    //cell.detailTextLabel.font = [UIFont systemFontOfSize:10];
     [cell.textLabel setTextColor:[UIColor darkGrayColor]];
     [cell.detailTextLabel setTextColor:[UIColor darkGrayColor]];
     

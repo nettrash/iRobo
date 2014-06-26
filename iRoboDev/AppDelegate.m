@@ -30,6 +30,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    _firstInitialization = YES;
     _fromBackground = NO;
     _needToProcessLaunchURL = NO;
     _launchURL = nil;
@@ -59,8 +60,9 @@
     [self getScenario];
     [self.window makeKeyAndVisible];
     
+    [self showWait:NSLocalizedString(@"InitializeApp", @"InitializeApp")];
     [application registerForRemoteNotificationTypes:(UIRemoteNotificationType)(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
-    
+
     return YES;
 }
 
@@ -265,6 +267,15 @@
 - (NSString *)DeviceName
 {
     return [NSString stringWithFormat:@"%@ %@", [[UIDevice currentDevice] systemName], [[UIDevice currentDevice] systemVersion]];
+}
+
+- (void)firstTimeInitializationComplete
+{
+    if (_firstInitialization) {
+        _firstInitialization = NO;
+        [self hideWait];
+        [self showCheckPasswordView];
+    }
 }
 
 #pragma mark - Audio
@@ -504,12 +515,16 @@
 
 - (void)firstTimeRegister
 {
+    _firstInitialization = NO;
+    [self hideWait];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[RegisterViewController_iPhone alloc] initWithNibName:@"RegisterViewController_iPhone" bundle:nil]];
     [self.window setRootViewController:nc];
 }
 
 - (void)approveProfile
 {
+    _firstInitialization = NO;
+    [self hideWait];
     if (!self.userProfile.phoneApproved)
     {
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[ApprovePhoneViewController_iPhone alloc] initWithNibName:@"ApprovePhoneViewController_iPhone" bundle:nil]];
@@ -534,7 +549,8 @@
     _revealViewController.rightViewController = [[MessagesViewController_iPhone alloc] initWithNibName:@"MessagesViewController_iPhone" bundle:nil];
     
     [self.window setRootViewController:_revealViewController];
-    [self showCheckPasswordView];
+    if (!_firstInitialization)
+        [self showCheckPasswordView];
 }
 
 - (void)showCheckPasswordView
@@ -547,6 +563,10 @@
             if (_checkPasswordView_iPhone.view.superview != self.window.rootViewController.view)
                 [self.window.rootViewController.view addSubview:_checkPasswordView_iPhone.view];
             [self.window.rootViewController.view bringSubviewToFront:_checkPasswordView_iPhone.view];
+            if (_firstInitialization)
+            {
+                [self.window.rootViewController.view bringSubviewToFront:_waitingView_iPhone.view];
+            }
         }
         else
         {

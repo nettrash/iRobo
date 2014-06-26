@@ -292,3 +292,8 @@
 "AdditionalParameters_Title" = "УТОЧНЕНИЕ";
 "NoCard_NeedToAddCard_Message" = "Добавь карту и я смогу с ней работать! Помни что я работаю только с подтвержденными картами!";
 "NoCard_NeedToAddCard_Title" = "НЕТ КАРТ";
+"InitializeApp" = "Инициализация...";
+"DeleteFavoriteWait" = "Удаляю запись из избранных платежей...";
+"DeleteFavorite_Title" = "Удаление избранного платежа";
+"DeleteFavorites_ErrorMessage" = "Не удалось удалить запись из избранных платежей. Вероятно что-то пошло не так... Попробуй позже.";
+"DeleteConfirmation_Title" = "Удалить";

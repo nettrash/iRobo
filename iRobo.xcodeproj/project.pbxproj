@@ -2555,7 +2555,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "iRoboDev/iRoboDev-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					../card.io,
 					/Users/nettrash/Develop/iOS/card.io,
@@ -2590,7 +2590,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "iRoboDev/iRoboDev-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					../card.io,
 					/Users/nettrash/Develop/iOS/card.io,

@@ -30,10 +30,12 @@
     BOOL _needToShowDoneButton;
     ComissionViewController_iPhone *_comissionViewController;
     NSDecimalNumber *_summa;
+    BOOL _activateSummaField;
 }
 
 @property (nonatomic, retain) id<PayViewControllerDelegate> delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withTopCurrency:(svcTopCurrency *)currency;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withTopCurrency:(svcTopCurrency *)currency andSumma:(NSDecimalNumber *)summa;
 
 @end

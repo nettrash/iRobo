@@ -11,6 +11,7 @@
 	@synthesize Count = _Count;
 	@synthesize Parameters = _Parameters;
     @synthesize zeroComission = _zeroComission;
+    @synthesize OutPossibleValues = _OutPossibleValues;
 
 	- (id) init
 	{
