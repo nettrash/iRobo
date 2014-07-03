@@ -18,8 +18,14 @@
 
 @protocol ActivityResultDelegate
 
-- (void)activityStart:(svcCard *)card;
-- (void)activityEnd:(svcCard *)card;
+@required
+
+- (void)activityStart:(id)obj;
+- (void)activityEnd:(id)obj;
+
+@optional
+
+- (void)doActivityParentAction:(id)activity withData:(id)data;
 
 @end
 

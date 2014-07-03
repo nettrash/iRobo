@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController_iPhone">
             <connections>
+                <outlet property="tblHistory" destination="2aM-5d-w5e" id="M0Y-lO-LWg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,6 +17,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="76" y="-257"/>
         </view>
         <tableViewController id="2aM-5d-w5e">
             <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zSD-Ya-nvg">
@@ -23,8 +25,8 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <connections>
-                    <outlet property="dataSource" destination="2aM-5d-w5e" id="trm-2g-JWv"/>
-                    <outlet property="delegate" destination="2aM-5d-w5e" id="JEU-5W-4A1"/>
+                    <outlet property="dataSource" destination="-1" id="ceq-T4-XeQ"/>
+                    <outlet property="delegate" destination="-1" id="JQC-hO-gIh"/>
                 </connections>
             </tableView>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -32,6 +34,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="440" y="-257"/>
         </tableViewController>
     </objects>
 </document>

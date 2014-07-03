@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PayViewControllerDelegate.h"
+#import "ActivityProtocols.h"
+#import "BlankViewControllerDelegate.h"
 
-@interface HistoryViewController_iPhone : UIViewController
+@interface HistoryViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate, ActivityResultDelegate, BlankViewControllerDelegate>
+{
+    int _Id;
+    int _Count;
+    NSMutableArray *_history;
+    NSMutableArray *_historyCache;
+    BOOL _isLoadingCache;
+    NSIndexPath *_selectedIndexPath;
+    NSArray *_activities;
+}
 
 @end

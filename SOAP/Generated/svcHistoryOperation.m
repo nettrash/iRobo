@@ -23,6 +23,10 @@
 	@synthesize check_MerchantOrder = _check_MerchantOrder;
 	@synthesize charity_Id = _charity_Id;
 	@synthesize charity_Name = _charity_Name;
+    @synthesize zeroComission = _zeroComission;
+    @synthesize OutPossibleValues = _OutPossibleValues;
+    @synthesize availibleNow = _availibleNow;
+    @synthesize op_Id = _op_Id;
 
 	- (id) init
 	{
@@ -40,7 +44,7 @@
 			self.check_MerchantName = nil;
 			self.check_MerchantOrder = nil;
 			self.charity_Name = nil;
-
+            self.OutPossibleValues = nil;
 		}
 		return self;
 	}
@@ -71,6 +75,10 @@
 			self.check_MerchantOrder = [Soap getNodeValue: node withName: @"check_MerchantOrder"];
 			self.charity_Id = [[Soap getNodeValue: node withName: @"charity_Id"] intValue];
 			self.charity_Name = [Soap getNodeValue: node withName: @"charity_Name"];
+            self.OutPossibleValues = [Soap getNodeValue: node withName: @"OutPossibleValues"];
+            self.zeroComission = [[Soap getNodeValue: node withName: @"zeroComission"] boolValue];
+            self.availibleNow = [[Soap getNodeValue: node withName: @"availibleNow"] boolValue];
+            self.op_Id = [[Soap getNodeValue: node withName: @"op_Id"] intValue];
 		}
 		return self;
 	}
@@ -111,6 +119,10 @@
 		if (self.check_MerchantOrder != nil) [s appendFormat: @"<check_MerchantOrder>%@</check_MerchantOrder>", [[self.check_MerchantOrder stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		[s appendFormat: @"<charity_Id>%@</charity_Id>", [NSString stringWithFormat: @"%i", self.charity_Id]];
 		if (self.charity_Name != nil) [s appendFormat: @"<charity_Name>%@</charity_Name>", [[self.charity_Name stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
+        if (self.OutPossibleValues != nil) [s appendFormat: @"<OutPossibleValues>%@</OutPossibleValues>", [[self.OutPossibleValues stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
+        [s appendFormat: @"<zeroComission>%@</zeroComission>", (self.zeroComission)?@"true":@"false"];
+        [s appendFormat: @"<availibleNow>%@</availibleNow>", (self.availibleNow)?@"true":@"false"];
+        [s appendFormat: @"<op_Id>%@</op_Id>", [NSString stringWithFormat: @"%i", self.op_Id]];
 
 		return s;
 	}

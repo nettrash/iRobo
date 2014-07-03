@@ -415,6 +415,11 @@
     }
 }
 
+- (void)cancelPayment:(id)sender
+{
+    [self.delegate finishPay:self];
+}
+
 - (void)chooseCard:(id)sender
 {
     _summa = [NSDecimalNumber decimalNumberWithString:[self.tfSumma.text stringByReplacingOccurrencesOfString:@"," withString:@"."]];

@@ -428,14 +428,16 @@
 
 #pragma mark ActivityResultDelegate
 
-- (void)activityStart:(svcCard *)card
+- (void)activityStart:(id)obj
 {
+    svcCard *card = (svcCard *)obj;
     self.activeCard = card;
     [self.tblCards.tableView reloadData];
 }
 
-- (void)activityEnd:(svcCard *)card
+- (void)activityEnd:(id)obj
 {
+    svcCard *card = (svcCard *)obj;
     self.activeCard = nil;
     [self.tblCards.tableView reloadData];
 }

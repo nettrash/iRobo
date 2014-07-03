@@ -26,7 +26,10 @@
 	NSString* _check_MerchantOrder;
 	int _charity_Id;
 	NSString* _charity_Name;
-	
+    NSString* _OutPossibleValues;
+    BOOL _zeroComission;
+    BOOL _availibleNow;
+    int _op_Id;
 }
 		
 	@property (retain, nonatomic) NSDate* op_RegDate;
@@ -46,6 +49,10 @@
 	@property (retain, nonatomic) NSString* check_MerchantOrder;
 	@property int charity_Id;
 	@property (retain, nonatomic) NSString* charity_Name;
+    @property (retain, nonatomic) NSString* OutPossibleValues;
+    @property (nonatomic) BOOL zeroComission;
+    @property (nonatomic) BOOL availibleNow;
+    @property int op_Id;
 
 	+ (svcHistoryOperation*) createWithNode: (CXMLNode*) node;
 	- (id) initWithNode: (CXMLNode*) node;

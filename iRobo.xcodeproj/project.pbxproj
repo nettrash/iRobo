@@ -15,6 +15,32 @@
 		E51F44B51925377700A9D6EB /* MainScanIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44B31925377700A9D6EB /* MainScanIcon@2x.png */; };
 		E51F44B91925428300A9D6EB /* PayCharityViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */; };
 		E51F44BA1925428300A9D6EB /* PayCharityViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */; };
+		E52A78FB19657C920038FA65 /* HistoryBlankActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A78F719657C920038FA65 /* HistoryBlankActivityIcon.png */; };
+		E52A78FC19657C920038FA65 /* HistoryBlankActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A78F819657C920038FA65 /* HistoryBlankActivityIcon@2x.png */; };
+		E52A78FD19657C920038FA65 /* HistoryBlankActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A78F919657C920038FA65 /* HistoryBlankActivityMiniIcon.png */; };
+		E52A78FE19657C920038FA65 /* HistoryBlankActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A78FA19657C920038FA65 /* HistoryBlankActivityMiniIcon@2x.png */; };
+		E52A790319657CDE0038FA65 /* HistoryBlankActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A790219657CDE0038FA65 /* HistoryBlankActivity.m */; };
+		E52A7907196581150038FA65 /* BlankViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A7905196581150038FA65 /* BlankViewController_iPhone.m */; };
+		E52A7908196581150038FA65 /* BlankViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A7906196581150038FA65 /* BlankViewController_iPhone.xib */; };
+		E53552921962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */; };
+		E53552931962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */; };
+		E53552961963390B00BB4F4A /* HistoryRepeatPaymentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552951963390B00BB4F4A /* HistoryRepeatPaymentActivity.m */; };
+		E535529B196413B500BB4F4A /* HistoryRequestSupportActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5355297196413B500BB4F4A /* HistoryRequestSupportActivityIcon.png */; };
+		E535529C196413B500BB4F4A /* HistoryRequestSupportActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5355298196413B500BB4F4A /* HistoryRequestSupportActivityIcon@2x.png */; };
+		E535529D196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5355299196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png */; };
+		E535529E196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E535529A196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon@2x.png */; };
+		E53552A3196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E535529F196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon.png */; };
+		E53552A4196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53552A0196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon@2x.png */; };
+		E53552A5196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E53552A1196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon.png */; };
+		E53552A6196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53552A2196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon@2x.png */; };
+		E53552A9196480DB00BB4F4A /* NSDate+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552A8196480DB00BB4F4A /* NSDate+Operation.m */; };
+		E53552AB1964974F00BB4F4A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53552AA1964974F00BB4F4A /* Social.framework */; };
+		E53552AD1964975A00BB4F4A /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53552AC1964975A00BB4F4A /* Twitter.framework */; };
+		E53552B01964986600BB4F4A /* HistoryPostToFacebookActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552AF1964986600BB4F4A /* HistoryPostToFacebookActivity.m */; };
+		E53552B519649E4500BB4F4A /* HistoryPostToFacebookActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E53552B119649E4500BB4F4A /* HistoryPostToFacebookActivityIcon.png */; };
+		E53552B619649E4500BB4F4A /* HistoryPostToFacebookActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53552B219649E4500BB4F4A /* HistoryPostToFacebookActivityIcon@2x.png */; };
+		E53552B719649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E53552B319649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon.png */; };
+		E53552B819649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53552B419649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon@2x.png */; };
 		E5448B3D190919D90025C9E7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5448B3C190919D90025C9E7 /* Settings.bundle */; };
 		E5448B4019091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png in Resources */ = {isa = PBXBuildFile; fileRef = E5448B3E19091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png */; };
 		E5448B4119091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5448B3F19091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png */; };
@@ -332,6 +358,18 @@
 		E5B6F68A1923922300EAA3C4 /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B6F6891923922300EAA3C4 /* NSURL+Parameters.m */; };
 		E5B6F68F19239CE300EAA3C4 /* ScanViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B6F68D19239CE300EAA3C4 /* ScanViewController_iPhone.m */; };
 		E5B6F69019239CE300EAA3C4 /* ScanViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5B6F68E19239CE300EAA3C4 /* ScanViewController_iPhone.xib */; };
+		E5C4948D195DD5AE00330CEA /* HistoryCellView_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C4948B195DD5AE00330CEA /* HistoryCellView_iPhone.m */; };
+		E5C4948E195DD5AE00330CEA /* HistoryCellView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C4948C195DD5AE00330CEA /* HistoryCellView_iPhone.xib */; };
+		E5C49493195DEA9B00330CEA /* PaynetEasyR.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C49491195DEA9B00330CEA /* PaynetEasyR.png */; };
+		E5C49494195DEA9B00330CEA /* PaynetEasyR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C49492195DEA9B00330CEA /* PaynetEasyR@2x.png */; };
+		E5C49497195DEB2300330CEA /* OceanBankPayToAnyReqR.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C49495195DEB2300330CEA /* OceanBankPayToAnyReqR.png */; };
+		E5C49498195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C49496195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png */; };
+		E5C4949B195DF05300330CEA /* MainCharityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C49499195DF05300330CEA /* MainCharityIcon.png */; };
+		E5C4949C195DF05300330CEA /* MainCharityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5C4949A195DF05300330CEA /* MainCharityIcon@2x.png */; };
+		E5C494A01962A7B100330CEA /* SelectedHistoryCellView_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C4949E1962A7B100330CEA /* SelectedHistoryCellView_iPhone.m */; };
+		E5C494A11962A7B100330CEA /* SelectedHistoryCellView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5C4949F1962A7B100330CEA /* SelectedHistoryCellView_iPhone.xib */; };
+		E5C494A41962DB2C00330CEA /* UIHistoryActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C494A31962DB2C00330CEA /* UIHistoryActivity.m */; };
+		E5C494A91962DBD300330CEA /* HistoryRequestSupportActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C494A81962DBD300330CEA /* HistoryRequestSupportActivity.m */; };
 		E5D96059192A7B44008AD81B /* OCEANComission.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D96057192A7B44008AD81B /* OCEANComission.png */; };
 		E5D9605A192A7B44008AD81B /* OCEANComission@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D96058192A7B44008AD81B /* OCEANComission@2x.png */; };
 		E5D96060192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9605E192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.m */; };
@@ -543,6 +581,39 @@
 		E51F44B61925428300A9D6EB /* PayCharityViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCharityViewController_iPhone.h; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.h; sourceTree = "<group>"; };
 		E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCharityViewController_iPhone.m; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.m; sourceTree = "<group>"; };
 		E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PayCharityViewController_iPhone.xib; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.xib; sourceTree = "<group>"; };
+		E52A78F719657C920038FA65 /* HistoryBlankActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryBlankActivityIcon.png; sourceTree = "<group>"; };
+		E52A78F819657C920038FA65 /* HistoryBlankActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryBlankActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E52A78F919657C920038FA65 /* HistoryBlankActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryBlankActivityMiniIcon.png; sourceTree = "<group>"; };
+		E52A78FA19657C920038FA65 /* HistoryBlankActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryBlankActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
+		E52A790119657CDE0038FA65 /* HistoryBlankActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryBlankActivity.h; path = Common/Activities/HistoryBlankActivity.h; sourceTree = "<group>"; };
+		E52A790219657CDE0038FA65 /* HistoryBlankActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryBlankActivity.m; path = Common/Activities/HistoryBlankActivity.m; sourceTree = "<group>"; };
+		E52A7904196581150038FA65 /* BlankViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlankViewController_iPhone.h; path = Vews/iPhone/Common/BlankViewController_iPhone.h; sourceTree = "<group>"; };
+		E52A7905196581150038FA65 /* BlankViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlankViewController_iPhone.m; path = Vews/iPhone/Common/BlankViewController_iPhone.m; sourceTree = "<group>"; };
+		E52A7906196581150038FA65 /* BlankViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlankViewController_iPhone.xib; path = Vews/iPhone/Common/BlankViewController_iPhone.xib; sourceTree = "<group>"; };
+		E52A7909196581C10038FA65 /* BlankViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlankViewControllerDelegate.h; path = Common/Protocols/BlankViewControllerDelegate.h; sourceTree = "<group>"; };
+		E535528F1962E1DD00BB4F4A /* RequestSupportViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestSupportViewController_iPhone.h; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.h; sourceTree = "<group>"; };
+		E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestSupportViewController_iPhone.m; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.m; sourceTree = "<group>"; };
+		E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RequestSupportViewController_iPhone.xib; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.xib; sourceTree = "<group>"; };
+		E53552941963390B00BB4F4A /* HistoryRepeatPaymentActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryRepeatPaymentActivity.h; path = Common/Activities/HistoryRepeatPaymentActivity.h; sourceTree = "<group>"; };
+		E53552951963390B00BB4F4A /* HistoryRepeatPaymentActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryRepeatPaymentActivity.m; path = Common/Activities/HistoryRepeatPaymentActivity.m; sourceTree = "<group>"; };
+		E5355297196413B500BB4F4A /* HistoryRequestSupportActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryRequestSupportActivityIcon.png; sourceTree = "<group>"; };
+		E5355298196413B500BB4F4A /* HistoryRequestSupportActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryRequestSupportActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E5355299196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryRequestSupportActivityMiniIcon.png; sourceTree = "<group>"; };
+		E535529A196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryRequestSupportActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
+		E535529F196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryRepeatPaymentActivityIcon.png; sourceTree = "<group>"; };
+		E53552A0196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryRepeatPaymentActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E53552A1196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryRepeatPaymentActivityMiniIcon.png; sourceTree = "<group>"; };
+		E53552A2196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryRepeatPaymentActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
+		E53552A7196480DB00BB4F4A /* NSDate+Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Operation.h"; path = "Common/NSDate+Operation.h"; sourceTree = "<group>"; };
+		E53552A8196480DB00BB4F4A /* NSDate+Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Operation.m"; path = "Common/NSDate+Operation.m"; sourceTree = "<group>"; };
+		E53552AA1964974F00BB4F4A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E53552AC1964975A00BB4F4A /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		E53552AE1964986600BB4F4A /* HistoryPostToFacebookActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryPostToFacebookActivity.h; path = Common/Activities/HistoryPostToFacebookActivity.h; sourceTree = "<group>"; };
+		E53552AF1964986600BB4F4A /* HistoryPostToFacebookActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryPostToFacebookActivity.m; path = Common/Activities/HistoryPostToFacebookActivity.m; sourceTree = "<group>"; };
+		E53552B119649E4500BB4F4A /* HistoryPostToFacebookActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryPostToFacebookActivityIcon.png; sourceTree = "<group>"; };
+		E53552B219649E4500BB4F4A /* HistoryPostToFacebookActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryPostToFacebookActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E53552B319649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryPostToFacebookActivityMiniIcon.png; sourceTree = "<group>"; };
+		E53552B419649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryPostToFacebookActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
 		E5448B3C190919D90025C9E7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E5448B3E19091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsMinTimeoutForPassword.png; path = Content/Common/SettingsMinTimeoutForPassword.png; sourceTree = "<group>"; };
 		E5448B3F19091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SettingsMinTimeoutForPassword@2x.png"; path = "Content/Common/SettingsMinTimeoutForPassword@2x.png"; sourceTree = "<group>"; };
@@ -817,6 +888,23 @@
 		E5B6F68D19239CE300EAA3C4 /* ScanViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScanViewController_iPhone.m; path = Vews/iPhone/Main/ScanViewController_iPhone.m; sourceTree = "<group>"; };
 		E5B6F68E19239CE300EAA3C4 /* ScanViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScanViewController_iPhone.xib; path = Vews/iPhone/Main/ScanViewController_iPhone.xib; sourceTree = "<group>"; };
 		E5B6F6921923A62700EAA3C4 /* ScanViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ScanViewControllerDelegate.h; path = Common/Protocols/ScanViewControllerDelegate.h; sourceTree = "<group>"; };
+		E5C4948A195DD5AE00330CEA /* HistoryCellView_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryCellView_iPhone.h; path = Vews/iPhone/History/HistoryCellView_iPhone.h; sourceTree = "<group>"; };
+		E5C4948B195DD5AE00330CEA /* HistoryCellView_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryCellView_iPhone.m; path = Vews/iPhone/History/HistoryCellView_iPhone.m; sourceTree = "<group>"; };
+		E5C4948C195DD5AE00330CEA /* HistoryCellView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryCellView_iPhone.xib; path = Vews/iPhone/History/HistoryCellView_iPhone.xib; sourceTree = "<group>"; };
+		E5C49491195DEA9B00330CEA /* PaynetEasyR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PaynetEasyR.png; sourceTree = "<group>"; };
+		E5C49492195DEA9B00330CEA /* PaynetEasyR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PaynetEasyR@2x.png"; sourceTree = "<group>"; };
+		E5C49495195DEB2300330CEA /* OceanBankPayToAnyReqR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OceanBankPayToAnyReqR.png; sourceTree = "<group>"; };
+		E5C49496195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OceanBankPayToAnyReqR@2x.png"; sourceTree = "<group>"; };
+		E5C49499195DF05300330CEA /* MainCharityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainCharityIcon.png; sourceTree = "<group>"; };
+		E5C4949A195DF05300330CEA /* MainCharityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainCharityIcon@2x.png"; sourceTree = "<group>"; };
+		E5C4949D1962A7B100330CEA /* SelectedHistoryCellView_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectedHistoryCellView_iPhone.h; path = Vews/iPhone/History/SelectedHistoryCellView_iPhone.h; sourceTree = "<group>"; };
+		E5C4949E1962A7B100330CEA /* SelectedHistoryCellView_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectedHistoryCellView_iPhone.m; path = Vews/iPhone/History/SelectedHistoryCellView_iPhone.m; sourceTree = "<group>"; };
+		E5C4949F1962A7B100330CEA /* SelectedHistoryCellView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectedHistoryCellView_iPhone.xib; path = Vews/iPhone/History/SelectedHistoryCellView_iPhone.xib; sourceTree = "<group>"; };
+		E5C494A21962DB2C00330CEA /* UIHistoryActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIHistoryActivity.h; path = Common/Activities/UIHistoryActivity.h; sourceTree = "<group>"; };
+		E5C494A31962DB2C00330CEA /* UIHistoryActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIHistoryActivity.m; path = Common/Activities/UIHistoryActivity.m; sourceTree = "<group>"; };
+		E5C494A71962DBD300330CEA /* HistoryRequestSupportActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryRequestSupportActivity.h; path = Common/Activities/HistoryRequestSupportActivity.h; sourceTree = "<group>"; };
+		E5C494A81962DBD300330CEA /* HistoryRequestSupportActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryRequestSupportActivity.m; path = Common/Activities/HistoryRequestSupportActivity.m; sourceTree = "<group>"; };
+		E5C494AF1962DDDE00330CEA /* RequestSupportDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestSupportDelegate.h; path = Common/Protocols/RequestSupportDelegate.h; sourceTree = "<group>"; };
 		E5D96057192A7B44008AD81B /* OCEANComission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OCEANComission.png; path = Content/iPhone/OCEANComission.png; sourceTree = "<group>"; };
 		E5D96058192A7B44008AD81B /* OCEANComission@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "OCEANComission@2x.png"; path = "Content/iPhone/OCEANComission@2x.png"; sourceTree = "<group>"; };
 		E5D9605D192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdditionalParametersViewController_iPhone.h; path = Vews/iPhone/Operation/AdditionalParametersViewController_iPhone.h; sourceTree = "<group>"; };
@@ -919,6 +1007,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53552AD1964975A00BB4F4A /* Twitter.framework in Frameworks */,
+				E53552AB1964974F00BB4F4A /* Social.framework in Frameworks */,
 				E5B6F5CE190EAE7800EAA3C4 /* AddressBookUI.framework in Frameworks */,
 				E5B6F5CD190EAE7100EAA3C4 /* AddressBook.framework in Frameworks */,
 				E5EE654319004DA30013819A /* MessageUI.framework in Frameworks */,
@@ -983,6 +1073,8 @@
 		E50E647D18E1CF5700D9883F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E53552AC1964975A00BB4F4A /* Twitter.framework */,
+				E53552AA1964974F00BB4F4A /* Social.framework */,
 				E5EE654219004DA30013819A /* MessageUI.framework */,
 				E599ED3E18F5A94E0019A74E /* MapKit.framework */,
 				E599ED3C18F5A93B0019A74E /* CoreLocation.framework */,
@@ -1349,6 +1441,8 @@
 				E5B6F67B19237E1F00EAA3C4 /* CheckPasswordDelegate.h */,
 				E5B6F6921923A62700EAA3C4 /* ScanViewControllerDelegate.h */,
 				E5D96062192BA861008AD81B /* AdditionalParametersDelegate.h */,
+				E5C494AF1962DDDE00330CEA /* RequestSupportDelegate.h */,
+				E52A7909196581C10038FA65 /* BlankViewControllerDelegate.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1577,6 +1671,12 @@
 				E599ED2B18F5A76C0019A74E /* HistoryViewController_iPhone.h */,
 				E599ED2C18F5A76C0019A74E /* HistoryViewController_iPhone.m */,
 				E599ED2D18F5A76C0019A74E /* HistoryViewController_iPhone.xib */,
+				E5C4948A195DD5AE00330CEA /* HistoryCellView_iPhone.h */,
+				E5C4948B195DD5AE00330CEA /* HistoryCellView_iPhone.m */,
+				E5C4948C195DD5AE00330CEA /* HistoryCellView_iPhone.xib */,
+				E5C4949D1962A7B100330CEA /* SelectedHistoryCellView_iPhone.h */,
+				E5C4949E1962A7B100330CEA /* SelectedHistoryCellView_iPhone.m */,
+				E5C4949F1962A7B100330CEA /* SelectedHistoryCellView_iPhone.xib */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -1684,6 +1784,8 @@
 		E5B6F5AE190E702F00EAA3C4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E5C49499195DF05300330CEA /* MainCharityIcon.png */,
+				E5C4949A195DF05300330CEA /* MainCharityIcon@2x.png */,
 				E51F44B21925377700A9D6EB /* MainScanIcon.png */,
 				E51F44B31925377700A9D6EB /* MainScanIcon@2x.png */,
 				E5B6F634191B58FE00EAA3C4 /* CatalogSearchIcon.png */,
@@ -1706,6 +1808,10 @@
 		E5B6F61F191A631A00EAA3C4 /* Currencies */ = {
 			isa = PBXGroup;
 			children = (
+				E5C49495195DEB2300330CEA /* OceanBankPayToAnyReqR.png */,
+				E5C49496195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png */,
+				E5C49491195DEA9B00330CEA /* PaynetEasyR.png */,
+				E5C49492195DEA9B00330CEA /* PaynetEasyR@2x.png */,
 				E5B6F66B191F680C00EAA3C4 /* QiwiS1.png */,
 				E5B6F66C191F680C00EAA3C4 /* QiwiS1@2x.png */,
 				E5B6F628191A67C100EAA3C4 /* QiwiSMegafon.png */,
@@ -1744,6 +1850,40 @@
 			path = pol;
 			sourceTree = "<group>";
 		};
+		E5C494A51962DB8A00330CEA /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				E5EE651E19003E430013819A /* CardRefreshBalanceActivity.h */,
+				E5EE651F19003E430013819A /* CardRefreshBalanceActivity.m */,
+				E5EE6521190041D60013819A /* CardMoneySendActivity.h */,
+				E5EE6522190041D60013819A /* CardMoneySendActivity.m */,
+				E5EE6524190042490013819A /* CardReceiveMoneyActivity.h */,
+				E5EE6525190042490013819A /* CardReceiveMoneyActivity.m */,
+				E5EE6527190043B90013819A /* CardRequestSupportActivity.h */,
+				E5EE6528190043B90013819A /* CardRequestSupportActivity.m */,
+				E5EE652A1900443B0013819A /* CardCallSupportActivity.h */,
+				E5EE652B1900443B0013819A /* CardCallSupportActivity.m */,
+				E556D8A21905126A002BD048 /* CardAuthorizeActivity.h */,
+				E556D8A31905126A002BD048 /* CardAuthorizeActivity.m */,
+			);
+			name = Card;
+			sourceTree = "<group>";
+		};
+		E5C494A61962DBA100330CEA /* History */ = {
+			isa = PBXGroup;
+			children = (
+				E5C494A71962DBD300330CEA /* HistoryRequestSupportActivity.h */,
+				E5C494A81962DBD300330CEA /* HistoryRequestSupportActivity.m */,
+				E53552941963390B00BB4F4A /* HistoryRepeatPaymentActivity.h */,
+				E53552951963390B00BB4F4A /* HistoryRepeatPaymentActivity.m */,
+				E53552AE1964986600BB4F4A /* HistoryPostToFacebookActivity.h */,
+				E53552AF1964986600BB4F4A /* HistoryPostToFacebookActivity.m */,
+				E52A790119657CDE0038FA65 /* HistoryBlankActivity.h */,
+				E52A790219657CDE0038FA65 /* HistoryBlankActivity.m */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
 		E5D9EE0118E33D6E00B60781 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -1778,6 +1918,8 @@
 				E5B6F6741921160100EAA3C4 /* NSString+Checkers.m */,
 				E5B6F6881923922300EAA3C4 /* NSURL+Parameters.h */,
 				E5B6F6891923922300EAA3C4 /* NSURL+Parameters.m */,
+				E53552A7196480DB00BB4F4A /* NSDate+Operation.h */,
+				E53552A8196480DB00BB4F4A /* NSDate+Operation.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1873,6 +2015,12 @@
 				E556D8B119064D68002BD048 /* NoInternetConnectionViewController_iPhone.h */,
 				E556D8B219064D68002BD048 /* NoInternetConnectionViewController_iPhone.m */,
 				E556D8B319064D68002BD048 /* NoInternetConnectionViewController_iPhone.xib */,
+				E535528F1962E1DD00BB4F4A /* RequestSupportViewController_iPhone.h */,
+				E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */,
+				E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */,
+				E52A7904196581150038FA65 /* BlankViewController_iPhone.h */,
+				E52A7905196581150038FA65 /* BlankViewController_iPhone.m */,
+				E52A7906196581150038FA65 /* BlankViewController_iPhone.xib */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1890,23 +2038,15 @@
 		E5EE651D19003E150013819A /* Activities */ = {
 			isa = PBXGroup;
 			children = (
-				E5EE651E19003E430013819A /* CardRefreshBalanceActivity.h */,
-				E5EE651F19003E430013819A /* CardRefreshBalanceActivity.m */,
-				E5EE6521190041D60013819A /* CardMoneySendActivity.h */,
-				E5EE6522190041D60013819A /* CardMoneySendActivity.m */,
-				E5EE6524190042490013819A /* CardReceiveMoneyActivity.h */,
-				E5EE6525190042490013819A /* CardReceiveMoneyActivity.m */,
-				E5EE6527190043B90013819A /* CardRequestSupportActivity.h */,
-				E5EE6528190043B90013819A /* CardRequestSupportActivity.m */,
-				E5EE652A1900443B0013819A /* CardCallSupportActivity.h */,
-				E5EE652B1900443B0013819A /* CardCallSupportActivity.m */,
+				E5C494A61962DBA100330CEA /* History */,
+				E5C494A51962DB8A00330CEA /* Card */,
 				E5EE654B19011D330013819A /* ActivityProtocols.h */,
-				E556D8A21905126A002BD048 /* CardAuthorizeActivity.h */,
-				E556D8A31905126A002BD048 /* CardAuthorizeActivity.m */,
 				E556D8B6190674EF002BD048 /* ActivityAction.h */,
 				E556D8B7190674EF002BD048 /* ActivityAction.m */,
 				E5B6F6171918CCA900EAA3C4 /* UICardActivity.h */,
 				E5B6F6181918CCA900EAA3C4 /* UICardActivity.m */,
+				E5C494A21962DB2C00330CEA /* UIHistoryActivity.h */,
+				E5C494A31962DB2C00330CEA /* UIHistoryActivity.m */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -1914,6 +2054,22 @@
 		E5EE652D19004B630013819A /* ActivityIcons */ = {
 			isa = PBXGroup;
 			children = (
+				E52A78F719657C920038FA65 /* HistoryBlankActivityIcon.png */,
+				E52A78F819657C920038FA65 /* HistoryBlankActivityIcon@2x.png */,
+				E52A78F919657C920038FA65 /* HistoryBlankActivityMiniIcon.png */,
+				E52A78FA19657C920038FA65 /* HistoryBlankActivityMiniIcon@2x.png */,
+				E53552B119649E4500BB4F4A /* HistoryPostToFacebookActivityIcon.png */,
+				E53552B219649E4500BB4F4A /* HistoryPostToFacebookActivityIcon@2x.png */,
+				E53552B319649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon.png */,
+				E53552B419649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon@2x.png */,
+				E535529F196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon.png */,
+				E53552A0196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon@2x.png */,
+				E53552A1196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon.png */,
+				E53552A2196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon@2x.png */,
+				E5355297196413B500BB4F4A /* HistoryRequestSupportActivityIcon.png */,
+				E5355298196413B500BB4F4A /* HistoryRequestSupportActivityIcon@2x.png */,
+				E5355299196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png */,
+				E535529A196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon@2x.png */,
 				E5B6F5FF1918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon.png */,
 				E5B6F6001918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon@2x.png */,
 				E5B6F6011918CC4000EAA3C4 /* CardCallSupportActivityMiniIcon.png */,
@@ -2065,16 +2221,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B6F59A190AB2D100EAA3C4 /* azIntro.m4a in Resources */,
+				E52A78FE19657C920038FA65 /* HistoryBlankActivityMiniIcon@2x.png in Resources */,
 				E5448B4419091EC20025C9E7 /* SettingsMaxTimeoutForPassword.png in Resources */,
 				E5B6F669191BDAFE00EAA3C4 /* SearchCatalogViewController_iPhone.xib in Resources */,
 				E599ECFE18F581370019A74E /* Stat.png in Resources */,
 				E5B6F623191A631A00EAA3C4 /* QiwiOutOceanR@2x.png in Resources */,
+				E5C4949C195DF05300330CEA /* MainCharityIcon@2x.png in Resources */,
 				E599EA2118E76BF50019A74E /* Localizable.strings in Resources */,
 				E5EAAE771939141E00B6B832 /* MapPinTerminal.png in Resources */,
 				E5448B8E1909BC490025C9E7 /* Oferta.m4a in Resources */,
 				E5B6F6851923898900EAA3C4 /* iPhoneSplashPortrait@2x.png in Resources */,
 				E5B6F597190AAC5500EAA3C4 /* azmum.m4a in Resources */,
 				E5B6F648191B984000EAA3C4 /* azwelcome5.m4a in Resources */,
+				E52A78FC19657C920038FA65 /* HistoryBlankActivityIcon@2x.png in Resources */,
+				E53552B619649E4500BB4F4A /* HistoryPostToFacebookActivityIcon@2x.png in Resources */,
 				E599ECE818F46A880019A74E /* CheckPasswordViewController_iPhone.xib in Resources */,
 				E599ED2318F5A6470019A74E /* TerminalsViewController_iPhone.xib in Resources */,
 				E5B6F5C5190E7E6C00EAA3C4 /* MainCheckIcon.png in Resources */,
@@ -2082,9 +2242,11 @@
 				E599ED0A18F583140019A74E /* Support.png in Resources */,
 				E599E9D918E768A00019A74E /* Loading_Round_Orange.png in Resources */,
 				E599ECD818F402770019A74E /* ApprovePhoneViewController_iPhone.xib in Resources */,
+				E5C49498195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png in Resources */,
 				E5B6F5E51916BDE700EAA3C4 /* Comission@2x.png in Resources */,
 				E5B6F59D190AB39B00EAA3C4 /* PasswordIcon.png in Resources */,
 				E5B6F64E191B984000EAA3C4 /* azwelcome11.m4a in Resources */,
+				E535529C196413B500BB4F4A /* HistoryRequestSupportActivityIcon@2x.png in Resources */,
 				E599ED0F18F5855C0019A74E /* Cards@2x.png in Resources */,
 				E5B6F593190AAC5500EAA3C4 /* azwelcome.m4a in Resources */,
 				E599ECE318F469B20019A74E /* MainViewController_iPhone.xib in Resources */,
@@ -2101,14 +2263,18 @@
 				E51F44AE1925301600A9D6EB /* LampOff.png in Resources */,
 				E5B6F647191B984000EAA3C4 /* azwelcome4.m4a in Resources */,
 				E5B6F649191B984000EAA3C4 /* azwelcome6.m4a in Resources */,
+				E53552A5196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon.png in Resources */,
 				E599ECF018F553340019A74E /* MenuViewController_iPhone.xib in Resources */,
 				E599ED3B18F5A86D0019A74E /* ProfileViewController_iPhone.xib in Resources */,
 				E5B6F6821923898900EAA3C4 /* iPhoneAppIcon.png in Resources */,
 				E5B6F64C191B984000EAA3C4 /* azwelcome9.m4a in Resources */,
+				E5C4949B195DF05300330CEA /* MainCharityIcon.png in Resources */,
 				E5B6F5B6190E70AB00EAA3C4 /* MainPhoneIcon@2x.png in Resources */,
 				E599ECFB18F580270019A74E /* History@2x.png in Resources */,
 				E51F44B41925377700A9D6EB /* MainScanIcon.png in Resources */,
 				E556D8BC19067E8C002BD048 /* MoneySendBackground@2x.png in Resources */,
+				E535529D196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png in Resources */,
+				E5C49497195DEB2300330CEA /* OceanBankPayToAnyReqR.png in Resources */,
 				E599E9DB18E768A90019A74E /* Oferta(Ru).rtf in Resources */,
 				E5B6F5BA190E74CF00EAA3C4 /* MainCard2CardIcon@2x.png in Resources */,
 				E556D8B519064D68002BD048 /* NoInternetConnectionViewController_iPhone.xib in Resources */,
@@ -2133,6 +2299,7 @@
 				E51F44B51925377700A9D6EB /* MainScanIcon@2x.png in Resources */,
 				E5B6F5F419180F2200EAA3C4 /* SelectedCardCellView_iPhone.xib in Resources */,
 				E5B6F660191B9B3700EAA3C4 /* azpoker.m4a in Resources */,
+				E53552A4196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon@2x.png in Resources */,
 				E599ED1318F5882F0019A74E /* Terminals@2x.png in Resources */,
 				E599ED4718F5BFB00019A74E /* Fail@2x.png in Resources */,
 				E556D8C01906BBE0002BD048 /* close@2x.png in Resources */,
@@ -2155,6 +2322,7 @@
 				E5B6F6111918CC4000EAA3C4 /* CardReceiveMoneyActivityMiniIcon.png in Resources */,
 				E5B6F60D1918CC4000EAA3C4 /* CardCallSupportActivityMiniIcon.png in Resources */,
 				E556D89B1901745D002BD048 /* EnterCVCBackground.png in Resources */,
+				E53552931962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib in Resources */,
 				E5EE653C19004C6A0013819A /* CardMoneySendActivityIcon.png in Resources */,
 				E5B6F626191A668B00EAA3C4 /* QiwiS2.png in Resources */,
 				E5448B4019091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png in Resources */,
@@ -2162,6 +2330,7 @@
 				E5B6F5F719183D9C00EAA3C4 /* CardCellActivityBorder.png in Resources */,
 				E556D89819016D36002BD048 /* EnterCVCViewController_iPhone.xib in Resources */,
 				E5B6F5A3190AC2B200EAA3C4 /* ChangePersonViewController_iPhone.xib in Resources */,
+				E53552A3196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon.png in Resources */,
 				E5B6F66E191F680C00EAA3C4 /* QiwiS1@2x.png in Resources */,
 				E5B6F61E191A44AA00EAA3C4 /* PayCheckViewController_iPhone.xib in Resources */,
 				E556D8BB19067E8C002BD048 /* MoneySendBackground.png in Resources */,
@@ -2172,6 +2341,8 @@
 				E5B6F651191B984000EAA3C4 /* azwelcome14.m4a in Resources */,
 				E599ED0B18F583140019A74E /* Support@2x.png in Resources */,
 				E599E9D618E768950019A74E /* Loading_Round_Orange@2x.png in Resources */,
+				E53552B519649E4500BB4F4A /* HistoryPostToFacebookActivityIcon.png in Resources */,
+				E52A78FD19657C920038FA65 /* HistoryBlankActivityMiniIcon.png in Resources */,
 				E556D8A019044D03002BD048 /* CardAuthorizeActivityIcon.png in Resources */,
 				E5EE651218FDF5BE0013819A /* AddCardViewController_iPhone.xib in Resources */,
 				E599ED1618F58AD90019A74E /* Payments.png in Resources */,
@@ -2183,6 +2354,7 @@
 				E5B6F637191B58FE00EAA3C4 /* CatalogSearchIcon@2x.png in Resources */,
 				E5B6F622191A631A00EAA3C4 /* QiwiOutOceanR.png in Resources */,
 				E5EE6549190050660013819A /* CardMoneySendActivityViewController_iPhone.xib in Resources */,
+				E53552B719649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon.png in Resources */,
 				E599E9CA18E768590019A74E /* RegisterViewController_iPhone.xib in Resources */,
 				E5B6F66D191F680C00EAA3C4 /* QiwiS1.png in Resources */,
 				E5B6F572190AA34A00EAA3C4 /* PhoneIcon.png in Resources */,
@@ -2192,8 +2364,10 @@
 				E5B6F656191B9A3900EAA3C4 /* aznettrash1.m4a in Resources */,
 				E5448B3D190919D90025C9E7 /* Settings.bundle in Resources */,
 				E5B6F64F191B984000EAA3C4 /* azwelcome12.m4a in Resources */,
+				E5C49494195DEA9B00330CEA /* PaynetEasyR@2x.png in Resources */,
 				E5B6F650191B984000EAA3C4 /* azwelcome13.m4a in Resources */,
 				E5B6F646191B984000EAA3C4 /* azwelcome3.m4a in Resources */,
+				E5C494A11962A7B100330CEA /* SelectedHistoryCellView_iPhone.xib in Resources */,
 				E599ED4818F5BFB00019A74E /* Information.png in Resources */,
 				E5EE650718FDAE680013819A /* reveal-icon.png in Resources */,
 				E5B6F6861923898900EAA3C4 /* iPhoneSplashPortraitR4.png in Resources */,
@@ -2202,6 +2376,7 @@
 				E5B6F62B191A67C100EAA3C4 /* QiwiSMegafon@2x.png in Resources */,
 				E51F44AF1925301600A9D6EB /* LampOff@2x.png in Resources */,
 				E599E98A18E760980019A74E /* InfoPlist.strings in Resources */,
+				E5C4948E195DD5AE00330CEA /* HistoryCellView_iPhone.xib in Resources */,
 				E5B6F6131918CC4000EAA3C4 /* CardRefreshBalanceActivityMiniIcon.png in Resources */,
 				E599ECFA18F580270019A74E /* History.png in Resources */,
 				E5B6F64D191B984000EAA3C4 /* azwelcome10.m4a in Resources */,
@@ -2214,6 +2389,7 @@
 				E556D8C91907DD67002BD048 /* OperationStateViewController_iPhone.xib in Resources */,
 				E5B6F5EA191791A500EAA3C4 /* TransferAddOn@2x.png in Resources */,
 				E5B6F60F1918CC4000EAA3C4 /* CardMoneySendActivityMiniIcon.png in Resources */,
+				E535529E196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon@2x.png in Resources */,
 				E5EE654119004C6A0013819A /* CardRefreshBalanceActivityIcon@2x.png in Resources */,
 				E5B6F573190AA34A00EAA3C4 /* PhoneIcon@2x.png in Resources */,
 				E5B6F636191B58FE00EAA3C4 /* CatalogSearchIcon.png in Resources */,
@@ -2228,6 +2404,7 @@
 				E5B6F5E9191791A500EAA3C4 /* TransferAddOn.png in Resources */,
 				E5B6F5EF1917A90500EAA3C4 /* CardCellView_iPhone.xib in Resources */,
 				E599E9DC18E768AC0019A74E /* Intro(Ru).rtf in Resources */,
+				E53552B819649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon@2x.png in Resources */,
 				E5B6F5C1190E7A5D00EAA3C4 /* MainNoChecksIcon.png in Resources */,
 				E5B6F5B5190E70AB00EAA3C4 /* MainPhoneIcon.png in Resources */,
 				E5B6F5E11916BBB900EAA3C4 /* ComissionViewController_iPhone.xib in Resources */,
@@ -2239,7 +2416,9 @@
 				E5B6F627191A668B00EAA3C4 /* QiwiS2@2x.png in Resources */,
 				E599E9D818E7689D0019A74E /* Loading_Round_Red@2x.png in Resources */,
 				E599E9C818E7684C0019A74E /* WaitingViewController_iPhone.xib in Resources */,
+				E52A78FB19657C920038FA65 /* HistoryBlankActivityIcon.png in Resources */,
 				E5B6F60E1918CC4000EAA3C4 /* CardCallSupportActivityMiniIcon@2x.png in Resources */,
+				E53552A6196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon@2x.png in Resources */,
 				E5B6F630191A689300EAA3C4 /* PayViewController_iPhone.xib in Resources */,
 				E5EE654019004C6A0013819A /* CardRefreshBalanceActivityIcon.png in Resources */,
 				E5B6F64B191B984000EAA3C4 /* azwelcome8.m4a in Resources */,
@@ -2259,6 +2438,9 @@
 				E5B6F5AD190D174400EAA3C4 /* About1@2x.png in Resources */,
 				E599ED0218F581F70019A74E /* Favorites.png in Resources */,
 				E5B6F576190AA54C00EAA3C4 /* EMailIcon.png in Resources */,
+				E5C49493195DEA9B00330CEA /* PaynetEasyR.png in Resources */,
+				E535529B196413B500BB4F4A /* HistoryRequestSupportActivityIcon.png in Resources */,
+				E52A7908196581150038FA65 /* BlankViewController_iPhone.xib in Resources */,
 				E556D8A119044D03002BD048 /* CardAuthorizeActivityIcon@2x.png in Resources */,
 				E5B6F65C191B9A9A00EAA3C4 /* ndemyashova.m4a in Resources */,
 				E5B6F6121918CC4000EAA3C4 /* CardReceiveMoneyActivityMiniIcon@2x.png in Resources */,
@@ -2302,10 +2484,12 @@
 				E599E9F918E769270019A74E /* svcSettings.m in Sources */,
 				E556D8A41905126A002BD048 /* CardAuthorizeActivity.m in Sources */,
 				E556D8C81907DD67002BD048 /* OperationStateViewController_iPhone.m in Sources */,
+				E53552961963390B00BB4F4A /* HistoryRepeatPaymentActivity.m in Sources */,
 				E5B6F5A2190AC2B200EAA3C4 /* ChangePersonViewController_iPhone.m in Sources */,
 				E556D8B019064B7B002BD048 /* Reachability.m in Sources */,
 				E599E9DD18E768BF0019A74E /* Soap+Prefix.m in Sources */,
 				E599E9ED18E768F90019A74E /* svcCardStat.m in Sources */,
+				E5C494A91962DBD300330CEA /* HistoryRequestSupportActivity.m in Sources */,
 				E599E9EE18E768FF0019A74E /* svcCharity.m in Sources */,
 				E599E9DE18E768C30019A74E /* svcArrayOfCard.m in Sources */,
 				E5B6F5FE19184F4200EAA3C4 /* UIImage+Scale.m in Sources */,
@@ -2358,6 +2542,7 @@
 				E599EA1B18E769BC0019A74E /* CXMLNode_XPathExtensions.m in Sources */,
 				E5B6F5E01916BBB900EAA3C4 /* ComissionViewController_iPhone.m in Sources */,
 				E599EA0518E769690019A74E /* SoapDictionary.m in Sources */,
+				E53552A9196480DB00BB4F4A /* NSDate+Operation.m in Sources */,
 				E599EA0018E7693E0019A74E /* svcWSResponse.m in Sources */,
 				E599EA0F18E7698E0019A74E /* CTidy.m in Sources */,
 				E5B6F6191918CCA900EAA3C4 /* UICardActivity.m in Sources */,
@@ -2369,6 +2554,7 @@
 				E599EA0318E769610019A74E /* Soap.m in Sources */,
 				E599ED2E18F5A76C0019A74E /* HistoryViewController_iPhone.m in Sources */,
 				E599E9EA18E768EE0019A74E /* svcArrayOfTerminal.m in Sources */,
+				E5C494A01962A7B100330CEA /* SelectedHistoryCellView_iPhone.m in Sources */,
 				E5B6F68F19239CE300EAA3C4 /* ScanViewController_iPhone.m in Sources */,
 				E599E9E418E768D90019A74E /* svcArrayOfMessage.m in Sources */,
 				E599E9FD18E769340019A74E /* svcTerminal.m in Sources */,
@@ -2378,8 +2564,10 @@
 				E5B6F62F191A689300EAA3C4 /* PayViewController_iPhone.m in Sources */,
 				E5B6F5A7190AC36800EAA3C4 /* AboutViewController_iPhone.m in Sources */,
 				E599EA0418E769640019A74E /* SoapArray.m in Sources */,
+				E5C494A41962DB2C00330CEA /* UIHistoryActivity.m in Sources */,
 				E5EE6529190043B90013819A /* CardRequestSupportActivity.m in Sources */,
 				E5EE651719000C4E0013819A /* UIViewController+KeyboardExtensions.m in Sources */,
+				E52A790319657CDE0038FA65 /* HistoryBlankActivity.m in Sources */,
 				E5EE6548190050660013819A /* CardMoneySendActivityViewController_iPhone.m in Sources */,
 				E599E9C918E768550019A74E /* RegisterViewController_iPhone.m in Sources */,
 				E599E9FE18E769370019A74E /* svcTopCurrency.m in Sources */,
@@ -2398,10 +2586,13 @@
 				E599E9FC18E769310019A74E /* svcSudzc.m in Sources */,
 				E5B6F668191BDAFE00EAA3C4 /* SearchCatalogViewController_iPhone.m in Sources */,
 				E5EE64F218FD77420013819A /* NSNumber+Currency.m in Sources */,
+				E53552B01964986600BB4F4A /* HistoryPostToFacebookActivity.m in Sources */,
 				E599ED3418F5A7EE0019A74E /* StatViewController_iPhone.m in Sources */,
 				E599E99318E760980019A74E /* iRoboDev.xcdatamodeld in Sources */,
+				E53552921962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m in Sources */,
 				E599EA1618E769AB0019A74E /* CXMLElement_ElementTreeExtensions.m in Sources */,
 				E599E9FA18E7692A0019A74E /* svcShopCatalogItem.m in Sources */,
+				E5C4948D195DD5AE00330CEA /* HistoryCellView_iPhone.m in Sources */,
 				E599E9E318E768D60019A74E /* svcArrayOfHistoryOperation.m in Sources */,
 				E599E9F518E769170019A74E /* svcOperationState.m in Sources */,
 				E5EE64F718FD85A30013819A /* NSDate+MonthNames.m in Sources */,
@@ -2410,6 +2601,7 @@
 				E599EA1418E769A40019A74E /* CXMLElement.m in Sources */,
 				E599E9EB18E768F20019A74E /* svcArrayOfTopCurrency.m in Sources */,
 				E599EA0718E769700019A74E /* SoapHandler.m in Sources */,
+				E52A7907196581150038FA65 /* BlankViewController_iPhone.m in Sources */,
 				E599E9CB18E7685F0019A74E /* EnterPhoneViewController_iPhone.m in Sources */,
 				E5B6F6751921160100EAA3C4 /* NSString+Checkers.m in Sources */,
 				E599ECEF18F553340019A74E /* MenuViewController_iPhone.m in Sources */,
@@ -2539,8 +2731,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = iRoboDev/iRoboDev.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRoboDev/iRoboDev-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2566,7 +2758,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B3E21E01-E26A-419F-B211-F97A8FB930BA";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2578,8 +2770,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = iRoboDev/iRoboDev.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRoboDev/iRoboDev-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2601,7 +2793,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B3E21E01-E26A-419F-B211-F97A8FB930BA";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

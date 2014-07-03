@@ -263,6 +263,12 @@
 	- (SoapRequest*) GetHistory: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP;
 	- (SoapRequest*) GetHistory: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP;
 
+
+    // Returns svcWSResponse*
+    /* Получение истории операций относительно указанного op_Id */
+    - (SoapRequest*) GetHistoryFromId: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count;
+    - (SoapRequest*) GetHistoryFromId: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count;
+
 	// Returns svcWSResponse*
 	/* Оплата счёта */
 	- (SoapRequest*) PayCheck: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE checkId: (int) checkId cardId: (int) cardId CVC: (NSString*) CVC;

@@ -927,7 +927,27 @@
 		return _request;
 	}
 
-	// Returns svcWSResponse*
+    // Returns svcWSResponse*
+    /* Получение истории операций относительно указанного op_Id */
+    - (SoapRequest*) GetHistoryFromId: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count
+    {
+        return [self GetHistoryFromId: handler action: nil UNIQUE: UNIQUE Id: Id Count: Count];
+    }
+
+- (SoapRequest*) GetHistoryFromId: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count
+    {
+        NSMutableArray* _params = [NSMutableArray array];
+    
+        [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithInt: Id] forName: @"Id"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithInt: Count] forName: @"Count"]];
+        NSString* _envelope = [Soap createEnvelope: @"GetHistoryFromId" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
+        SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/GetHistoryFromId" postData: _envelope deserializeTo: [svcWSResponse alloc]];
+        [_request send];
+        return _request;
+    }
+
+    // Returns svcWSResponse*
 	/* Оплата счёта */
 	- (SoapRequest*) PayCheck: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE checkId: (int) checkId cardId: (int) cardId CVC: (NSString*) CVC
 	{

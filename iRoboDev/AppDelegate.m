@@ -60,7 +60,8 @@
     [self getScenario];
     [self.window makeKeyAndVisible];
     
-    [self showWait:NSLocalizedString(@"InitializeApp", @"InitializeApp")];
+    if (_firstInitialization)
+        [self showWait:NSLocalizedString(@"InitializeApp", @"InitializeApp")];
     [application registerForRemoteNotificationTypes:(UIRemoteNotificationType)(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
 
     return YES;
