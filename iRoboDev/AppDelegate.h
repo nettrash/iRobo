@@ -17,6 +17,8 @@
 #import "NoInternetConnectionViewController_iPhone.h"
 #import "AppSettings.h"
 
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
 @class Reachability;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, SWRevealViewControllerDelegate, CheckPasswordDelegate>
@@ -63,8 +65,6 @@
 - (UIImage*)blurryGPUImage:(UIImage *)image withBlurLevel:(NSInteger)blur andPhases:(NSInteger)phases;
 - (UIImage*)scaleIfNeeded:(CGImageRef)cgimg;
 - (UIImage*)takeScreenShot;
-
-- (BOOL)iPhone5;
 
 - (void)showWait:(NSString *)message;
 - (void)hideWait;

@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "PayViewControllerDelegate.h"
 #import "ActivityProtocols.h"
-#import "BlankViewControllerDelegate.h"
+#import "OperationBlankDelegate.h"
+#import "AddToFavoriteDelegate.h"
 
-@interface HistoryViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate, ActivityResultDelegate, BlankViewControllerDelegate>
+@interface HistoryViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate, ActivityResultDelegate, OperationBlankDelegate, AddToFavoriteDelegate>
 {
     int _Id;
     int _Count;

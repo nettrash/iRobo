@@ -22,6 +22,29 @@
 		E52A790319657CDE0038FA65 /* HistoryBlankActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A790219657CDE0038FA65 /* HistoryBlankActivity.m */; };
 		E52A7907196581150038FA65 /* BlankViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A7905196581150038FA65 /* BlankViewController_iPhone.m */; };
 		E52A7908196581150038FA65 /* BlankViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A7906196581150038FA65 /* BlankViewController_iPhone.xib */; };
+		E52A790C19658DD60038FA65 /* HistoryPostToTwitterActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A790B19658DD60038FA65 /* HistoryPostToTwitterActivity.m */; };
+		E52A7911196590F20038FA65 /* HistoryPostToTwitterActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A790D196590F20038FA65 /* HistoryPostToTwitterActivityIcon.png */; };
+		E52A7912196590F20038FA65 /* HistoryPostToTwitterActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A790E196590F20038FA65 /* HistoryPostToTwitterActivityIcon@2x.png */; };
+		E52A7913196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A790F196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon.png */; };
+		E52A7914196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A7910196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon@2x.png */; };
+		E52A79191966A3750038FA65 /* FavoriteFail.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79151966A3750038FA65 /* FavoriteFail.png */; };
+		E52A791A1966A3750038FA65 /* FavoriteFail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79161966A3750038FA65 /* FavoriteFail@2x.png */; };
+		E52A791B1966A3750038FA65 /* FavoriteSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79171966A3750038FA65 /* FavoriteSuccess.png */; };
+		E52A791C1966A3750038FA65 /* FavoriteSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79181966A3750038FA65 /* FavoriteSuccess@2x.png */; };
+		E52A791F1966C42F0038FA65 /* HistoryAddToFavoriteActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A791E1966C42F0038FA65 /* HistoryAddToFavoriteActivity.m */; };
+		E52A79241966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79201966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon.png */; };
+		E52A79251966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79211966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon@2x.png */; };
+		E52A79261966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79221966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon.png */; };
+		E52A79271966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79231966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon@2x.png */; };
+		E52A792A1966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A79291966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.m */; };
+		E52A792F1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A792B1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png */; };
+		E52A79301966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A792C1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon@2x.png */; };
+		E52A79311966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A792D1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png */; };
+		E52A79321966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A792E1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon@2x.png */; };
+		E52A79361966E14E0038FA65 /* AddToFavoriteViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A79341966E14E0038FA65 /* AddToFavoriteViewController_iPhone.m */; };
+		E52A79371966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A79351966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib */; };
+		E52A793C19670D130038FA65 /* EditFavoriteViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A793A19670D130038FA65 /* EditFavoriteViewController_iPhone.m */; };
+		E52A793D19670D130038FA65 /* EditFavoriteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A793B19670D130038FA65 /* EditFavoriteViewController_iPhone.xib */; };
 		E53552921962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */; };
 		E53552931962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */; };
 		E53552961963390B00BB4F4A /* HistoryRepeatPaymentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552951963390B00BB4F4A /* HistoryRepeatPaymentActivity.m */; };
@@ -590,7 +613,37 @@
 		E52A7904196581150038FA65 /* BlankViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlankViewController_iPhone.h; path = Vews/iPhone/Common/BlankViewController_iPhone.h; sourceTree = "<group>"; };
 		E52A7905196581150038FA65 /* BlankViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlankViewController_iPhone.m; path = Vews/iPhone/Common/BlankViewController_iPhone.m; sourceTree = "<group>"; };
 		E52A7906196581150038FA65 /* BlankViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlankViewController_iPhone.xib; path = Vews/iPhone/Common/BlankViewController_iPhone.xib; sourceTree = "<group>"; };
-		E52A7909196581C10038FA65 /* BlankViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlankViewControllerDelegate.h; path = Common/Protocols/BlankViewControllerDelegate.h; sourceTree = "<group>"; };
+		E52A7909196581C10038FA65 /* OperationBlankDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OperationBlankDelegate.h; path = Common/Protocols/OperationBlankDelegate.h; sourceTree = "<group>"; };
+		E52A790A19658DD60038FA65 /* HistoryPostToTwitterActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryPostToTwitterActivity.h; path = Common/Activities/HistoryPostToTwitterActivity.h; sourceTree = "<group>"; };
+		E52A790B19658DD60038FA65 /* HistoryPostToTwitterActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryPostToTwitterActivity.m; path = Common/Activities/HistoryPostToTwitterActivity.m; sourceTree = "<group>"; };
+		E52A790D196590F20038FA65 /* HistoryPostToTwitterActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryPostToTwitterActivityIcon.png; sourceTree = "<group>"; };
+		E52A790E196590F20038FA65 /* HistoryPostToTwitterActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryPostToTwitterActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E52A790F196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryPostToTwitterActivityMiniIcon.png; sourceTree = "<group>"; };
+		E52A7910196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryPostToTwitterActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
+		E52A79151966A3750038FA65 /* FavoriteFail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FavoriteFail.png; path = Content/Common/FavoriteFail.png; sourceTree = "<group>"; };
+		E52A79161966A3750038FA65 /* FavoriteFail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FavoriteFail@2x.png"; path = "Content/Common/FavoriteFail@2x.png"; sourceTree = "<group>"; };
+		E52A79171966A3750038FA65 /* FavoriteSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FavoriteSuccess.png; path = Content/Common/FavoriteSuccess.png; sourceTree = "<group>"; };
+		E52A79181966A3750038FA65 /* FavoriteSuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FavoriteSuccess@2x.png"; path = "Content/Common/FavoriteSuccess@2x.png"; sourceTree = "<group>"; };
+		E52A791D1966C42F0038FA65 /* HistoryAddToFavoriteActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryAddToFavoriteActivity.h; path = Common/Activities/HistoryAddToFavoriteActivity.h; sourceTree = "<group>"; };
+		E52A791E1966C42F0038FA65 /* HistoryAddToFavoriteActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryAddToFavoriteActivity.m; path = Common/Activities/HistoryAddToFavoriteActivity.m; sourceTree = "<group>"; };
+		E52A79201966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryAddToFavoritesActivityIcon.png; sourceTree = "<group>"; };
+		E52A79211966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryAddToFavoritesActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E52A79221966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryAddToFavoritesActivityMiniIcon.png; sourceTree = "<group>"; };
+		E52A79231966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryAddToFavoritesActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
+		E52A79281966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryRemoveFromFavoriteActivity.h; path = Common/Activities/HistoryRemoveFromFavoriteActivity.h; sourceTree = "<group>"; };
+		E52A79291966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryRemoveFromFavoriteActivity.m; path = Common/Activities/HistoryRemoveFromFavoriteActivity.m; sourceTree = "<group>"; };
+		E52A792B1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryRemoveFromFavoritesActivityIcon.png; sourceTree = "<group>"; };
+		E52A792C1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryRemoveFromFavoritesActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E52A792D1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryRemoveFromFavoritesActivityMiniIcon.png; sourceTree = "<group>"; };
+		E52A792E1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryRemoveFromFavoritesActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
+		E52A79331966E14E0038FA65 /* AddToFavoriteViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddToFavoriteViewController_iPhone.h; path = Vews/iPhone/Favorites/AddToFavoriteViewController_iPhone.h; sourceTree = "<group>"; };
+		E52A79341966E14E0038FA65 /* AddToFavoriteViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddToFavoriteViewController_iPhone.m; path = Vews/iPhone/Favorites/AddToFavoriteViewController_iPhone.m; sourceTree = "<group>"; };
+		E52A79351966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddToFavoriteViewController_iPhone.xib; path = Vews/iPhone/Favorites/AddToFavoriteViewController_iPhone.xib; sourceTree = "<group>"; };
+		E52A79381966E19B0038FA65 /* AddToFavoriteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddToFavoriteDelegate.h; path = Common/Protocols/AddToFavoriteDelegate.h; sourceTree = "<group>"; };
+		E52A793919670D130038FA65 /* EditFavoriteViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFavoriteViewController_iPhone.h; path = Vews/iPhone/Favorites/EditFavoriteViewController_iPhone.h; sourceTree = "<group>"; };
+		E52A793A19670D130038FA65 /* EditFavoriteViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFavoriteViewController_iPhone.m; path = Vews/iPhone/Favorites/EditFavoriteViewController_iPhone.m; sourceTree = "<group>"; };
+		E52A793B19670D130038FA65 /* EditFavoriteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditFavoriteViewController_iPhone.xib; path = Vews/iPhone/Favorites/EditFavoriteViewController_iPhone.xib; sourceTree = "<group>"; };
+		E52A793F19670D9D0038FA65 /* EditFavoriteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFavoriteDelegate.h; path = Common/Protocols/EditFavoriteDelegate.h; sourceTree = "<group>"; };
 		E535528F1962E1DD00BB4F4A /* RequestSupportViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestSupportViewController_iPhone.h; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.h; sourceTree = "<group>"; };
 		E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestSupportViewController_iPhone.m; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.m; sourceTree = "<group>"; };
 		E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RequestSupportViewController_iPhone.xib; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -1316,6 +1369,10 @@
 		E50E657918E2D10A00D9883F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E52A79151966A3750038FA65 /* FavoriteFail.png */,
+				E52A79161966A3750038FA65 /* FavoriteFail@2x.png */,
+				E52A79171966A3750038FA65 /* FavoriteSuccess.png */,
+				E52A79181966A3750038FA65 /* FavoriteSuccess@2x.png */,
 				E5EAAE741939141E00B6B832 /* Map */,
 				E51F44AA1925301600A9D6EB /* LampOff.png */,
 				E51F44AB1925301600A9D6EB /* LampOff@2x.png */,
@@ -1442,7 +1499,9 @@
 				E5B6F6921923A62700EAA3C4 /* ScanViewControllerDelegate.h */,
 				E5D96062192BA861008AD81B /* AdditionalParametersDelegate.h */,
 				E5C494AF1962DDDE00330CEA /* RequestSupportDelegate.h */,
-				E52A7909196581C10038FA65 /* BlankViewControllerDelegate.h */,
+				E52A7909196581C10038FA65 /* OperationBlankDelegate.h */,
+				E52A79381966E19B0038FA65 /* AddToFavoriteDelegate.h */,
+				E52A793F19670D9D0038FA65 /* EditFavoriteDelegate.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1624,6 +1683,12 @@
 				E599ED1918F5A58E0019A74E /* FavoritesViewController_iPhone.h */,
 				E599ED1A18F5A58E0019A74E /* FavoritesViewController_iPhone.m */,
 				E599ED1B18F5A58E0019A74E /* FavoritesViewController_iPhone.xib */,
+				E52A79331966E14E0038FA65 /* AddToFavoriteViewController_iPhone.h */,
+				E52A79341966E14E0038FA65 /* AddToFavoriteViewController_iPhone.m */,
+				E52A79351966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib */,
+				E52A793919670D130038FA65 /* EditFavoriteViewController_iPhone.h */,
+				E52A793A19670D130038FA65 /* EditFavoriteViewController_iPhone.m */,
+				E52A793B19670D130038FA65 /* EditFavoriteViewController_iPhone.xib */,
 			);
 			name = Favorites;
 			sourceTree = "<group>";
@@ -1880,6 +1945,12 @@
 				E53552AF1964986600BB4F4A /* HistoryPostToFacebookActivity.m */,
 				E52A790119657CDE0038FA65 /* HistoryBlankActivity.h */,
 				E52A790219657CDE0038FA65 /* HistoryBlankActivity.m */,
+				E52A790A19658DD60038FA65 /* HistoryPostToTwitterActivity.h */,
+				E52A790B19658DD60038FA65 /* HistoryPostToTwitterActivity.m */,
+				E52A791D1966C42F0038FA65 /* HistoryAddToFavoriteActivity.h */,
+				E52A791E1966C42F0038FA65 /* HistoryAddToFavoriteActivity.m */,
+				E52A79281966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.h */,
+				E52A79291966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.m */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -2054,6 +2125,18 @@
 		E5EE652D19004B630013819A /* ActivityIcons */ = {
 			isa = PBXGroup;
 			children = (
+				E52A792B1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png */,
+				E52A792C1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon@2x.png */,
+				E52A792D1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png */,
+				E52A792E1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon@2x.png */,
+				E52A79201966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon.png */,
+				E52A79211966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon@2x.png */,
+				E52A79221966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon.png */,
+				E52A79231966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon@2x.png */,
+				E52A790D196590F20038FA65 /* HistoryPostToTwitterActivityIcon.png */,
+				E52A790E196590F20038FA65 /* HistoryPostToTwitterActivityIcon@2x.png */,
+				E52A790F196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon.png */,
+				E52A7910196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon@2x.png */,
 				E52A78F719657C920038FA65 /* HistoryBlankActivityIcon.png */,
 				E52A78F819657C920038FA65 /* HistoryBlankActivityIcon@2x.png */,
 				E52A78F919657C920038FA65 /* HistoryBlankActivityMiniIcon.png */,
@@ -2243,12 +2326,14 @@
 				E599E9D918E768A00019A74E /* Loading_Round_Orange.png in Resources */,
 				E599ECD818F402770019A74E /* ApprovePhoneViewController_iPhone.xib in Resources */,
 				E5C49498195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png in Resources */,
+				E52A79241966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon.png in Resources */,
 				E5B6F5E51916BDE700EAA3C4 /* Comission@2x.png in Resources */,
 				E5B6F59D190AB39B00EAA3C4 /* PasswordIcon.png in Resources */,
 				E5B6F64E191B984000EAA3C4 /* azwelcome11.m4a in Resources */,
 				E535529C196413B500BB4F4A /* HistoryRequestSupportActivityIcon@2x.png in Resources */,
 				E599ED0F18F5855C0019A74E /* Cards@2x.png in Resources */,
 				E5B6F593190AAC5500EAA3C4 /* azwelcome.m4a in Resources */,
+				E52A79301966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon@2x.png in Resources */,
 				E599ECE318F469B20019A74E /* MainViewController_iPhone.xib in Resources */,
 				E5B6F653191B984000EAA3C4 /* azwelcome16.m4a in Resources */,
 				E5B6F5D7190FC7C600EAA3C4 /* Card2CardTransferViewController_iPhone.xib in Resources */,
@@ -2271,6 +2356,7 @@
 				E5C4949B195DF05300330CEA /* MainCharityIcon.png in Resources */,
 				E5B6F5B6190E70AB00EAA3C4 /* MainPhoneIcon@2x.png in Resources */,
 				E599ECFB18F580270019A74E /* History@2x.png in Resources */,
+				E52A79261966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon.png in Resources */,
 				E51F44B41925377700A9D6EB /* MainScanIcon.png in Resources */,
 				E556D8BC19067E8C002BD048 /* MoneySendBackground@2x.png in Resources */,
 				E535529D196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png in Resources */,
@@ -2283,6 +2369,7 @@
 				E5B6F5DC1911121F00EAA3C4 /* MoneyTransferViewController_iPhone.xib in Resources */,
 				E5D96061192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib in Resources */,
 				E599ED1218F5882F0019A74E /* Terminals.png in Resources */,
+				E52A79191966A3750038FA65 /* FavoriteFail.png in Resources */,
 				E5B6F652191B984000EAA3C4 /* azwelcome15.m4a in Resources */,
 				E5EE653119004B630013819A /* CardRequestSupportActivityIcon@2x.png in Resources */,
 				E599ED4B18F5BFB00019A74E /* Success@2x.png in Resources */,
@@ -2316,11 +2403,13 @@
 				E5B6F577190AA54C00EAA3C4 /* EMailIcon@2x.png in Resources */,
 				E5448B7B1909B4340025C9E7 /* Intro.m4a in Resources */,
 				E5EE653E19004C6A0013819A /* CardReceiveMoneyActivityIcon.png in Resources */,
+				E52A79371966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib in Resources */,
 				E5448B7C1909B4340025C9E7 /* mum.m4a in Resources */,
 				E5B6F59E190AB39B00EAA3C4 /* PasswordIcon@2x.png in Resources */,
 				E5B6F598190AAC5500EAA3C4 /* aznettrash.m4a in Resources */,
 				E5B6F6111918CC4000EAA3C4 /* CardReceiveMoneyActivityMiniIcon.png in Resources */,
 				E5B6F60D1918CC4000EAA3C4 /* CardCallSupportActivityMiniIcon.png in Resources */,
+				E52A79321966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon@2x.png in Resources */,
 				E556D89B1901745D002BD048 /* EnterCVCBackground.png in Resources */,
 				E53552931962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib in Resources */,
 				E5EE653C19004C6A0013819A /* CardMoneySendActivityIcon.png in Resources */,
@@ -2341,6 +2430,8 @@
 				E5B6F651191B984000EAA3C4 /* azwelcome14.m4a in Resources */,
 				E599ED0B18F583140019A74E /* Support@2x.png in Resources */,
 				E599E9D618E768950019A74E /* Loading_Round_Orange@2x.png in Resources */,
+				E52A7912196590F20038FA65 /* HistoryPostToTwitterActivityIcon@2x.png in Resources */,
+				E52A791B1966A3750038FA65 /* FavoriteSuccess.png in Resources */,
 				E53552B519649E4500BB4F4A /* HistoryPostToFacebookActivityIcon.png in Resources */,
 				E52A78FD19657C920038FA65 /* HistoryBlankActivityMiniIcon.png in Resources */,
 				E556D8A019044D03002BD048 /* CardAuthorizeActivityIcon.png in Resources */,
@@ -2379,12 +2470,14 @@
 				E5C4948E195DD5AE00330CEA /* HistoryCellView_iPhone.xib in Resources */,
 				E5B6F6131918CC4000EAA3C4 /* CardRefreshBalanceActivityMiniIcon.png in Resources */,
 				E599ECFA18F580270019A74E /* History.png in Resources */,
+				E52A793D19670D130038FA65 /* EditFavoriteViewController_iPhone.xib in Resources */,
 				E5B6F64D191B984000EAA3C4 /* azwelcome10.m4a in Resources */,
 				E5D96059192A7B44008AD81B /* OCEANComission.png in Resources */,
 				E599E9CE18E7686A0019A74E /* EnterEMailViewController_iPhone.xib in Resources */,
 				E5EAAE781939141E00B6B832 /* MapPinTerminal@2x.png in Resources */,
 				E599E99518E760980019A74E /* Images.xcassets in Resources */,
 				E599ED4E18F5F7600019A74E /* WWW.png in Resources */,
+				E52A791C1966A3750038FA65 /* FavoriteSuccess@2x.png in Resources */,
 				E5B6F5BD190E780500EAA3C4 /* MainTransferIcon.png in Resources */,
 				E556D8C91907DD67002BD048 /* OperationStateViewController_iPhone.xib in Resources */,
 				E5B6F5EA191791A500EAA3C4 /* TransferAddOn@2x.png in Resources */,
@@ -2395,12 +2488,14 @@
 				E5B6F636191B58FE00EAA3C4 /* CatalogSearchIcon.png in Resources */,
 				E5448B7D1909B4340025C9E7 /* mum1.m4a in Resources */,
 				E599E9DA18E768A40019A74E /* ROBOKASSA.png in Resources */,
+				E52A7911196590F20038FA65 /* HistoryPostToTwitterActivityIcon.png in Resources */,
 				E5B6F657191B9A3900EAA3C4 /* aznettrash2.m4a in Resources */,
 				E5B6F5F819183D9C00EAA3C4 /* CardCellActivityBorder@2x.png in Resources */,
 				E599ED4918F5BFB00019A74E /* Information@2x.png in Resources */,
 				E5B6F60B1918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon.png in Resources */,
 				E5B6F5B9190E74CF00EAA3C4 /* MainCard2CardIcon.png in Resources */,
 				E5B6F5AB190AC66700EAA3C4 /* About1.png in Resources */,
+				E52A79271966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon@2x.png in Resources */,
 				E5B6F5E9191791A500EAA3C4 /* TransferAddOn.png in Resources */,
 				E5B6F5EF1917A90500EAA3C4 /* CardCellView_iPhone.xib in Resources */,
 				E599E9DC18E768AC0019A74E /* Intro(Ru).rtf in Resources */,
@@ -2411,9 +2506,11 @@
 				E5448B7E1909B4340025C9E7 /* mum2.m4a in Resources */,
 				E599ECF618F558DF0019A74E /* MessagesViewController_iPhone.xib in Resources */,
 				E5448B4119091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png in Resources */,
+				E52A79251966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon@2x.png in Resources */,
 				E5EE650818FDAE680013819A /* reveal-icon@2x.png in Resources */,
 				E5B6F664191B9B6800EAA3C4 /* azpol.m4a in Resources */,
 				E5B6F627191A668B00EAA3C4 /* QiwiS2@2x.png in Resources */,
+				E52A7913196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon.png in Resources */,
 				E599E9D818E7689D0019A74E /* Loading_Round_Red@2x.png in Resources */,
 				E599E9C818E7684C0019A74E /* WaitingViewController_iPhone.xib in Resources */,
 				E52A78FB19657C920038FA65 /* HistoryBlankActivityIcon.png in Resources */,
@@ -2425,6 +2522,7 @@
 				E599ED0E18F5855C0019A74E /* Cards.png in Resources */,
 				E599ECDD18F402910019A74E /* ApproveEMailViewController_iPhone.xib in Resources */,
 				E599E9D018E768720019A74E /* EnterPasswordViewController_iPhone.xib in Resources */,
+				E52A7914196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon@2x.png in Resources */,
 				E599E9D718E768980019A74E /* Loading_Round_Red.png in Resources */,
 				E51F44B11925301600A9D6EB /* LampOn@2x.png in Resources */,
 				E5B6F67A1921427700EAA3C4 /* MessageCell_iPhone.xib in Resources */,
@@ -2443,6 +2541,9 @@
 				E52A7908196581150038FA65 /* BlankViewController_iPhone.xib in Resources */,
 				E556D8A119044D03002BD048 /* CardAuthorizeActivityIcon@2x.png in Resources */,
 				E5B6F65C191B9A9A00EAA3C4 /* ndemyashova.m4a in Resources */,
+				E52A79311966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png in Resources */,
+				E52A792F1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png in Resources */,
+				E52A791A1966A3750038FA65 /* FavoriteFail@2x.png in Resources */,
 				E5B6F6121918CC4000EAA3C4 /* CardReceiveMoneyActivityMiniIcon@2x.png in Resources */,
 				E5B6F60C1918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon@2x.png in Resources */,
 				E599ED4F18F5F7600019A74E /* WWW@2x.png in Resources */,
@@ -2514,6 +2615,8 @@
 				E599ECE718F46A880019A74E /* CheckPasswordViewController_iPhone.m in Sources */,
 				E599EA0E18E769870019A74E /* SoapService.m in Sources */,
 				E599E9E618E768E00019A74E /* svcArrayOfRoumingMobileOperator.m in Sources */,
+				E52A790C19658DD60038FA65 /* HistoryPostToTwitterActivity.m in Sources */,
+				E52A79361966E14E0038FA65 /* AddToFavoriteViewController_iPhone.m in Sources */,
 				E599E9E018E768C90019A74E /* svcArrayOfCurrency.m in Sources */,
 				E599E9F018E769060019A74E /* svcCurrency.m in Sources */,
 				E599E9E518E768DD0019A74E /* svcArrayOfParameter.m in Sources */,
@@ -2556,6 +2659,7 @@
 				E599E9EA18E768EE0019A74E /* svcArrayOfTerminal.m in Sources */,
 				E5C494A01962A7B100330CEA /* SelectedHistoryCellView_iPhone.m in Sources */,
 				E5B6F68F19239CE300EAA3C4 /* ScanViewController_iPhone.m in Sources */,
+				E52A793C19670D130038FA65 /* EditFavoriteViewController_iPhone.m in Sources */,
 				E599E9E418E768D90019A74E /* svcArrayOfMessage.m in Sources */,
 				E599E9FD18E769340019A74E /* svcTerminal.m in Sources */,
 				E599E9F118E769090019A74E /* svcDeviceStatItem.m in Sources */,
@@ -2564,6 +2668,7 @@
 				E5B6F62F191A689300EAA3C4 /* PayViewController_iPhone.m in Sources */,
 				E5B6F5A7190AC36800EAA3C4 /* AboutViewController_iPhone.m in Sources */,
 				E599EA0418E769640019A74E /* SoapArray.m in Sources */,
+				E52A791F1966C42F0038FA65 /* HistoryAddToFavoriteActivity.m in Sources */,
 				E5C494A41962DB2C00330CEA /* UIHistoryActivity.m in Sources */,
 				E5EE6529190043B90013819A /* CardRequestSupportActivity.m in Sources */,
 				E5EE651719000C4E0013819A /* UIViewController+KeyboardExtensions.m in Sources */,
@@ -2572,6 +2677,7 @@
 				E599E9C918E768550019A74E /* RegisterViewController_iPhone.m in Sources */,
 				E599E9FE18E769370019A74E /* svcTopCurrency.m in Sources */,
 				E599ECDC18F402910019A74E /* ApproveEMailViewController_iPhone.m in Sources */,
+				E52A792A1966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.m in Sources */,
 				E599EA1518E769A80019A74E /* CXMLElement_CreationExtensions.m in Sources */,
 				E599E9EF18E769030019A74E /* svcCheck.m in Sources */,
 				E5EE652C1900443B0013819A /* CardCallSupportActivity.m in Sources */,

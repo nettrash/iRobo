@@ -50,6 +50,12 @@
 {
     [super viewDidLoad];
     self.vWait.hidden = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
     [self initializeInterface];
 }
 
@@ -85,6 +91,17 @@
     {
         self.tvRequest.text = @"";
     }
+
+    if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+    {
+        if (!IS_IPHONE_5)
+        {
+            CGRect frame = self.tvRequest.frame;
+            frame.size.height -= 100.0;
+            self.tvRequest.frame = frame;
+        }
+    }
+
     [self.tvRequest becomeFirstResponder];
 }
 

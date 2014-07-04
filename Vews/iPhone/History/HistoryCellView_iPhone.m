@@ -44,6 +44,8 @@
 {
     self.operation = op;
     NSString *title = op.currName;
+    if (op.inFavorites && op.favoriteName && op.favoriteName != nil && ![op.favoriteName isEqualToString:@""])
+        title = op.favoriteName;
     if (op.check_Id > 0)
         title = [NSString stringWithFormat:@"%@ N-%@", op.check_MerchantName, op.check_MerchantOrder];
     if (op.charity_Id > 0)
@@ -57,13 +59,13 @@
     self.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:250.0/255.0 alpha:1.0];
     self.lblResult.text = NSLocalizedString(@"OpInProgress", @"OpInProgress");
     if ([op.process isEqualToString:@"Done"]) {
-        self.imageView.image = [UIImage imageNamed:@"Success"];
+        self.imageView.image = [UIImage imageNamed:op.inFavorites ? @"FavoriteSuccess" : @"Success"];
         self.backgroundColor = [UIColor colorWithRed:250.0/255.0 green:255.0/255.0 blue:250.0/255.0 alpha:1.0];
         self.lblResult.text = NSLocalizedString(@"OpDone", @"OpDone");
     }
     if ([op.process isEqualToString:@"Cancel"]) {
         self.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0];
-        self.imageView.image = [UIImage imageNamed:@"Fail"];
+        self.imageView.image = [UIImage imageNamed:op.inFavorites ? @"FavoriteFail" : @"Fail"];
         self.lblResult.text = NSLocalizedString(@"OpCancel", @"OpCancel");
     }
     

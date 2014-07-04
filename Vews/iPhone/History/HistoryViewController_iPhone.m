@@ -22,6 +22,10 @@
 #import "HistoryPostToFacebookActivity.h"
 #import "HistoryBlankActivity.h"
 #import "BlankViewController_iPhone.h"
+#import "HistoryPostToTwitterActivity.h"
+#import "HistoryAddToFavoriteActivity.h"
+#import "HistoryRemoveFromFavoriteActivity.h"
+#import "AddToFavoriteViewController_iPhone.h"
 
 @interface HistoryViewController_iPhone ()
 
@@ -42,7 +46,7 @@
         self.navigationItem.title = NSLocalizedString(@"History_Title", @"History_Title");
         SWRevealViewController *revealViewController = [self revealViewController];
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon"] style:UIBarButtonItemStylePlain target:revealViewController action:@selector(revealToggle:)];
-        _activities = [NSArray arrayWithObjects:[[HistoryRepeatPaymentActivity alloc] initWithResultDelegate:self], [[HistoryBlankActivity alloc] initWithResultDelegate:self], [[HistoryRequestSupportActivity alloc] initWithResultDelegate:self], [[HistoryPostToFacebookActivity alloc] initWithResultDelegate:self], nil];
+        _activities = [NSArray arrayWithObjects:[[HistoryRepeatPaymentActivity alloc] initWithResultDelegate:self], [[HistoryBlankActivity alloc] initWithResultDelegate:self], [[HistoryAddToFavoriteActivity alloc] initWithResultDelegate:self], [[HistoryRemoveFromFavoriteActivity alloc] initWithResultDelegate:self], [[HistoryRequestSupportActivity alloc] initWithResultDelegate:self], [[HistoryPostToFacebookActivity alloc] initWithResultDelegate:self], [[HistoryPostToTwitterActivity alloc] initWithResultDelegate:self], nil];
     }
     return self;
 }
@@ -50,15 +54,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tblHistory.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 16, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 16);
-    [self.view addSubview:self.tblHistory.view];
-    SWRevealViewController *revealViewController = [self revealViewController];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon"] style:UIBarButtonItemStylePlain target:revealViewController action:@selector(revealToggle:)];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refreshHistory:) forControlEvents:UIControlEventValueChanged];
     [self.tblHistory setRefreshControl:refreshControl];
+    self.tblHistory.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 16, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 16);
+    [self.view addSubview:self.tblHistory.view];
     [self.tblHistory.refreshControl beginRefreshing];
     [self performSelector:@selector(refreshHistory:) withObject:nil afterDelay:.1];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -157,6 +164,189 @@
     _historyCache = nil;
     [self.tblHistory.tableView reloadData];
     [self getHistoryCache:nil];
+}
+
+- (BOOL)isEqualParametersOperation:(svcHistoryOperation *) op toOperation:(svcHistoryOperation *)toOp
+{
+    if (![op.out_curr isEqualToString:toOp.out_curr])
+        return NO;
+    
+    NSString *pa = op.op_Parameters;
+    NSString *pb = toOp.op_Parameters;
+    
+    if ([pa hasSuffix:@";"])
+        pa = [pa substringToIndex:[pa length] - 2];
+
+    if ([pb hasSuffix:@";"])
+        pb = [pb substringToIndex:[pb length] - 2];
+    
+    NSArray *a = [pa componentsSeparatedByString:@";"];
+    NSArray *b = [pb componentsSeparatedByString:@";"];
+    
+    if (!a || a == nil || !b || b == nil || [a count] != [b count])
+        return NO;
+    
+    for (int idx = 0; idx < [a count]; idx++)
+    {
+        NSString *as = (NSString *)[a objectAtIndex:idx];
+        NSString *bs = (NSString *)[b objectAtIndex:idx];
+
+        if (!as || as == nil || !bs || bs == nil)
+            return NO;
+        
+        NSArray *aa = [as componentsSeparatedByString:@":"];
+        NSArray *bb = [bs componentsSeparatedByString:@":"];
+        
+        if (!aa || aa == nil || !bb || bb == nil || [aa count] != [bb count] || [aa count] < 2 || [bb count] < 2)
+            return NO;
+        
+        if (![(NSString *)[aa objectAtIndex:1] isEqualToString:(NSString *)[bb objectAtIndex:1]])
+            return NO;
+    }
+    return YES;
+}
+
+- (void)removeFavoriteNames:(svcHistoryOperation *)op
+{
+    if (!op || op == nil) return;
+    //Отправляем команду на удаление на сервер
+    //Очищаем все похожие записи в текущей истории и кеше (если он есть)
+    for (svcHistoryOperation *h in _history)
+    {
+        if ([self isEqualParametersOperation:op toOperation:h])
+        {
+            h.favoriteName = nil;
+        }
+    }
+    if (_historyCache && _historyCache != nil)
+    {
+        for (svcHistoryOperation *h in _historyCache)
+        {
+            if ([self isEqualParametersOperation:op toOperation:h])
+            {
+                h.favoriteName = nil;
+            }
+        }
+    }
+    //Перегружаем данные в таблице
+    [self.tblHistory.tableView reloadData];
+    //Командуем удалить
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    svcWSMobileBANK *svc = [svcWSMobileBANK service];
+    svc.logging = YES;
+    [svc RemoveFromFavorite:self action:@selector(removeFromFavoriteHandler:) UNIQUE:[app.userProfile uid] OpKey:op.op_Key];
+}
+
+- (void)removeFromFavorites:(svcHistoryOperation *)op
+{
+    if (!op || op == nil) return;
+    //Отправляем команду на удаление на сервер
+    //Очищаем все похожие записи в текущей истории и кеше (если он есть)
+    for (svcHistoryOperation *h in _history)
+    {
+        if ([self isEqualParametersOperation:op toOperation:h])
+        {
+            h.inFavorites = NO;
+        }
+    }
+    if (_historyCache && _historyCache != nil)
+    {
+        for (svcHistoryOperation *h in _historyCache)
+        {
+            if ([self isEqualParametersOperation:op toOperation:h])
+            {
+                h.inFavorites = NO;
+            }
+        }
+    }
+    //Перегружаем данные в таблице
+    [self.tblHistory.tableView reloadData];
+    //Командуем удалить
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    svcWSMobileBANK *svc = [svcWSMobileBANK service];
+    svc.logging = YES;
+    [svc RemoveFromFavorite:self action:@selector(removeFromFavoriteHandler:) UNIQUE:[app.userProfile uid] OpKey:op.op_Key];
+}
+
+- (void)addToFavorites:(svcHistoryOperation *)op
+{
+    if (!op || op == nil) return;
+    //Отправляем команду на удаление на сервер
+    //Устанавливаем все похожие записи в текущей истории и кеше (если он есть)
+    for (svcHistoryOperation *h in _history)
+    {
+        if ([self isEqualParametersOperation:op toOperation:h])
+        {
+            h.inFavorites = YES;
+        }
+    }
+    if (_historyCache && _historyCache != nil)
+    {
+        for (svcHistoryOperation *h in _historyCache)
+        {
+            if ([self isEqualParametersOperation:op toOperation:h])
+            {
+                h.inFavorites = YES;
+            }
+        }
+    }
+    //Перегружаем данные в таблице
+    [self.tblHistory.tableView reloadData];
+}
+
+- (void)addToFavorites:(svcHistoryOperation *)op withName:(NSString *)name
+{
+    if (!op || op == nil) return;
+    //Отправляем команду на удаление на сервер
+    //Устанавливаем все похожие записи в текущей истории и кеше (если он есть)
+    for (svcHistoryOperation *h in _history)
+    {
+        if ([self isEqualParametersOperation:op toOperation:h])
+        {
+            h.inFavorites = YES;
+            h.favoriteName = name;
+        }
+    }
+    if (_historyCache && _historyCache != nil)
+    {
+        for (svcHistoryOperation *h in _historyCache)
+        {
+            if ([self isEqualParametersOperation:op toOperation:h])
+            {
+                h.inFavorites = YES;
+                h.favoriteName = name;
+            }
+        }
+    }
+    //Перегружаем данные в таблице
+    [self.tblHistory.tableView reloadData];
+}
+
+- (svcHistoryOperation *)operationWithOpKey:(NSString *)OpKey
+{
+    for (svcHistoryOperation *h in _history) {
+        if ([h.op_Key isEqualToString:OpKey])
+            return h;
+    }
+    return nil;
+}
+
+- (void)removeFromFavoriteHandler:(id)response
+{
+    if ([response isKindOfClass:[svcWSResponse class]])
+    {
+        svcWSResponse *resp = (svcWSResponse *)response;
+        if (resp.result)
+        {
+            [self removeFavoriteNames:[self operationWithOpKey:resp.OpKey]];
+            return;
+        }
+        //Обратно помечаем как принадлежащие избранному
+        [self addToFavorites:[self operationWithOpKey:resp.OpKey]];
+    }
+    //Ошибка удаления
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"RemoveFromFavorite_Title", @"RemoveFromFavorite_Title") message:NSLocalizedString(@"RemoveFromFavorite_ErrorMessage", @"RemoveFromFavorite_ErrorMessage") delegate:nil cancelButtonTitle:NSLocalizedString(@"Button_Continue", @"Button_Continue") otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark UITableViewDataSource
@@ -283,13 +473,37 @@
         [self.navigationController pushViewController:pp animated:YES];
         return;
     }
+    if ([activity isKindOfClass:[HistoryRemoveFromFavoriteActivity class]]) {
+        [self removeFromFavorites:(svcHistoryOperation *)data];
+        return;
+    }
+    if ([activity isKindOfClass:[HistoryAddToFavoriteActivity class]]) {
+        svcHistoryOperation *op = (svcHistoryOperation *)data;
+        AddToFavoriteViewController_iPhone *pp = [[AddToFavoriteViewController_iPhone alloc] initWithNibName:@"AddToFavoriteViewController_iPhone" bundle:nil withOperation:op];
+        pp.delegate = self;
+        [self.navigationController pushViewController:pp animated:YES];
+        return;
+    }
 }
 
-#pragma mark BlankViewControllerDelegate
+#pragma mark OperationBlankDelegate
 
 - (void)finishBlankWork:(UIViewController *)controller
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+#pragma mark AddToFavoriteDelegate
+
+- (void)addToFavorite:(UIViewController *)controller operation:(svcHistoryOperation *)op withName:(NSString *)name andSumm:(NSDecimalNumber *)summa
+{
+    [self addToFavorites:op withName:name];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)cancelAddToFavorite:(UIViewController *)controller
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

@@ -608,6 +608,25 @@
 		return _request;
 	}
 
+    // Returns svcWSResponse*
+    /* Удаление записи из избранного по OpKey */
+    - (SoapRequest*) RemoveFromFavorite: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE OpKey: (NSString *) OpKey
+    {
+        return [self RemoveFromFavorite: handler action: nil UNIQUE: UNIQUE OpKey: OpKey];
+    }
+
+    - (SoapRequest*) RemoveFromFavorite: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE OpKey: (NSString *) OpKey
+    {
+        NSMutableArray* _params = [NSMutableArray array];
+    
+        [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: OpKey forName: @"OpKey"]];
+        NSString* _envelope = [Soap createEnvelope: @"RemoveFromFavorite" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
+        SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/RemoveFromFavorite" postData: _envelope deserializeTo: [svcWSResponse alloc]];
+        [_request send];
+        return _request;
+    }
+
 	// Returns svcWSResponse*
 	/* Сохранение сортировки записей в избранном */
 	- (SoapRequest*) SaveFavoritesOrder: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE orderList: (NSString*) orderList
@@ -934,7 +953,7 @@
         return [self GetHistoryFromId: handler action: nil UNIQUE: UNIQUE Id: Id Count: Count];
     }
 
-- (SoapRequest*) GetHistoryFromId: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count
+    - (SoapRequest*) GetHistoryFromId: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count
     {
         NSMutableArray* _params = [NSMutableArray array];
     

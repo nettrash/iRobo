@@ -1,14 +1,14 @@
 //
-//  HistoryBlankActivity.m
+//  HistoryAddToFavoriteActivity.m
 //  iRobo
 //
-//  Created by Ivan Alekseev on 03.07.14.
+//  Created by Ivan Alekseev on 04.07.14.
 //  Copyright (c) 2014 ROBOKASSA. All rights reserved.
 //
 
-#import "HistoryBlankActivity.h"
+#import "HistoryAddToFavoriteActivity.h"
 
-@implementation HistoryBlankActivity
+@implementation HistoryAddToFavoriteActivity
 
 + (UIActivityCategory)activityCategory
 {
@@ -17,21 +17,21 @@
 
 - (NSString *)activityType
 {
-    return @"ru.robokassa.history.blank";
+    return @"ru.robokassa.history.favorites.add";
 }
 
 - (NSString *)activityTitle {
-    return NSLocalizedString(@"Activity_History_Blank_Title", @"Activity_History_Blank_Title");
+    return NSLocalizedString(@"Activity_History_AddToFavorites_Title", @"Activity_History_AddToFavorites_Title");
 }
 
 - (UIImage *)activityImage
 {
-    return [UIImage imageNamed:@"HistoryBlankActivityIcon.png"];
+    return [UIImage imageNamed:@"HistoryAddToFavoritesActivityIcon.png"];
 }
 
 - (UIImage *)activityMiniImage
 {
-    return [UIImage imageNamed:@"HistoryBlankActivityMiniIcon.png"];
+    return [UIImage imageNamed:@"HistoryAddToFavoritesActivityMiniIcon.png"];
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems
@@ -51,6 +51,15 @@
     
     if (![op.process isEqualToString:@"Done"])
         return NO;
+
+    if (!op.availibleNow)
+        return NO;
+    
+    if (op.check_Id > 0 || op.charity_Id > 0)
+        return NO;
+    
+    if (op.inFavorites)
+        return NO;
     
     return YES;
 }
@@ -69,12 +78,11 @@
     }
     [self activityDidFinish:YES];
 }
+
 /*
 - (UIViewController *)activityViewController
 {
 }*/
-
-#pragma mark PayViewControllerDelegate
 
 - (void)finishPost
 {

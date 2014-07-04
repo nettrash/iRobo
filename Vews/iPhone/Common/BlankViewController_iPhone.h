@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BlankViewControllerDelegate.h"
+#import "OperationBlankDelegate.h"
 #import "svcHistoryOperation.h"
 
 @interface BlankViewController_iPhone : UIViewController
 
-@property (nonatomic, retain) id<BlankViewControllerDelegate> delegate;
+@property (nonatomic, retain) id<OperationBlankDelegate> delegate;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withOperation:(svcHistoryOperation *)op;
 

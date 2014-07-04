@@ -237,11 +237,6 @@
 
 #pragma mark - Service methods
 
-- (BOOL)iPhone5
-{
-    return UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone && UIScreen.mainScreen.bounds.size.height * UIScreen.mainScreen.scale >= 1136;
-}
-
 - (void)showWait:(NSString *)message
 {
     if (!_nowWaiting)
@@ -402,7 +397,7 @@
         [self.window.rootViewController.view bringSubviewToFront:self.vBlur];
     }
     @catch (NSException*) {
-        self.vBlur = [[UIImageView alloc] initWithImage:[UIImage imageNamed:([self iPhone5] ? @"Splash5.png" : @"Splash.png")]];
+        self.vBlur = [[UIImageView alloc] initWithImage:[UIImage imageNamed:(IS_IPHONE_5 ? @"Splash5.png" : @"Splash.png")]];
     }
 }
 

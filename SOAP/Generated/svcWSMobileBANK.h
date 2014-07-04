@@ -183,6 +183,11 @@
 	- (SoapRequest*) RemoveFavorite: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE favoriteId: (int) favoriteId;
 	- (SoapRequest*) RemoveFavorite: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE favoriteId: (int) favoriteId;
 
+    // Returns svcWSResponse*
+    /* Удаление записи из избранного по OpKey */
+    - (SoapRequest*) RemoveFromFavorite: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE OpKey: (NSString *) OpKey;
+    - (SoapRequest*) RemoveFromFavorite: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE OpKey: (NSString *) OpKey;
+
 	// Returns svcWSResponse*
 	/* Сохранение сортировки записей в избранном */
 	- (SoapRequest*) SaveFavoritesOrder: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE orderList: (NSString*) orderList;

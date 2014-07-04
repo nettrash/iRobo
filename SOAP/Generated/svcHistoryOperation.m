@@ -18,6 +18,7 @@
 	@synthesize currName = _currName;
 	@synthesize errorMessage = _errorMessage;
 	@synthesize inFavorites = _inFavorites;
+    @synthesize favoriteName = _favoriteName;
 	@synthesize check_Id = _check_Id;
 	@synthesize check_MerchantName = _check_MerchantName;
 	@synthesize check_MerchantOrder = _check_MerchantOrder;
@@ -41,6 +42,7 @@
 			self.state = nil;
 			self.currName = nil;
 			self.errorMessage = nil;
+            self.favoriteName = nil;
 			self.check_MerchantName = nil;
 			self.check_MerchantOrder = nil;
 			self.charity_Name = nil;
@@ -70,6 +72,7 @@
 			self.currName = [Soap getNodeValue: node withName: @"currName"];
 			self.errorMessage = [Soap getNodeValue: node withName: @"errorMessage"];
 			self.inFavorites = [[Soap getNodeValue: node withName: @"inFavorites"] boolValue];
+            self.favoriteName = [Soap getNodeValue: node withName: @"favoriteName"];
 			self.check_Id = [[Soap getNodeValue: node withName: @"check_Id"] intValue];
 			self.check_MerchantName = [Soap getNodeValue: node withName: @"check_MerchantName"];
 			self.check_MerchantOrder = [Soap getNodeValue: node withName: @"check_MerchantOrder"];
@@ -114,6 +117,7 @@
 		if (self.currName != nil) [s appendFormat: @"<currName>%@</currName>", [[self.currName stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		if (self.errorMessage != nil) [s appendFormat: @"<errorMessage>%@</errorMessage>", [[self.errorMessage stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		[s appendFormat: @"<inFavorites>%@</inFavorites>", (self.inFavorites)?@"true":@"false"];
+        if (self.favoriteName != nil) [s appendFormat: @"<favoriteName>%@</favoriteName>", [[self.favoriteName stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		[s appendFormat: @"<check_Id>%@</check_Id>", [NSString stringWithFormat: @"%i", self.check_Id]];
 		if (self.check_MerchantName != nil) [s appendFormat: @"<check_MerchantName>%@</check_MerchantName>", [[self.check_MerchantName stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		if (self.check_MerchantOrder != nil) [s appendFormat: @"<check_MerchantOrder>%@</check_MerchantOrder>", [[self.check_MerchantOrder stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];

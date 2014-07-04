@@ -21,6 +21,7 @@
 	NSString* _currName;
 	NSString* _errorMessage;
 	BOOL _inFavorites;
+    NSString* _favoriteName;
 	int _check_Id;
 	NSString* _check_MerchantName;
 	NSString* _check_MerchantOrder;
@@ -44,6 +45,7 @@
 	@property (retain, nonatomic) NSString* currName;
 	@property (retain, nonatomic) NSString* errorMessage;
 	@property BOOL inFavorites;
+    @property (retain, nonatomic) NSString* favoriteName;
 	@property int check_Id;
 	@property (retain, nonatomic) NSString* check_MerchantName;
 	@property (retain, nonatomic) NSString* check_MerchantOrder;

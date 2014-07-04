@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 ROBOKASSA. All rights reserved.
 //
 
-#ifndef iRobo_BlankViewControllerDelegate_h
-#define iRobo_BlankViewControllerDelegate_h
+#ifndef iRobo_OperationBlankDelegate_h
+#define iRobo_OperationBlankDelegate_h
 
-@protocol BlankViewControllerDelegate
+@protocol OperationBlankDelegate
 
 - (void)finishBlankWork:(UIViewController *)controller;
 
