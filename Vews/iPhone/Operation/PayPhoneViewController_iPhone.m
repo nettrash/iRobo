@@ -562,6 +562,7 @@
 
 - (void)operationIsComplete:(UIViewController *)controller success:(BOOL)success
 {
+    [self removeDoneButtonFromNumberPadKeyboard];
     if (success)
     {
         //Надо показать успешность оплаты

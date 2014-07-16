@@ -18,6 +18,7 @@
 @property (nonatomic, retain) IBOutlet UITextFieldWithDelete *tfChar2;
 @property (nonatomic, retain) IBOutlet UITextFieldWithDelete *tfChar3;
 @property (nonatomic, retain) IBOutlet UITextFieldWithDelete *tfChar4;
+@property (nonatomic, retain) IBOutlet UILabel *lblDemoPassword;
 
 @end
 
@@ -28,6 +29,7 @@
 @synthesize tfChar3 = _tfChar3;
 @synthesize tfChar4 = _tfChar4;
 @synthesize delegate = _delegate;
+@synthesize lblDemoPassword = _lblDemoPassword;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andDelegate:(id<CheckPasswordDelegate>)delegate
 {
@@ -47,6 +49,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.lblDemoPassword.hidden = !app.userProfile.isDemoMode;
     [self prepareView];
 }
 

@@ -14,6 +14,7 @@
 #import "svcFavorite.h"
 #import "NSNumber+Currency.h"
 #import "PayViewController_iPhone.h"
+#import "EditFavoriteViewController_iPhone.h"
 
 @interface FavoritesViewController_iPhone ()
 
@@ -172,8 +173,8 @@
     if (cell.imageView.image == nil)
         cell.imageView.image = [UIImage imageNamed:@"MainNoChecksIcon.png"];
     
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:10];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:8];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:10];
     [cell.textLabel setTextColor:[UIColor darkGrayColor]];
     [cell.detailTextLabel setTextColor:[UIColor darkGrayColor]];
     return cell;
@@ -184,16 +185,25 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    svcTopCurrency *curr = [[svcTopCurrency alloc] init];
     svcFavorite *f = (svcFavorite *)[[self getFavoritesBySection:indexPath.section] objectAtIndex:indexPath.row];
-    curr.Label = f.currency;
-    curr.Name = f.currencyName;
-    curr.Parameters = f.parameters;
-    curr.zeroComission = f.zeroComission;
-    curr.OutPossibleValues = f.OutPossibleValues;
-    PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:curr andSumma:f.summa];
-    pp.delegate = self;
-    [self.navigationController pushViewController:pp animated:YES];
+    if ([tableView isEditing])
+    {
+        EditFavoriteViewController_iPhone *pp = [[EditFavoriteViewController_iPhone alloc] initWithNibName:@"EditFavoriteViewController_iPhone" bundle:nil withFavorite:f];
+        pp.delegate = self;
+        [self.navigationController pushViewController:pp animated:YES];
+    }
+    else
+    {
+        svcTopCurrency *curr = [[svcTopCurrency alloc] init];
+        curr.Label = f.currency;
+        curr.Name = f.currencyName;
+        curr.Parameters = f.parameters;
+        curr.zeroComission = f.zeroComission;
+        curr.OutPossibleValues = f.OutPossibleValues;
+        PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:curr andSumma:f.summa];
+        pp.delegate = self;
+        [self.navigationController pushViewController:pp animated:YES];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -209,7 +219,7 @@
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return UITableViewCellEditingStyleDelete;
+    return UITableViewCellEditingStyleDelete || UITableViewCellEditingStyleNone;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -222,6 +232,19 @@
 - (void)finishPay:(UIViewController *)controller
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+#pragma mark EditFavoriteDelegate
+
+- (void)editFavorite:(UIViewController *)controller favorite:(svcFavorite *)favorite
+{
+    [self.tblFavorites.tableView reloadData];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)cancelEditFavorite:(UIViewController *)controller
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

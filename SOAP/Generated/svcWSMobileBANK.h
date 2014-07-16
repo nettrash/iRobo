@@ -271,8 +271,8 @@
 
     // Returns svcWSResponse*
     /* Получение истории операций относительно указанного op_Id */
-    - (SoapRequest*) GetHistoryFromId: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count;
-    - (SoapRequest*) GetHistoryFromId: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count;
+    - (SoapRequest*) GetHistoryFromId: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count SearchText: (NSString*) SearchText;
+    - (SoapRequest*) GetHistoryFromId: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count SearchText: (NSString*) SearchText;
 
 	// Returns svcWSResponse*
 	/* Оплата счёта */

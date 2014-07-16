@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditFavoriteViewController_iPhone">
             <connections>
+                <outlet property="tblFavorite" destination="aOL-6E-Fng" id="Xuo-ny-Vfy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,8 +24,8 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <connections>
-                    <outlet property="dataSource" destination="aOL-6E-Fng" id="EXh-4G-YVC"/>
-                    <outlet property="delegate" destination="aOL-6E-Fng" id="UXF-zy-Whd"/>
+                    <outlet property="dataSource" destination="-1" id="5UE-yp-vyW"/>
+                    <outlet property="delegate" destination="-1" id="Qcv-sR-mLS"/>
                 </connections>
             </tableView>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

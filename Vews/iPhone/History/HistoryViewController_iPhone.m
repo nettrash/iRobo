@@ -26,10 +26,12 @@
 #import "HistoryAddToFavoriteActivity.h"
 #import "HistoryRemoveFromFavoriteActivity.h"
 #import "AddToFavoriteViewController_iPhone.h"
+#import "HistoryFinalizeCellView_iPhone.h"
 
 @interface HistoryViewController_iPhone ()
 
 @property (nonatomic, retain) IBOutlet UITableViewController *tblHistory;
+@property (nonatomic, retain) IBOutlet UISearchBar *sbPart;
 
 @end
 
@@ -57,7 +59,9 @@
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refreshHistory:) forControlEvents:UIControlEventValueChanged];
     [self.tblHistory setRefreshControl:refreshControl];
-    self.tblHistory.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 16, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 16);
+    self.sbPart.frame = CGRectMake(0, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20, self.sbPart.frame.size.width, self.sbPart.frame.size.height);
+    [self.view addSubview:self.sbPart];
+    self.tblHistory.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + self.navigationController.navigationBar.frame.size.height + 20 + self.sbPart.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - 20 - self.sbPart.frame.size.height);
     [self.view addSubview:self.tblHistory.view];
     [self.tblHistory.refreshControl beginRefreshing];
     [self performSelector:@selector(refreshHistory:) withObject:nil afterDelay:.1];
@@ -75,6 +79,7 @@
 
 - (void)refreshHistory:(id)sender
 {
+    [self.sbPart resignFirstResponder];
     _history = nil;
     _historyCache = nil;
     if (!self.tblHistory.refreshControl.refreshing)
@@ -82,7 +87,8 @@
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     svcWSMobileBANK *svc = [svcWSMobileBANK service];
     svc.logging = YES;
-    [svc GetHistoryFromId:self action:@selector(getHistoryHandler:) UNIQUE:[app.userProfile uid] Id:-1 Count:_Count];
+    [svc GetHistoryFromId:self action:@selector(getHistoryHandler:) UNIQUE:[app.userProfile uid] Id:-1 Count:_Count SearchText:self.sbPart.text];
+    [self.tblHistory.tableView reloadData];
 }
 
 - (void)getHistory:(id)sender
@@ -90,7 +96,7 @@
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     svcWSMobileBANK *svc = [svcWSMobileBANK service];
     svc.logging = YES;
-    [svc GetHistoryFromId:self action:@selector(getHistoryHandler:) UNIQUE:[app.userProfile uid] Id:_Id Count:_Count];
+    [svc GetHistoryFromId:self action:@selector(getHistoryHandler:) UNIQUE:[app.userProfile uid] Id:_Id Count:_Count SearchText:self.sbPart.text];
 }
 
 - (void)getHistoryHandler:(id)response
@@ -117,8 +123,8 @@
                     if ([(svcHistoryOperation *)[_historyCache objectAtIndex:[_historyCache count] - 1] op_Id] >= _Id)
                         [self performSelector:@selector(getHistoryCache:) withObject:nil afterDelay:1];
                 }
-                [self.tblHistory.tableView reloadData];
             }
+            [self.tblHistory.tableView reloadData];
         }
     }
 }
@@ -131,11 +137,12 @@
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     svcWSMobileBANK *svc = [svcWSMobileBANK service];
     svc.logging = YES;
-    [svc GetHistoryFromId:self action:@selector(getHistoryCacheHandler:) UNIQUE:[app.userProfile uid] Id:_Id Count:_Count];
+    [svc GetHistoryFromId:self action:@selector(getHistoryCacheHandler:) UNIQUE:[app.userProfile uid] Id:_Id Count:_Count SearchText:self.sbPart.text];
 }
 
 - (void)getHistoryCacheHandler:(id)response
 {
+    if (!_isLoadingCache) return;
     _isLoadingCache = NO;
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [app hideWait];
@@ -151,6 +158,7 @@
                     _historyCache = [NSMutableArray arrayWithCapacity:0];
                 [_historyCache addObjectsFromArray:resp.history];
             }
+            [self.tblHistory.tableView reloadData];
         }
     }
 }
@@ -358,39 +366,57 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_history count];
+    if ([_history count] > 0)
+        return [_history count] + 1;
+    else
+        return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_selectedIndexPath && [_selectedIndexPath compare:indexPath] == NSOrderedSame)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SelectedHistoryCellView_iPhone" owner:self options:nil];
-        SelectedHistoryCellView_iPhone *cell = (SelectedHistoryCellView_iPhone *)[nib objectAtIndex:0];
+    if (indexPath.row >= [_history count]) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HistoryFinalizeCellView_iPhone" owner:self options:nil];
+        HistoryFinalizeCellView_iPhone *cell = (HistoryFinalizeCellView_iPhone *)[nib objectAtIndex:0];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        svcHistoryOperation *op = (svcHistoryOperation *)[_history objectAtIndex:indexPath.row];
-        if (indexPath.row > [_history count] - (_Count / 2))
-            [self performSelector:@selector(useHistoryCache) withObject:nil afterDelay:.3];
-        
-        [cell setCellData:op withActivities:_activities];
-        
+
+        if (_isLoadingCache || _historyCache != nil) {
+            [cell.aiWait startAnimating];
+            cell.lblMessage.hidden = YES;
+        } else {
+            [cell.aiWait stopAnimating];
+            cell.lblMessage.hidden = NO;
+        }
         return cell;
-    }
-    else
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HistoryCellView_iPhone" owner:self options:nil];
-        HistoryCellView_iPhone *cell = (HistoryCellView_iPhone *)[nib objectAtIndex:0];
+    } else {
+        if (_selectedIndexPath && [_selectedIndexPath compare:indexPath] == NSOrderedSame) {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SelectedHistoryCellView_iPhone" owner:self options:nil];
+            SelectedHistoryCellView_iPhone *cell = (SelectedHistoryCellView_iPhone *)[nib objectAtIndex:0];
         
-        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        svcHistoryOperation *op = (svcHistoryOperation *)[_history objectAtIndex:indexPath.row];
-        if (indexPath.row > [_history count] - (_Count / 2))
-            [self performSelector:@selector(useHistoryCache) withObject:nil afterDelay:.3];
+            svcHistoryOperation *op = (svcHistoryOperation *)[_history objectAtIndex:indexPath.row];
+            if (indexPath.row > [_history count] - (_Count / 2))
+                [self performSelector:@selector(useHistoryCache) withObject:nil afterDelay:.3];
         
-        [cell setCellData:op];
-        return cell;
+            [cell setCellData:op withActivities:_activities];
+        
+            return cell;
+        }
+        else
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HistoryCellView_iPhone" owner:self options:nil];
+            HistoryCellView_iPhone *cell = (HistoryCellView_iPhone *)[nib objectAtIndex:0];
+        
+            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+        
+            svcHistoryOperation *op = (svcHistoryOperation *)[_history objectAtIndex:indexPath.row];
+            if (indexPath.row > [_history count] - (_Count / 2))
+                [self performSelector:@selector(useHistoryCache) withObject:nil afterDelay:.3];
+        
+            [cell setCellData:op];
+            return cell;
+        }
     }
 }
 
@@ -398,6 +424,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.sbPart resignFirstResponder];
+    if (indexPath.row >= [_history count]) return;
+    
     NSIndexPath *ip = _selectedIndexPath;
     _selectedIndexPath = indexPath;
     
@@ -418,15 +447,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_selectedIndexPath && [_selectedIndexPath compare:indexPath] == NSOrderedSame)
-    {
-        return 176;
+    if (indexPath.row >= [_history count]) {
+        return 44;
+    } else {
+        if (_selectedIndexPath && [_selectedIndexPath compare:indexPath] == NSOrderedSame)
+        {
+            return 188;
+        }
+        return 100;
     }
-    return 88;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row >= [_history count]) return;
     NSIndexPath *ip = _selectedIndexPath;
     _selectedIndexPath = nil;
     [tableView beginUpdates];
@@ -504,6 +538,15 @@
 - (void)cancelAddToFavorite:(UIViewController *)controller
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark UISearchBarDelegate
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar
+{
+    [theSearchBar resignFirstResponder];
+    _isLoadingCache = NO;
+    [self refreshHistory:nil];
 }
 
 @end

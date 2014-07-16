@@ -24,7 +24,7 @@
 	NSString* _ErrorText;
 	NSDecimalNumber* _card_Balance;
 	BOOL _card_IsOCEAN;
-	
+    NSString* _card_NativeNumber;
 }
 		
 	@property int card_Id;
@@ -42,6 +42,7 @@
 	@property (retain, nonatomic) NSString* ErrorText;
 	@property (retain, nonatomic) NSDecimalNumber* card_Balance;
 	@property BOOL card_IsOCEAN;
+    @property (retain, nonatomic) NSString* card_NativeNumber;
 
 	+ (svcCard*) createWithNode: (CXMLNode*) node;
 	- (id) initWithNode: (CXMLNode*) node;

@@ -22,4 +22,7 @@
 
 @property (nonatomic, retain) id<PayViewControllerDelegate> delegate;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withToCardNumber:(NSString *)toCardNumber;
+- (void)initToCardNumber:(NSString *)toCardNumber;
+
 @end

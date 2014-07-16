@@ -78,6 +78,46 @@
         self.tfSumma.keyboardType = UIKeyboardTypeNumberPad;
         self.tfSumma.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
         self.tfSumma.delegate = self;
+        self.tfSumma.text = @"1000";
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withToCardNumber:(NSString *)toCardNumber
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _cards = nil;
+        self.summa = [NSNumber numberWithInt:1000];
+        self.toCardNumber = @"";
+        self.navigationItem.title = NSLocalizedString(@"Card2CardTransfer_Title", @"Card2CardTransfer_Title");
+        
+        self.tfFromCard = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
+        self.tfFromCard.adjustsFontSizeToFitWidth = YES;
+        self.tfFromCard.textColor = [UIColor darkGrayColor];
+        self.tfFromCard.keyboardType = UIKeyboardTypeNumberPad;
+        self.pvCards = [[UIPickerView alloc] init];
+        self.pvCards.dataSource = self;
+        self.pvCards.delegate = self;
+        [self.tfFromCard setInputView:self.pvCards];
+        self.tfFromCard.delegate = self;
+        
+        self.tfToCard = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
+        self.tfToCard.adjustsFontSizeToFitWidth = YES;
+        self.tfToCard.textColor = [UIColor darkGrayColor];
+        self.tfToCard.keyboardType = UIKeyboardTypeNumberPad;
+        self.tfToCard.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
+        self.tfToCard.delegate = self;
+        self.toCardNumber = [NSString stringWithString:toCardNumber];
+        self.tfToCard.text = self.toCardNumber;
+        
+        self.tfSumma = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 180, 30)];
+        self.tfSumma.adjustsFontSizeToFitWidth = YES;
+        self.tfSumma.textColor = [UIColor darkGrayColor];
+        self.tfSumma.keyboardType = UIKeyboardTypeNumberPad;
+        self.tfSumma.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
+        self.tfSumma.delegate = self;
+        self.tfSumma.text = @"1000";
     }
     return self;
 }
@@ -85,20 +125,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
+    self.cvcView.delegate = self;
+
     _needToShowDoneButton = NO;
     
     self.doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.doneButton.frame = CGRectMake(0, 163, 106, 53);
     self.doneButton.adjustsImageWhenHighlighted = NO;
     
-    [self.doneButton setTitle:NSLocalizedString(@"...", @"...") forState:UIControlStateApplication];
-    [self.doneButton setTitle:NSLocalizedString(@"...", @"...") forState:UIControlStateDisabled];
-    [self.doneButton setTitle:NSLocalizedString(@"...", @"...") forState:UIControlStateHighlighted];
-    [self.doneButton setTitle:NSLocalizedString(@"...", @"...") forState:UIControlStateNormal];
-    [self.doneButton setTitle:NSLocalizedString(@"...", @"...") forState:UIControlStateReserved];
-    [self.doneButton setTitle:NSLocalizedString(@"...", @"...") forState:UIControlStateSelected];
+    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateApplication];
+    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateDisabled];
+    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateHighlighted];
+    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateNormal];
+    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateReserved];
+    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateSelected];
     
-    [self.doneButton addTarget:self action:@selector(btnDone_Click:) forControlEvents:UIControlEventTouchUpInside];
+    [self.doneButton addTarget:self.cvcView action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PayButton_Title", @"PayButton_Title") style:UIBarButtonItemStyleDone target:self action:@selector(btnDone_Click:)];
+    
     [self validate];
 }
 
@@ -232,6 +279,12 @@
     [self.doneButton removeFromSuperview];
 }
 
+- (void)initToCardNumber:(NSString *)toCardNumber
+{
+    self.toCardNumber = [NSString stringWithString:toCardNumber];
+    self.tfToCard.text = self.toCardNumber;
+}
+
 - (void)getCards
 {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -328,25 +381,11 @@
     
     if (bValidSumma && bValidToCard)
     {
-        [self.doneButton setTitle:NSLocalizedString(@"PAY", @"") forState:UIControlStateApplication];
-        [self.doneButton setTitle:NSLocalizedString(@"PAY", @"") forState:UIControlStateDisabled];
-        [self.doneButton setTitle:NSLocalizedString(@"PAY", @"") forState:UIControlStateHighlighted];
-        [self.doneButton setTitle:NSLocalizedString(@"PAY", @"") forState:UIControlStateNormal];
-        [self.doneButton setTitle:NSLocalizedString(@"PAY", @"") forState:UIControlStateReserved];
-        [self.doneButton setTitle:NSLocalizedString(@"PAY", @"") forState:UIControlStateSelected];
-        [self.doneButton setBackgroundColor:[UIColor colorWithRed:130.0/255.0 green:203.0/255.0 blue:161.0/255.0 alpha:1]];
-        self.doneButton.enabled = YES;
+        self.navigationItem.rightBarButtonItem.enabled = YES;
     }
     else
     {
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"") forState:UIControlStateApplication];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"") forState:UIControlStateDisabled];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"") forState:UIControlStateHighlighted];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"") forState:UIControlStateNormal];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"") forState:UIControlStateReserved];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"") forState:UIControlStateSelected];
-        [self.doneButton setBackgroundColor:[UIColor clearColor]];
-        self.doneButton.enabled = NO;
+        self.navigationItem.rightBarButtonItem.enabled = NO;
     }
     
     return bValidSumma && bValidToCard;
@@ -354,10 +393,10 @@
 
 - (IBAction)btnDone_Click:(id)sender
 {
-    self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
-    self.cvcView.delegate = self;
-    [self.doneButton removeTarget:self action:@selector(btnDone_Click:) forControlEvents:UIControlEventTouchUpInside];
-    [self.doneButton addTarget:self.cvcView action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+    _needToShowDoneButton = YES;
+    [self.tfFromCard resignFirstResponder];
+    [self.tfToCard resignFirstResponder];
+    [self.tfSumma resignFirstResponder];
     [self.cvcView performSelector:@selector(addToViewController:) withObject:self afterDelay:.1];
 }
 
@@ -491,10 +530,10 @@
 
 -(void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue
 {
+    _needToShowDoneButton = NO;
+    [self removeDoneButtonFromNumberPadKeyboard];
     if (cvcEntered)
     {
-        _needToShowDoneButton = NO;
-        [self removeDoneButtonFromNumberPadKeyboard];
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];
         [self performSelector:@selector(startOperation:) withObject:cvcValue afterDelay:.1];
     }
@@ -629,6 +668,7 @@
 
 - (void)operationIsComplete:(UIViewController *)controller success:(BOOL)success
 {
+    [self removeDoneButtonFromNumberPadKeyboard];
     if (success)
     {
         //Надо показать успешность оплаты

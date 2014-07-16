@@ -11,6 +11,31 @@
 
 @implementation NSString (Checkers)
 
+- (BOOL)isRobodQRCommand
+{
+    return ([self hasPrefix:@"https://misc.roboxchange.com/External/iPhone/linktorobokassa.ashx"] ||
+            [self hasPrefix:@"robokassa://"] ||
+            [self hasPrefix:@"robod://"] ||
+            [self hasPrefix:@"card2card://"]);
+}
+
+- (BOOL)isVCARD
+{
+    return ([self hasPrefix:@"BEGIN:VCARD"] && [self hasSuffix:@"END:VCARD"]);
+}
+
+- (BOOL)isURL
+{
+    NSDataDetector *detector = [[NSDataDetector alloc] initWithTypes:NSTextCheckingTypeLink error:nil];
+    NSArray *matches = [detector matchesInString:self options:0 range:NSMakeRange(0, [self length])];
+    for (NSTextCheckingResult *match in matches) {
+        if ([match resultType] == NSTextCheckingTypeLink) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (BOOL)isHTML
 {
     return

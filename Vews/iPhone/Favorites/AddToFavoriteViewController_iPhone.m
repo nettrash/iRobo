@@ -31,6 +31,8 @@
 @synthesize favoriteId = _favoriteId;
 @synthesize favoriteName = _favoriteName;
 @synthesize summa = _summa;
+@synthesize tfName = _tfName;
+@synthesize tfSumma = _tfSumma;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withOperation:(svcHistoryOperation *)op
 {
@@ -50,7 +52,6 @@
         self.tfName.autocapitalizationType = UITextAutocapitalizationTypeWords;
         //self.tfName.delegate = self;
         self.tfName.text = self.favoriteName;
-        [self.tfName setTextAlignment:NSTextAlignmentRight];
         self.tfName.clearsOnBeginEditing = YES;
 
         self.tfSumma = [[UITextField alloc] initWithFrame:CGRectMake(15, 6, 285, 30)];

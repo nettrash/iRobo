@@ -7,6 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E51F0000196ADD070025F5A6 /* QiwiS6059.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF66196ADD070025F5A6 /* QiwiS6059.png */; };
+		E51F0001196ADD070025F5A6 /* QiwiS6059@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF67196ADD070025F5A6 /* QiwiS6059@2x.png */; };
+		E51F0002196ADD070025F5A6 /* QiwiS6061.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF68196ADD070025F5A6 /* QiwiS6061.png */; };
+		E51F0003196ADD070025F5A6 /* QiwiS6061@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF69196ADD070025F5A6 /* QiwiS6061@2x.png */; };
+		E51F0004196ADD070025F5A6 /* QiwiS6062.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF6A196ADD070025F5A6 /* QiwiS6062.png */; };
+		E51F0005196ADD070025F5A6 /* QiwiS6062@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF6B196ADD070025F5A6 /* QiwiS6062@2x.png */; };
+		E51F0006196ADD070025F5A6 /* QiwiS6063.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF6C196ADD070025F5A6 /* QiwiS6063.png */; };
+		E51F0007196ADD070025F5A6 /* QiwiS6063@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF6D196ADD070025F5A6 /* QiwiS6063@2x.png */; };
+		E51F0008196ADD070025F5A6 /* QiwiS6064.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF6E196ADD070025F5A6 /* QiwiS6064.png */; };
+		E51F0009196ADD070025F5A6 /* QiwiS6064@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF6F196ADD070025F5A6 /* QiwiS6064@2x.png */; };
+		E51F000A196ADD070025F5A6 /* QiwiS6065.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF70196ADD070025F5A6 /* QiwiS6065.png */; };
+		E51F000B196ADD070025F5A6 /* QiwiS6065@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF71196ADD070025F5A6 /* QiwiS6065@2x.png */; };
+		E51F000C196ADD070025F5A6 /* QiwiS6066.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF72196ADD070025F5A6 /* QiwiS6066.png */; };
+		E51F000D196ADD070025F5A6 /* QiwiS6066@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF73196ADD070025F5A6 /* QiwiS6066@2x.png */; };
+		E51F000E196ADD070025F5A6 /* QiwiS6067.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF74196ADD070025F5A6 /* QiwiS6067.png */; };
+		E51F000F196ADD070025F5A6 /* QiwiS6067@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF75196ADD070025F5A6 /* QiwiS6067@2x.png */; };
+		E51F0010196ADD070025F5A6 /* QiwiS6068.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF76196ADD070025F5A6 /* QiwiS6068.png */; };
+		E51F0011196ADD070025F5A6 /* QiwiS6068@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF77196ADD070025F5A6 /* QiwiS6068@2x.png */; };
+		E51F0012196ADD070025F5A6 /* QiwiS6069.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF78196ADD070025F5A6 /* QiwiS6069.png */; };
+		E51F0013196ADD070025F5A6 /* QiwiS6069@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF79196ADD070025F5A6 /* QiwiS6069@2x.png */; };
+		E51F0014196ADD070025F5A6 /* QiwiS6602.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF7A196ADD070025F5A6 /* QiwiS6602.png */; };
+		E51F0015196ADD070025F5A6 /* QiwiS6602@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF7B196ADD070025F5A6 /* QiwiS6602@2x.png */; };
+		E51F0016196ADD070025F5A6 /* QiwiS6603.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF7C196ADD070025F5A6 /* QiwiS6603.png */; };
+		E51F0017196ADD070025F5A6 /* QiwiS6603@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF7D196ADD070025F5A6 /* QiwiS6603@2x.png */; };
+		E51F0018196ADD070025F5A6 /* QiwiS7824.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF7E196ADD070025F5A6 /* QiwiS7824.png */; };
+		E51F0019196ADD070025F5A6 /* QiwiS7824@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF7F196ADD070025F5A6 /* QiwiS7824@2x.png */; };
+		E51F001A196ADD070025F5A6 /* QiwiS7825.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF80196ADD070025F5A6 /* QiwiS7825.png */; };
+		E51F001B196ADD070025F5A6 /* QiwiS7825@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF81196ADD070025F5A6 /* QiwiS7825@2x.png */; };
+		E51F001C196ADD070025F5A6 /* QiwiS7826.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF82196ADD070025F5A6 /* QiwiS7826.png */; };
+		E51F001D196ADD070025F5A6 /* QiwiS7826@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF83196ADD070025F5A6 /* QiwiS7826@2x.png */; };
+		E51F001E196ADD070025F5A6 /* QiwiS7827.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF84196ADD070025F5A6 /* QiwiS7827.png */; };
+		E51F001F196ADD070025F5A6 /* QiwiS7827@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF85196ADD070025F5A6 /* QiwiS7827@2x.png */; };
+		E51F0020196ADD070025F5A6 /* QiwiS7828.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF86196ADD070025F5A6 /* QiwiS7828.png */; };
+		E51F0021196ADD070025F5A6 /* QiwiS7828@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF87196ADD070025F5A6 /* QiwiS7828@2x.png */; };
+		E51F0022196ADD070025F5A6 /* QiwiS7829.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF88196ADD070025F5A6 /* QiwiS7829.png */; };
+		E51F0023196ADD070025F5A6 /* QiwiS7829@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF89196ADD070025F5A6 /* QiwiS7829@2x.png */; };
+		E51F0024196ADD070025F5A6 /* QiwiS7830.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF8A196ADD070025F5A6 /* QiwiS7830.png */; };
+		E51F0025196ADD070025F5A6 /* QiwiS7830@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF8B196ADD070025F5A6 /* QiwiS7830@2x.png */; };
+		E51F0026196ADD070025F5A6 /* QiwiS7831.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF8C196ADD070025F5A6 /* QiwiS7831.png */; };
+		E51F0027196ADD070025F5A6 /* QiwiS7831@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF8D196ADD070025F5A6 /* QiwiS7831@2x.png */; };
+		E51F0028196ADD070025F5A6 /* QiwiS7832.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF8E196ADD070025F5A6 /* QiwiS7832.png */; };
+		E51F0029196ADD070025F5A6 /* QiwiS7832@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF8F196ADD070025F5A6 /* QiwiS7832@2x.png */; };
+		E51F002A196ADD070025F5A6 /* QiwiS7833.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF90196ADD070025F5A6 /* QiwiS7833.png */; };
+		E51F002B196ADD070025F5A6 /* QiwiS7833@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF91196ADD070025F5A6 /* QiwiS7833@2x.png */; };
+		E51F002C196ADD070025F5A6 /* QiwiS7834.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF92196ADD070025F5A6 /* QiwiS7834.png */; };
+		E51F002D196ADD070025F5A6 /* QiwiS7834@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF93196ADD070025F5A6 /* QiwiS7834@2x.png */; };
+		E51F002E196ADD070025F5A6 /* QiwiS7835.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF94196ADD070025F5A6 /* QiwiS7835.png */; };
+		E51F002F196ADD070025F5A6 /* QiwiS7835@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF95196ADD070025F5A6 /* QiwiS7835@2x.png */; };
+		E51F0030196ADD070025F5A6 /* QiwiS7836.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF96196ADD070025F5A6 /* QiwiS7836.png */; };
+		E51F0031196ADD070025F5A6 /* QiwiS7836@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF97196ADD070025F5A6 /* QiwiS7836@2x.png */; };
+		E51F0035196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E51F0033196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.m */; };
+		E51F0036196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51F0034196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.xib */; };
 		E51F44AE1925301600A9D6EB /* LampOff.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44AA1925301600A9D6EB /* LampOff.png */; };
 		E51F44AF1925301600A9D6EB /* LampOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44AB1925301600A9D6EB /* LampOff@2x.png */; };
 		E51F44B01925301600A9D6EB /* LampOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44AC1925301600A9D6EB /* LampOn.png */; };
@@ -15,6 +67,244 @@
 		E51F44B51925377700A9D6EB /* MainScanIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51F44B31925377700A9D6EB /* MainScanIcon@2x.png */; };
 		E51F44B91925428300A9D6EB /* PayCharityViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */; };
 		E51F44BA1925428300A9D6EB /* PayCharityViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */; };
+		E51FFDF2196AC9C80025F5A6 /* QiwiS31.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDF0196AC9C80025F5A6 /* QiwiS31.png */; };
+		E51FFDF3196AC9C80025F5A6 /* QiwiS31@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDF1196AC9C80025F5A6 /* QiwiS31@2x.png */; };
+		E51FFE7A196AC9DB0025F5A6 /* QiwiS2281.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDF6196AC9DB0025F5A6 /* QiwiS2281.png */; };
+		E51FFE7B196AC9DB0025F5A6 /* QiwiS2281@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDF7196AC9DB0025F5A6 /* QiwiS2281@2x.png */; };
+		E51FFE7C196AC9DB0025F5A6 /* QiwiS2282.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDF8196AC9DB0025F5A6 /* QiwiS2282.png */; };
+		E51FFE7D196AC9DB0025F5A6 /* QiwiS2282@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDF9196AC9DB0025F5A6 /* QiwiS2282@2x.png */; };
+		E51FFE7E196AC9DB0025F5A6 /* QiwiS2283.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDFA196AC9DB0025F5A6 /* QiwiS2283.png */; };
+		E51FFE7F196AC9DB0025F5A6 /* QiwiS2283@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDFB196AC9DB0025F5A6 /* QiwiS2283@2x.png */; };
+		E51FFE80196AC9DB0025F5A6 /* QiwiS2284.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDFC196AC9DB0025F5A6 /* QiwiS2284.png */; };
+		E51FFE81196AC9DB0025F5A6 /* QiwiS2284@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDFD196AC9DB0025F5A6 /* QiwiS2284@2x.png */; };
+		E51FFE82196AC9DB0025F5A6 /* QiwiS2285.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDFE196AC9DB0025F5A6 /* QiwiS2285.png */; };
+		E51FFE83196AC9DB0025F5A6 /* QiwiS2285@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFDFF196AC9DB0025F5A6 /* QiwiS2285@2x.png */; };
+		E51FFE84196AC9DB0025F5A6 /* QiwiS2286.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE00196AC9DB0025F5A6 /* QiwiS2286.png */; };
+		E51FFE85196AC9DB0025F5A6 /* QiwiS2286@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE01196AC9DB0025F5A6 /* QiwiS2286@2x.png */; };
+		E51FFE86196AC9DB0025F5A6 /* QiwiS2287.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE02196AC9DB0025F5A6 /* QiwiS2287.png */; };
+		E51FFE87196AC9DB0025F5A6 /* QiwiS2287@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE03196AC9DB0025F5A6 /* QiwiS2287@2x.png */; };
+		E51FFE88196AC9DB0025F5A6 /* QiwiS2288.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE04196AC9DB0025F5A6 /* QiwiS2288.png */; };
+		E51FFE89196AC9DB0025F5A6 /* QiwiS2288@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE05196AC9DB0025F5A6 /* QiwiS2288@2x.png */; };
+		E51FFE8A196AC9DB0025F5A6 /* QiwiS2289.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE06196AC9DB0025F5A6 /* QiwiS2289.png */; };
+		E51FFE8B196AC9DB0025F5A6 /* QiwiS2289@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE07196AC9DB0025F5A6 /* QiwiS2289@2x.png */; };
+		E51FFE8C196AC9DB0025F5A6 /* QiwiS2290.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE08196AC9DB0025F5A6 /* QiwiS2290.png */; };
+		E51FFE8D196AC9DB0025F5A6 /* QiwiS2290@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE09196AC9DB0025F5A6 /* QiwiS2290@2x.png */; };
+		E51FFE8E196AC9DB0025F5A6 /* QiwiS2291.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE0A196AC9DB0025F5A6 /* QiwiS2291.png */; };
+		E51FFE8F196AC9DB0025F5A6 /* QiwiS2291@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE0B196AC9DB0025F5A6 /* QiwiS2291@2x.png */; };
+		E51FFE90196AC9DB0025F5A6 /* QiwiS2292.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE0C196AC9DB0025F5A6 /* QiwiS2292.png */; };
+		E51FFE91196AC9DB0025F5A6 /* QiwiS2292@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE0D196AC9DB0025F5A6 /* QiwiS2292@2x.png */; };
+		E51FFE92196AC9DB0025F5A6 /* QiwiS2293.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE0E196AC9DB0025F5A6 /* QiwiS2293.png */; };
+		E51FFE93196AC9DB0025F5A6 /* QiwiS2293@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE0F196AC9DB0025F5A6 /* QiwiS2293@2x.png */; };
+		E51FFE94196AC9DB0025F5A6 /* QiwiS2294.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE10196AC9DB0025F5A6 /* QiwiS2294.png */; };
+		E51FFE95196AC9DB0025F5A6 /* QiwiS2294@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE11196AC9DB0025F5A6 /* QiwiS2294@2x.png */; };
+		E51FFE96196AC9DB0025F5A6 /* QiwiS2295.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE12196AC9DB0025F5A6 /* QiwiS2295.png */; };
+		E51FFE97196AC9DB0025F5A6 /* QiwiS2295@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE13196AC9DB0025F5A6 /* QiwiS2295@2x.png */; };
+		E51FFE98196AC9DB0025F5A6 /* QiwiS2296.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE14196AC9DB0025F5A6 /* QiwiS2296.png */; };
+		E51FFE99196AC9DB0025F5A6 /* QiwiS2296@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE15196AC9DB0025F5A6 /* QiwiS2296@2x.png */; };
+		E51FFE9A196AC9DB0025F5A6 /* QiwiS2297.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE16196AC9DB0025F5A6 /* QiwiS2297.png */; };
+		E51FFE9B196AC9DB0025F5A6 /* QiwiS2297@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE17196AC9DB0025F5A6 /* QiwiS2297@2x.png */; };
+		E51FFE9C196AC9DB0025F5A6 /* QiwiS2298.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE18196AC9DB0025F5A6 /* QiwiS2298.png */; };
+		E51FFE9D196AC9DB0025F5A6 /* QiwiS2298@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE19196AC9DB0025F5A6 /* QiwiS2298@2x.png */; };
+		E51FFE9E196AC9DB0025F5A6 /* QiwiS2299.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE1A196AC9DB0025F5A6 /* QiwiS2299.png */; };
+		E51FFE9F196AC9DB0025F5A6 /* QiwiS2299@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE1B196AC9DB0025F5A6 /* QiwiS2299@2x.png */; };
+		E51FFEA0196AC9DB0025F5A6 /* QiwiS2300.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE1C196AC9DB0025F5A6 /* QiwiS2300.png */; };
+		E51FFEA1196AC9DB0025F5A6 /* QiwiS2300@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE1D196AC9DB0025F5A6 /* QiwiS2300@2x.png */; };
+		E51FFEA2196AC9DB0025F5A6 /* QiwiS2301.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE1E196AC9DB0025F5A6 /* QiwiS2301.png */; };
+		E51FFEA3196AC9DB0025F5A6 /* QiwiS2301@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE1F196AC9DB0025F5A6 /* QiwiS2301@2x.png */; };
+		E51FFEA4196AC9DB0025F5A6 /* QiwiS2302.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE20196AC9DB0025F5A6 /* QiwiS2302.png */; };
+		E51FFEA5196AC9DB0025F5A6 /* QiwiS2302@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE21196AC9DB0025F5A6 /* QiwiS2302@2x.png */; };
+		E51FFEA6196AC9DB0025F5A6 /* QiwiS2303.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE22196AC9DB0025F5A6 /* QiwiS2303.png */; };
+		E51FFEA7196AC9DB0025F5A6 /* QiwiS2303@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE23196AC9DB0025F5A6 /* QiwiS2303@2x.png */; };
+		E51FFEA8196AC9DB0025F5A6 /* QiwiS2304.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE24196AC9DB0025F5A6 /* QiwiS2304.png */; };
+		E51FFEA9196AC9DB0025F5A6 /* QiwiS2304@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE25196AC9DB0025F5A6 /* QiwiS2304@2x.png */; };
+		E51FFEAA196AC9DB0025F5A6 /* QiwiS2305.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE26196AC9DB0025F5A6 /* QiwiS2305.png */; };
+		E51FFEAB196AC9DB0025F5A6 /* QiwiS2305@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE27196AC9DB0025F5A6 /* QiwiS2305@2x.png */; };
+		E51FFEAC196AC9DB0025F5A6 /* QiwiS2306.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE28196AC9DB0025F5A6 /* QiwiS2306.png */; };
+		E51FFEAD196AC9DB0025F5A6 /* QiwiS2306@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE29196AC9DB0025F5A6 /* QiwiS2306@2x.png */; };
+		E51FFEAE196AC9DB0025F5A6 /* QiwiS2307.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE2A196AC9DB0025F5A6 /* QiwiS2307.png */; };
+		E51FFEAF196AC9DB0025F5A6 /* QiwiS2307@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE2B196AC9DB0025F5A6 /* QiwiS2307@2x.png */; };
+		E51FFEB0196AC9DB0025F5A6 /* QiwiS2308.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE2C196AC9DB0025F5A6 /* QiwiS2308.png */; };
+		E51FFEB1196AC9DB0025F5A6 /* QiwiS2308@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE2D196AC9DB0025F5A6 /* QiwiS2308@2x.png */; };
+		E51FFEB2196AC9DB0025F5A6 /* QiwiS2309.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE2E196AC9DB0025F5A6 /* QiwiS2309.png */; };
+		E51FFEB3196AC9DB0025F5A6 /* QiwiS2309@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE2F196AC9DB0025F5A6 /* QiwiS2309@2x.png */; };
+		E51FFEB4196AC9DB0025F5A6 /* QiwiS2310.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE30196AC9DB0025F5A6 /* QiwiS2310.png */; };
+		E51FFEB5196AC9DB0025F5A6 /* QiwiS2310@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE31196AC9DB0025F5A6 /* QiwiS2310@2x.png */; };
+		E51FFEB6196AC9DB0025F5A6 /* QiwiS2311.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE32196AC9DB0025F5A6 /* QiwiS2311.png */; };
+		E51FFEB7196AC9DB0025F5A6 /* QiwiS2311@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE33196AC9DB0025F5A6 /* QiwiS2311@2x.png */; };
+		E51FFEB8196AC9DB0025F5A6 /* QiwiS2312.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE34196AC9DB0025F5A6 /* QiwiS2312.png */; };
+		E51FFEB9196AC9DB0025F5A6 /* QiwiS2312@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE35196AC9DB0025F5A6 /* QiwiS2312@2x.png */; };
+		E51FFEBA196AC9DB0025F5A6 /* QiwiS2314.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE36196AC9DB0025F5A6 /* QiwiS2314.png */; };
+		E51FFEBB196AC9DB0025F5A6 /* QiwiS2314@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE37196AC9DB0025F5A6 /* QiwiS2314@2x.png */; };
+		E51FFEBC196AC9DB0025F5A6 /* QiwiS2316.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE38196AC9DB0025F5A6 /* QiwiS2316.png */; };
+		E51FFEBD196AC9DB0025F5A6 /* QiwiS2316@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE39196AC9DB0025F5A6 /* QiwiS2316@2x.png */; };
+		E51FFEBE196AC9DB0025F5A6 /* QiwiS2317.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE3A196AC9DB0025F5A6 /* QiwiS2317.png */; };
+		E51FFEBF196AC9DB0025F5A6 /* QiwiS2317@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE3B196AC9DB0025F5A6 /* QiwiS2317@2x.png */; };
+		E51FFEC0196AC9DB0025F5A6 /* QiwiS2318.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE3C196AC9DB0025F5A6 /* QiwiS2318.png */; };
+		E51FFEC1196AC9DB0025F5A6 /* QiwiS2318@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE3D196AC9DB0025F5A6 /* QiwiS2318@2x.png */; };
+		E51FFEC2196AC9DB0025F5A6 /* QiwiS2319.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE3E196AC9DB0025F5A6 /* QiwiS2319.png */; };
+		E51FFEC3196AC9DB0025F5A6 /* QiwiS2319@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE3F196AC9DB0025F5A6 /* QiwiS2319@2x.png */; };
+		E51FFEC4196AC9DB0025F5A6 /* QiwiS2320.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE40196AC9DB0025F5A6 /* QiwiS2320.png */; };
+		E51FFEC5196AC9DB0025F5A6 /* QiwiS2320@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE41196AC9DB0025F5A6 /* QiwiS2320@2x.png */; };
+		E51FFEC6196AC9DB0025F5A6 /* QiwiS2321.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE42196AC9DB0025F5A6 /* QiwiS2321.png */; };
+		E51FFEC7196AC9DB0025F5A6 /* QiwiS2321@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE43196AC9DB0025F5A6 /* QiwiS2321@2x.png */; };
+		E51FFEC8196AC9DB0025F5A6 /* QiwiS2322.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE44196AC9DB0025F5A6 /* QiwiS2322.png */; };
+		E51FFEC9196AC9DB0025F5A6 /* QiwiS2322@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE45196AC9DB0025F5A6 /* QiwiS2322@2x.png */; };
+		E51FFECA196AC9DB0025F5A6 /* QiwiS2323.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE46196AC9DB0025F5A6 /* QiwiS2323.png */; };
+		E51FFECB196AC9DB0025F5A6 /* QiwiS2323@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE47196AC9DB0025F5A6 /* QiwiS2323@2x.png */; };
+		E51FFECC196AC9DB0025F5A6 /* QiwiS2324.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE48196AC9DB0025F5A6 /* QiwiS2324.png */; };
+		E51FFECD196AC9DB0025F5A6 /* QiwiS2324@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE49196AC9DB0025F5A6 /* QiwiS2324@2x.png */; };
+		E51FFECE196AC9DB0025F5A6 /* QiwiS2325.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE4A196AC9DB0025F5A6 /* QiwiS2325.png */; };
+		E51FFECF196AC9DB0025F5A6 /* QiwiS2325@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE4B196AC9DB0025F5A6 /* QiwiS2325@2x.png */; };
+		E51FFED0196AC9DB0025F5A6 /* QiwiS2326.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE4C196AC9DB0025F5A6 /* QiwiS2326.png */; };
+		E51FFED1196AC9DB0025F5A6 /* QiwiS2326@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE4D196AC9DB0025F5A6 /* QiwiS2326@2x.png */; };
+		E51FFED2196AC9DB0025F5A6 /* QiwiS2330.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE4E196AC9DB0025F5A6 /* QiwiS2330.png */; };
+		E51FFED3196AC9DB0025F5A6 /* QiwiS2330@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE4F196AC9DB0025F5A6 /* QiwiS2330@2x.png */; };
+		E51FFED4196AC9DB0025F5A6 /* QiwiS2331.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE50196AC9DB0025F5A6 /* QiwiS2331.png */; };
+		E51FFED5196AC9DB0025F5A6 /* QiwiS2331@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE51196AC9DB0025F5A6 /* QiwiS2331@2x.png */; };
+		E51FFED6196AC9DB0025F5A6 /* QiwiS2332.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE52196AC9DB0025F5A6 /* QiwiS2332.png */; };
+		E51FFED7196AC9DB0025F5A6 /* QiwiS2332@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE53196AC9DB0025F5A6 /* QiwiS2332@2x.png */; };
+		E51FFED8196AC9DB0025F5A6 /* QiwiS2333.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE54196AC9DB0025F5A6 /* QiwiS2333.png */; };
+		E51FFED9196AC9DB0025F5A6 /* QiwiS2333@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE55196AC9DB0025F5A6 /* QiwiS2333@2x.png */; };
+		E51FFEDA196AC9DB0025F5A6 /* QiwiS2334.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE56196AC9DB0025F5A6 /* QiwiS2334.png */; };
+		E51FFEDB196AC9DB0025F5A6 /* QiwiS2334@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE57196AC9DB0025F5A6 /* QiwiS2334@2x.png */; };
+		E51FFEDC196AC9DB0025F5A6 /* QiwiS2335.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE58196AC9DB0025F5A6 /* QiwiS2335.png */; };
+		E51FFEDD196AC9DB0025F5A6 /* QiwiS2335@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE59196AC9DB0025F5A6 /* QiwiS2335@2x.png */; };
+		E51FFEDE196AC9DB0025F5A6 /* QiwiS2336.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE5A196AC9DB0025F5A6 /* QiwiS2336.png */; };
+		E51FFEDF196AC9DB0025F5A6 /* QiwiS2336@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE5B196AC9DB0025F5A6 /* QiwiS2336@2x.png */; };
+		E51FFEE0196AC9DB0025F5A6 /* QiwiS2337.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE5C196AC9DB0025F5A6 /* QiwiS2337.png */; };
+		E51FFEE1196AC9DB0025F5A6 /* QiwiS2337@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE5D196AC9DB0025F5A6 /* QiwiS2337@2x.png */; };
+		E51FFEE2196AC9DB0025F5A6 /* QiwiS2338.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE5E196AC9DB0025F5A6 /* QiwiS2338.png */; };
+		E51FFEE3196AC9DB0025F5A6 /* QiwiS2338@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE5F196AC9DB0025F5A6 /* QiwiS2338@2x.png */; };
+		E51FFEE4196AC9DB0025F5A6 /* QiwiS2340.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE60196AC9DB0025F5A6 /* QiwiS2340.png */; };
+		E51FFEE5196AC9DB0025F5A6 /* QiwiS2340@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE61196AC9DB0025F5A6 /* QiwiS2340@2x.png */; };
+		E51FFEE6196AC9DB0025F5A6 /* QiwiS2341.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE62196AC9DB0025F5A6 /* QiwiS2341.png */; };
+		E51FFEE7196AC9DB0025F5A6 /* QiwiS2341@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE63196AC9DB0025F5A6 /* QiwiS2341@2x.png */; };
+		E51FFEE8196AC9DB0025F5A6 /* QiwiS2342.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE64196AC9DB0025F5A6 /* QiwiS2342.png */; };
+		E51FFEE9196AC9DB0025F5A6 /* QiwiS2342@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE65196AC9DB0025F5A6 /* QiwiS2342@2x.png */; };
+		E51FFEEA196AC9DB0025F5A6 /* QiwiS2343.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE66196AC9DB0025F5A6 /* QiwiS2343.png */; };
+		E51FFEEB196AC9DB0025F5A6 /* QiwiS2343@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE67196AC9DB0025F5A6 /* QiwiS2343@2x.png */; };
+		E51FFEEC196AC9DB0025F5A6 /* QiwiS2344.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE68196AC9DB0025F5A6 /* QiwiS2344.png */; };
+		E51FFEED196AC9DB0025F5A6 /* QiwiS2344@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE69196AC9DB0025F5A6 /* QiwiS2344@2x.png */; };
+		E51FFEEE196AC9DB0025F5A6 /* QiwiS2345.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE6A196AC9DB0025F5A6 /* QiwiS2345.png */; };
+		E51FFEEF196AC9DB0025F5A6 /* QiwiS2345@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE6B196AC9DB0025F5A6 /* QiwiS2345@2x.png */; };
+		E51FFEF0196AC9DB0025F5A6 /* QiwiS2346.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE6C196AC9DB0025F5A6 /* QiwiS2346.png */; };
+		E51FFEF1196AC9DB0025F5A6 /* QiwiS2346@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE6D196AC9DB0025F5A6 /* QiwiS2346@2x.png */; };
+		E51FFEF2196AC9DB0025F5A6 /* QiwiS2347.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE6E196AC9DB0025F5A6 /* QiwiS2347.png */; };
+		E51FFEF3196AC9DB0025F5A6 /* QiwiS2347@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE6F196AC9DB0025F5A6 /* QiwiS2347@2x.png */; };
+		E51FFEF4196AC9DB0025F5A6 /* QiwiS2348.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE70196AC9DB0025F5A6 /* QiwiS2348.png */; };
+		E51FFEF5196AC9DB0025F5A6 /* QiwiS2348@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE71196AC9DB0025F5A6 /* QiwiS2348@2x.png */; };
+		E51FFEF6196AC9DB0025F5A6 /* QiwiS10098.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE72196AC9DB0025F5A6 /* QiwiS10098.png */; };
+		E51FFEF7196AC9DB0025F5A6 /* QiwiS10098@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE73196AC9DB0025F5A6 /* QiwiS10098@2x.png */; };
+		E51FFEF8196AC9DB0025F5A6 /* QiwiS10664.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE74196AC9DB0025F5A6 /* QiwiS10664.png */; };
+		E51FFEF9196AC9DB0025F5A6 /* QiwiS10664@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE75196AC9DB0025F5A6 /* QiwiS10664@2x.png */; };
+		E51FFEFA196AC9DB0025F5A6 /* QiwiS10665.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE76196AC9DB0025F5A6 /* QiwiS10665.png */; };
+		E51FFEFB196AC9DB0025F5A6 /* QiwiS10665@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE77196AC9DB0025F5A6 /* QiwiS10665@2x.png */; };
+		E51FFEFC196AC9DB0025F5A6 /* QiwiS10666.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE78196AC9DB0025F5A6 /* QiwiS10666.png */; };
+		E51FFEFD196AC9DB0025F5A6 /* QiwiS10666@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFE79196AC9DB0025F5A6 /* QiwiS10666@2x.png */; };
+		E51FFF98196ADD070025F5A6 /* QiwiS3075.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFEFE196ADD060025F5A6 /* QiwiS3075.png */; };
+		E51FFF99196ADD070025F5A6 /* QiwiS3075@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFEFF196ADD060025F5A6 /* QiwiS3075@2x.png */; };
+		E51FFF9A196ADD070025F5A6 /* QiwiS3076.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF00196ADD060025F5A6 /* QiwiS3076.png */; };
+		E51FFF9B196ADD070025F5A6 /* QiwiS3076@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF01196ADD060025F5A6 /* QiwiS3076@2x.png */; };
+		E51FFF9C196ADD070025F5A6 /* QiwiS3077.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF02196ADD060025F5A6 /* QiwiS3077.png */; };
+		E51FFF9D196ADD070025F5A6 /* QiwiS3077@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF03196ADD060025F5A6 /* QiwiS3077@2x.png */; };
+		E51FFF9E196ADD070025F5A6 /* QiwiS3078.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF04196ADD060025F5A6 /* QiwiS3078.png */; };
+		E51FFF9F196ADD070025F5A6 /* QiwiS3078@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF05196ADD060025F5A6 /* QiwiS3078@2x.png */; };
+		E51FFFA0196ADD070025F5A6 /* QiwiS3079.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF06196ADD060025F5A6 /* QiwiS3079.png */; };
+		E51FFFA1196ADD070025F5A6 /* QiwiS3079@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF07196ADD060025F5A6 /* QiwiS3079@2x.png */; };
+		E51FFFA2196ADD070025F5A6 /* QiwiS3081.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF08196ADD060025F5A6 /* QiwiS3081.png */; };
+		E51FFFA3196ADD070025F5A6 /* QiwiS3081@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF09196ADD060025F5A6 /* QiwiS3081@2x.png */; };
+		E51FFFA4196ADD070025F5A6 /* QiwiS3082.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF0A196ADD060025F5A6 /* QiwiS3082.png */; };
+		E51FFFA5196ADD070025F5A6 /* QiwiS3082@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF0B196ADD060025F5A6 /* QiwiS3082@2x.png */; };
+		E51FFFA6196ADD070025F5A6 /* QiwiS3083.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF0C196ADD060025F5A6 /* QiwiS3083.png */; };
+		E51FFFA7196ADD070025F5A6 /* QiwiS3083@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF0D196ADD060025F5A6 /* QiwiS3083@2x.png */; };
+		E51FFFA8196ADD070025F5A6 /* QiwiS3084.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF0E196ADD070025F5A6 /* QiwiS3084.png */; };
+		E51FFFA9196ADD070025F5A6 /* QiwiS3084@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF0F196ADD070025F5A6 /* QiwiS3084@2x.png */; };
+		E51FFFAA196ADD070025F5A6 /* QiwiS3085.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF10196ADD070025F5A6 /* QiwiS3085.png */; };
+		E51FFFAB196ADD070025F5A6 /* QiwiS3085@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF11196ADD070025F5A6 /* QiwiS3085@2x.png */; };
+		E51FFFAC196ADD070025F5A6 /* QiwiS4136.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF12196ADD070025F5A6 /* QiwiS4136.png */; };
+		E51FFFAD196ADD070025F5A6 /* QiwiS4136@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF13196ADD070025F5A6 /* QiwiS4136@2x.png */; };
+		E51FFFAE196ADD070025F5A6 /* QiwiS4137.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF14196ADD070025F5A6 /* QiwiS4137.png */; };
+		E51FFFAF196ADD070025F5A6 /* QiwiS4137@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF15196ADD070025F5A6 /* QiwiS4137@2x.png */; };
+		E51FFFB0196ADD070025F5A6 /* QiwiS4138.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF16196ADD070025F5A6 /* QiwiS4138.png */; };
+		E51FFFB1196ADD070025F5A6 /* QiwiS4138@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF17196ADD070025F5A6 /* QiwiS4138@2x.png */; };
+		E51FFFB2196ADD070025F5A6 /* QiwiS4657.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF18196ADD070025F5A6 /* QiwiS4657.png */; };
+		E51FFFB3196ADD070025F5A6 /* QiwiS4657@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF19196ADD070025F5A6 /* QiwiS4657@2x.png */; };
+		E51FFFB4196ADD070025F5A6 /* QiwiS4658.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF1A196ADD070025F5A6 /* QiwiS4658.png */; };
+		E51FFFB5196ADD070025F5A6 /* QiwiS4658@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF1B196ADD070025F5A6 /* QiwiS4658@2x.png */; };
+		E51FFFB6196ADD070025F5A6 /* QiwiS4659.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF1C196ADD070025F5A6 /* QiwiS4659.png */; };
+		E51FFFB7196ADD070025F5A6 /* QiwiS4659@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF1D196ADD070025F5A6 /* QiwiS4659@2x.png */; };
+		E51FFFB8196ADD070025F5A6 /* QiwiS4661.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF1E196ADD070025F5A6 /* QiwiS4661.png */; };
+		E51FFFB9196ADD070025F5A6 /* QiwiS4661@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF1F196ADD070025F5A6 /* QiwiS4661@2x.png */; };
+		E51FFFBA196ADD070025F5A6 /* QiwiS4662.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF20196ADD070025F5A6 /* QiwiS4662.png */; };
+		E51FFFBB196ADD070025F5A6 /* QiwiS4662@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF21196ADD070025F5A6 /* QiwiS4662@2x.png */; };
+		E51FFFBC196ADD070025F5A6 /* QiwiS4701.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF22196ADD070025F5A6 /* QiwiS4701.png */; };
+		E51FFFBD196ADD070025F5A6 /* QiwiS4701@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF23196ADD070025F5A6 /* QiwiS4701@2x.png */; };
+		E51FFFBE196ADD070025F5A6 /* QiwiS4702.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF24196ADD070025F5A6 /* QiwiS4702.png */; };
+		E51FFFBF196ADD070025F5A6 /* QiwiS4702@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF25196ADD070025F5A6 /* QiwiS4702@2x.png */; };
+		E51FFFC0196ADD070025F5A6 /* QiwiS4703.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF26196ADD070025F5A6 /* QiwiS4703.png */; };
+		E51FFFC1196ADD070025F5A6 /* QiwiS4703@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF27196ADD070025F5A6 /* QiwiS4703@2x.png */; };
+		E51FFFC2196ADD070025F5A6 /* QiwiS4704.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF28196ADD070025F5A6 /* QiwiS4704.png */; };
+		E51FFFC3196ADD070025F5A6 /* QiwiS4704@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF29196ADD070025F5A6 /* QiwiS4704@2x.png */; };
+		E51FFFC4196ADD070025F5A6 /* QiwiS4705.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF2A196ADD070025F5A6 /* QiwiS4705.png */; };
+		E51FFFC5196ADD070025F5A6 /* QiwiS4705@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF2B196ADD070025F5A6 /* QiwiS4705@2x.png */; };
+		E51FFFC6196ADD070025F5A6 /* QiwiS5227.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF2C196ADD070025F5A6 /* QiwiS5227.png */; };
+		E51FFFC7196ADD070025F5A6 /* QiwiS5227@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF2D196ADD070025F5A6 /* QiwiS5227@2x.png */; };
+		E51FFFC8196ADD070025F5A6 /* QiwiS5229.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF2E196ADD070025F5A6 /* QiwiS5229.png */; };
+		E51FFFC9196ADD070025F5A6 /* QiwiS5229@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF2F196ADD070025F5A6 /* QiwiS5229@2x.png */; };
+		E51FFFCA196ADD070025F5A6 /* QiwiS5230.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF30196ADD070025F5A6 /* QiwiS5230.png */; };
+		E51FFFCB196ADD070025F5A6 /* QiwiS5230@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF31196ADD070025F5A6 /* QiwiS5230@2x.png */; };
+		E51FFFCC196ADD070025F5A6 /* QiwiS5231.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF32196ADD070025F5A6 /* QiwiS5231.png */; };
+		E51FFFCD196ADD070025F5A6 /* QiwiS5231@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF33196ADD070025F5A6 /* QiwiS5231@2x.png */; };
+		E51FFFCE196ADD070025F5A6 /* QiwiS5232.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF34196ADD070025F5A6 /* QiwiS5232.png */; };
+		E51FFFCF196ADD070025F5A6 /* QiwiS5232@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF35196ADD070025F5A6 /* QiwiS5232@2x.png */; };
+		E51FFFD0196ADD070025F5A6 /* QiwiS5233.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF36196ADD070025F5A6 /* QiwiS5233.png */; };
+		E51FFFD1196ADD070025F5A6 /* QiwiS5233@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF37196ADD070025F5A6 /* QiwiS5233@2x.png */; };
+		E51FFFD2196ADD070025F5A6 /* QiwiS5234.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF38196ADD070025F5A6 /* QiwiS5234.png */; };
+		E51FFFD3196ADD070025F5A6 /* QiwiS5234@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF39196ADD070025F5A6 /* QiwiS5234@2x.png */; };
+		E51FFFD4196ADD070025F5A6 /* QiwiS5235.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF3A196ADD070025F5A6 /* QiwiS5235.png */; };
+		E51FFFD5196ADD070025F5A6 /* QiwiS5235@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF3B196ADD070025F5A6 /* QiwiS5235@2x.png */; };
+		E51FFFD6196ADD070025F5A6 /* QiwiS5236.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF3C196ADD070025F5A6 /* QiwiS5236.png */; };
+		E51FFFD7196ADD070025F5A6 /* QiwiS5236@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF3D196ADD070025F5A6 /* QiwiS5236@2x.png */; };
+		E51FFFD8196ADD070025F5A6 /* QiwiS5237.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF3E196ADD070025F5A6 /* QiwiS5237.png */; };
+		E51FFFD9196ADD070025F5A6 /* QiwiS5237@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF3F196ADD070025F5A6 /* QiwiS5237@2x.png */; };
+		E51FFFDA196ADD070025F5A6 /* QiwiS5238.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF40196ADD070025F5A6 /* QiwiS5238.png */; };
+		E51FFFDB196ADD070025F5A6 /* QiwiS5238@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF41196ADD070025F5A6 /* QiwiS5238@2x.png */; };
+		E51FFFDC196ADD070025F5A6 /* QiwiS5239.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF42196ADD070025F5A6 /* QiwiS5239.png */; };
+		E51FFFDD196ADD070025F5A6 /* QiwiS5239@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF43196ADD070025F5A6 /* QiwiS5239@2x.png */; };
+		E51FFFDE196ADD070025F5A6 /* QiwiS5797.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF44196ADD070025F5A6 /* QiwiS5797.png */; };
+		E51FFFDF196ADD070025F5A6 /* QiwiS5797@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF45196ADD070025F5A6 /* QiwiS5797@2x.png */; };
+		E51FFFE0196ADD070025F5A6 /* QiwiS5798.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF46196ADD070025F5A6 /* QiwiS5798.png */; };
+		E51FFFE1196ADD070025F5A6 /* QiwiS5798@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF47196ADD070025F5A6 /* QiwiS5798@2x.png */; };
+		E51FFFE2196ADD070025F5A6 /* QiwiS5799.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF48196ADD070025F5A6 /* QiwiS5799.png */; };
+		E51FFFE3196ADD070025F5A6 /* QiwiS5799@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF49196ADD070025F5A6 /* QiwiS5799@2x.png */; };
+		E51FFFE4196ADD070025F5A6 /* QiwiS5890.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF4A196ADD070025F5A6 /* QiwiS5890.png */; };
+		E51FFFE5196ADD070025F5A6 /* QiwiS5890@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF4B196ADD070025F5A6 /* QiwiS5890@2x.png */; };
+		E51FFFE6196ADD070025F5A6 /* QiwiS5891.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF4C196ADD070025F5A6 /* QiwiS5891.png */; };
+		E51FFFE7196ADD070025F5A6 /* QiwiS5891@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF4D196ADD070025F5A6 /* QiwiS5891@2x.png */; };
+		E51FFFE8196ADD070025F5A6 /* QiwiS5892.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF4E196ADD070025F5A6 /* QiwiS5892.png */; };
+		E51FFFE9196ADD070025F5A6 /* QiwiS5892@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF4F196ADD070025F5A6 /* QiwiS5892@2x.png */; };
+		E51FFFEA196ADD070025F5A6 /* QiwiS5957.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF50196ADD070025F5A6 /* QiwiS5957.png */; };
+		E51FFFEB196ADD070025F5A6 /* QiwiS5957@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF51196ADD070025F5A6 /* QiwiS5957@2x.png */; };
+		E51FFFEC196ADD070025F5A6 /* QiwiS5958.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF52196ADD070025F5A6 /* QiwiS5958.png */; };
+		E51FFFED196ADD070025F5A6 /* QiwiS5958@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF53196ADD070025F5A6 /* QiwiS5958@2x.png */; };
+		E51FFFEE196ADD070025F5A6 /* QiwiS5959.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF54196ADD070025F5A6 /* QiwiS5959.png */; };
+		E51FFFEF196ADD070025F5A6 /* QiwiS5959@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF55196ADD070025F5A6 /* QiwiS5959@2x.png */; };
+		E51FFFF0196ADD070025F5A6 /* QiwiS5985.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF56196ADD070025F5A6 /* QiwiS5985.png */; };
+		E51FFFF1196ADD070025F5A6 /* QiwiS5985@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF57196ADD070025F5A6 /* QiwiS5985@2x.png */; };
+		E51FFFF2196ADD070025F5A6 /* QiwiS5986.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF58196ADD070025F5A6 /* QiwiS5986.png */; };
+		E51FFFF3196ADD070025F5A6 /* QiwiS5986@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF59196ADD070025F5A6 /* QiwiS5986@2x.png */; };
+		E51FFFF4196ADD070025F5A6 /* QiwiS5987.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF5A196ADD070025F5A6 /* QiwiS5987.png */; };
+		E51FFFF5196ADD070025F5A6 /* QiwiS5987@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF5B196ADD070025F5A6 /* QiwiS5987@2x.png */; };
+		E51FFFF6196ADD070025F5A6 /* QiwiS5988.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF5C196ADD070025F5A6 /* QiwiS5988.png */; };
+		E51FFFF7196ADD070025F5A6 /* QiwiS5988@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF5D196ADD070025F5A6 /* QiwiS5988@2x.png */; };
+		E51FFFF8196ADD070025F5A6 /* QiwiS6055.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF5E196ADD070025F5A6 /* QiwiS6055.png */; };
+		E51FFFF9196ADD070025F5A6 /* QiwiS6055@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF5F196ADD070025F5A6 /* QiwiS6055@2x.png */; };
+		E51FFFFA196ADD070025F5A6 /* QiwiS6056.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF60196ADD070025F5A6 /* QiwiS6056.png */; };
+		E51FFFFB196ADD070025F5A6 /* QiwiS6056@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF61196ADD070025F5A6 /* QiwiS6056@2x.png */; };
+		E51FFFFC196ADD070025F5A6 /* QiwiS6057.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF62196ADD070025F5A6 /* QiwiS6057.png */; };
+		E51FFFFD196ADD070025F5A6 /* QiwiS6057@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF63196ADD070025F5A6 /* QiwiS6057@2x.png */; };
+		E51FFFFE196ADD070025F5A6 /* QiwiS6058.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF64196ADD070025F5A6 /* QiwiS6058.png */; };
+		E51FFFFF196ADD070025F5A6 /* QiwiS6058@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51FFF65196ADD070025F5A6 /* QiwiS6058@2x.png */; };
 		E52A78FB19657C920038FA65 /* HistoryBlankActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A78F719657C920038FA65 /* HistoryBlankActivityIcon.png */; };
 		E52A78FC19657C920038FA65 /* HistoryBlankActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A78F819657C920038FA65 /* HistoryBlankActivityIcon@2x.png */; };
 		E52A78FD19657C920038FA65 /* HistoryBlankActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A78F919657C920038FA65 /* HistoryBlankActivityMiniIcon.png */; };
@@ -45,6 +335,12 @@
 		E52A79371966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A79351966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib */; };
 		E52A793C19670D130038FA65 /* EditFavoriteViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A793A19670D130038FA65 /* EditFavoriteViewController_iPhone.m */; };
 		E52A793D19670D130038FA65 /* EditFavoriteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A793B19670D130038FA65 /* EditFavoriteViewController_iPhone.xib */; };
+		E52A79421967165F0038FA65 /* QiwiS330.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79401967165F0038FA65 /* QiwiS330.png */; };
+		E52A79431967165F0038FA65 /* QiwiS330@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A79411967165F0038FA65 /* QiwiS330@2x.png */; };
+		E52A7945196853670038FA65 /* RequestSupportViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A7944196853670038FA65 /* RequestSupportViewController_iPhone4.xib */; };
+		E52A794719693D3C0038FA65 /* PayPhoneViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A794619693D3C0038FA65 /* PayPhoneViewController_iPhone4.xib */; };
+		E52A794B1969510A0038FA65 /* UIAlertWithInternetSearchDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A794A1969510A0038FA65 /* UIAlertWithInternetSearchDelegate.m */; };
+		E52A794E196962EA0038FA65 /* UIAlertWithOpenURLDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52A794D196962EA0038FA65 /* UIAlertWithOpenURLDelegate.m */; };
 		E53552921962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */; };
 		E53552931962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */; };
 		E53552961963390B00BB4F4A /* HistoryRepeatPaymentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E53552951963390B00BB4F4A /* HistoryRepeatPaymentActivity.m */; };
@@ -428,6 +724,25 @@
 		E5EE654319004DA30013819A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EE654219004DA30013819A /* MessageUI.framework */; };
 		E5EE6548190050660013819A /* CardMoneySendActivityViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EE6546190050660013819A /* CardMoneySendActivityViewController_iPhone.m */; };
 		E5EE6549190050660013819A /* CardMoneySendActivityViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5EE6547190050660013819A /* CardMoneySendActivityViewController_iPhone.xib */; };
+		E5EEC4691974115E00409E80 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4581974115E00409E80 /* bitstream.c */; };
+		E5EEC46A1974115E00409E80 /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC45B1974115E00409E80 /* mask.c */; };
+		E5EEC46B1974115E00409E80 /* qrenc.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC45D1974115E00409E80 /* qrenc.c */; };
+		E5EEC46C1974115E00409E80 /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC45E1974115E00409E80 /* qrencode.c */; };
+		E5EEC46D1974115E00409E80 /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4611974115E00409E80 /* qrinput.c */; };
+		E5EEC46E1974115E00409E80 /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4631974115E00409E80 /* qrspec.c */; };
+		E5EEC46F1974115E00409E80 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4651974115E00409E80 /* rscode.c */; };
+		E5EEC4701974115E00409E80 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4671974115E00409E80 /* split.c */; };
+		E5EEC473197411A500409E80 /* UIImage+QR.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC472197411A500409E80 /* UIImage+QR.m */; };
+		E5EEC4771974126B00409E80 /* QRViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4751974126B00409E80 /* QRViewController_iPhone.m */; };
+		E5EEC4781974126B00409E80 /* QRViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5EEC4761974126B00409E80 /* QRViewController_iPhone.xib */; };
+		E5EEC47B197428DB00409E80 /* MainQRIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EEC479197428DB00409E80 /* MainQRIcon.png */; };
+		E5EEC47C197428DB00409E80 /* MainQRIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EEC47A197428DB00409E80 /* MainQRIcon@2x.png */; };
+		E5EEC4811974627600409E80 /* CardQRActivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EEC47D1974627600409E80 /* CardQRActivityIcon.png */; };
+		E5EEC4821974627600409E80 /* CardQRActivityIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EEC47E1974627600409E80 /* CardQRActivityIcon@2x.png */; };
+		E5EEC4831974627600409E80 /* CardQRActivityMiniIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EEC47F1974627600409E80 /* CardQRActivityMiniIcon.png */; };
+		E5EEC4841974627600409E80 /* CardQRActivityMiniIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EEC4801974627600409E80 /* CardQRActivityMiniIcon@2x.png */; };
+		E5EEC4871974640800409E80 /* CardQRActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4861974640800409E80 /* CardQRActivity.m */; };
+		E5EEC48A1975328600409E80 /* UIAlertViewRegisterDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EEC4891975328600409E80 /* UIAlertViewRegisterDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -595,6 +910,9 @@
 		E50E653418E2CF2900D9883F /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
 		E50E653518E2CF2900D9883F /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
 		E50E653618E2CF2900D9883F /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		E51F0032196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryFinalizeCellView_iPhone.h; path = Vews/iPhone/History/HistoryFinalizeCellView_iPhone.h; sourceTree = "<group>"; };
+		E51F0033196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryFinalizeCellView_iPhone.m; path = Vews/iPhone/History/HistoryFinalizeCellView_iPhone.m; sourceTree = "<group>"; };
+		E51F0034196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryFinalizeCellView_iPhone.xib; path = Vews/iPhone/History/HistoryFinalizeCellView_iPhone.xib; sourceTree = "<group>"; };
 		E51F44AA1925301600A9D6EB /* LampOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LampOff.png; path = Content/Common/LampOff.png; sourceTree = "<group>"; };
 		E51F44AB1925301600A9D6EB /* LampOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LampOff@2x.png"; path = "Content/Common/LampOff@2x.png"; sourceTree = "<group>"; };
 		E51F44AC1925301600A9D6EB /* LampOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LampOn.png; path = Content/Common/LampOn.png; sourceTree = "<group>"; };
@@ -604,6 +922,294 @@
 		E51F44B61925428300A9D6EB /* PayCharityViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayCharityViewController_iPhone.h; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.h; sourceTree = "<group>"; };
 		E51F44B71925428300A9D6EB /* PayCharityViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayCharityViewController_iPhone.m; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.m; sourceTree = "<group>"; };
 		E51F44B81925428300A9D6EB /* PayCharityViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PayCharityViewController_iPhone.xib; path = Vews/iPhone/Operation/PayCharityViewController_iPhone.xib; sourceTree = "<group>"; };
+		E51FFDF0196AC9C80025F5A6 /* QiwiS31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS31.png; sourceTree = "<group>"; };
+		E51FFDF1196AC9C80025F5A6 /* QiwiS31@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS31@2x.png"; sourceTree = "<group>"; };
+		E51FFDF6196AC9DB0025F5A6 /* QiwiS2281.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2281.png; sourceTree = "<group>"; };
+		E51FFDF7196AC9DB0025F5A6 /* QiwiS2281@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2281@2x.png"; sourceTree = "<group>"; };
+		E51FFDF8196AC9DB0025F5A6 /* QiwiS2282.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2282.png; sourceTree = "<group>"; };
+		E51FFDF9196AC9DB0025F5A6 /* QiwiS2282@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2282@2x.png"; sourceTree = "<group>"; };
+		E51FFDFA196AC9DB0025F5A6 /* QiwiS2283.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2283.png; sourceTree = "<group>"; };
+		E51FFDFB196AC9DB0025F5A6 /* QiwiS2283@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2283@2x.png"; sourceTree = "<group>"; };
+		E51FFDFC196AC9DB0025F5A6 /* QiwiS2284.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2284.png; sourceTree = "<group>"; };
+		E51FFDFD196AC9DB0025F5A6 /* QiwiS2284@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2284@2x.png"; sourceTree = "<group>"; };
+		E51FFDFE196AC9DB0025F5A6 /* QiwiS2285.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2285.png; sourceTree = "<group>"; };
+		E51FFDFF196AC9DB0025F5A6 /* QiwiS2285@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2285@2x.png"; sourceTree = "<group>"; };
+		E51FFE00196AC9DB0025F5A6 /* QiwiS2286.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2286.png; sourceTree = "<group>"; };
+		E51FFE01196AC9DB0025F5A6 /* QiwiS2286@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2286@2x.png"; sourceTree = "<group>"; };
+		E51FFE02196AC9DB0025F5A6 /* QiwiS2287.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2287.png; sourceTree = "<group>"; };
+		E51FFE03196AC9DB0025F5A6 /* QiwiS2287@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2287@2x.png"; sourceTree = "<group>"; };
+		E51FFE04196AC9DB0025F5A6 /* QiwiS2288.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2288.png; sourceTree = "<group>"; };
+		E51FFE05196AC9DB0025F5A6 /* QiwiS2288@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2288@2x.png"; sourceTree = "<group>"; };
+		E51FFE06196AC9DB0025F5A6 /* QiwiS2289.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2289.png; sourceTree = "<group>"; };
+		E51FFE07196AC9DB0025F5A6 /* QiwiS2289@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2289@2x.png"; sourceTree = "<group>"; };
+		E51FFE08196AC9DB0025F5A6 /* QiwiS2290.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2290.png; sourceTree = "<group>"; };
+		E51FFE09196AC9DB0025F5A6 /* QiwiS2290@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2290@2x.png"; sourceTree = "<group>"; };
+		E51FFE0A196AC9DB0025F5A6 /* QiwiS2291.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2291.png; sourceTree = "<group>"; };
+		E51FFE0B196AC9DB0025F5A6 /* QiwiS2291@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2291@2x.png"; sourceTree = "<group>"; };
+		E51FFE0C196AC9DB0025F5A6 /* QiwiS2292.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2292.png; sourceTree = "<group>"; };
+		E51FFE0D196AC9DB0025F5A6 /* QiwiS2292@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2292@2x.png"; sourceTree = "<group>"; };
+		E51FFE0E196AC9DB0025F5A6 /* QiwiS2293.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2293.png; sourceTree = "<group>"; };
+		E51FFE0F196AC9DB0025F5A6 /* QiwiS2293@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2293@2x.png"; sourceTree = "<group>"; };
+		E51FFE10196AC9DB0025F5A6 /* QiwiS2294.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2294.png; sourceTree = "<group>"; };
+		E51FFE11196AC9DB0025F5A6 /* QiwiS2294@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2294@2x.png"; sourceTree = "<group>"; };
+		E51FFE12196AC9DB0025F5A6 /* QiwiS2295.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2295.png; sourceTree = "<group>"; };
+		E51FFE13196AC9DB0025F5A6 /* QiwiS2295@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2295@2x.png"; sourceTree = "<group>"; };
+		E51FFE14196AC9DB0025F5A6 /* QiwiS2296.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2296.png; sourceTree = "<group>"; };
+		E51FFE15196AC9DB0025F5A6 /* QiwiS2296@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2296@2x.png"; sourceTree = "<group>"; };
+		E51FFE16196AC9DB0025F5A6 /* QiwiS2297.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2297.png; sourceTree = "<group>"; };
+		E51FFE17196AC9DB0025F5A6 /* QiwiS2297@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2297@2x.png"; sourceTree = "<group>"; };
+		E51FFE18196AC9DB0025F5A6 /* QiwiS2298.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2298.png; sourceTree = "<group>"; };
+		E51FFE19196AC9DB0025F5A6 /* QiwiS2298@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2298@2x.png"; sourceTree = "<group>"; };
+		E51FFE1A196AC9DB0025F5A6 /* QiwiS2299.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2299.png; sourceTree = "<group>"; };
+		E51FFE1B196AC9DB0025F5A6 /* QiwiS2299@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2299@2x.png"; sourceTree = "<group>"; };
+		E51FFE1C196AC9DB0025F5A6 /* QiwiS2300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2300.png; sourceTree = "<group>"; };
+		E51FFE1D196AC9DB0025F5A6 /* QiwiS2300@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2300@2x.png"; sourceTree = "<group>"; };
+		E51FFE1E196AC9DB0025F5A6 /* QiwiS2301.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2301.png; sourceTree = "<group>"; };
+		E51FFE1F196AC9DB0025F5A6 /* QiwiS2301@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2301@2x.png"; sourceTree = "<group>"; };
+		E51FFE20196AC9DB0025F5A6 /* QiwiS2302.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2302.png; sourceTree = "<group>"; };
+		E51FFE21196AC9DB0025F5A6 /* QiwiS2302@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2302@2x.png"; sourceTree = "<group>"; };
+		E51FFE22196AC9DB0025F5A6 /* QiwiS2303.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2303.png; sourceTree = "<group>"; };
+		E51FFE23196AC9DB0025F5A6 /* QiwiS2303@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2303@2x.png"; sourceTree = "<group>"; };
+		E51FFE24196AC9DB0025F5A6 /* QiwiS2304.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2304.png; sourceTree = "<group>"; };
+		E51FFE25196AC9DB0025F5A6 /* QiwiS2304@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2304@2x.png"; sourceTree = "<group>"; };
+		E51FFE26196AC9DB0025F5A6 /* QiwiS2305.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2305.png; sourceTree = "<group>"; };
+		E51FFE27196AC9DB0025F5A6 /* QiwiS2305@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2305@2x.png"; sourceTree = "<group>"; };
+		E51FFE28196AC9DB0025F5A6 /* QiwiS2306.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2306.png; sourceTree = "<group>"; };
+		E51FFE29196AC9DB0025F5A6 /* QiwiS2306@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2306@2x.png"; sourceTree = "<group>"; };
+		E51FFE2A196AC9DB0025F5A6 /* QiwiS2307.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2307.png; sourceTree = "<group>"; };
+		E51FFE2B196AC9DB0025F5A6 /* QiwiS2307@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2307@2x.png"; sourceTree = "<group>"; };
+		E51FFE2C196AC9DB0025F5A6 /* QiwiS2308.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2308.png; sourceTree = "<group>"; };
+		E51FFE2D196AC9DB0025F5A6 /* QiwiS2308@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2308@2x.png"; sourceTree = "<group>"; };
+		E51FFE2E196AC9DB0025F5A6 /* QiwiS2309.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2309.png; sourceTree = "<group>"; };
+		E51FFE2F196AC9DB0025F5A6 /* QiwiS2309@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2309@2x.png"; sourceTree = "<group>"; };
+		E51FFE30196AC9DB0025F5A6 /* QiwiS2310.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2310.png; sourceTree = "<group>"; };
+		E51FFE31196AC9DB0025F5A6 /* QiwiS2310@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2310@2x.png"; sourceTree = "<group>"; };
+		E51FFE32196AC9DB0025F5A6 /* QiwiS2311.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2311.png; sourceTree = "<group>"; };
+		E51FFE33196AC9DB0025F5A6 /* QiwiS2311@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2311@2x.png"; sourceTree = "<group>"; };
+		E51FFE34196AC9DB0025F5A6 /* QiwiS2312.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2312.png; sourceTree = "<group>"; };
+		E51FFE35196AC9DB0025F5A6 /* QiwiS2312@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2312@2x.png"; sourceTree = "<group>"; };
+		E51FFE36196AC9DB0025F5A6 /* QiwiS2314.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2314.png; sourceTree = "<group>"; };
+		E51FFE37196AC9DB0025F5A6 /* QiwiS2314@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2314@2x.png"; sourceTree = "<group>"; };
+		E51FFE38196AC9DB0025F5A6 /* QiwiS2316.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2316.png; sourceTree = "<group>"; };
+		E51FFE39196AC9DB0025F5A6 /* QiwiS2316@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2316@2x.png"; sourceTree = "<group>"; };
+		E51FFE3A196AC9DB0025F5A6 /* QiwiS2317.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2317.png; sourceTree = "<group>"; };
+		E51FFE3B196AC9DB0025F5A6 /* QiwiS2317@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2317@2x.png"; sourceTree = "<group>"; };
+		E51FFE3C196AC9DB0025F5A6 /* QiwiS2318.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2318.png; sourceTree = "<group>"; };
+		E51FFE3D196AC9DB0025F5A6 /* QiwiS2318@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2318@2x.png"; sourceTree = "<group>"; };
+		E51FFE3E196AC9DB0025F5A6 /* QiwiS2319.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2319.png; sourceTree = "<group>"; };
+		E51FFE3F196AC9DB0025F5A6 /* QiwiS2319@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2319@2x.png"; sourceTree = "<group>"; };
+		E51FFE40196AC9DB0025F5A6 /* QiwiS2320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2320.png; sourceTree = "<group>"; };
+		E51FFE41196AC9DB0025F5A6 /* QiwiS2320@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2320@2x.png"; sourceTree = "<group>"; };
+		E51FFE42196AC9DB0025F5A6 /* QiwiS2321.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2321.png; sourceTree = "<group>"; };
+		E51FFE43196AC9DB0025F5A6 /* QiwiS2321@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2321@2x.png"; sourceTree = "<group>"; };
+		E51FFE44196AC9DB0025F5A6 /* QiwiS2322.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2322.png; sourceTree = "<group>"; };
+		E51FFE45196AC9DB0025F5A6 /* QiwiS2322@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2322@2x.png"; sourceTree = "<group>"; };
+		E51FFE46196AC9DB0025F5A6 /* QiwiS2323.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2323.png; sourceTree = "<group>"; };
+		E51FFE47196AC9DB0025F5A6 /* QiwiS2323@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2323@2x.png"; sourceTree = "<group>"; };
+		E51FFE48196AC9DB0025F5A6 /* QiwiS2324.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2324.png; sourceTree = "<group>"; };
+		E51FFE49196AC9DB0025F5A6 /* QiwiS2324@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2324@2x.png"; sourceTree = "<group>"; };
+		E51FFE4A196AC9DB0025F5A6 /* QiwiS2325.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2325.png; sourceTree = "<group>"; };
+		E51FFE4B196AC9DB0025F5A6 /* QiwiS2325@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2325@2x.png"; sourceTree = "<group>"; };
+		E51FFE4C196AC9DB0025F5A6 /* QiwiS2326.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2326.png; sourceTree = "<group>"; };
+		E51FFE4D196AC9DB0025F5A6 /* QiwiS2326@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2326@2x.png"; sourceTree = "<group>"; };
+		E51FFE4E196AC9DB0025F5A6 /* QiwiS2330.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2330.png; sourceTree = "<group>"; };
+		E51FFE4F196AC9DB0025F5A6 /* QiwiS2330@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2330@2x.png"; sourceTree = "<group>"; };
+		E51FFE50196AC9DB0025F5A6 /* QiwiS2331.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2331.png; sourceTree = "<group>"; };
+		E51FFE51196AC9DB0025F5A6 /* QiwiS2331@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2331@2x.png"; sourceTree = "<group>"; };
+		E51FFE52196AC9DB0025F5A6 /* QiwiS2332.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2332.png; sourceTree = "<group>"; };
+		E51FFE53196AC9DB0025F5A6 /* QiwiS2332@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2332@2x.png"; sourceTree = "<group>"; };
+		E51FFE54196AC9DB0025F5A6 /* QiwiS2333.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2333.png; sourceTree = "<group>"; };
+		E51FFE55196AC9DB0025F5A6 /* QiwiS2333@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2333@2x.png"; sourceTree = "<group>"; };
+		E51FFE56196AC9DB0025F5A6 /* QiwiS2334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2334.png; sourceTree = "<group>"; };
+		E51FFE57196AC9DB0025F5A6 /* QiwiS2334@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2334@2x.png"; sourceTree = "<group>"; };
+		E51FFE58196AC9DB0025F5A6 /* QiwiS2335.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2335.png; sourceTree = "<group>"; };
+		E51FFE59196AC9DB0025F5A6 /* QiwiS2335@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2335@2x.png"; sourceTree = "<group>"; };
+		E51FFE5A196AC9DB0025F5A6 /* QiwiS2336.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2336.png; sourceTree = "<group>"; };
+		E51FFE5B196AC9DB0025F5A6 /* QiwiS2336@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2336@2x.png"; sourceTree = "<group>"; };
+		E51FFE5C196AC9DB0025F5A6 /* QiwiS2337.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2337.png; sourceTree = "<group>"; };
+		E51FFE5D196AC9DB0025F5A6 /* QiwiS2337@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2337@2x.png"; sourceTree = "<group>"; };
+		E51FFE5E196AC9DB0025F5A6 /* QiwiS2338.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2338.png; sourceTree = "<group>"; };
+		E51FFE5F196AC9DB0025F5A6 /* QiwiS2338@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2338@2x.png"; sourceTree = "<group>"; };
+		E51FFE60196AC9DB0025F5A6 /* QiwiS2340.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2340.png; sourceTree = "<group>"; };
+		E51FFE61196AC9DB0025F5A6 /* QiwiS2340@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2340@2x.png"; sourceTree = "<group>"; };
+		E51FFE62196AC9DB0025F5A6 /* QiwiS2341.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2341.png; sourceTree = "<group>"; };
+		E51FFE63196AC9DB0025F5A6 /* QiwiS2341@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2341@2x.png"; sourceTree = "<group>"; };
+		E51FFE64196AC9DB0025F5A6 /* QiwiS2342.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2342.png; sourceTree = "<group>"; };
+		E51FFE65196AC9DB0025F5A6 /* QiwiS2342@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2342@2x.png"; sourceTree = "<group>"; };
+		E51FFE66196AC9DB0025F5A6 /* QiwiS2343.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2343.png; sourceTree = "<group>"; };
+		E51FFE67196AC9DB0025F5A6 /* QiwiS2343@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2343@2x.png"; sourceTree = "<group>"; };
+		E51FFE68196AC9DB0025F5A6 /* QiwiS2344.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2344.png; sourceTree = "<group>"; };
+		E51FFE69196AC9DB0025F5A6 /* QiwiS2344@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2344@2x.png"; sourceTree = "<group>"; };
+		E51FFE6A196AC9DB0025F5A6 /* QiwiS2345.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2345.png; sourceTree = "<group>"; };
+		E51FFE6B196AC9DB0025F5A6 /* QiwiS2345@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2345@2x.png"; sourceTree = "<group>"; };
+		E51FFE6C196AC9DB0025F5A6 /* QiwiS2346.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2346.png; sourceTree = "<group>"; };
+		E51FFE6D196AC9DB0025F5A6 /* QiwiS2346@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2346@2x.png"; sourceTree = "<group>"; };
+		E51FFE6E196AC9DB0025F5A6 /* QiwiS2347.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2347.png; sourceTree = "<group>"; };
+		E51FFE6F196AC9DB0025F5A6 /* QiwiS2347@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2347@2x.png"; sourceTree = "<group>"; };
+		E51FFE70196AC9DB0025F5A6 /* QiwiS2348.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS2348.png; sourceTree = "<group>"; };
+		E51FFE71196AC9DB0025F5A6 /* QiwiS2348@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS2348@2x.png"; sourceTree = "<group>"; };
+		E51FFE72196AC9DB0025F5A6 /* QiwiS10098.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS10098.png; sourceTree = "<group>"; };
+		E51FFE73196AC9DB0025F5A6 /* QiwiS10098@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS10098@2x.png"; sourceTree = "<group>"; };
+		E51FFE74196AC9DB0025F5A6 /* QiwiS10664.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS10664.png; sourceTree = "<group>"; };
+		E51FFE75196AC9DB0025F5A6 /* QiwiS10664@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS10664@2x.png"; sourceTree = "<group>"; };
+		E51FFE76196AC9DB0025F5A6 /* QiwiS10665.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS10665.png; sourceTree = "<group>"; };
+		E51FFE77196AC9DB0025F5A6 /* QiwiS10665@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS10665@2x.png"; sourceTree = "<group>"; };
+		E51FFE78196AC9DB0025F5A6 /* QiwiS10666.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS10666.png; sourceTree = "<group>"; };
+		E51FFE79196AC9DB0025F5A6 /* QiwiS10666@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS10666@2x.png"; sourceTree = "<group>"; };
+		E51FFEFE196ADD060025F5A6 /* QiwiS3075.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3075.png; sourceTree = "<group>"; };
+		E51FFEFF196ADD060025F5A6 /* QiwiS3075@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3075@2x.png"; sourceTree = "<group>"; };
+		E51FFF00196ADD060025F5A6 /* QiwiS3076.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3076.png; sourceTree = "<group>"; };
+		E51FFF01196ADD060025F5A6 /* QiwiS3076@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3076@2x.png"; sourceTree = "<group>"; };
+		E51FFF02196ADD060025F5A6 /* QiwiS3077.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3077.png; sourceTree = "<group>"; };
+		E51FFF03196ADD060025F5A6 /* QiwiS3077@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3077@2x.png"; sourceTree = "<group>"; };
+		E51FFF04196ADD060025F5A6 /* QiwiS3078.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3078.png; sourceTree = "<group>"; };
+		E51FFF05196ADD060025F5A6 /* QiwiS3078@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3078@2x.png"; sourceTree = "<group>"; };
+		E51FFF06196ADD060025F5A6 /* QiwiS3079.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3079.png; sourceTree = "<group>"; };
+		E51FFF07196ADD060025F5A6 /* QiwiS3079@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3079@2x.png"; sourceTree = "<group>"; };
+		E51FFF08196ADD060025F5A6 /* QiwiS3081.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3081.png; sourceTree = "<group>"; };
+		E51FFF09196ADD060025F5A6 /* QiwiS3081@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3081@2x.png"; sourceTree = "<group>"; };
+		E51FFF0A196ADD060025F5A6 /* QiwiS3082.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3082.png; sourceTree = "<group>"; };
+		E51FFF0B196ADD060025F5A6 /* QiwiS3082@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3082@2x.png"; sourceTree = "<group>"; };
+		E51FFF0C196ADD060025F5A6 /* QiwiS3083.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3083.png; sourceTree = "<group>"; };
+		E51FFF0D196ADD060025F5A6 /* QiwiS3083@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3083@2x.png"; sourceTree = "<group>"; };
+		E51FFF0E196ADD070025F5A6 /* QiwiS3084.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3084.png; sourceTree = "<group>"; };
+		E51FFF0F196ADD070025F5A6 /* QiwiS3084@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3084@2x.png"; sourceTree = "<group>"; };
+		E51FFF10196ADD070025F5A6 /* QiwiS3085.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS3085.png; sourceTree = "<group>"; };
+		E51FFF11196ADD070025F5A6 /* QiwiS3085@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS3085@2x.png"; sourceTree = "<group>"; };
+		E51FFF12196ADD070025F5A6 /* QiwiS4136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4136.png; sourceTree = "<group>"; };
+		E51FFF13196ADD070025F5A6 /* QiwiS4136@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4136@2x.png"; sourceTree = "<group>"; };
+		E51FFF14196ADD070025F5A6 /* QiwiS4137.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4137.png; sourceTree = "<group>"; };
+		E51FFF15196ADD070025F5A6 /* QiwiS4137@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4137@2x.png"; sourceTree = "<group>"; };
+		E51FFF16196ADD070025F5A6 /* QiwiS4138.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4138.png; sourceTree = "<group>"; };
+		E51FFF17196ADD070025F5A6 /* QiwiS4138@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4138@2x.png"; sourceTree = "<group>"; };
+		E51FFF18196ADD070025F5A6 /* QiwiS4657.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4657.png; sourceTree = "<group>"; };
+		E51FFF19196ADD070025F5A6 /* QiwiS4657@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4657@2x.png"; sourceTree = "<group>"; };
+		E51FFF1A196ADD070025F5A6 /* QiwiS4658.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4658.png; sourceTree = "<group>"; };
+		E51FFF1B196ADD070025F5A6 /* QiwiS4658@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4658@2x.png"; sourceTree = "<group>"; };
+		E51FFF1C196ADD070025F5A6 /* QiwiS4659.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4659.png; sourceTree = "<group>"; };
+		E51FFF1D196ADD070025F5A6 /* QiwiS4659@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4659@2x.png"; sourceTree = "<group>"; };
+		E51FFF1E196ADD070025F5A6 /* QiwiS4661.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4661.png; sourceTree = "<group>"; };
+		E51FFF1F196ADD070025F5A6 /* QiwiS4661@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4661@2x.png"; sourceTree = "<group>"; };
+		E51FFF20196ADD070025F5A6 /* QiwiS4662.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4662.png; sourceTree = "<group>"; };
+		E51FFF21196ADD070025F5A6 /* QiwiS4662@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4662@2x.png"; sourceTree = "<group>"; };
+		E51FFF22196ADD070025F5A6 /* QiwiS4701.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4701.png; sourceTree = "<group>"; };
+		E51FFF23196ADD070025F5A6 /* QiwiS4701@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4701@2x.png"; sourceTree = "<group>"; };
+		E51FFF24196ADD070025F5A6 /* QiwiS4702.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4702.png; sourceTree = "<group>"; };
+		E51FFF25196ADD070025F5A6 /* QiwiS4702@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4702@2x.png"; sourceTree = "<group>"; };
+		E51FFF26196ADD070025F5A6 /* QiwiS4703.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4703.png; sourceTree = "<group>"; };
+		E51FFF27196ADD070025F5A6 /* QiwiS4703@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4703@2x.png"; sourceTree = "<group>"; };
+		E51FFF28196ADD070025F5A6 /* QiwiS4704.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4704.png; sourceTree = "<group>"; };
+		E51FFF29196ADD070025F5A6 /* QiwiS4704@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4704@2x.png"; sourceTree = "<group>"; };
+		E51FFF2A196ADD070025F5A6 /* QiwiS4705.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS4705.png; sourceTree = "<group>"; };
+		E51FFF2B196ADD070025F5A6 /* QiwiS4705@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS4705@2x.png"; sourceTree = "<group>"; };
+		E51FFF2C196ADD070025F5A6 /* QiwiS5227.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5227.png; sourceTree = "<group>"; };
+		E51FFF2D196ADD070025F5A6 /* QiwiS5227@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5227@2x.png"; sourceTree = "<group>"; };
+		E51FFF2E196ADD070025F5A6 /* QiwiS5229.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5229.png; sourceTree = "<group>"; };
+		E51FFF2F196ADD070025F5A6 /* QiwiS5229@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5229@2x.png"; sourceTree = "<group>"; };
+		E51FFF30196ADD070025F5A6 /* QiwiS5230.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5230.png; sourceTree = "<group>"; };
+		E51FFF31196ADD070025F5A6 /* QiwiS5230@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5230@2x.png"; sourceTree = "<group>"; };
+		E51FFF32196ADD070025F5A6 /* QiwiS5231.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5231.png; sourceTree = "<group>"; };
+		E51FFF33196ADD070025F5A6 /* QiwiS5231@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5231@2x.png"; sourceTree = "<group>"; };
+		E51FFF34196ADD070025F5A6 /* QiwiS5232.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5232.png; sourceTree = "<group>"; };
+		E51FFF35196ADD070025F5A6 /* QiwiS5232@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5232@2x.png"; sourceTree = "<group>"; };
+		E51FFF36196ADD070025F5A6 /* QiwiS5233.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5233.png; sourceTree = "<group>"; };
+		E51FFF37196ADD070025F5A6 /* QiwiS5233@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5233@2x.png"; sourceTree = "<group>"; };
+		E51FFF38196ADD070025F5A6 /* QiwiS5234.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5234.png; sourceTree = "<group>"; };
+		E51FFF39196ADD070025F5A6 /* QiwiS5234@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5234@2x.png"; sourceTree = "<group>"; };
+		E51FFF3A196ADD070025F5A6 /* QiwiS5235.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5235.png; sourceTree = "<group>"; };
+		E51FFF3B196ADD070025F5A6 /* QiwiS5235@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5235@2x.png"; sourceTree = "<group>"; };
+		E51FFF3C196ADD070025F5A6 /* QiwiS5236.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5236.png; sourceTree = "<group>"; };
+		E51FFF3D196ADD070025F5A6 /* QiwiS5236@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5236@2x.png"; sourceTree = "<group>"; };
+		E51FFF3E196ADD070025F5A6 /* QiwiS5237.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5237.png; sourceTree = "<group>"; };
+		E51FFF3F196ADD070025F5A6 /* QiwiS5237@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5237@2x.png"; sourceTree = "<group>"; };
+		E51FFF40196ADD070025F5A6 /* QiwiS5238.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5238.png; sourceTree = "<group>"; };
+		E51FFF41196ADD070025F5A6 /* QiwiS5238@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5238@2x.png"; sourceTree = "<group>"; };
+		E51FFF42196ADD070025F5A6 /* QiwiS5239.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5239.png; sourceTree = "<group>"; };
+		E51FFF43196ADD070025F5A6 /* QiwiS5239@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5239@2x.png"; sourceTree = "<group>"; };
+		E51FFF44196ADD070025F5A6 /* QiwiS5797.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5797.png; sourceTree = "<group>"; };
+		E51FFF45196ADD070025F5A6 /* QiwiS5797@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5797@2x.png"; sourceTree = "<group>"; };
+		E51FFF46196ADD070025F5A6 /* QiwiS5798.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5798.png; sourceTree = "<group>"; };
+		E51FFF47196ADD070025F5A6 /* QiwiS5798@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5798@2x.png"; sourceTree = "<group>"; };
+		E51FFF48196ADD070025F5A6 /* QiwiS5799.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5799.png; sourceTree = "<group>"; };
+		E51FFF49196ADD070025F5A6 /* QiwiS5799@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5799@2x.png"; sourceTree = "<group>"; };
+		E51FFF4A196ADD070025F5A6 /* QiwiS5890.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5890.png; sourceTree = "<group>"; };
+		E51FFF4B196ADD070025F5A6 /* QiwiS5890@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5890@2x.png"; sourceTree = "<group>"; };
+		E51FFF4C196ADD070025F5A6 /* QiwiS5891.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5891.png; sourceTree = "<group>"; };
+		E51FFF4D196ADD070025F5A6 /* QiwiS5891@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5891@2x.png"; sourceTree = "<group>"; };
+		E51FFF4E196ADD070025F5A6 /* QiwiS5892.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5892.png; sourceTree = "<group>"; };
+		E51FFF4F196ADD070025F5A6 /* QiwiS5892@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5892@2x.png"; sourceTree = "<group>"; };
+		E51FFF50196ADD070025F5A6 /* QiwiS5957.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5957.png; sourceTree = "<group>"; };
+		E51FFF51196ADD070025F5A6 /* QiwiS5957@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5957@2x.png"; sourceTree = "<group>"; };
+		E51FFF52196ADD070025F5A6 /* QiwiS5958.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5958.png; sourceTree = "<group>"; };
+		E51FFF53196ADD070025F5A6 /* QiwiS5958@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5958@2x.png"; sourceTree = "<group>"; };
+		E51FFF54196ADD070025F5A6 /* QiwiS5959.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5959.png; sourceTree = "<group>"; };
+		E51FFF55196ADD070025F5A6 /* QiwiS5959@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5959@2x.png"; sourceTree = "<group>"; };
+		E51FFF56196ADD070025F5A6 /* QiwiS5985.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5985.png; sourceTree = "<group>"; };
+		E51FFF57196ADD070025F5A6 /* QiwiS5985@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5985@2x.png"; sourceTree = "<group>"; };
+		E51FFF58196ADD070025F5A6 /* QiwiS5986.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5986.png; sourceTree = "<group>"; };
+		E51FFF59196ADD070025F5A6 /* QiwiS5986@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5986@2x.png"; sourceTree = "<group>"; };
+		E51FFF5A196ADD070025F5A6 /* QiwiS5987.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5987.png; sourceTree = "<group>"; };
+		E51FFF5B196ADD070025F5A6 /* QiwiS5987@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5987@2x.png"; sourceTree = "<group>"; };
+		E51FFF5C196ADD070025F5A6 /* QiwiS5988.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS5988.png; sourceTree = "<group>"; };
+		E51FFF5D196ADD070025F5A6 /* QiwiS5988@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS5988@2x.png"; sourceTree = "<group>"; };
+		E51FFF5E196ADD070025F5A6 /* QiwiS6055.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6055.png; sourceTree = "<group>"; };
+		E51FFF5F196ADD070025F5A6 /* QiwiS6055@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6055@2x.png"; sourceTree = "<group>"; };
+		E51FFF60196ADD070025F5A6 /* QiwiS6056.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6056.png; sourceTree = "<group>"; };
+		E51FFF61196ADD070025F5A6 /* QiwiS6056@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6056@2x.png"; sourceTree = "<group>"; };
+		E51FFF62196ADD070025F5A6 /* QiwiS6057.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6057.png; sourceTree = "<group>"; };
+		E51FFF63196ADD070025F5A6 /* QiwiS6057@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6057@2x.png"; sourceTree = "<group>"; };
+		E51FFF64196ADD070025F5A6 /* QiwiS6058.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6058.png; sourceTree = "<group>"; };
+		E51FFF65196ADD070025F5A6 /* QiwiS6058@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6058@2x.png"; sourceTree = "<group>"; };
+		E51FFF66196ADD070025F5A6 /* QiwiS6059.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6059.png; sourceTree = "<group>"; };
+		E51FFF67196ADD070025F5A6 /* QiwiS6059@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6059@2x.png"; sourceTree = "<group>"; };
+		E51FFF68196ADD070025F5A6 /* QiwiS6061.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6061.png; sourceTree = "<group>"; };
+		E51FFF69196ADD070025F5A6 /* QiwiS6061@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6061@2x.png"; sourceTree = "<group>"; };
+		E51FFF6A196ADD070025F5A6 /* QiwiS6062.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6062.png; sourceTree = "<group>"; };
+		E51FFF6B196ADD070025F5A6 /* QiwiS6062@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6062@2x.png"; sourceTree = "<group>"; };
+		E51FFF6C196ADD070025F5A6 /* QiwiS6063.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6063.png; sourceTree = "<group>"; };
+		E51FFF6D196ADD070025F5A6 /* QiwiS6063@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6063@2x.png"; sourceTree = "<group>"; };
+		E51FFF6E196ADD070025F5A6 /* QiwiS6064.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6064.png; sourceTree = "<group>"; };
+		E51FFF6F196ADD070025F5A6 /* QiwiS6064@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6064@2x.png"; sourceTree = "<group>"; };
+		E51FFF70196ADD070025F5A6 /* QiwiS6065.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6065.png; sourceTree = "<group>"; };
+		E51FFF71196ADD070025F5A6 /* QiwiS6065@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6065@2x.png"; sourceTree = "<group>"; };
+		E51FFF72196ADD070025F5A6 /* QiwiS6066.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6066.png; sourceTree = "<group>"; };
+		E51FFF73196ADD070025F5A6 /* QiwiS6066@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6066@2x.png"; sourceTree = "<group>"; };
+		E51FFF74196ADD070025F5A6 /* QiwiS6067.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6067.png; sourceTree = "<group>"; };
+		E51FFF75196ADD070025F5A6 /* QiwiS6067@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6067@2x.png"; sourceTree = "<group>"; };
+		E51FFF76196ADD070025F5A6 /* QiwiS6068.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6068.png; sourceTree = "<group>"; };
+		E51FFF77196ADD070025F5A6 /* QiwiS6068@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6068@2x.png"; sourceTree = "<group>"; };
+		E51FFF78196ADD070025F5A6 /* QiwiS6069.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6069.png; sourceTree = "<group>"; };
+		E51FFF79196ADD070025F5A6 /* QiwiS6069@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6069@2x.png"; sourceTree = "<group>"; };
+		E51FFF7A196ADD070025F5A6 /* QiwiS6602.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6602.png; sourceTree = "<group>"; };
+		E51FFF7B196ADD070025F5A6 /* QiwiS6602@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6602@2x.png"; sourceTree = "<group>"; };
+		E51FFF7C196ADD070025F5A6 /* QiwiS6603.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS6603.png; sourceTree = "<group>"; };
+		E51FFF7D196ADD070025F5A6 /* QiwiS6603@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS6603@2x.png"; sourceTree = "<group>"; };
+		E51FFF7E196ADD070025F5A6 /* QiwiS7824.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7824.png; sourceTree = "<group>"; };
+		E51FFF7F196ADD070025F5A6 /* QiwiS7824@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7824@2x.png"; sourceTree = "<group>"; };
+		E51FFF80196ADD070025F5A6 /* QiwiS7825.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7825.png; sourceTree = "<group>"; };
+		E51FFF81196ADD070025F5A6 /* QiwiS7825@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7825@2x.png"; sourceTree = "<group>"; };
+		E51FFF82196ADD070025F5A6 /* QiwiS7826.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7826.png; sourceTree = "<group>"; };
+		E51FFF83196ADD070025F5A6 /* QiwiS7826@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7826@2x.png"; sourceTree = "<group>"; };
+		E51FFF84196ADD070025F5A6 /* QiwiS7827.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7827.png; sourceTree = "<group>"; };
+		E51FFF85196ADD070025F5A6 /* QiwiS7827@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7827@2x.png"; sourceTree = "<group>"; };
+		E51FFF86196ADD070025F5A6 /* QiwiS7828.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7828.png; sourceTree = "<group>"; };
+		E51FFF87196ADD070025F5A6 /* QiwiS7828@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7828@2x.png"; sourceTree = "<group>"; };
+		E51FFF88196ADD070025F5A6 /* QiwiS7829.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7829.png; sourceTree = "<group>"; };
+		E51FFF89196ADD070025F5A6 /* QiwiS7829@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7829@2x.png"; sourceTree = "<group>"; };
+		E51FFF8A196ADD070025F5A6 /* QiwiS7830.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7830.png; sourceTree = "<group>"; };
+		E51FFF8B196ADD070025F5A6 /* QiwiS7830@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7830@2x.png"; sourceTree = "<group>"; };
+		E51FFF8C196ADD070025F5A6 /* QiwiS7831.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7831.png; sourceTree = "<group>"; };
+		E51FFF8D196ADD070025F5A6 /* QiwiS7831@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7831@2x.png"; sourceTree = "<group>"; };
+		E51FFF8E196ADD070025F5A6 /* QiwiS7832.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7832.png; sourceTree = "<group>"; };
+		E51FFF8F196ADD070025F5A6 /* QiwiS7832@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7832@2x.png"; sourceTree = "<group>"; };
+		E51FFF90196ADD070025F5A6 /* QiwiS7833.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7833.png; sourceTree = "<group>"; };
+		E51FFF91196ADD070025F5A6 /* QiwiS7833@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7833@2x.png"; sourceTree = "<group>"; };
+		E51FFF92196ADD070025F5A6 /* QiwiS7834.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7834.png; sourceTree = "<group>"; };
+		E51FFF93196ADD070025F5A6 /* QiwiS7834@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7834@2x.png"; sourceTree = "<group>"; };
+		E51FFF94196ADD070025F5A6 /* QiwiS7835.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7835.png; sourceTree = "<group>"; };
+		E51FFF95196ADD070025F5A6 /* QiwiS7835@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7835@2x.png"; sourceTree = "<group>"; };
+		E51FFF96196ADD070025F5A6 /* QiwiS7836.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS7836.png; sourceTree = "<group>"; };
+		E51FFF97196ADD070025F5A6 /* QiwiS7836@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS7836@2x.png"; sourceTree = "<group>"; };
 		E52A78F719657C920038FA65 /* HistoryBlankActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryBlankActivityIcon.png; sourceTree = "<group>"; };
 		E52A78F819657C920038FA65 /* HistoryBlankActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HistoryBlankActivityIcon@2x.png"; sourceTree = "<group>"; };
 		E52A78F919657C920038FA65 /* HistoryBlankActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryBlankActivityMiniIcon.png; sourceTree = "<group>"; };
@@ -644,6 +1250,14 @@
 		E52A793A19670D130038FA65 /* EditFavoriteViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFavoriteViewController_iPhone.m; path = Vews/iPhone/Favorites/EditFavoriteViewController_iPhone.m; sourceTree = "<group>"; };
 		E52A793B19670D130038FA65 /* EditFavoriteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditFavoriteViewController_iPhone.xib; path = Vews/iPhone/Favorites/EditFavoriteViewController_iPhone.xib; sourceTree = "<group>"; };
 		E52A793F19670D9D0038FA65 /* EditFavoriteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFavoriteDelegate.h; path = Common/Protocols/EditFavoriteDelegate.h; sourceTree = "<group>"; };
+		E52A79401967165F0038FA65 /* QiwiS330.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS330.png; sourceTree = "<group>"; };
+		E52A79411967165F0038FA65 /* QiwiS330@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS330@2x.png"; sourceTree = "<group>"; };
+		E52A7944196853670038FA65 /* RequestSupportViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RequestSupportViewController_iPhone4.xib; path = Vews/iPhone/Common/RequestSupportViewController_iPhone4.xib; sourceTree = "<group>"; };
+		E52A794619693D3C0038FA65 /* PayPhoneViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PayPhoneViewController_iPhone4.xib; path = Vews/iPhone/Operation/PayPhoneViewController_iPhone4.xib; sourceTree = "<group>"; };
+		E52A79491969510A0038FA65 /* UIAlertWithInternetSearchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAlertWithInternetSearchDelegate.h; path = Common/Delegates/UIAlertWithInternetSearchDelegate.h; sourceTree = "<group>"; };
+		E52A794A1969510A0038FA65 /* UIAlertWithInternetSearchDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAlertWithInternetSearchDelegate.m; path = Common/Delegates/UIAlertWithInternetSearchDelegate.m; sourceTree = "<group>"; };
+		E52A794C196962EA0038FA65 /* UIAlertWithOpenURLDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAlertWithOpenURLDelegate.h; path = Common/Delegates/UIAlertWithOpenURLDelegate.h; sourceTree = "<group>"; };
+		E52A794D196962EA0038FA65 /* UIAlertWithOpenURLDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAlertWithOpenURLDelegate.m; path = Common/Delegates/UIAlertWithOpenURLDelegate.m; sourceTree = "<group>"; };
 		E535528F1962E1DD00BB4F4A /* RequestSupportViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestSupportViewController_iPhone.h; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.h; sourceTree = "<group>"; };
 		E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestSupportViewController_iPhone.m; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.m; sourceTree = "<group>"; };
 		E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RequestSupportViewController_iPhone.xib; path = Vews/iPhone/Common/RequestSupportViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -1053,6 +1667,38 @@
 		E5EE6546190050660013819A /* CardMoneySendActivityViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMoneySendActivityViewController_iPhone.m; path = Vews/iPhone/Activity/CardMoneySendActivityViewController_iPhone.m; sourceTree = "<group>"; };
 		E5EE6547190050660013819A /* CardMoneySendActivityViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardMoneySendActivityViewController_iPhone.xib; path = Vews/iPhone/Activity/CardMoneySendActivityViewController_iPhone.xib; sourceTree = "<group>"; };
 		E5EE654B19011D330013819A /* ActivityProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityProtocols.h; path = Common/Activities/ActivityProtocols.h; sourceTree = "<group>"; };
+		E5EEC4581974115E00409E80 /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
+		E5EEC4591974115E00409E80 /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
+		E5EEC45A1974115E00409E80 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		E5EEC45B1974115E00409E80 /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
+		E5EEC45C1974115E00409E80 /* mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mask.h; sourceTree = "<group>"; };
+		E5EEC45D1974115E00409E80 /* qrenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrenc.c; sourceTree = "<group>"; };
+		E5EEC45E1974115E00409E80 /* qrencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrencode.c; sourceTree = "<group>"; };
+		E5EEC45F1974115E00409E80 /* qrencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode.h; sourceTree = "<group>"; };
+		E5EEC4601974115E00409E80 /* qrencode_inner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrencode_inner.h; sourceTree = "<group>"; };
+		E5EEC4611974115E00409E80 /* qrinput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrinput.c; sourceTree = "<group>"; };
+		E5EEC4621974115E00409E80 /* qrinput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrinput.h; sourceTree = "<group>"; };
+		E5EEC4631974115E00409E80 /* qrspec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrspec.c; sourceTree = "<group>"; };
+		E5EEC4641974115E00409E80 /* qrspec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrspec.h; sourceTree = "<group>"; };
+		E5EEC4651974115E00409E80 /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
+		E5EEC4661974115E00409E80 /* rscode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rscode.h; sourceTree = "<group>"; };
+		E5EEC4671974115E00409E80 /* split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = split.c; sourceTree = "<group>"; };
+		E5EEC4681974115E00409E80 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		E5EEC471197411A500409E80 /* UIImage+QR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+QR.h"; path = "Common/UIImage+QR.h"; sourceTree = "<group>"; };
+		E5EEC472197411A500409E80 /* UIImage+QR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+QR.m"; path = "Common/UIImage+QR.m"; sourceTree = "<group>"; };
+		E5EEC4741974126B00409E80 /* QRViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QRViewController_iPhone.h; path = Vews/iPhone/Common/QRViewController_iPhone.h; sourceTree = "<group>"; };
+		E5EEC4751974126B00409E80 /* QRViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRViewController_iPhone.m; path = Vews/iPhone/Common/QRViewController_iPhone.m; sourceTree = "<group>"; };
+		E5EEC4761974126B00409E80 /* QRViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QRViewController_iPhone.xib; path = Vews/iPhone/Common/QRViewController_iPhone.xib; sourceTree = "<group>"; };
+		E5EEC479197428DB00409E80 /* MainQRIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainQRIcon.png; sourceTree = "<group>"; };
+		E5EEC47A197428DB00409E80 /* MainQRIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainQRIcon@2x.png"; sourceTree = "<group>"; };
+		E5EEC47D1974627600409E80 /* CardQRActivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardQRActivityIcon.png; sourceTree = "<group>"; };
+		E5EEC47E1974627600409E80 /* CardQRActivityIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardQRActivityIcon@2x.png"; sourceTree = "<group>"; };
+		E5EEC47F1974627600409E80 /* CardQRActivityMiniIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardQRActivityMiniIcon.png; sourceTree = "<group>"; };
+		E5EEC4801974627600409E80 /* CardQRActivityMiniIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardQRActivityMiniIcon@2x.png"; sourceTree = "<group>"; };
+		E5EEC4851974640800409E80 /* CardQRActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardQRActivity.h; path = Common/Activities/CardQRActivity.h; sourceTree = "<group>"; };
+		E5EEC4861974640800409E80 /* CardQRActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardQRActivity.m; path = Common/Activities/CardQRActivity.m; sourceTree = "<group>"; };
+		E5EEC4881975328600409E80 /* UIAlertViewRegisterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAlertViewRegisterDelegate.h; path = Common/Delegates/UIAlertViewRegisterDelegate.h; sourceTree = "<group>"; };
+		E5EEC4891975328600409E80 /* UIAlertViewRegisterDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAlertViewRegisterDelegate.m; path = Common/Delegates/UIAlertViewRegisterDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1406,6 +2052,26 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		E519AE0E196E977F00133260 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		E52A7948196950DC0038FA65 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E52A79491969510A0038FA65 /* UIAlertWithInternetSearchDelegate.h */,
+				E52A794A1969510A0038FA65 /* UIAlertWithInternetSearchDelegate.m */,
+				E52A794C196962EA0038FA65 /* UIAlertWithOpenURLDelegate.h */,
+				E52A794D196962EA0038FA65 /* UIAlertWithOpenURLDelegate.m */,
+				E5EEC4881975328600409E80 /* UIAlertViewRegisterDelegate.h */,
+				E5EEC4891975328600409E80 /* UIAlertViewRegisterDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		E5448B6E1909B4340025C9E7 /* NETTRASH */ = {
 			isa = PBXGroup;
 			children = (
@@ -1515,6 +2181,7 @@
 				E5B6F5C7190EA46800EAA3C4 /* PayPhoneViewController_iPhone.h */,
 				E5B6F5C8190EA46800EAA3C4 /* PayPhoneViewController_iPhone.m */,
 				E5B6F5C9190EA46800EAA3C4 /* PayPhoneViewController_iPhone.xib */,
+				E52A794619693D3C0038FA65 /* PayPhoneViewController_iPhone4.xib */,
 				E5B6F5D3190FC7C600EAA3C4 /* Card2CardTransferViewController_iPhone.h */,
 				E5B6F5D4190FC7C600EAA3C4 /* Card2CardTransferViewController_iPhone.m */,
 				E5B6F5D5190FC7C600EAA3C4 /* Card2CardTransferViewController_iPhone.xib */,
@@ -1742,6 +2409,9 @@
 				E5C4949D1962A7B100330CEA /* SelectedHistoryCellView_iPhone.h */,
 				E5C4949E1962A7B100330CEA /* SelectedHistoryCellView_iPhone.m */,
 				E5C4949F1962A7B100330CEA /* SelectedHistoryCellView_iPhone.xib */,
+				E51F0032196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.h */,
+				E51F0033196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.m */,
+				E51F0034196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.xib */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -1849,6 +2519,8 @@
 		E5B6F5AE190E702F00EAA3C4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E5EEC479197428DB00409E80 /* MainQRIcon.png */,
+				E5EEC47A197428DB00409E80 /* MainQRIcon@2x.png */,
 				E5C49499195DF05300330CEA /* MainCharityIcon.png */,
 				E5C4949A195DF05300330CEA /* MainCharityIcon@2x.png */,
 				E51F44B21925377700A9D6EB /* MainScanIcon.png */,
@@ -1873,6 +2545,296 @@
 		E5B6F61F191A631A00EAA3C4 /* Currencies */ = {
 			isa = PBXGroup;
 			children = (
+				E51FFEFE196ADD060025F5A6 /* QiwiS3075.png */,
+				E51FFEFF196ADD060025F5A6 /* QiwiS3075@2x.png */,
+				E51FFF00196ADD060025F5A6 /* QiwiS3076.png */,
+				E51FFF01196ADD060025F5A6 /* QiwiS3076@2x.png */,
+				E51FFF02196ADD060025F5A6 /* QiwiS3077.png */,
+				E51FFF03196ADD060025F5A6 /* QiwiS3077@2x.png */,
+				E51FFF04196ADD060025F5A6 /* QiwiS3078.png */,
+				E51FFF05196ADD060025F5A6 /* QiwiS3078@2x.png */,
+				E51FFF06196ADD060025F5A6 /* QiwiS3079.png */,
+				E51FFF07196ADD060025F5A6 /* QiwiS3079@2x.png */,
+				E51FFF08196ADD060025F5A6 /* QiwiS3081.png */,
+				E51FFF09196ADD060025F5A6 /* QiwiS3081@2x.png */,
+				E51FFF0A196ADD060025F5A6 /* QiwiS3082.png */,
+				E51FFF0B196ADD060025F5A6 /* QiwiS3082@2x.png */,
+				E51FFF0C196ADD060025F5A6 /* QiwiS3083.png */,
+				E51FFF0D196ADD060025F5A6 /* QiwiS3083@2x.png */,
+				E51FFF0E196ADD070025F5A6 /* QiwiS3084.png */,
+				E51FFF0F196ADD070025F5A6 /* QiwiS3084@2x.png */,
+				E51FFF10196ADD070025F5A6 /* QiwiS3085.png */,
+				E51FFF11196ADD070025F5A6 /* QiwiS3085@2x.png */,
+				E51FFF12196ADD070025F5A6 /* QiwiS4136.png */,
+				E51FFF13196ADD070025F5A6 /* QiwiS4136@2x.png */,
+				E51FFF14196ADD070025F5A6 /* QiwiS4137.png */,
+				E51FFF15196ADD070025F5A6 /* QiwiS4137@2x.png */,
+				E51FFF16196ADD070025F5A6 /* QiwiS4138.png */,
+				E51FFF17196ADD070025F5A6 /* QiwiS4138@2x.png */,
+				E51FFF18196ADD070025F5A6 /* QiwiS4657.png */,
+				E51FFF19196ADD070025F5A6 /* QiwiS4657@2x.png */,
+				E51FFF1A196ADD070025F5A6 /* QiwiS4658.png */,
+				E51FFF1B196ADD070025F5A6 /* QiwiS4658@2x.png */,
+				E51FFF1C196ADD070025F5A6 /* QiwiS4659.png */,
+				E51FFF1D196ADD070025F5A6 /* QiwiS4659@2x.png */,
+				E51FFF1E196ADD070025F5A6 /* QiwiS4661.png */,
+				E51FFF1F196ADD070025F5A6 /* QiwiS4661@2x.png */,
+				E51FFF20196ADD070025F5A6 /* QiwiS4662.png */,
+				E51FFF21196ADD070025F5A6 /* QiwiS4662@2x.png */,
+				E51FFF22196ADD070025F5A6 /* QiwiS4701.png */,
+				E51FFF23196ADD070025F5A6 /* QiwiS4701@2x.png */,
+				E51FFF24196ADD070025F5A6 /* QiwiS4702.png */,
+				E51FFF25196ADD070025F5A6 /* QiwiS4702@2x.png */,
+				E51FFF26196ADD070025F5A6 /* QiwiS4703.png */,
+				E51FFF27196ADD070025F5A6 /* QiwiS4703@2x.png */,
+				E51FFF28196ADD070025F5A6 /* QiwiS4704.png */,
+				E51FFF29196ADD070025F5A6 /* QiwiS4704@2x.png */,
+				E51FFF2A196ADD070025F5A6 /* QiwiS4705.png */,
+				E51FFF2B196ADD070025F5A6 /* QiwiS4705@2x.png */,
+				E51FFF2C196ADD070025F5A6 /* QiwiS5227.png */,
+				E51FFF2D196ADD070025F5A6 /* QiwiS5227@2x.png */,
+				E51FFF2E196ADD070025F5A6 /* QiwiS5229.png */,
+				E51FFF2F196ADD070025F5A6 /* QiwiS5229@2x.png */,
+				E51FFF30196ADD070025F5A6 /* QiwiS5230.png */,
+				E51FFF31196ADD070025F5A6 /* QiwiS5230@2x.png */,
+				E51FFF32196ADD070025F5A6 /* QiwiS5231.png */,
+				E51FFF33196ADD070025F5A6 /* QiwiS5231@2x.png */,
+				E51FFF34196ADD070025F5A6 /* QiwiS5232.png */,
+				E51FFF35196ADD070025F5A6 /* QiwiS5232@2x.png */,
+				E51FFF36196ADD070025F5A6 /* QiwiS5233.png */,
+				E51FFF37196ADD070025F5A6 /* QiwiS5233@2x.png */,
+				E51FFF38196ADD070025F5A6 /* QiwiS5234.png */,
+				E51FFF39196ADD070025F5A6 /* QiwiS5234@2x.png */,
+				E51FFF3A196ADD070025F5A6 /* QiwiS5235.png */,
+				E51FFF3B196ADD070025F5A6 /* QiwiS5235@2x.png */,
+				E51FFF3C196ADD070025F5A6 /* QiwiS5236.png */,
+				E51FFF3D196ADD070025F5A6 /* QiwiS5236@2x.png */,
+				E51FFF3E196ADD070025F5A6 /* QiwiS5237.png */,
+				E51FFF3F196ADD070025F5A6 /* QiwiS5237@2x.png */,
+				E51FFF40196ADD070025F5A6 /* QiwiS5238.png */,
+				E51FFF41196ADD070025F5A6 /* QiwiS5238@2x.png */,
+				E51FFF42196ADD070025F5A6 /* QiwiS5239.png */,
+				E51FFF43196ADD070025F5A6 /* QiwiS5239@2x.png */,
+				E51FFF44196ADD070025F5A6 /* QiwiS5797.png */,
+				E51FFF45196ADD070025F5A6 /* QiwiS5797@2x.png */,
+				E51FFF46196ADD070025F5A6 /* QiwiS5798.png */,
+				E51FFF47196ADD070025F5A6 /* QiwiS5798@2x.png */,
+				E51FFF48196ADD070025F5A6 /* QiwiS5799.png */,
+				E51FFF49196ADD070025F5A6 /* QiwiS5799@2x.png */,
+				E51FFF4A196ADD070025F5A6 /* QiwiS5890.png */,
+				E51FFF4B196ADD070025F5A6 /* QiwiS5890@2x.png */,
+				E51FFF4C196ADD070025F5A6 /* QiwiS5891.png */,
+				E51FFF4D196ADD070025F5A6 /* QiwiS5891@2x.png */,
+				E51FFF4E196ADD070025F5A6 /* QiwiS5892.png */,
+				E51FFF4F196ADD070025F5A6 /* QiwiS5892@2x.png */,
+				E51FFF50196ADD070025F5A6 /* QiwiS5957.png */,
+				E51FFF51196ADD070025F5A6 /* QiwiS5957@2x.png */,
+				E51FFF52196ADD070025F5A6 /* QiwiS5958.png */,
+				E51FFF53196ADD070025F5A6 /* QiwiS5958@2x.png */,
+				E51FFF54196ADD070025F5A6 /* QiwiS5959.png */,
+				E51FFF55196ADD070025F5A6 /* QiwiS5959@2x.png */,
+				E51FFF56196ADD070025F5A6 /* QiwiS5985.png */,
+				E51FFF57196ADD070025F5A6 /* QiwiS5985@2x.png */,
+				E51FFF58196ADD070025F5A6 /* QiwiS5986.png */,
+				E51FFF59196ADD070025F5A6 /* QiwiS5986@2x.png */,
+				E51FFF5A196ADD070025F5A6 /* QiwiS5987.png */,
+				E51FFF5B196ADD070025F5A6 /* QiwiS5987@2x.png */,
+				E51FFF5C196ADD070025F5A6 /* QiwiS5988.png */,
+				E51FFF5D196ADD070025F5A6 /* QiwiS5988@2x.png */,
+				E51FFF5E196ADD070025F5A6 /* QiwiS6055.png */,
+				E51FFF5F196ADD070025F5A6 /* QiwiS6055@2x.png */,
+				E51FFF60196ADD070025F5A6 /* QiwiS6056.png */,
+				E51FFF61196ADD070025F5A6 /* QiwiS6056@2x.png */,
+				E51FFF62196ADD070025F5A6 /* QiwiS6057.png */,
+				E51FFF63196ADD070025F5A6 /* QiwiS6057@2x.png */,
+				E51FFF64196ADD070025F5A6 /* QiwiS6058.png */,
+				E51FFF65196ADD070025F5A6 /* QiwiS6058@2x.png */,
+				E51FFF66196ADD070025F5A6 /* QiwiS6059.png */,
+				E51FFF67196ADD070025F5A6 /* QiwiS6059@2x.png */,
+				E51FFF68196ADD070025F5A6 /* QiwiS6061.png */,
+				E51FFF69196ADD070025F5A6 /* QiwiS6061@2x.png */,
+				E51FFF6A196ADD070025F5A6 /* QiwiS6062.png */,
+				E51FFF6B196ADD070025F5A6 /* QiwiS6062@2x.png */,
+				E51FFF6C196ADD070025F5A6 /* QiwiS6063.png */,
+				E51FFF6D196ADD070025F5A6 /* QiwiS6063@2x.png */,
+				E51FFF6E196ADD070025F5A6 /* QiwiS6064.png */,
+				E51FFF6F196ADD070025F5A6 /* QiwiS6064@2x.png */,
+				E51FFF70196ADD070025F5A6 /* QiwiS6065.png */,
+				E51FFF71196ADD070025F5A6 /* QiwiS6065@2x.png */,
+				E51FFF72196ADD070025F5A6 /* QiwiS6066.png */,
+				E51FFF73196ADD070025F5A6 /* QiwiS6066@2x.png */,
+				E51FFF74196ADD070025F5A6 /* QiwiS6067.png */,
+				E51FFF75196ADD070025F5A6 /* QiwiS6067@2x.png */,
+				E51FFF76196ADD070025F5A6 /* QiwiS6068.png */,
+				E51FFF77196ADD070025F5A6 /* QiwiS6068@2x.png */,
+				E51FFF78196ADD070025F5A6 /* QiwiS6069.png */,
+				E51FFF79196ADD070025F5A6 /* QiwiS6069@2x.png */,
+				E51FFF7A196ADD070025F5A6 /* QiwiS6602.png */,
+				E51FFF7B196ADD070025F5A6 /* QiwiS6602@2x.png */,
+				E51FFF7C196ADD070025F5A6 /* QiwiS6603.png */,
+				E51FFF7D196ADD070025F5A6 /* QiwiS6603@2x.png */,
+				E51FFF7E196ADD070025F5A6 /* QiwiS7824.png */,
+				E51FFF7F196ADD070025F5A6 /* QiwiS7824@2x.png */,
+				E51FFF80196ADD070025F5A6 /* QiwiS7825.png */,
+				E51FFF81196ADD070025F5A6 /* QiwiS7825@2x.png */,
+				E51FFF82196ADD070025F5A6 /* QiwiS7826.png */,
+				E51FFF83196ADD070025F5A6 /* QiwiS7826@2x.png */,
+				E51FFF84196ADD070025F5A6 /* QiwiS7827.png */,
+				E51FFF85196ADD070025F5A6 /* QiwiS7827@2x.png */,
+				E51FFF86196ADD070025F5A6 /* QiwiS7828.png */,
+				E51FFF87196ADD070025F5A6 /* QiwiS7828@2x.png */,
+				E51FFF88196ADD070025F5A6 /* QiwiS7829.png */,
+				E51FFF89196ADD070025F5A6 /* QiwiS7829@2x.png */,
+				E51FFF8A196ADD070025F5A6 /* QiwiS7830.png */,
+				E51FFF8B196ADD070025F5A6 /* QiwiS7830@2x.png */,
+				E51FFF8C196ADD070025F5A6 /* QiwiS7831.png */,
+				E51FFF8D196ADD070025F5A6 /* QiwiS7831@2x.png */,
+				E51FFF8E196ADD070025F5A6 /* QiwiS7832.png */,
+				E51FFF8F196ADD070025F5A6 /* QiwiS7832@2x.png */,
+				E51FFF90196ADD070025F5A6 /* QiwiS7833.png */,
+				E51FFF91196ADD070025F5A6 /* QiwiS7833@2x.png */,
+				E51FFF92196ADD070025F5A6 /* QiwiS7834.png */,
+				E51FFF93196ADD070025F5A6 /* QiwiS7834@2x.png */,
+				E51FFF94196ADD070025F5A6 /* QiwiS7835.png */,
+				E51FFF95196ADD070025F5A6 /* QiwiS7835@2x.png */,
+				E51FFF96196ADD070025F5A6 /* QiwiS7836.png */,
+				E51FFF97196ADD070025F5A6 /* QiwiS7836@2x.png */,
+				E51FFDF6196AC9DB0025F5A6 /* QiwiS2281.png */,
+				E51FFDF7196AC9DB0025F5A6 /* QiwiS2281@2x.png */,
+				E51FFDF8196AC9DB0025F5A6 /* QiwiS2282.png */,
+				E51FFDF9196AC9DB0025F5A6 /* QiwiS2282@2x.png */,
+				E51FFDFA196AC9DB0025F5A6 /* QiwiS2283.png */,
+				E51FFDFB196AC9DB0025F5A6 /* QiwiS2283@2x.png */,
+				E51FFDFC196AC9DB0025F5A6 /* QiwiS2284.png */,
+				E51FFDFD196AC9DB0025F5A6 /* QiwiS2284@2x.png */,
+				E51FFDFE196AC9DB0025F5A6 /* QiwiS2285.png */,
+				E51FFDFF196AC9DB0025F5A6 /* QiwiS2285@2x.png */,
+				E51FFE00196AC9DB0025F5A6 /* QiwiS2286.png */,
+				E51FFE01196AC9DB0025F5A6 /* QiwiS2286@2x.png */,
+				E51FFE02196AC9DB0025F5A6 /* QiwiS2287.png */,
+				E51FFE03196AC9DB0025F5A6 /* QiwiS2287@2x.png */,
+				E51FFE04196AC9DB0025F5A6 /* QiwiS2288.png */,
+				E51FFE05196AC9DB0025F5A6 /* QiwiS2288@2x.png */,
+				E51FFE06196AC9DB0025F5A6 /* QiwiS2289.png */,
+				E51FFE07196AC9DB0025F5A6 /* QiwiS2289@2x.png */,
+				E51FFE08196AC9DB0025F5A6 /* QiwiS2290.png */,
+				E51FFE09196AC9DB0025F5A6 /* QiwiS2290@2x.png */,
+				E51FFE0A196AC9DB0025F5A6 /* QiwiS2291.png */,
+				E51FFE0B196AC9DB0025F5A6 /* QiwiS2291@2x.png */,
+				E51FFE0C196AC9DB0025F5A6 /* QiwiS2292.png */,
+				E51FFE0D196AC9DB0025F5A6 /* QiwiS2292@2x.png */,
+				E51FFE0E196AC9DB0025F5A6 /* QiwiS2293.png */,
+				E51FFE0F196AC9DB0025F5A6 /* QiwiS2293@2x.png */,
+				E51FFE10196AC9DB0025F5A6 /* QiwiS2294.png */,
+				E51FFE11196AC9DB0025F5A6 /* QiwiS2294@2x.png */,
+				E51FFE12196AC9DB0025F5A6 /* QiwiS2295.png */,
+				E51FFE13196AC9DB0025F5A6 /* QiwiS2295@2x.png */,
+				E51FFE14196AC9DB0025F5A6 /* QiwiS2296.png */,
+				E51FFE15196AC9DB0025F5A6 /* QiwiS2296@2x.png */,
+				E51FFE16196AC9DB0025F5A6 /* QiwiS2297.png */,
+				E51FFE17196AC9DB0025F5A6 /* QiwiS2297@2x.png */,
+				E51FFE18196AC9DB0025F5A6 /* QiwiS2298.png */,
+				E51FFE19196AC9DB0025F5A6 /* QiwiS2298@2x.png */,
+				E51FFE1A196AC9DB0025F5A6 /* QiwiS2299.png */,
+				E51FFE1B196AC9DB0025F5A6 /* QiwiS2299@2x.png */,
+				E51FFE1C196AC9DB0025F5A6 /* QiwiS2300.png */,
+				E51FFE1D196AC9DB0025F5A6 /* QiwiS2300@2x.png */,
+				E51FFE1E196AC9DB0025F5A6 /* QiwiS2301.png */,
+				E51FFE1F196AC9DB0025F5A6 /* QiwiS2301@2x.png */,
+				E51FFE20196AC9DB0025F5A6 /* QiwiS2302.png */,
+				E51FFE21196AC9DB0025F5A6 /* QiwiS2302@2x.png */,
+				E51FFE22196AC9DB0025F5A6 /* QiwiS2303.png */,
+				E51FFE23196AC9DB0025F5A6 /* QiwiS2303@2x.png */,
+				E51FFE24196AC9DB0025F5A6 /* QiwiS2304.png */,
+				E51FFE25196AC9DB0025F5A6 /* QiwiS2304@2x.png */,
+				E51FFE26196AC9DB0025F5A6 /* QiwiS2305.png */,
+				E51FFE27196AC9DB0025F5A6 /* QiwiS2305@2x.png */,
+				E51FFE28196AC9DB0025F5A6 /* QiwiS2306.png */,
+				E51FFE29196AC9DB0025F5A6 /* QiwiS2306@2x.png */,
+				E51FFE2A196AC9DB0025F5A6 /* QiwiS2307.png */,
+				E51FFE2B196AC9DB0025F5A6 /* QiwiS2307@2x.png */,
+				E51FFE2C196AC9DB0025F5A6 /* QiwiS2308.png */,
+				E51FFE2D196AC9DB0025F5A6 /* QiwiS2308@2x.png */,
+				E51FFE2E196AC9DB0025F5A6 /* QiwiS2309.png */,
+				E51FFE2F196AC9DB0025F5A6 /* QiwiS2309@2x.png */,
+				E51FFE30196AC9DB0025F5A6 /* QiwiS2310.png */,
+				E51FFE31196AC9DB0025F5A6 /* QiwiS2310@2x.png */,
+				E51FFE32196AC9DB0025F5A6 /* QiwiS2311.png */,
+				E51FFE33196AC9DB0025F5A6 /* QiwiS2311@2x.png */,
+				E51FFE34196AC9DB0025F5A6 /* QiwiS2312.png */,
+				E51FFE35196AC9DB0025F5A6 /* QiwiS2312@2x.png */,
+				E51FFE36196AC9DB0025F5A6 /* QiwiS2314.png */,
+				E51FFE37196AC9DB0025F5A6 /* QiwiS2314@2x.png */,
+				E51FFE38196AC9DB0025F5A6 /* QiwiS2316.png */,
+				E51FFE39196AC9DB0025F5A6 /* QiwiS2316@2x.png */,
+				E51FFE3A196AC9DB0025F5A6 /* QiwiS2317.png */,
+				E51FFE3B196AC9DB0025F5A6 /* QiwiS2317@2x.png */,
+				E51FFE3C196AC9DB0025F5A6 /* QiwiS2318.png */,
+				E51FFE3D196AC9DB0025F5A6 /* QiwiS2318@2x.png */,
+				E51FFE3E196AC9DB0025F5A6 /* QiwiS2319.png */,
+				E51FFE3F196AC9DB0025F5A6 /* QiwiS2319@2x.png */,
+				E51FFE40196AC9DB0025F5A6 /* QiwiS2320.png */,
+				E51FFE41196AC9DB0025F5A6 /* QiwiS2320@2x.png */,
+				E51FFE42196AC9DB0025F5A6 /* QiwiS2321.png */,
+				E51FFE43196AC9DB0025F5A6 /* QiwiS2321@2x.png */,
+				E51FFE44196AC9DB0025F5A6 /* QiwiS2322.png */,
+				E51FFE45196AC9DB0025F5A6 /* QiwiS2322@2x.png */,
+				E51FFE46196AC9DB0025F5A6 /* QiwiS2323.png */,
+				E51FFE47196AC9DB0025F5A6 /* QiwiS2323@2x.png */,
+				E51FFE48196AC9DB0025F5A6 /* QiwiS2324.png */,
+				E51FFE49196AC9DB0025F5A6 /* QiwiS2324@2x.png */,
+				E51FFE4A196AC9DB0025F5A6 /* QiwiS2325.png */,
+				E51FFE4B196AC9DB0025F5A6 /* QiwiS2325@2x.png */,
+				E51FFE4C196AC9DB0025F5A6 /* QiwiS2326.png */,
+				E51FFE4D196AC9DB0025F5A6 /* QiwiS2326@2x.png */,
+				E51FFE4E196AC9DB0025F5A6 /* QiwiS2330.png */,
+				E51FFE4F196AC9DB0025F5A6 /* QiwiS2330@2x.png */,
+				E51FFE50196AC9DB0025F5A6 /* QiwiS2331.png */,
+				E51FFE51196AC9DB0025F5A6 /* QiwiS2331@2x.png */,
+				E51FFE52196AC9DB0025F5A6 /* QiwiS2332.png */,
+				E51FFE53196AC9DB0025F5A6 /* QiwiS2332@2x.png */,
+				E51FFE54196AC9DB0025F5A6 /* QiwiS2333.png */,
+				E51FFE55196AC9DB0025F5A6 /* QiwiS2333@2x.png */,
+				E51FFE56196AC9DB0025F5A6 /* QiwiS2334.png */,
+				E51FFE57196AC9DB0025F5A6 /* QiwiS2334@2x.png */,
+				E51FFE58196AC9DB0025F5A6 /* QiwiS2335.png */,
+				E51FFE59196AC9DB0025F5A6 /* QiwiS2335@2x.png */,
+				E51FFE5A196AC9DB0025F5A6 /* QiwiS2336.png */,
+				E51FFE5B196AC9DB0025F5A6 /* QiwiS2336@2x.png */,
+				E51FFE5C196AC9DB0025F5A6 /* QiwiS2337.png */,
+				E51FFE5D196AC9DB0025F5A6 /* QiwiS2337@2x.png */,
+				E51FFE5E196AC9DB0025F5A6 /* QiwiS2338.png */,
+				E51FFE5F196AC9DB0025F5A6 /* QiwiS2338@2x.png */,
+				E51FFE60196AC9DB0025F5A6 /* QiwiS2340.png */,
+				E51FFE61196AC9DB0025F5A6 /* QiwiS2340@2x.png */,
+				E51FFE62196AC9DB0025F5A6 /* QiwiS2341.png */,
+				E51FFE63196AC9DB0025F5A6 /* QiwiS2341@2x.png */,
+				E51FFE64196AC9DB0025F5A6 /* QiwiS2342.png */,
+				E51FFE65196AC9DB0025F5A6 /* QiwiS2342@2x.png */,
+				E51FFE66196AC9DB0025F5A6 /* QiwiS2343.png */,
+				E51FFE67196AC9DB0025F5A6 /* QiwiS2343@2x.png */,
+				E51FFE68196AC9DB0025F5A6 /* QiwiS2344.png */,
+				E51FFE69196AC9DB0025F5A6 /* QiwiS2344@2x.png */,
+				E51FFE6A196AC9DB0025F5A6 /* QiwiS2345.png */,
+				E51FFE6B196AC9DB0025F5A6 /* QiwiS2345@2x.png */,
+				E51FFE6C196AC9DB0025F5A6 /* QiwiS2346.png */,
+				E51FFE6D196AC9DB0025F5A6 /* QiwiS2346@2x.png */,
+				E51FFE6E196AC9DB0025F5A6 /* QiwiS2347.png */,
+				E51FFE6F196AC9DB0025F5A6 /* QiwiS2347@2x.png */,
+				E51FFE70196AC9DB0025F5A6 /* QiwiS2348.png */,
+				E51FFE71196AC9DB0025F5A6 /* QiwiS2348@2x.png */,
+				E51FFE72196AC9DB0025F5A6 /* QiwiS10098.png */,
+				E51FFE73196AC9DB0025F5A6 /* QiwiS10098@2x.png */,
+				E51FFE74196AC9DB0025F5A6 /* QiwiS10664.png */,
+				E51FFE75196AC9DB0025F5A6 /* QiwiS10664@2x.png */,
+				E51FFE76196AC9DB0025F5A6 /* QiwiS10665.png */,
+				E51FFE77196AC9DB0025F5A6 /* QiwiS10665@2x.png */,
+				E51FFE78196AC9DB0025F5A6 /* QiwiS10666.png */,
+				E51FFE79196AC9DB0025F5A6 /* QiwiS10666@2x.png */,
+				E51FFDF0196AC9C80025F5A6 /* QiwiS31.png */,
+				E51FFDF1196AC9C80025F5A6 /* QiwiS31@2x.png */,
+				E52A79401967165F0038FA65 /* QiwiS330.png */,
+				E52A79411967165F0038FA65 /* QiwiS330@2x.png */,
 				E5C49495195DEB2300330CEA /* OceanBankPayToAnyReqR.png */,
 				E5C49496195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png */,
 				E5C49491195DEA9B00330CEA /* PaynetEasyR.png */,
@@ -1930,6 +2892,8 @@
 				E5EE652B1900443B0013819A /* CardCallSupportActivity.m */,
 				E556D8A21905126A002BD048 /* CardAuthorizeActivity.h */,
 				E556D8A31905126A002BD048 /* CardAuthorizeActivity.m */,
+				E5EEC4851974640800409E80 /* CardQRActivity.h */,
+				E5EEC4861974640800409E80 /* CardQRActivity.m */,
 			);
 			name = Card;
 			sourceTree = "<group>";
@@ -1958,6 +2922,8 @@
 		E5D9EE0118E33D6E00B60781 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E5EEC4571974115E00409E80 /* QR */,
+				E52A7948196950DC0038FA65 /* Delegates */,
 				E556D8AE19064B7B002BD048 /* Reachability.h */,
 				E556D8AF19064B7B002BD048 /* Reachability.m */,
 				E556D8921901668A002BD048 /* Protocols */,
@@ -1991,6 +2957,8 @@
 				E5B6F6891923922300EAA3C4 /* NSURL+Parameters.m */,
 				E53552A7196480DB00BB4F4A /* NSDate+Operation.h */,
 				E53552A8196480DB00BB4F4A /* NSDate+Operation.m */,
+				E5EEC471197411A500409E80 /* UIImage+QR.h */,
+				E5EEC472197411A500409E80 /* UIImage+QR.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -2027,6 +2995,7 @@
 		E5D9EE1018E39B8600B60781 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				E519AE0E196E977F00133260 /* Common */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -2089,9 +3058,13 @@
 				E535528F1962E1DD00BB4F4A /* RequestSupportViewController_iPhone.h */,
 				E53552901962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m */,
 				E53552911962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib */,
+				E52A7944196853670038FA65 /* RequestSupportViewController_iPhone4.xib */,
 				E52A7904196581150038FA65 /* BlankViewController_iPhone.h */,
 				E52A7905196581150038FA65 /* BlankViewController_iPhone.m */,
 				E52A7906196581150038FA65 /* BlankViewController_iPhone.xib */,
+				E5EEC4741974126B00409E80 /* QRViewController_iPhone.h */,
+				E5EEC4751974126B00409E80 /* QRViewController_iPhone.m */,
+				E5EEC4761974126B00409E80 /* QRViewController_iPhone.xib */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -2125,6 +3098,10 @@
 		E5EE652D19004B630013819A /* ActivityIcons */ = {
 			isa = PBXGroup;
 			children = (
+				E5EEC47D1974627600409E80 /* CardQRActivityIcon.png */,
+				E5EEC47E1974627600409E80 /* CardQRActivityIcon@2x.png */,
+				E5EEC47F1974627600409E80 /* CardQRActivityMiniIcon.png */,
+				E5EEC4801974627600409E80 /* CardQRActivityMiniIcon@2x.png */,
 				E52A792B1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png */,
 				E52A792C1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon@2x.png */,
 				E52A792D1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png */,
@@ -2196,6 +3173,31 @@
 			name = Activity;
 			sourceTree = "<group>";
 		};
+		E5EEC4571974115E00409E80 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				E5EEC4581974115E00409E80 /* bitstream.c */,
+				E5EEC4591974115E00409E80 /* bitstream.h */,
+				E5EEC45A1974115E00409E80 /* config.h */,
+				E5EEC45B1974115E00409E80 /* mask.c */,
+				E5EEC45C1974115E00409E80 /* mask.h */,
+				E5EEC45D1974115E00409E80 /* qrenc.c */,
+				E5EEC45E1974115E00409E80 /* qrencode.c */,
+				E5EEC45F1974115E00409E80 /* qrencode.h */,
+				E5EEC4601974115E00409E80 /* qrencode_inner.h */,
+				E5EEC4611974115E00409E80 /* qrinput.c */,
+				E5EEC4621974115E00409E80 /* qrinput.h */,
+				E5EEC4631974115E00409E80 /* qrspec.c */,
+				E5EEC4641974115E00409E80 /* qrspec.h */,
+				E5EEC4651974115E00409E80 /* rscode.c */,
+				E5EEC4661974115E00409E80 /* rscode.h */,
+				E5EEC4671974115E00409E80 /* split.c */,
+				E5EEC4681974115E00409E80 /* split.h */,
+			);
+			name = QR;
+			path = Common/QR;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2247,6 +3249,9 @@
 					E599E97F18E760980019A74E = {
 						DevelopmentTeam = 9J4X6PJX56;
 						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -2303,55 +3308,133 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51FFEAB196AC9DB0025F5A6 /* QiwiS2305@2x.png in Resources */,
+				E51FFFAB196ADD070025F5A6 /* QiwiS3085@2x.png in Resources */,
 				E5B6F59A190AB2D100EAA3C4 /* azIntro.m4a in Resources */,
 				E52A78FE19657C920038FA65 /* HistoryBlankActivityMiniIcon@2x.png in Resources */,
+				E51FFEEB196AC9DB0025F5A6 /* QiwiS2343@2x.png in Resources */,
+				E51FFFEE196ADD070025F5A6 /* QiwiS5959.png in Resources */,
 				E5448B4419091EC20025C9E7 /* SettingsMaxTimeoutForPassword.png in Resources */,
 				E5B6F669191BDAFE00EAA3C4 /* SearchCatalogViewController_iPhone.xib in Resources */,
 				E599ECFE18F581370019A74E /* Stat.png in Resources */,
+				E51F0027196ADD070025F5A6 /* QiwiS7831@2x.png in Resources */,
+				E51FFECD196AC9DB0025F5A6 /* QiwiS2324@2x.png in Resources */,
+				E51F002C196ADD070025F5A6 /* QiwiS7834.png in Resources */,
+				E51FFFC4196ADD070025F5A6 /* QiwiS4705.png in Resources */,
+				E51FFE9F196AC9DB0025F5A6 /* QiwiS2299@2x.png in Resources */,
 				E5B6F623191A631A00EAA3C4 /* QiwiOutOceanR@2x.png in Resources */,
+				E51FFFD1196ADD070025F5A6 /* QiwiS5233@2x.png in Resources */,
+				E51F002E196ADD070025F5A6 /* QiwiS7835.png in Resources */,
+				E51FFE97196AC9DB0025F5A6 /* QiwiS2295@2x.png in Resources */,
+				E51F0001196ADD070025F5A6 /* QiwiS6059@2x.png in Resources */,
+				E5EEC47C197428DB00409E80 /* MainQRIcon@2x.png in Resources */,
+				E51FFFCD196ADD070025F5A6 /* QiwiS5231@2x.png in Resources */,
+				E51FFEEE196AC9DB0025F5A6 /* QiwiS2345.png in Resources */,
+				E51F001B196ADD070025F5A6 /* QiwiS7825@2x.png in Resources */,
+				E5EEC4841974627600409E80 /* CardQRActivityMiniIcon@2x.png in Resources */,
+				E51FFEF9196AC9DB0025F5A6 /* QiwiS10664@2x.png in Resources */,
+				E51FFEF3196AC9DB0025F5A6 /* QiwiS2347@2x.png in Resources */,
+				E51FFFB6196ADD070025F5A6 /* QiwiS4659.png in Resources */,
+				E51FFF9C196ADD070025F5A6 /* QiwiS3077.png in Resources */,
+				E5EEC47B197428DB00409E80 /* MainQRIcon.png in Resources */,
 				E5C4949C195DF05300330CEA /* MainCharityIcon@2x.png in Resources */,
+				E51FFE9C196AC9DB0025F5A6 /* QiwiS2298.png in Resources */,
 				E599EA2118E76BF50019A74E /* Localizable.strings in Resources */,
+				E51FFEDA196AC9DB0025F5A6 /* QiwiS2334.png in Resources */,
+				E51FFFA6196ADD070025F5A6 /* QiwiS3083.png in Resources */,
+				E51FFE93196AC9DB0025F5A6 /* QiwiS2293@2x.png in Resources */,
 				E5EAAE771939141E00B6B832 /* MapPinTerminal.png in Resources */,
+				E51FFE9B196AC9DB0025F5A6 /* QiwiS2297@2x.png in Resources */,
+				E51FFEB4196AC9DB0025F5A6 /* QiwiS2310.png in Resources */,
 				E5448B8E1909BC490025C9E7 /* Oferta.m4a in Resources */,
 				E5B6F6851923898900EAA3C4 /* iPhoneSplashPortrait@2x.png in Resources */,
+				E51F0030196ADD070025F5A6 /* QiwiS7836.png in Resources */,
+				E51FFFFA196ADD070025F5A6 /* QiwiS6056.png in Resources */,
 				E5B6F597190AAC5500EAA3C4 /* azmum.m4a in Resources */,
+				E51FFFEC196ADD070025F5A6 /* QiwiS5958.png in Resources */,
 				E5B6F648191B984000EAA3C4 /* azwelcome5.m4a in Resources */,
 				E52A78FC19657C920038FA65 /* HistoryBlankActivityIcon@2x.png in Resources */,
 				E53552B619649E4500BB4F4A /* HistoryPostToFacebookActivityIcon@2x.png in Resources */,
 				E599ECE818F46A880019A74E /* CheckPasswordViewController_iPhone.xib in Resources */,
+				E51FFFF3196ADD070025F5A6 /* QiwiS5986@2x.png in Resources */,
 				E599ED2318F5A6470019A74E /* TerminalsViewController_iPhone.xib in Resources */,
+				E51FFFD6196ADD070025F5A6 /* QiwiS5236.png in Resources */,
 				E5B6F5C5190E7E6C00EAA3C4 /* MainCheckIcon.png in Resources */,
+				E51FFEC1196AC9DB0025F5A6 /* QiwiS2318@2x.png in Resources */,
 				E599ED2F18F5A76C0019A74E /* HistoryViewController_iPhone.xib in Resources */,
 				E599ED0A18F583140019A74E /* Support.png in Resources */,
+				E51FFEBA196AC9DB0025F5A6 /* QiwiS2314.png in Resources */,
+				E51FFEAF196AC9DB0025F5A6 /* QiwiS2307@2x.png in Resources */,
 				E599E9D918E768A00019A74E /* Loading_Round_Orange.png in Resources */,
+				E51FFFB1196ADD070025F5A6 /* QiwiS4138@2x.png in Resources */,
+				E51FFEA5196AC9DB0025F5A6 /* QiwiS2302@2x.png in Resources */,
+				E51FFEFD196AC9DB0025F5A6 /* QiwiS10666@2x.png in Resources */,
 				E599ECD818F402770019A74E /* ApprovePhoneViewController_iPhone.xib in Resources */,
 				E5C49498195DEB2300330CEA /* OceanBankPayToAnyReqR@2x.png in Resources */,
 				E52A79241966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon.png in Resources */,
+				E51F000D196ADD070025F5A6 /* QiwiS6066@2x.png in Resources */,
 				E5B6F5E51916BDE700EAA3C4 /* Comission@2x.png in Resources */,
 				E5B6F59D190AB39B00EAA3C4 /* PasswordIcon.png in Resources */,
+				E51FFEA3196AC9DB0025F5A6 /* QiwiS2301@2x.png in Resources */,
+				E51FFEDB196AC9DB0025F5A6 /* QiwiS2334@2x.png in Resources */,
 				E5B6F64E191B984000EAA3C4 /* azwelcome11.m4a in Resources */,
 				E535529C196413B500BB4F4A /* HistoryRequestSupportActivityIcon@2x.png in Resources */,
 				E599ED0F18F5855C0019A74E /* Cards@2x.png in Resources */,
+				E51FFED9196AC9DB0025F5A6 /* QiwiS2333@2x.png in Resources */,
+				E51FFFF4196ADD070025F5A6 /* QiwiS5987.png in Resources */,
+				E51F0018196ADD070025F5A6 /* QiwiS7824.png in Resources */,
+				E51FFF9B196ADD070025F5A6 /* QiwiS3076@2x.png in Resources */,
 				E5B6F593190AAC5500EAA3C4 /* azwelcome.m4a in Resources */,
 				E52A79301966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon@2x.png in Resources */,
+				E51FFE80196AC9DB0025F5A6 /* QiwiS2284.png in Resources */,
 				E599ECE318F469B20019A74E /* MainViewController_iPhone.xib in Resources */,
 				E5B6F653191B984000EAA3C4 /* azwelcome16.m4a in Resources */,
+				E51F0004196ADD070025F5A6 /* QiwiS6062.png in Resources */,
 				E5B6F5D7190FC7C600EAA3C4 /* Card2CardTransferViewController_iPhone.xib in Resources */,
+				E51F001C196ADD070025F5A6 /* QiwiS7826.png in Resources */,
+				E51FFED1196AC9DB0025F5A6 /* QiwiS2326@2x.png in Resources */,
 				E5448B7F1909B4340025C9E7 /* mum3.m4a in Resources */,
+				E51F002F196ADD070025F5A6 /* QiwiS7835@2x.png in Resources */,
+				E51FFEF6196AC9DB0025F5A6 /* QiwiS10098.png in Resources */,
 				E5B6F661191B9B3700EAA3C4 /* azpoker1.m4a in Resources */,
+				E51FFF98196ADD070025F5A6 /* QiwiS3075.png in Resources */,
+				E51FFEA9196AC9DB0025F5A6 /* QiwiS2304@2x.png in Resources */,
 				E599E9CC18E768620019A74E /* EnterPhoneViewController_iPhone.xib in Resources */,
+				E51FFEED196AC9DB0025F5A6 /* QiwiS2344@2x.png in Resources */,
 				E5EE653019004B630013819A /* CardRequestSupportActivityIcon.png in Resources */,
 				E5EE650118FD8DF90013819A /* CardsViewController_iPhone.xib in Resources */,
+				E51FFEC6196AC9DB0025F5A6 /* QiwiS2321.png in Resources */,
+				E51FFEDE196AC9DB0025F5A6 /* QiwiS2336.png in Resources */,
+				E51FFE8C196AC9DB0025F5A6 /* QiwiS2290.png in Resources */,
 				E5448B801909B4340025C9E7 /* mum4.m4a in Resources */,
 				E5B6F6841923898900EAA3C4 /* iPhoneSplashPortrait.png in Resources */,
+				E51FFE8E196AC9DB0025F5A6 /* QiwiS2291.png in Resources */,
+				E51FFEB8196AC9DB0025F5A6 /* QiwiS2312.png in Resources */,
+				E51FFFEF196ADD070025F5A6 /* QiwiS5959@2x.png in Resources */,
+				E51FFFCC196ADD070025F5A6 /* QiwiS5231.png in Resources */,
+				E51FFFE1196ADD070025F5A6 /* QiwiS5798@2x.png in Resources */,
+				E51FFFC1196ADD070025F5A6 /* QiwiS4703@2x.png in Resources */,
+				E51FFFA8196ADD070025F5A6 /* QiwiS3084.png in Resources */,
 				E5B6F6831923898900EAA3C4 /* iPhoneSettingsIcon.png in Resources */,
 				E51F44AE1925301600A9D6EB /* LampOff.png in Resources */,
 				E5B6F647191B984000EAA3C4 /* azwelcome4.m4a in Resources */,
+				E51FFEAA196AC9DB0025F5A6 /* QiwiS2305.png in Resources */,
+				E51FFDF3196AC9C80025F5A6 /* QiwiS31@2x.png in Resources */,
 				E5B6F649191B984000EAA3C4 /* azwelcome6.m4a in Resources */,
+				E51FFE89196AC9DB0025F5A6 /* QiwiS2288@2x.png in Resources */,
+				E51FFFA5196ADD070025F5A6 /* QiwiS3082@2x.png in Resources */,
 				E53552A5196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon.png in Resources */,
+				E51FFFA2196ADD070025F5A6 /* QiwiS3081.png in Resources */,
 				E599ECF018F553340019A74E /* MenuViewController_iPhone.xib in Resources */,
+				E51FFEE9196AC9DB0025F5A6 /* QiwiS2342@2x.png in Resources */,
+				E51FFF9D196ADD070025F5A6 /* QiwiS3077@2x.png in Resources */,
 				E599ED3B18F5A86D0019A74E /* ProfileViewController_iPhone.xib in Resources */,
 				E5B6F6821923898900EAA3C4 /* iPhoneAppIcon.png in Resources */,
+				E51FFE96196AC9DB0025F5A6 /* QiwiS2295.png in Resources */,
+				E51F0019196ADD070025F5A6 /* QiwiS7824@2x.png in Resources */,
+				E51FFE9A196AC9DB0025F5A6 /* QiwiS2297.png in Resources */,
+				E51FFFCE196ADD070025F5A6 /* QiwiS5232.png in Resources */,
+				E51FFECE196AC9DB0025F5A6 /* QiwiS2325.png in Resources */,
 				E5B6F64C191B984000EAA3C4 /* azwelcome9.m4a in Resources */,
 				E5C4949B195DF05300330CEA /* MainCharityIcon.png in Resources */,
 				E5B6F5B6190E70AB00EAA3C4 /* MainPhoneIcon@2x.png in Resources */,
@@ -2359,194 +3442,416 @@
 				E52A79261966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon.png in Resources */,
 				E51F44B41925377700A9D6EB /* MainScanIcon.png in Resources */,
 				E556D8BC19067E8C002BD048 /* MoneySendBackground@2x.png in Resources */,
+				E51FFE9E196AC9DB0025F5A6 /* QiwiS2299.png in Resources */,
+				E51FFEAC196AC9DB0025F5A6 /* QiwiS2306.png in Resources */,
 				E535529D196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png in Resources */,
+				E51FFE83196AC9DB0025F5A6 /* QiwiS2285@2x.png in Resources */,
+				E51FFE94196AC9DB0025F5A6 /* QiwiS2294.png in Resources */,
 				E5C49497195DEB2300330CEA /* OceanBankPayToAnyReqR.png in Resources */,
+				E51F0002196ADD070025F5A6 /* QiwiS6061.png in Resources */,
+				E51FFFB9196ADD070025F5A6 /* QiwiS4661@2x.png in Resources */,
+				E51FFEC9196AC9DB0025F5A6 /* QiwiS2322@2x.png in Resources */,
+				E51F000B196ADD070025F5A6 /* QiwiS6065@2x.png in Resources */,
+				E51FFFBD196ADD070025F5A6 /* QiwiS4701@2x.png in Resources */,
+				E51FFECC196AC9DB0025F5A6 /* QiwiS2324.png in Resources */,
 				E599E9DB18E768A90019A74E /* Oferta(Ru).rtf in Resources */,
+				E51FFEAD196AC9DB0025F5A6 /* QiwiS2306@2x.png in Resources */,
+				E51FFFD0196ADD070025F5A6 /* QiwiS5233.png in Resources */,
+				E51FFF9A196ADD070025F5A6 /* QiwiS3076.png in Resources */,
+				E51FFE7E196AC9DB0025F5A6 /* QiwiS2283.png in Resources */,
 				E5B6F5BA190E74CF00EAA3C4 /* MainCard2CardIcon@2x.png in Resources */,
+				E51FFEEC196AC9DB0025F5A6 /* QiwiS2344.png in Resources */,
+				E51FFFB0196ADD070025F5A6 /* QiwiS4138.png in Resources */,
+				E51FFEF8196AC9DB0025F5A6 /* QiwiS10664.png in Resources */,
 				E556D8B519064D68002BD048 /* NoInternetConnectionViewController_iPhone.xib in Resources */,
 				E5B6F64A191B984000EAA3C4 /* azwelcome7.m4a in Resources */,
 				E5B6F62A191A67C100EAA3C4 /* QiwiSMegafon.png in Resources */,
+				E51FFE87196AC9DB0025F5A6 /* QiwiS2287@2x.png in Resources */,
 				E5B6F5DC1911121F00EAA3C4 /* MoneyTransferViewController_iPhone.xib in Resources */,
+				E51F0025196ADD070025F5A6 /* QiwiS7830@2x.png in Resources */,
+				E51FFEE7196AC9DB0025F5A6 /* QiwiS2341@2x.png in Resources */,
 				E5D96061192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib in Resources */,
+				E51FFFEB196ADD070025F5A6 /* QiwiS5957@2x.png in Resources */,
 				E599ED1218F5882F0019A74E /* Terminals.png in Resources */,
+				E51FFEF5196AC9DB0025F5A6 /* QiwiS2348@2x.png in Resources */,
+				E51FFEFA196AC9DB0025F5A6 /* QiwiS10665.png in Resources */,
 				E52A79191966A3750038FA65 /* FavoriteFail.png in Resources */,
+				E51FFE82196AC9DB0025F5A6 /* QiwiS2285.png in Resources */,
 				E5B6F652191B984000EAA3C4 /* azwelcome15.m4a in Resources */,
 				E5EE653119004B630013819A /* CardRequestSupportActivityIcon@2x.png in Resources */,
 				E599ED4B18F5BFB00019A74E /* Success@2x.png in Resources */,
+				E51FFFA0196ADD070025F5A6 /* QiwiS3079.png in Resources */,
 				E599ED4A18F5BFB00019A74E /* Success.png in Resources */,
 				E599ED4618F5BFB00019A74E /* Fail.png in Resources */,
 				E5448B6D1909AD600025C9E7 /* AudioProfiles.plist in Resources */,
+				E51FFEA6196AC9DB0025F5A6 /* QiwiS2303.png in Resources */,
 				E5448B851909B4450025C9E7 /* AudioProfileAZhdanova.plist in Resources */,
 				E599ED1718F58AD90019A74E /* Payments@2x.png in Resources */,
 				E51F44BA1925428300A9D6EB /* PayCharityViewController_iPhone.xib in Resources */,
+				E51F001A196ADD070025F5A6 /* QiwiS7825.png in Resources */,
+				E51FFEE2196AC9DB0025F5A6 /* QiwiS2338.png in Resources */,
 				E556D88F19015A8B002BD048 /* CardAuthorizeViewController_iPhone.xib in Resources */,
 				E5448B881909B8360025C9E7 /* nettrash.m4a in Resources */,
 				E5D9605A192A7B44008AD81B /* OCEANComission@2x.png in Resources */,
 				E599ED0618F5827B0019A74E /* Settings.png in Resources */,
+				E51FFEDC196AC9DB0025F5A6 /* QiwiS2335.png in Resources */,
+				E51FFEFB196AC9DB0025F5A6 /* QiwiS10665@2x.png in Resources */,
+				E51F0000196ADD070025F5A6 /* QiwiS6059.png in Resources */,
 				E51F44B51925377700A9D6EB /* MainScanIcon@2x.png in Resources */,
 				E5B6F5F419180F2200EAA3C4 /* SelectedCardCellView_iPhone.xib in Resources */,
+				E51FFFDF196ADD070025F5A6 /* QiwiS5797@2x.png in Resources */,
+				E51FFEA0196AC9DB0025F5A6 /* QiwiS2300.png in Resources */,
+				E51FFFCF196ADD070025F5A6 /* QiwiS5232@2x.png in Resources */,
 				E5B6F660191B9B3700EAA3C4 /* azpoker.m4a in Resources */,
+				E51FFE8F196AC9DB0025F5A6 /* QiwiS2291@2x.png in Resources */,
+				E51FFFF1196ADD070025F5A6 /* QiwiS5985@2x.png in Resources */,
+				E51FFFDA196ADD070025F5A6 /* QiwiS5238.png in Resources */,
+				E51FFFD5196ADD070025F5A6 /* QiwiS5235@2x.png in Resources */,
+				E51FFFC7196ADD070025F5A6 /* QiwiS5227@2x.png in Resources */,
+				E51FFE8D196AC9DB0025F5A6 /* QiwiS2290@2x.png in Resources */,
+				E51FFFB4196ADD070025F5A6 /* QiwiS4658.png in Resources */,
 				E53552A4196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon@2x.png in Resources */,
+				E51FFE84196AC9DB0025F5A6 /* QiwiS2286.png in Resources */,
+				E51FFE91196AC9DB0025F5A6 /* QiwiS2292@2x.png in Resources */,
 				E599ED1318F5882F0019A74E /* Terminals@2x.png in Resources */,
+				E51F0003196ADD070025F5A6 /* QiwiS6061@2x.png in Resources */,
+				E51FFFB5196ADD070025F5A6 /* QiwiS4658@2x.png in Resources */,
+				E51FFED0196AC9DB0025F5A6 /* QiwiS2326.png in Resources */,
 				E599ED4718F5BFB00019A74E /* Fail@2x.png in Resources */,
 				E556D8C01906BBE0002BD048 /* close@2x.png in Resources */,
 				E5B6F594190AAC5500EAA3C4 /* azwelcome1.m4a in Resources */,
 				E5EE653F19004C6A0013819A /* CardReceiveMoneyActivityIcon@2x.png in Resources */,
+				E51FFFB2196ADD070025F5A6 /* QiwiS4657.png in Resources */,
+				E51FFFDE196ADD070025F5A6 /* QiwiS5797.png in Resources */,
 				E51F44B01925301600A9D6EB /* LampOn.png in Resources */,
+				E51FFFC3196ADD070025F5A6 /* QiwiS4704@2x.png in Resources */,
+				E51F0011196ADD070025F5A6 /* QiwiS6068@2x.png in Resources */,
 				E5B6F6101918CC4000EAA3C4 /* CardMoneySendActivityMiniIcon@2x.png in Resources */,
 				E5B6F595190AAC5500EAA3C4 /* azwelcome2.m4a in Resources */,
+				E51FFFE3196ADD070025F5A6 /* QiwiS5799@2x.png in Resources */,
 				E599ED0318F581F70019A74E /* Favorites@2x.png in Resources */,
 				E5B6F6161918CC4000EAA3C4 /* CardRequestSupportActivityMiniIcon@2x.png in Resources */,
 				E5EE653A19004C6A0013819A /* CardCallSupportActivityIcon.png in Resources */,
+				E51FFED7196AC9DB0025F5A6 /* QiwiS2332@2x.png in Resources */,
+				E51FFFBC196ADD070025F5A6 /* QiwiS4701.png in Resources */,
+				E51F0022196ADD070025F5A6 /* QiwiS7829.png in Resources */,
+				E51FFFC2196ADD070025F5A6 /* QiwiS4704.png in Resources */,
+				E51F001F196ADD070025F5A6 /* QiwiS7827@2x.png in Resources */,
+				E51FFFD7196ADD070025F5A6 /* QiwiS5236@2x.png in Resources */,
 				E5448B7A1909B4340025C9E7 /* AudioProfile.plist in Resources */,
+				E51FFFFF196ADD070025F5A6 /* QiwiS6058@2x.png in Resources */,
 				E5448B8B1909B9EA0025C9E7 /* welcome.m4a in Resources */,
 				E5B6F577190AA54C00EAA3C4 /* EMailIcon@2x.png in Resources */,
 				E5448B7B1909B4340025C9E7 /* Intro.m4a in Resources */,
+				E51FFED4196AC9DB0025F5A6 /* QiwiS2331.png in Resources */,
 				E5EE653E19004C6A0013819A /* CardReceiveMoneyActivityIcon.png in Resources */,
+				E51FFED5196AC9DB0025F5A6 /* QiwiS2331@2x.png in Resources */,
 				E52A79371966E14E0038FA65 /* AddToFavoriteViewController_iPhone.xib in Resources */,
 				E5448B7C1909B4340025C9E7 /* mum.m4a in Resources */,
+				E51FFED2196AC9DB0025F5A6 /* QiwiS2330.png in Resources */,
 				E5B6F59E190AB39B00EAA3C4 /* PasswordIcon@2x.png in Resources */,
+				E51FFE8B196AC9DB0025F5A6 /* QiwiS2289@2x.png in Resources */,
+				E51FFE81196AC9DB0025F5A6 /* QiwiS2284@2x.png in Resources */,
+				E51F0009196ADD070025F5A6 /* QiwiS6064@2x.png in Resources */,
+				E5EEC4811974627600409E80 /* CardQRActivityIcon.png in Resources */,
+				E51FFED6196AC9DB0025F5A6 /* QiwiS2332.png in Resources */,
+				E51FFFDC196ADD070025F5A6 /* QiwiS5239.png in Resources */,
 				E5B6F598190AAC5500EAA3C4 /* aznettrash.m4a in Resources */,
+				E51F0028196ADD070025F5A6 /* QiwiS7832.png in Resources */,
+				E51FFEBB196AC9DB0025F5A6 /* QiwiS2314@2x.png in Resources */,
 				E5B6F6111918CC4000EAA3C4 /* CardReceiveMoneyActivityMiniIcon.png in Resources */,
 				E5B6F60D1918CC4000EAA3C4 /* CardCallSupportActivityMiniIcon.png in Resources */,
 				E52A79321966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon@2x.png in Resources */,
+				E51FFFED196ADD070025F5A6 /* QiwiS5958@2x.png in Resources */,
+				E51FFFA9196ADD070025F5A6 /* QiwiS3084@2x.png in Resources */,
+				E51FFEDD196AC9DB0025F5A6 /* QiwiS2335@2x.png in Resources */,
+				E51FFFBE196ADD070025F5A6 /* QiwiS4702.png in Resources */,
+				E51FFE7F196AC9DB0025F5A6 /* QiwiS2283@2x.png in Resources */,
 				E556D89B1901745D002BD048 /* EnterCVCBackground.png in Resources */,
+				E51F0015196ADD070025F5A6 /* QiwiS6602@2x.png in Resources */,
+				E51FFEC2196AC9DB0025F5A6 /* QiwiS2319.png in Resources */,
+				E51FFE85196AC9DB0025F5A6 /* QiwiS2286@2x.png in Resources */,
+				E51FFFE7196ADD070025F5A6 /* QiwiS5891@2x.png in Resources */,
+				E51FFEA4196AC9DB0025F5A6 /* QiwiS2302.png in Resources */,
 				E53552931962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib in Resources */,
 				E5EE653C19004C6A0013819A /* CardMoneySendActivityIcon.png in Resources */,
 				E5B6F626191A668B00EAA3C4 /* QiwiS2.png in Resources */,
 				E5448B4019091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png in Resources */,
+				E51FFEFC196AC9DB0025F5A6 /* QiwiS10666.png in Resources */,
 				E599ED3518F5A7EE0019A74E /* StatViewController_iPhone.xib in Resources */,
+				E51FFEB7196AC9DB0025F5A6 /* QiwiS2311@2x.png in Resources */,
+				E51F0007196ADD070025F5A6 /* QiwiS6063@2x.png in Resources */,
+				E51FFEF1196AC9DB0025F5A6 /* QiwiS2346@2x.png in Resources */,
 				E5B6F5F719183D9C00EAA3C4 /* CardCellActivityBorder.png in Resources */,
+				E51FFED8196AC9DB0025F5A6 /* QiwiS2333.png in Resources */,
+				E51F000F196ADD070025F5A6 /* QiwiS6067@2x.png in Resources */,
 				E556D89819016D36002BD048 /* EnterCVCViewController_iPhone.xib in Resources */,
+				E51F0024196ADD070025F5A6 /* QiwiS7830.png in Resources */,
 				E5B6F5A3190AC2B200EAA3C4 /* ChangePersonViewController_iPhone.xib in Resources */,
 				E53552A3196426F600BB4F4A /* HistoryRepeatPaymentActivityIcon.png in Resources */,
+				E51FFEAE196AC9DB0025F5A6 /* QiwiS2307.png in Resources */,
 				E5B6F66E191F680C00EAA3C4 /* QiwiS1@2x.png in Resources */,
 				E5B6F61E191A44AA00EAA3C4 /* PayCheckViewController_iPhone.xib in Resources */,
 				E556D8BB19067E8C002BD048 /* MoneySendBackground.png in Resources */,
 				E599E9D418E768810019A74E /* AcceptOfertaViewController_iPhone.xib in Resources */,
 				E5B6F5CB190EA46800EAA3C4 /* PayPhoneViewController_iPhone.xib in Resources */,
+				E51FFFD4196ADD070025F5A6 /* QiwiS5235.png in Resources */,
 				E5B6F6151918CC4000EAA3C4 /* CardRequestSupportActivityMiniIcon.png in Resources */,
 				E5B6F5C2190E7A5D00EAA3C4 /* MainNoChecksIcon@2x.png in Resources */,
+				E51F0036196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.xib in Resources */,
+				E51FFFCB196ADD070025F5A6 /* QiwiS5230@2x.png in Resources */,
+				E51FFE9D196AC9DB0025F5A6 /* QiwiS2298@2x.png in Resources */,
 				E5B6F651191B984000EAA3C4 /* azwelcome14.m4a in Resources */,
+				E51FFFA3196ADD070025F5A6 /* QiwiS3081@2x.png in Resources */,
 				E599ED0B18F583140019A74E /* Support@2x.png in Resources */,
+				E51FFF9E196ADD070025F5A6 /* QiwiS3078.png in Resources */,
 				E599E9D618E768950019A74E /* Loading_Round_Orange@2x.png in Resources */,
 				E52A7912196590F20038FA65 /* HistoryPostToTwitterActivityIcon@2x.png in Resources */,
+				E51FFFFE196ADD070025F5A6 /* QiwiS6058.png in Resources */,
+				E51F0020196ADD070025F5A6 /* QiwiS7828.png in Resources */,
 				E52A791B1966A3750038FA65 /* FavoriteSuccess.png in Resources */,
+				E5EEC4831974627600409E80 /* CardQRActivityMiniIcon.png in Resources */,
 				E53552B519649E4500BB4F4A /* HistoryPostToFacebookActivityIcon.png in Resources */,
 				E52A78FD19657C920038FA65 /* HistoryBlankActivityMiniIcon.png in Resources */,
 				E556D8A019044D03002BD048 /* CardAuthorizeActivityIcon.png in Resources */,
+				E51FFFD8196ADD070025F5A6 /* QiwiS5237.png in Resources */,
+				E51FFEB2196AC9DB0025F5A6 /* QiwiS2309.png in Resources */,
+				E51FFE7B196AC9DB0025F5A6 /* QiwiS2281@2x.png in Resources */,
 				E5EE651218FDF5BE0013819A /* AddCardViewController_iPhone.xib in Resources */,
+				E51FFEB1196AC9DB0025F5A6 /* QiwiS2308@2x.png in Resources */,
 				E599ED1618F58AD90019A74E /* Payments.png in Resources */,
+				E51FFFD2196ADD070025F5A6 /* QiwiS5234.png in Resources */,
 				E556D89C1901745D002BD048 /* EnterCVCBackground@2x.png in Resources */,
+				E51FFFC9196ADD070025F5A6 /* QiwiS5229@2x.png in Resources */,
 				E599ECFF18F581370019A74E /* Stat@2x.png in Resources */,
+				E52A79421967165F0038FA65 /* QiwiS330.png in Resources */,
+				E51FFFD9196ADD070025F5A6 /* QiwiS5237@2x.png in Resources */,
+				E51FFEE5196AC9DB0025F5A6 /* QiwiS2340@2x.png in Resources */,
 				E5EE653B19004C6A0013819A /* CardCallSupportActivityIcon@2x.png in Resources */,
+				E51F0021196ADD070025F5A6 /* QiwiS7828@2x.png in Resources */,
+				E51FFEC3196AC9DB0025F5A6 /* QiwiS2319@2x.png in Resources */,
+				E51FFEA2196AC9DB0025F5A6 /* QiwiS2301.png in Resources */,
+				E51FFEBE196AC9DB0025F5A6 /* QiwiS2317.png in Resources */,
+				E51FFE98196AC9DB0025F5A6 /* QiwiS2296.png in Resources */,
 				E599E9D218E7687A0019A74E /* VerifyPasswordViewController_iPhone.xib in Resources */,
+				E51FFEE3196AC9DB0025F5A6 /* QiwiS2338@2x.png in Resources */,
 				E5EE653D19004C6A0013819A /* CardMoneySendActivityIcon@2x.png in Resources */,
 				E5B6F637191B58FE00EAA3C4 /* CatalogSearchIcon@2x.png in Resources */,
 				E5B6F622191A631A00EAA3C4 /* QiwiOutOceanR.png in Resources */,
+				E51FFFDB196ADD070025F5A6 /* QiwiS5238@2x.png in Resources */,
+				E51FFEC8196AC9DB0025F5A6 /* QiwiS2322.png in Resources */,
+				E51F001D196ADD070025F5A6 /* QiwiS7826@2x.png in Resources */,
 				E5EE6549190050660013819A /* CardMoneySendActivityViewController_iPhone.xib in Resources */,
+				E51FFFA1196ADD070025F5A6 /* QiwiS3079@2x.png in Resources */,
 				E53552B719649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon.png in Resources */,
 				E599E9CA18E768590019A74E /* RegisterViewController_iPhone.xib in Resources */,
 				E5B6F66D191F680C00EAA3C4 /* QiwiS1.png in Resources */,
 				E5B6F572190AA34A00EAA3C4 /* PhoneIcon.png in Resources */,
+				E51F0006196ADD070025F5A6 /* QiwiS6063.png in Resources */,
+				E51FFEE6196AC9DB0025F5A6 /* QiwiS2341.png in Resources */,
 				E5B6F6141918CC4000EAA3C4 /* CardRefreshBalanceActivityMiniIcon@2x.png in Resources */,
+				E52A7945196853670038FA65 /* RequestSupportViewController_iPhone4.xib in Resources */,
+				E51FFFEA196ADD070025F5A6 /* QiwiS5957.png in Resources */,
 				E5B6F5A8190AC36800EAA3C4 /* AboutViewController_iPhone.xib in Resources */,
+				E51FFE86196AC9DB0025F5A6 /* QiwiS2287.png in Resources */,
+				E51FFFAF196ADD070025F5A6 /* QiwiS4137@2x.png in Resources */,
+				E51F0008196ADD070025F5A6 /* QiwiS6064.png in Resources */,
+				E51FFEB6196AC9DB0025F5A6 /* QiwiS2311.png in Resources */,
+				E51FFE92196AC9DB0025F5A6 /* QiwiS2293.png in Resources */,
 				E5B6F6871923898900EAA3C4 /* iPhoneSpotlightIcon.png in Resources */,
 				E5B6F656191B9A3900EAA3C4 /* aznettrash1.m4a in Resources */,
+				E51FFEC0196AC9DB0025F5A6 /* QiwiS2318.png in Resources */,
 				E5448B3D190919D90025C9E7 /* Settings.bundle in Resources */,
+				E51FFEF4196AC9DB0025F5A6 /* QiwiS2348.png in Resources */,
+				E51F0010196ADD070025F5A6 /* QiwiS6068.png in Resources */,
+				E51FFFAD196ADD070025F5A6 /* QiwiS4136@2x.png in Resources */,
+				E51F0023196ADD070025F5A6 /* QiwiS7829@2x.png in Resources */,
+				E51FFECB196AC9DB0025F5A6 /* QiwiS2323@2x.png in Resources */,
 				E5B6F64F191B984000EAA3C4 /* azwelcome12.m4a in Resources */,
 				E5C49494195DEA9B00330CEA /* PaynetEasyR@2x.png in Resources */,
+				E51F0017196ADD070025F5A6 /* QiwiS6603@2x.png in Resources */,
 				E5B6F650191B984000EAA3C4 /* azwelcome13.m4a in Resources */,
+				E51FFFC8196ADD070025F5A6 /* QiwiS5229.png in Resources */,
 				E5B6F646191B984000EAA3C4 /* azwelcome3.m4a in Resources */,
+				E51FFFC0196ADD070025F5A6 /* QiwiS4703.png in Resources */,
 				E5C494A11962A7B100330CEA /* SelectedHistoryCellView_iPhone.xib in Resources */,
 				E599ED4818F5BFB00019A74E /* Information.png in Resources */,
+				E51FFE7C196AC9DB0025F5A6 /* QiwiS2282.png in Resources */,
+				E51FFFA7196ADD070025F5A6 /* QiwiS3083@2x.png in Resources */,
+				E51FFFE0196ADD070025F5A6 /* QiwiS5798.png in Resources */,
+				E51FFE95196AC9DB0025F5A6 /* QiwiS2294@2x.png in Resources */,
 				E5EE650718FDAE680013819A /* reveal-icon.png in Resources */,
 				E5B6F6861923898900EAA3C4 /* iPhoneSplashPortraitR4.png in Resources */,
+				E51FFFB8196ADD070025F5A6 /* QiwiS4661.png in Resources */,
+				E51FFE99196AC9DB0025F5A6 /* QiwiS2296@2x.png in Resources */,
+				E51FFFBF196ADD070025F5A6 /* QiwiS4702@2x.png in Resources */,
+				E51FFFC5196ADD070025F5A6 /* QiwiS4705@2x.png in Resources */,
+				E51FFFE8196ADD070025F5A6 /* QiwiS5892.png in Resources */,
 				E5B6F5E41916BDE700EAA3C4 /* Comission.png in Resources */,
+				E51FFFCA196ADD070025F5A6 /* QiwiS5230.png in Resources */,
 				E5448B4519091EC20025C9E7 /* SettingsMaxTimeoutForPassword@2x.png in Resources */,
 				E5B6F62B191A67C100EAA3C4 /* QiwiSMegafon@2x.png in Resources */,
 				E51F44AF1925301600A9D6EB /* LampOff@2x.png in Resources */,
 				E599E98A18E760980019A74E /* InfoPlist.strings in Resources */,
+				E51FFEBF196AC9DB0025F5A6 /* QiwiS2317@2x.png in Resources */,
 				E5C4948E195DD5AE00330CEA /* HistoryCellView_iPhone.xib in Resources */,
 				E5B6F6131918CC4000EAA3C4 /* CardRefreshBalanceActivityMiniIcon.png in Resources */,
 				E599ECFA18F580270019A74E /* History.png in Resources */,
+				E51FFFA4196ADD070025F5A6 /* QiwiS3082.png in Resources */,
+				E5EEC4781974126B00409E80 /* QRViewController_iPhone.xib in Resources */,
 				E52A793D19670D130038FA65 /* EditFavoriteViewController_iPhone.xib in Resources */,
 				E5B6F64D191B984000EAA3C4 /* azwelcome10.m4a in Resources */,
+				E51FFECA196AC9DB0025F5A6 /* QiwiS2323.png in Resources */,
+				E51FFEF2196AC9DB0025F5A6 /* QiwiS2347.png in Resources */,
+				E51FFF9F196ADD070025F5A6 /* QiwiS3078@2x.png in Resources */,
+				E52A794719693D3C0038FA65 /* PayPhoneViewController_iPhone4.xib in Resources */,
+				E51F002A196ADD070025F5A6 /* QiwiS7833.png in Resources */,
 				E5D96059192A7B44008AD81B /* OCEANComission.png in Resources */,
+				E51FFFB7196ADD070025F5A6 /* QiwiS4659@2x.png in Resources */,
 				E599E9CE18E7686A0019A74E /* EnterEMailViewController_iPhone.xib in Resources */,
 				E5EAAE781939141E00B6B832 /* MapPinTerminal@2x.png in Resources */,
 				E599E99518E760980019A74E /* Images.xcassets in Resources */,
+				E51FFFD3196ADD070025F5A6 /* QiwiS5234@2x.png in Resources */,
+				E51F000C196ADD070025F5A6 /* QiwiS6066.png in Resources */,
+				E51FFEC5196AC9DB0025F5A6 /* QiwiS2320@2x.png in Resources */,
+				E51FFEE4196AC9DB0025F5A6 /* QiwiS2340.png in Resources */,
 				E599ED4E18F5F7600019A74E /* WWW.png in Resources */,
 				E52A791C1966A3750038FA65 /* FavoriteSuccess@2x.png in Resources */,
 				E5B6F5BD190E780500EAA3C4 /* MainTransferIcon.png in Resources */,
+				E51FFFF0196ADD070025F5A6 /* QiwiS5985.png in Resources */,
+				E51FFEB0196AC9DB0025F5A6 /* QiwiS2308.png in Resources */,
 				E556D8C91907DD67002BD048 /* OperationStateViewController_iPhone.xib in Resources */,
+				E51FFFF5196ADD070025F5A6 /* QiwiS5987@2x.png in Resources */,
 				E5B6F5EA191791A500EAA3C4 /* TransferAddOn@2x.png in Resources */,
 				E5B6F60F1918CC4000EAA3C4 /* CardMoneySendActivityMiniIcon.png in Resources */,
 				E535529E196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon@2x.png in Resources */,
 				E5EE654119004C6A0013819A /* CardRefreshBalanceActivityIcon@2x.png in Resources */,
+				E51FFEBD196AC9DB0025F5A6 /* QiwiS2316@2x.png in Resources */,
 				E5B6F573190AA34A00EAA3C4 /* PhoneIcon@2x.png in Resources */,
+				E51F0016196ADD070025F5A6 /* QiwiS6603.png in Resources */,
+				E51FFFFD196ADD070025F5A6 /* QiwiS6057@2x.png in Resources */,
+				E51FFEF7196AC9DB0025F5A6 /* QiwiS10098@2x.png in Resources */,
+				E51F000E196ADD070025F5A6 /* QiwiS6067.png in Resources */,
 				E5B6F636191B58FE00EAA3C4 /* CatalogSearchIcon.png in Resources */,
 				E5448B7D1909B4340025C9E7 /* mum1.m4a in Resources */,
 				E599E9DA18E768A40019A74E /* ROBOKASSA.png in Resources */,
+				E51F0005196ADD070025F5A6 /* QiwiS6062@2x.png in Resources */,
 				E52A7911196590F20038FA65 /* HistoryPostToTwitterActivityIcon.png in Resources */,
+				E51F000A196ADD070025F5A6 /* QiwiS6065.png in Resources */,
 				E5B6F657191B9A3900EAA3C4 /* aznettrash2.m4a in Resources */,
 				E5B6F5F819183D9C00EAA3C4 /* CardCellActivityBorder@2x.png in Resources */,
+				E51F0026196ADD070025F5A6 /* QiwiS7831.png in Resources */,
+				E51FFEB9196AC9DB0025F5A6 /* QiwiS2312@2x.png in Resources */,
 				E599ED4918F5BFB00019A74E /* Information@2x.png in Resources */,
 				E5B6F60B1918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon.png in Resources */,
+				E51FFEE0196AC9DB0025F5A6 /* QiwiS2337.png in Resources */,
 				E5B6F5B9190E74CF00EAA3C4 /* MainCard2CardIcon.png in Resources */,
+				E51FFE7D196AC9DB0025F5A6 /* QiwiS2282@2x.png in Resources */,
 				E5B6F5AB190AC66700EAA3C4 /* About1.png in Resources */,
+				E51FFFFB196ADD070025F5A6 /* QiwiS6056@2x.png in Resources */,
 				E52A79271966C6F50038FA65 /* HistoryAddToFavoritesActivityMiniIcon@2x.png in Resources */,
 				E5B6F5E9191791A500EAA3C4 /* TransferAddOn.png in Resources */,
+				E51FFFF9196ADD070025F5A6 /* QiwiS6055@2x.png in Resources */,
+				E51FFFE9196ADD070025F5A6 /* QiwiS5892@2x.png in Resources */,
+				E51FFDF2196AC9C80025F5A6 /* QiwiS31.png in Resources */,
 				E5B6F5EF1917A90500EAA3C4 /* CardCellView_iPhone.xib in Resources */,
 				E599E9DC18E768AC0019A74E /* Intro(Ru).rtf in Resources */,
 				E53552B819649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon@2x.png in Resources */,
+				E51FFE88196AC9DB0025F5A6 /* QiwiS2288.png in Resources */,
 				E5B6F5C1190E7A5D00EAA3C4 /* MainNoChecksIcon.png in Resources */,
+				E52A79431967165F0038FA65 /* QiwiS330@2x.png in Resources */,
 				E5B6F5B5190E70AB00EAA3C4 /* MainPhoneIcon.png in Resources */,
 				E5B6F5E11916BBB900EAA3C4 /* ComissionViewController_iPhone.xib in Resources */,
 				E5448B7E1909B4340025C9E7 /* mum2.m4a in Resources */,
+				E51FFFC6196ADD070025F5A6 /* QiwiS5227.png in Resources */,
 				E599ECF618F558DF0019A74E /* MessagesViewController_iPhone.xib in Resources */,
 				E5448B4119091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png in Resources */,
+				E51F0014196ADD070025F5A6 /* QiwiS6602.png in Resources */,
+				E51F001E196ADD070025F5A6 /* QiwiS7827.png in Resources */,
+				E51FFEB3196AC9DB0025F5A6 /* QiwiS2309@2x.png in Resources */,
+				E51FFFB3196ADD070025F5A6 /* QiwiS4657@2x.png in Resources */,
 				E52A79251966C6F50038FA65 /* HistoryAddToFavoritesActivityIcon@2x.png in Resources */,
 				E5EE650818FDAE680013819A /* reveal-icon@2x.png in Resources */,
 				E5B6F664191B9B6800EAA3C4 /* azpol.m4a in Resources */,
 				E5B6F627191A668B00EAA3C4 /* QiwiS2@2x.png in Resources */,
 				E52A7913196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon.png in Resources */,
+				E51FFF99196ADD070025F5A6 /* QiwiS3075@2x.png in Resources */,
 				E599E9D818E7689D0019A74E /* Loading_Round_Red@2x.png in Resources */,
 				E599E9C818E7684C0019A74E /* WaitingViewController_iPhone.xib in Resources */,
+				E51FFFF8196ADD070025F5A6 /* QiwiS6055.png in Resources */,
 				E52A78FB19657C920038FA65 /* HistoryBlankActivityIcon.png in Resources */,
 				E5B6F60E1918CC4000EAA3C4 /* CardCallSupportActivityMiniIcon@2x.png in Resources */,
 				E53552A6196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon@2x.png in Resources */,
+				E51F0031196ADD070025F5A6 /* QiwiS7836@2x.png in Resources */,
 				E5B6F630191A689300EAA3C4 /* PayViewController_iPhone.xib in Resources */,
 				E5EE654019004C6A0013819A /* CardRefreshBalanceActivityIcon.png in Resources */,
 				E5B6F64B191B984000EAA3C4 /* azwelcome8.m4a in Resources */,
+				E51FFFAC196ADD070025F5A6 /* QiwiS4136.png in Resources */,
+				E5EEC4821974627600409E80 /* CardQRActivityIcon@2x.png in Resources */,
+				E51FFEE1196AC9DB0025F5A6 /* QiwiS2337@2x.png in Resources */,
+				E51FFFBB196ADD070025F5A6 /* QiwiS4662@2x.png in Resources */,
+				E51FFE90196AC9DB0025F5A6 /* QiwiS2292.png in Resources */,
 				E599ED0E18F5855C0019A74E /* Cards.png in Resources */,
+				E51FFEB5196AC9DB0025F5A6 /* QiwiS2310@2x.png in Resources */,
 				E599ECDD18F402910019A74E /* ApproveEMailViewController_iPhone.xib in Resources */,
+				E51FFEA7196AC9DB0025F5A6 /* QiwiS2303@2x.png in Resources */,
+				E51F0013196ADD070025F5A6 /* QiwiS6069@2x.png in Resources */,
+				E51FFFFC196ADD070025F5A6 /* QiwiS6057.png in Resources */,
 				E599E9D018E768720019A74E /* EnterPasswordViewController_iPhone.xib in Resources */,
+				E51FFFF2196ADD070025F5A6 /* QiwiS5986.png in Resources */,
 				E52A7914196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon@2x.png in Resources */,
 				E599E9D718E768980019A74E /* Loading_Round_Red.png in Resources */,
+				E51FFFBA196ADD070025F5A6 /* QiwiS4662.png in Resources */,
+				E51FFE8A196AC9DB0025F5A6 /* QiwiS2289.png in Resources */,
 				E51F44B11925301600A9D6EB /* LampOn@2x.png in Resources */,
 				E5B6F67A1921427700EAA3C4 /* MessageCell_iPhone.xib in Resources */,
 				E5B6F596190AAC5500EAA3C4 /* azdogorodnikova.m4a in Resources */,
 				E5B6F5C6190E7E6C00EAA3C4 /* MainCheckIcon@2x.png in Resources */,
 				E5B6F69019239CE300EAA3C4 /* ScanViewController_iPhone.xib in Resources */,
+				E51FFFE4196ADD070025F5A6 /* QiwiS5890.png in Resources */,
+				E51FFFF6196ADD070025F5A6 /* QiwiS5988.png in Resources */,
+				E51FFFAA196ADD070025F5A6 /* QiwiS3085.png in Resources */,
+				E51FFEF0196AC9DB0025F5A6 /* QiwiS2346.png in Resources */,
+				E51FFFDD196ADD070025F5A6 /* QiwiS5239@2x.png in Resources */,
 				E5448B8C1909B9EA0025C9E7 /* welcome1.m4a in Resources */,
+				E51FFFE5196ADD070025F5A6 /* QiwiS5890@2x.png in Resources */,
 				E5B6F5BE190E780500EAA3C4 /* MainTransferIcon@2x.png in Resources */,
+				E51FFFF7196ADD070025F5A6 /* QiwiS5988@2x.png in Resources */,
 				E599ED0718F5827B0019A74E /* Settings@2x.png in Resources */,
+				E51F002B196ADD070025F5A6 /* QiwiS7833@2x.png in Resources */,
+				E51FFEEA196AC9DB0025F5A6 /* QiwiS2343.png in Resources */,
+				E51FFECF196AC9DB0025F5A6 /* QiwiS2325@2x.png in Resources */,
+				E51FFEA1196AC9DB0025F5A6 /* QiwiS2300@2x.png in Resources */,
 				E556D8BF1906BBE0002BD048 /* close.png in Resources */,
+				E51FFED3196AC9DB0025F5A6 /* QiwiS2330@2x.png in Resources */,
+				E51FFEE8196AC9DB0025F5A6 /* QiwiS2342.png in Resources */,
 				E5B6F5AD190D174400EAA3C4 /* About1@2x.png in Resources */,
+				E51FFEBC196AC9DB0025F5A6 /* QiwiS2316.png in Resources */,
+				E51F0012196ADD070025F5A6 /* QiwiS6069.png in Resources */,
+				E51FFEC7196AC9DB0025F5A6 /* QiwiS2321@2x.png in Resources */,
+				E51FFFE6196ADD070025F5A6 /* QiwiS5891.png in Resources */,
+				E51FFEDF196AC9DB0025F5A6 /* QiwiS2336@2x.png in Resources */,
 				E599ED0218F581F70019A74E /* Favorites.png in Resources */,
+				E51FFFE2196ADD070025F5A6 /* QiwiS5799.png in Resources */,
+				E51F002D196ADD070025F5A6 /* QiwiS7834@2x.png in Resources */,
 				E5B6F576190AA54C00EAA3C4 /* EMailIcon.png in Resources */,
 				E5C49493195DEA9B00330CEA /* PaynetEasyR.png in Resources */,
 				E535529B196413B500BB4F4A /* HistoryRequestSupportActivityIcon.png in Resources */,
+				E51FFEA8196AC9DB0025F5A6 /* QiwiS2304.png in Resources */,
 				E52A7908196581150038FA65 /* BlankViewController_iPhone.xib in Resources */,
 				E556D8A119044D03002BD048 /* CardAuthorizeActivityIcon@2x.png in Resources */,
+				E51FFEEF196AC9DB0025F5A6 /* QiwiS2345@2x.png in Resources */,
 				E5B6F65C191B9A9A00EAA3C4 /* ndemyashova.m4a in Resources */,
 				E52A79311966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png in Resources */,
 				E52A792F1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png in Resources */,
 				E52A791A1966A3750038FA65 /* FavoriteFail@2x.png in Resources */,
 				E5B6F6121918CC4000EAA3C4 /* CardReceiveMoneyActivityMiniIcon@2x.png in Resources */,
+				E51FFFAE196ADD070025F5A6 /* QiwiS4137.png in Resources */,
 				E5B6F60C1918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon@2x.png in Resources */,
+				E51F0029196ADD070025F5A6 /* QiwiS7832@2x.png in Resources */,
+				E51FFEC4196AC9DB0025F5A6 /* QiwiS2320.png in Resources */,
 				E599ED4F18F5F7600019A74E /* WWW@2x.png in Resources */,
+				E51FFE7A196AC9DB0025F5A6 /* QiwiS2281.png in Resources */,
 				E599ED1D18F5A58E0019A74E /* FavoritesViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2588,10 +3893,14 @@
 				E53552961963390B00BB4F4A /* HistoryRepeatPaymentActivity.m in Sources */,
 				E5B6F5A2190AC2B200EAA3C4 /* ChangePersonViewController_iPhone.m in Sources */,
 				E556D8B019064B7B002BD048 /* Reachability.m in Sources */,
+				E51F0035196AE4200025F5A6 /* HistoryFinalizeCellView_iPhone.m in Sources */,
 				E599E9DD18E768BF0019A74E /* Soap+Prefix.m in Sources */,
+				E5EEC4871974640800409E80 /* CardQRActivity.m in Sources */,
 				E599E9ED18E768F90019A74E /* svcCardStat.m in Sources */,
 				E5C494A91962DBD300330CEA /* HistoryRequestSupportActivity.m in Sources */,
 				E599E9EE18E768FF0019A74E /* svcCharity.m in Sources */,
+				E5EEC46A1974115E00409E80 /* mask.c in Sources */,
+				E5EEC48A1975328600409E80 /* UIAlertViewRegisterDelegate.m in Sources */,
 				E599E9DE18E768C30019A74E /* svcArrayOfCard.m in Sources */,
 				E5B6F5FE19184F4200EAA3C4 /* UIImage+Scale.m in Sources */,
 				E599E9F718E7691D0019A74E /* svcRedirectTo.m in Sources */,
@@ -2603,8 +3912,11 @@
 				E599EA0218E7695C0019A74E /* NSMutableArray+Soap.m in Sources */,
 				E5B6F5EE1917A90500EAA3C4 /* CardCellView_iPhone.m in Sources */,
 				E5B6F68A1923922300EAA3C4 /* NSURL+Parameters.m in Sources */,
+				E52A794E196962EA0038FA65 /* UIAlertWithOpenURLDelegate.m in Sources */,
 				E599E9F418E769130019A74E /* svcMessage.m in Sources */,
 				E5B6F5FB19184B3300EAA3C4 /* UIImage+Color.m in Sources */,
+				E5EEC46D1974115E00409E80 /* qrinput.c in Sources */,
+				E5EEC46E1974115E00409E80 /* qrspec.c in Sources */,
 				E599E9F818E769210019A74E /* svcRoumingMobileOperator.m in Sources */,
 				E5B6F5F319180F2200EAA3C4 /* SelectedCardCellView_iPhone.m in Sources */,
 				E599EA0B18E7697D0019A74E /* SoapParameter.m in Sources */,
@@ -2612,6 +3924,7 @@
 				E599E9F618E7691A0019A74E /* svcParameter.m in Sources */,
 				E5EC350318F602670089A43F /* TerminalAnnotation.m in Sources */,
 				E599EA1218E7699E0019A74E /* CXMLDocument_CreationExtensions.m in Sources */,
+				E52A794B1969510A0038FA65 /* UIAlertWithInternetSearchDelegate.m in Sources */,
 				E599ECE718F46A880019A74E /* CheckPasswordViewController_iPhone.m in Sources */,
 				E599EA0E18E769870019A74E /* SoapService.m in Sources */,
 				E599E9E618E768E00019A74E /* svcArrayOfRoumingMobileOperator.m in Sources */,
@@ -2637,6 +3950,7 @@
 				E556D89719016D36002BD048 /* EnterCVCViewController_iPhone.m in Sources */,
 				E599E9D518E768880019A74E /* UserProfile.m in Sources */,
 				E599EA0C18E769800019A74E /* SoapReachability.m in Sources */,
+				E5EEC4691974115E00409E80 /* bitstream.c in Sources */,
 				E599ECEB18F54F7C0019A74E /* SWRevealViewController.m in Sources */,
 				E599E9C718E768470019A74E /* WaitingViewController_iPhone.m in Sources */,
 				E599E9E818E768E80019A74E /* svcArrayOfShopItem.m in Sources */,
@@ -2679,24 +3993,29 @@
 				E599ECDC18F402910019A74E /* ApproveEMailViewController_iPhone.m in Sources */,
 				E52A792A1966CB5E0038FA65 /* HistoryRemoveFromFavoriteActivity.m in Sources */,
 				E599EA1518E769A80019A74E /* CXMLElement_CreationExtensions.m in Sources */,
+				E5EEC4771974126B00409E80 /* QRViewController_iPhone.m in Sources */,
 				E599E9EF18E769030019A74E /* svcCheck.m in Sources */,
 				E5EE652C1900443B0013819A /* CardCallSupportActivity.m in Sources */,
 				E556D8B419064D68002BD048 /* NoInternetConnectionViewController_iPhone.m in Sources */,
 				E599E9EC18E768F50019A74E /* svcCard.m in Sources */,
+				E5EEC46F1974115E00409E80 /* rscode.c in Sources */,
 				E5EE6523190041D60013819A /* CardMoneySendActivity.m in Sources */,
 				E599E9E718E768E40019A74E /* svcArrayOfShopCatalogItem.m in Sources */,
 				E599EA0618E7696D0019A74E /* SoapFault.m in Sources */,
 				E599ECE218F469B20019A74E /* MainViewController_iPhone.m in Sources */,
 				E599E98C18E760980019A74E /* main.m in Sources */,
+				E5EEC4701974115E00409E80 /* split.c in Sources */,
 				E599E9D118E768760019A74E /* VerifyPasswordViewController_iPhone.m in Sources */,
 				E599E9FC18E769310019A74E /* svcSudzc.m in Sources */,
 				E5B6F668191BDAFE00EAA3C4 /* SearchCatalogViewController_iPhone.m in Sources */,
+				E5EEC46C1974115E00409E80 /* qrencode.c in Sources */,
 				E5EE64F218FD77420013819A /* NSNumber+Currency.m in Sources */,
 				E53552B01964986600BB4F4A /* HistoryPostToFacebookActivity.m in Sources */,
 				E599ED3418F5A7EE0019A74E /* StatViewController_iPhone.m in Sources */,
 				E599E99318E760980019A74E /* iRoboDev.xcdatamodeld in Sources */,
 				E53552921962E1DD00BB4F4A /* RequestSupportViewController_iPhone.m in Sources */,
 				E599EA1618E769AB0019A74E /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				E5EEC473197411A500409E80 /* UIImage+QR.m in Sources */,
 				E599E9FA18E7692A0019A74E /* svcShopCatalogItem.m in Sources */,
 				E5C4948D195DD5AE00330CEA /* HistoryCellView_iPhone.m in Sources */,
 				E599E9E318E768D60019A74E /* svcArrayOfHistoryOperation.m in Sources */,
@@ -2708,6 +4027,7 @@
 				E599E9EB18E768F20019A74E /* svcArrayOfTopCurrency.m in Sources */,
 				E599EA0718E769700019A74E /* SoapHandler.m in Sources */,
 				E52A7907196581150038FA65 /* BlankViewController_iPhone.m in Sources */,
+				E5EEC46B1974115E00409E80 /* qrenc.c in Sources */,
 				E599E9CB18E7685F0019A74E /* EnterPhoneViewController_iPhone.m in Sources */,
 				E5B6F6751921160100EAA3C4 /* NSString+Checkers.m in Sources */,
 				E599ECEF18F553340019A74E /* MenuViewController_iPhone.m in Sources */,
@@ -2865,7 +4185,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2900,7 +4220,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

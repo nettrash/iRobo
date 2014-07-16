@@ -11,18 +11,25 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import "SearchCatalogDelegate.h"
 #import "ScanViewControllerDelegate.h"
+#import "UIAlertWithInternetSearchDelegate.h"
+#import "UIAlertWithOpenURLDelegate.h"
+#import <AddressBookUI/AddressBookUI.h>
+#import "CardsViewControllerDelegate.h"
 
-@interface MainViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate, MFMailComposeViewControllerDelegate, SearchCatalogDelegate, ScanViewControllerDelegate> {
+@interface MainViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate, MFMailComposeViewControllerDelegate, SearchCatalogDelegate, ScanViewControllerDelegate, ABUnknownPersonViewControllerDelegate, CardsViewControllerDelegate> {
     NSArray *_checks;
     NSArray *_topCatalog;
     BOOL _checksRefreshing;
     BOOL _topCatalogRefreshing;
     BOOL _firstInitialized;
+    UIAlertWithInternetSearchDelegate *_internetSearchDelegate;
+    UIAlertWithOpenURLDelegate *_openURLDelegate;
 }
 
 - (void)payCheckById:(int)check_Id;
 - (void)payCheckByOpKey:(NSString *)OpKey;
 - (void)payCharity:(NSString *)CharityID;
+- (void)c2cTransfer:(NSString *)toCard;
 
 @end
 

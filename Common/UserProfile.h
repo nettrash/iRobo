@@ -23,8 +23,10 @@
 @property (nonatomic, retain) NSString *secondName;
 @property (nonatomic, retain) NSString *address;
 @property (nonatomic) BOOL ofertaAccepted;
+@property (nonatomic) BOOL isDemoMode;
 
 + (UserProfile *)load:(NSManagedObjectContext*)objectContext;
++ (UserProfile *)demoProfile;
 
 - (BOOL)needToRegister;
 - (void)saveChanges;

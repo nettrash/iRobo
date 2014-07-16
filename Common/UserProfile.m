@@ -14,6 +14,20 @@
 
 @implementation UserProfile
 
+@synthesize email = _email;
+@synthesize phone = _phone;
+@synthesize emailApproved = _emailApproved;
+@synthesize phoneApproved = _phoneApproved;
+@synthesize hasPassword = _hasPassword;
+@synthesize uid = _uid;
+@synthesize password = _password;
+@synthesize lastName = _lastName;
+@synthesize firstName = _firstName;
+@synthesize secondName = _secondName;
+@synthesize address = _address;
+@synthesize ofertaAccepted = _ofertaAccepted;
+@synthesize isDemoMode = _isDemoMode;
+
 + (UserProfile *)load:(NSManagedObjectContext*)objectContext
 {
     NSError *error;
@@ -23,7 +37,9 @@
     if (result && [result count] > 0)
     {
         UserProfile *profile = [UserProfile alloc];
+        profile.isDemoMode = NO;
         UserProfileEntity *entityProfile = (UserProfileEntity *)[result objectAtIndex:0];
+        
         if (entityProfile)
         {
             profile.email = [NSString stringWithString:[entityProfile email]];
@@ -43,9 +59,9 @@
             entityProfile = [NSEntityDescription insertNewObjectForEntityForName:@"UserProfileEntity" inManagedObjectContext:objectContext];
             entityProfile.email = [NSString stringWithString:[profile email]];
             entityProfile.phone = [NSString stringWithString:[profile phone]];
-            entityProfile.emailApproved = NO;
-            entityProfile.phoneApproved = NO;
-            entityProfile.hasPassword = NO;
+            entityProfile.emailApproved = [NSNumber numberWithBool:NO];
+            entityProfile.phoneApproved = [NSNumber numberWithBool:NO];
+            entityProfile.hasPassword = [NSNumber numberWithBool:NO];
             entityProfile.password = [NSString stringWithString:[profile password]];
             entityProfile.uid = [NSString stringWithString:[profile uid]];
             [objectContext save:nil];
@@ -61,6 +77,7 @@
             NSLog(@"UserProfile load error. Code %ld. Description %@. Debug description %@.", (long)error.code, error.description, error.debugDescription);
         }
         UserProfile *profile = [UserProfile alloc];
+        profile.isDemoMode = NO;
         [profile restoreFromCloud];
         if (profile.uid == nil || ![profile uid] || [profile.uid isEqualToString:@""])
             profile.uid = [profile getUUID];
@@ -73,9 +90,9 @@
         UserProfileEntity *entityProfile = [NSEntityDescription insertNewObjectForEntityForName:@"UserProfileEntity" inManagedObjectContext:objectContext];
         entityProfile.email = [NSString stringWithString:[profile email]];
         entityProfile.phone = [NSString stringWithString:[profile phone]];
-        entityProfile.emailApproved = NO;
-        entityProfile.phoneApproved = NO;
-        entityProfile.hasPassword = NO;
+        entityProfile.emailApproved = [NSNumber numberWithBool:NO];
+        entityProfile.phoneApproved = [NSNumber numberWithBool:NO];
+        entityProfile.hasPassword = [NSNumber numberWithBool:NO];
         entityProfile.password = [NSString stringWithString:[profile password]];
         entityProfile.uid = [NSString stringWithString:[profile uid]];
         [objectContext save:nil];
@@ -83,6 +100,22 @@
         [profile storeToCloud];
         return profile;
     }
+}
+
++ (UserProfile *)demoProfile
+{
+    UserProfile *p = [UserProfile alloc];
+    p.isDemoMode = YES;
+    p.uid = @"6C1D393C-82C5-4873-9354-D50EA7AC5199";
+    p.password = @"0000";
+    p.hasPassword = YES;
+    p.phone = @"+79031234567";
+    p.email = @"robot@roboxchange.com";
+    p.phoneApproved = YES;
+    p.emailApproved = YES;
+    p.ofertaAccepted = YES;
+    
+    return p;
 }
 
 - (BOOL)needToRegister
@@ -97,6 +130,7 @@
 
 - (void)saveChanges
 {
+    if (self.isDemoMode) return;
     //Store local
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSError *error = nil;
@@ -140,6 +174,7 @@
 
 - (void)storeToCloud
 {
+    if (self.isDemoMode) return;
     @try {
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self email] forKey:@"email"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self phone] forKey:@"phone"];
@@ -199,6 +234,7 @@
 
 - (void)storeUserDataToCloud
 {
+    if (self.isDemoMode) return;
     @try {
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self lastName] forKey:@"lastName"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self firstName] forKey:@"firstName"];

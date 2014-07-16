@@ -53,10 +53,11 @@
 
 - (void)getBlank:(id)sender
 {
-    self.imgBlank.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://misc.roboxchange.com/External/iPhone/blank.ashx?OpKey=%@", self.operation.op_Key]]]];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://misc.roboxchange.com/External/iPhone/blank.ashx?OpKey=%@", self.operation.op_Key]]];
+    self.imgBlank.image = [UIImage imageWithData:data];
     if (self.imgBlank.image == nil)
     {
-        self.lblInfo.text = [NSString stringWithFormat:@"https://misc.roboxchange.com/External/iPhone/blank.ashx?OpKey=%@", self.operation.op_Key];
+        self.lblInfo.text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     }
     else
     {

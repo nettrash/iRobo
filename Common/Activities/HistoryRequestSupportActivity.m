@@ -8,6 +8,7 @@
 
 #import "HistoryRequestSupportActivity.h"
 #import "RequestSupportViewController_iPhone.h"
+#import "AppDelegate.h"
 
 @implementation HistoryRequestSupportActivity
 
@@ -65,7 +66,7 @@
 - (UIViewController *)activityViewController
 {
     //Возвращаем конторллер отображения для действия
-    RequestSupportViewController_iPhone *rs = [[RequestSupportViewController_iPhone alloc] initWithNibName:@"RequestSupportViewController_iPhone" bundle:nil andHistoryOperation:self.operation];
+    RequestSupportViewController_iPhone *rs = [[RequestSupportViewController_iPhone alloc] initWithNibName:IS_IPHONE_5 ? @"RequestSupportViewController_iPhone" : @"RequestSupportViewController_iPhone4" bundle:nil andHistoryOperation:self.operation];
     rs.delegate = self;
     return rs;
 }

@@ -28,6 +28,7 @@
     if (self)
     {
         self.navigationItem.title = NSLocalizedString(@"Register_Title", @"Register_Title");
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"DEMO" style:UIBarButtonItemStyleDone target:self action:@selector(demoMode:)];
     }
     return self;
 }
@@ -50,6 +51,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)demoMode:(id)sender
+{
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    app.userProfile = [UserProfile demoProfile];
+    [app getScenario];
 }
 
 - (IBAction)btnContinue_Click:(id)sender

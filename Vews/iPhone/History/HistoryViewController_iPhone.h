@@ -12,7 +12,7 @@
 #import "OperationBlankDelegate.h"
 #import "AddToFavoriteDelegate.h"
 
-@interface HistoryViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate, ActivityResultDelegate, OperationBlankDelegate, AddToFavoriteDelegate>
+@interface HistoryViewController_iPhone : UIViewController <UITableViewDataSource, UITableViewDelegate, PayViewControllerDelegate, ActivityResultDelegate, OperationBlankDelegate, AddToFavoriteDelegate, UISearchBarDelegate>
 {
     int _Id;
     int _Count;

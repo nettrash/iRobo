@@ -97,6 +97,15 @@
         stateStr = NSLocalizedString(@"OpCancel", @"OpCancel");
     
     NSString *template = [NSString stringWithFormat:NSLocalizedString(@"SocialPost_Twitter_ExchangeOperation", @"SocialPost_Twitter_ExchangeOperation"), agentStr];
+    
+    if ([self.operation.out_curr isEqualToString:@"PaynetEasyR"]) {
+        //Строка для перевода с карты на карту
+        template = NSLocalizedString(@"SocialPost_Twitter_Card2CardOperation", @"SocialPost_Twitter_Card2CardOperation");
+    }
+    if ([self.operation.out_curr hasPrefix:@"OceanBankPayToAnyReq"]) {
+        //Строка для банковского перевода
+        template = NSLocalizedString(@"SocialPost_Twitter_AnyReqOperation", @"SocialPost_Twitter_AnyReqOperation");
+    }
     if (self.operation.check_Id > 0) {
         template = [NSString stringWithFormat:NSLocalizedString(@"SocialPost_Twitter_ShopOperation", @"SocialPost_Twitter_ShopOperation"), self.operation.check_MerchantName];
         imgToPost = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://misc.roboxchange.com/External/iPhone/MerchantLogo.ashx?checkId=%i", self.operation.check_Id]]]];

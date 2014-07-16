@@ -24,6 +24,8 @@
 #import "ActivityAction.h"
 #import "CardCellView_iPhone.h"
 #import "SelectedCardCellView_iPhone.h"
+#import "CardQRActivity.h"
+#import "QRViewController_iPhone.h"
 
 @interface CardsViewController_iPhone ()
 
@@ -62,7 +64,7 @@
         _cards = nil;
         _activeCard = nil;
         _formType = formType;
-        _activities = [NSArray arrayWithObjects:[[CardRefreshBalanceActivity alloc] initWithResultDelegate:self], [[CardReceiveMoneyActivity alloc] initWithResultDelegate:self], [[CardMoneySendActivity alloc] initWithResultDelegate:self], [[CardRequestSupportActivity alloc] initWithResultDelegate:self], [[CardCallSupportActivity alloc] initWithResultDelegate:self], [[CardAuthorizeActivity alloc] initWithResultDelegate:self], nil];
+        _activities = [NSArray arrayWithObjects:[[CardRefreshBalanceActivity alloc] initWithResultDelegate:self], [[CardReceiveMoneyActivity alloc] initWithResultDelegate:self], [[CardMoneySendActivity alloc] initWithResultDelegate:self], [[CardQRActivity alloc] initWithResultDelegate:self], [[CardRequestSupportActivity alloc] initWithResultDelegate:self], [[CardCallSupportActivity alloc] initWithResultDelegate:self], [[CardAuthorizeActivity alloc] initWithResultDelegate:self], nil];
     }
     return self;
 }
@@ -217,7 +219,7 @@
 
 - (IBAction)removeCard:(id)sender
 {
-    NSIndexPath *indexPath = [self.tblCards.tableView indexPathForSelectedRow];
+    NSIndexPath *indexPath = _selectedIndexPath;
     NSArray *a = [self cardsArrayForSection:indexPath.section];
     svcCard *card = (svcCard *)[a objectAtIndex:indexPath.row];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"RemoveCard_Title", @"RemoveCard_Title") message:[NSString stringWithFormat:NSLocalizedString(@"RemoveCard_Text", @"RemoveCard_Text"), card.card_Number] delegate:self cancelButtonTitle:NSLocalizedString(@"Button_No", @"Button_No") otherButtonTitles:NSLocalizedString(@"Button_Yes", @"Button_Yes"), nil];
@@ -232,11 +234,32 @@
     NSIndexPath *indexPath = [self.tblCards.tableView indexPathForSelectedRow];
     NSArray *a = [self cardsArrayForSection:indexPath.section];
     svcCard *card = (svcCard *)[a objectAtIndex:indexPath.row];
+    self.activeCard = card;
+    [self.tblCards.tableView reloadData];
     [svc RemoveCard:self action:@selector(removeCardHandle:) UNIQUE:[app.userProfile uid] cardId:card.card_Id];
+}
+
+- (void)removeCardFromArray:(svcCard *)card
+{
+    for (int section = 0; section < [self cardsSectionCount]; section++)
+    {
+        NSMutableArray *a = [self cardsArrayForSection:section];
+        for (svcCard *c in a)
+        {
+            if (c.card_Id == card.card_Id)
+            {
+                [a removeObject:c];
+                return;
+            }
+        }
+    }
 }
 
 - (void)removeCardHandle:(id)response
 {
+    svcCard *crd = self.activeCard;
+    self.activeCard = nil;
+    [self.tblCards.tableView reloadData];
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [app hideWait];
     if ([response isKindOfClass:[svcWSResponse class]])
@@ -244,6 +267,8 @@
         svcWSResponse *resp = (svcWSResponse *)response;
         if (resp.result)
         {
+            [self removeCardFromArray:crd];
+            [self.tblCards.tableView reloadData];
             [self.tblCards.refreshControl beginRefreshing];
             [self performSelector:@selector(getCards:) withObject:nil afterDelay:.1];
             return;
@@ -437,9 +462,19 @@
 
 - (void)activityEnd:(id)obj
 {
-    svcCard *card = (svcCard *)obj;
+//    svcCard *card = (svcCard *)obj;
     self.activeCard = nil;
     [self.tblCards.tableView reloadData];
+}
+
+- (void)doActivityParentAction:(id)activity withData:(id)data
+{
+    if ([activity isKindOfClass:[CardQRActivity class]]) {
+        svcCard *crd = (svcCard *)data;
+        QRViewController_iPhone *pp = [[QRViewController_iPhone alloc] initWithNibName:@"QRViewController_iPhone" bundle:nil withSource:[NSString stringWithFormat:@"card2card://to_card/%@", crd.card_NativeNumber] andWidth:self.view.frame.size.width];
+        [self.navigationController pushViewController:pp animated:YES];
+        return;
+    }
 }
 
 @end

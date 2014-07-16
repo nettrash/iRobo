@@ -16,6 +16,7 @@
 #import "SWRevealViewController.h"
 #import "NoInternetConnectionViewController_iPhone.h"
 #import "AppSettings.h"
+#import "UIAlertViewRegisterDelegate.h"
 
 #define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
@@ -57,6 +58,8 @@
 
 @property (nonatomic, strong) UserProfile *userProfile;
 
+@property (nonatomic, strong) UIAlertViewRegisterDelegate *registerAlertDelegate;
+
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
@@ -86,5 +89,7 @@
 - (void)applyScanedURL:(NSURL *)url;
 
 - (void)firstTimeInitializationComplete;
+
+- (void)demoModeAlert;
 
 @end

@@ -645,6 +645,7 @@
 -(void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue
 {
     _needToShowDoneButton = NO;
+    [self removeDoneButtonFromNumberPadKeyboard];
     if (cvcEntered)
     {
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];

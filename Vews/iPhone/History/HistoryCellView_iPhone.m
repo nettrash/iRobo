@@ -18,6 +18,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;
 @property (nonatomic, retain) IBOutlet UILabel *summLabel;
 @property (nonatomic, retain) IBOutlet UILabel *lblResult;
+@property (nonatomic, retain) IBOutlet UILabel *lblData;
 
 @end
 
@@ -30,6 +31,7 @@
 @synthesize dateLabel = _dateLabel;
 @synthesize summLabel = _summLabel;
 @synthesize lblResult = _lblResult;
+@synthesize lblData = _lblData;
 
 - (void)awakeFromNib
 {
@@ -47,7 +49,7 @@
     if (op.inFavorites && op.favoriteName && op.favoriteName != nil && ![op.favoriteName isEqualToString:@""])
         title = op.favoriteName;
     if (op.check_Id > 0)
-        title = [NSString stringWithFormat:@"%@ N-%@", op.check_MerchantName, op.check_MerchantOrder];
+        title = [NSString stringWithFormat:@"%@", op.check_MerchantName];
     if (op.charity_Id > 0)
         title = op.charity_Name;
     if ([title hasPrefix:@"RUR "]) {
@@ -82,6 +84,40 @@
     }
 
     self.dateLabel.text = [op.op_RegDate operationDate];
+    
+    NSString *prms = @"";
+    if (op.charity_Id > 0)
+    {
+        prms = [NSString stringWithFormat:@"Доброе дело №%i", op.charity_Id];
+    }
+    else
+    {
+        if (op.check_Id > 0)
+        {
+            prms = [NSString stringWithFormat:@"№ заказа %@", op.check_MerchantOrder];
+        }
+        else
+        {
+            if (op.op_Parameters && op.op_Parameters != nil && ![op.op_Parameters isEqualToString:@""])
+            {
+                NSArray *a = [op.op_Parameters componentsSeparatedByString:@";"];
+                NSMutableArray *ap = [NSMutableArray arrayWithCapacity:0];
+                for (NSString *s in a)
+                {
+                    if (s && s != nil && ![s isEqualToString:@""])
+                    {
+                        NSArray *b = [s componentsSeparatedByString:@":"];
+                        if (b && b != nil && [b count] > 1)
+                        {
+                            [ap addObject:(NSString *)[b objectAtIndex:1]];
+                        }
+                    }
+                }
+                prms = [ap componentsJoinedByString:@" "];
+            }
+        }
+    }
+    self.lblData.text = prms;
 }
 
 @end

@@ -24,6 +24,8 @@
 #import "NSString+Checkers.h"
 #import "NSString+RegEx.h"
 #import "PayCharityViewController_iPhone.h"
+#import "UIAlertWithInternetSearchDelegate.h"
+#import "QRViewController_iPhone.h"
 
 @interface MainViewController_iPhone ()
 
@@ -86,6 +88,15 @@
         ScanViewController_iPhone *v = [[ScanViewController_iPhone alloc] initWithNibName:@"ScanViewController_iPhone" bundle:nil delegate:self];
         [self presentViewController:v animated:YES completion:nil];
     }
+}
+
+- (void)receiveByQR:(id)sender
+{
+    //Отправляем выбирать карту
+    //Далее отправляем на код
+    CardsViewController_iPhone *cc = [[CardsViewController_iPhone alloc] initWithNibName:@"CardsViewController_iPhone" bundle:nil showUnauthorizedCards:NO withFormType:CardsViewFormTypeSelectView];
+    cc.delegate = self;
+    [self.navigationController pushViewController:cc animated:YES];
 }
 
 - (void)refresh:(id)sender
@@ -222,8 +233,8 @@
         case 1: {
             NSArray *videoDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
             if ([videoDevices count] > 0)
-                return 4;
-            return 3;
+                return 5;
+            return 4;
         }
         case 2: {
             if (_topCatalog && _topCatalog != nil && [_topCatalog count] > 0)
@@ -321,6 +332,14 @@
                     break;
                 }
                 case 3: {
+                    cell.textLabel.text = NSLocalizedString(@"MainTable_Section_Helpers_ReceiveByQR_Title", @"MainTable_Section_Helpers_ReceiveByQR_Title");
+                    cell.detailTextLabel.text = NSLocalizedString(@"MainTable_Section_Helpers_ReceiveByQR_Details", @"MainTable_Section_Helpers_ReceiveByQR_Details");
+                    cell.imageView.image = [UIImage imageNamed:@"MainQRIcon.png"];
+                    cell.accessoryView = nil;
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    break;
+                }
+                case 4: {
                     cell.textLabel.text = NSLocalizedString(@"MainTable_Section_Helpers_Scan_Title", @"MainTable_Section_Helpers_Scan_Title");
                     cell.detailTextLabel.text = NSLocalizedString(@"MainTable_Section_Helpers_Scan_Details", @"MainTable_Section_Helpers_Scan_Details");
                     cell.imageView.image = [UIImage imageNamed:@"MainScanIcon.png"];
@@ -405,8 +424,8 @@
             break;
     }
 
-    //cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
-    //cell.detailTextLabel.font = [UIFont systemFontOfSize:10];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:12];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:10];
     [cell.textLabel setTextColor:[UIColor darkGrayColor]];
     [cell.detailTextLabel setTextColor:[UIColor darkGrayColor]];
     
@@ -431,7 +450,7 @@
         case 1: {
             switch (indexPath.row) {
                 case 0: {
-                    PayPhoneViewController_iPhone *pp = [[PayPhoneViewController_iPhone alloc] initWithNibName:@"PayPhoneViewController_iPhone" bundle:nil];
+                    PayPhoneViewController_iPhone *pp = [[PayPhoneViewController_iPhone alloc] initWithNibName:IS_IPHONE_5 ? @"PayPhoneViewController_iPhone" : @"PayPhoneViewController_iPhone4" bundle:nil];
                     pp.delegate = self;
                     [self.navigationController pushViewController:pp animated:YES];
                     break;
@@ -449,6 +468,10 @@
                     break;
                 }
                 case 3: {
+                    [self receiveByQR:nil];
+                    break;
+                }
+                case 4: {
                     [self scan:nil];
                     break;
                 }
@@ -584,6 +607,13 @@
     [svc GetCharity:self action:@selector(payCharityHandler:) UNIQUE:[app.userProfile uid] charityId:[CharityID intValue]];
 }
 
+- (void)c2cTransfer:(NSString *)toCard
+{
+    Card2CardTransferViewController_iPhone *cc = [[Card2CardTransferViewController_iPhone alloc] initWithNibName:@"Card2CardTransferViewController_iPhone" bundle:nil withToCardNumber:toCard];
+    cc.delegate = self;
+    [self.navigationController pushViewController:cc animated:YES];
+}
+
 - (void)payCharityHandler:(id)response
 {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -612,9 +642,45 @@
     NSString *resultText = [result stringValue];
     if ([result.type isEqualToString:@"org.iso.QRCode"])
     {
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        [app performSelector:@selector(applyScanedURL:) withObject:[NSURL URLWithString:resultText] afterDelay:.1];
-        return;
+        if ([resultText isRobodQRCommand])
+        {
+            AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [app performSelector:@selector(applyScanedURL:) withObject:[NSURL URLWithString:resultText] afterDelay:.1];
+            return;
+        }
+        else
+        {
+            if ([resultText isVCARD]) {
+                CFDataRef vCardData = (__bridge CFDataRef)[resultText dataUsingEncoding:NSUTF8StringEncoding];
+                
+                ABRecordRef vCardPerson = ABPersonCreate();
+                
+                CFArrayRef vCardPeople = ABPersonCreatePeopleInSourceWithVCardRepresentation(vCardPerson, vCardData);
+                
+                for (CFIndex i = 0; i < CFArrayGetCount(vCardPeople); ++i) {
+                    vCardPerson = CFArrayGetValueAtIndex(vCardPeople, i);
+                    break;
+                }
+                
+                CFRelease(vCardPeople);
+                
+                ABUnknownPersonViewController *picker = [[ABUnknownPersonViewController alloc] init];
+                picker.unknownPersonViewDelegate = self;
+                picker.displayedPerson = vCardPerson;
+                picker.allowsAddingToAddressBook = YES;
+                picker.allowsActions = YES;
+                picker.title = NSLocalizedString(@"QRPerson", @"QRPerson");
+                [self.navigationController pushViewController:picker animated:YES];
+                return;
+            }
+            //Проверяем на тип URL
+            if ([resultText isURL]) {
+                _openURLDelegate = [UIAlertWithOpenURLDelegate initWithText:resultText];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"OpenURL_Title", @"OpenURL_Title") message:[NSString stringWithFormat:NSLocalizedString(@"OpenURL_Message", @"OpenURL_Message"), _openURLDelegate.url.host] delegate:_openURLDelegate cancelButtonTitle:NSLocalizedString(@"Button_Cancel", @"Button_Cancel") otherButtonTitles:NSLocalizedString(@"Button_OpenURL", @"Button_OpenURL"), nil];
+                [alert show];
+                return;
+            }
+        }
     }
     if ([result.type isEqualToString:@"org.iso.Code39"])
     {
@@ -730,6 +796,15 @@
              */
         }
     }
+    //А пока сообщаем что данный тип кода не поддерживается
+    [self showUnsupportedCode:resultText];
+}
+
+- (void)showUnsupportedCode:(NSString *)Q
+{
+    _internetSearchDelegate = [UIAlertWithInternetSearchDelegate initWithQ:Q];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"UnsupportedCode_Title", @"UnsupportedCode_Title") message:NSLocalizedString(@"UnsupportedCode_Message", @"UnsupportedCode_Message") delegate:_internetSearchDelegate cancelButtonTitle:NSLocalizedString(@"Button_Cancel", @"Button_Cancel") otherButtonTitles:NSLocalizedString(@"Button_YandexSearch", @"Button_YandexSearch"), NSLocalizedString(@"Button_GoogleSearch", @"Button_GoogleSearch"), NSLocalizedString(@"Button_BingSearch", @"Button_BingSearch"), nil];
+    [alert show];
 }
 
 #pragma mark ScanViewControllerDelegate
@@ -741,6 +816,22 @@
     {
         [self performSelector:@selector(processScanResult:) withObject:result afterDelay:.1];
     }
+}
+
+#pragma mark ABUnknownPersonViewControllerDelegate methods
+
+- (void)unknownPersonViewController:(ABUnknownPersonViewController *)unknownPersonView didResolveToPerson:(ABRecordRef)person
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark CardsViewControllerDelegate
+
+- (void)cardSelected:(svcCard *)card controller:(UIViewController *)controller
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    QRViewController_iPhone *qr = [[QRViewController_iPhone alloc] initWithNibName:@"QRViewController_iPhone" bundle:nil withSource:[NSString stringWithFormat:@"card2card://to_card/%@", card.card_NativeNumber] andWidth:self.view.frame.size.width];
+    [self.navigationController pushViewController:qr animated:YES];
 }
 
 @end

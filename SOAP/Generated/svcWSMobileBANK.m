@@ -42,8 +42,10 @@
 #import "svcOperationState.h"
 #import "svcCheck.h"
 
+#import "AppDelegate.h"
+
 /* Implementation of the service */
-				
+
 @implementation svcWSMobileBANK
 
 	- (id) init
@@ -72,7 +74,32 @@
 		return [[svcWSMobileBANK alloc] initWithUsername:username andPassword:password];
 	}
 
-		
+    - (BOOL) isDemoMode
+    {
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        BOOL retVal = NO;
+        @try {
+            retVal = app.userProfile.isDemoMode;
+        }
+        @catch (NSException *exception) {
+            retVal = NO;
+        }
+        @finally {
+        }
+        if (retVal) {
+            [app demoModeAlert];
+        }
+        return retVal;
+    }
+
+    - (SoapRequest *)demoRequest: (id) _target action: (SEL) _action
+    {
+        NSString* _envelope = [Soap createEnvelope: @"DemoMode" forNamespace: self.namespace withParameters: [NSMutableArray array] withHeaders: self.headers];
+        SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/DemoMode" postData: _envelope deserializeTo: [svcWSResponse alloc]];
+        [_request send];
+        return _request;
+    }
+
 	// Returns svcWSResponse*
 	/* Получение настроек устройства */
 	- (SoapRequest*) GetSettings: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Platform: (NSString*) Platform Device: (NSString*) Device
@@ -81,7 +108,7 @@
 	}
 
 	- (SoapRequest*) GetSettings: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Platform: (NSString*) Platform Device: (NSString*) Device
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -101,7 +128,11 @@
 	}
 
 	- (SoapRequest*) SaveSettings: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Phone: (NSString*) Phone EMail: (NSString*) EMail
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -121,7 +152,11 @@
 	}
 
 	- (SoapRequest*) SetPassword: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Password: (NSString*) Password
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -140,7 +175,7 @@
 	}
 
 	- (SoapRequest*) CheckPassword: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Password: (NSString*) Password
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -159,7 +194,7 @@
 	}
 
 	- (SoapRequest*) CheckEMail: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -177,7 +212,7 @@
 	}
 
 	- (SoapRequest*) CheckPhone: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -195,7 +230,11 @@
 	}
 
 	- (SoapRequest*) ApprovePhone: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Code: (NSString*) Code
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -209,12 +248,16 @@
 	// Returns svcWSResponse*
 	/* Сохранить метку для уведомлений */
 	- (SoapRequest*) SaveDeviceToken: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Token: (NSString*) Token
-	{
+    {
 		return [self SaveDeviceToken: handler action: nil UNIQUE: UNIQUE Token: Token];
 	}
 
 	- (SoapRequest*) SaveDeviceToken: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Token: (NSString*) Token
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -233,8 +276,12 @@
 	}
 
 	- (SoapRequest*) ValidateEMail: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE EMail: (NSString*) EMail
-		{
-		NSMutableArray* _params = [NSMutableArray array];
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
+        NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
 		[_params addObject: [[SoapParameter alloc] initWithValue: EMail forName: @"EMail"]];
@@ -252,7 +299,7 @@
 	}
 
 	- (SoapRequest*) GetCurrentVersion: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Platform: (NSString*) Platform appName: (NSString*) appName
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -272,7 +319,7 @@
 	}
 
 	- (SoapRequest*) GetCurrentVersionEx: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Platform: (NSString*) Platform appName: (NSString*) appName currentVersion: (NSString*) currentVersion deviceName: (NSString*) deviceName OSVersion: (NSString*) OSVersion
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -295,7 +342,11 @@
 	}
 
 	- (SoapRequest*) ClearDevice: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -313,7 +364,7 @@
 	}
 
 	- (SoapRequest*) GetDeviceStat: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -331,7 +382,11 @@
 	}
 
 	- (SoapRequest*) ActivateVendorId: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -350,7 +405,7 @@
 	}
 
 	- (SoapRequest*) GetCards: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash NotIncludeRemoved: (BOOL)NotIncludeRemoved NotIncludeNotAuthorized: (BOOL)NotIncludeNotAuthorized
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -371,7 +426,11 @@
 	}
 
 	- (SoapRequest*) RegisterCard: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardName: (NSString*) cardName cardNumber: (NSString*) cardNumber cardType: (NSString*) cardType cardYear: (int) cardYear cardMonth: (int) cardMonth cardHolder: (NSString*) cardHolder
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -395,7 +454,11 @@
 	}
 
 	- (SoapRequest*) RemoveCard: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -414,7 +477,11 @@
 	}
 
 	- (SoapRequest*) BeginAuthorizeCard: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId cvc: (NSString*) cvc
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -434,7 +501,11 @@
 	}
 
 	- (SoapRequest*) CheckAuthorizeCard: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -453,7 +524,11 @@
 	}
 
 	- (SoapRequest*) CheckAuthorizeCardWith3D: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -472,7 +547,11 @@
 	}
 
 	- (SoapRequest*) EndAuthorizeCard: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId authSum: (NSDecimalNumber*) authSum
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -492,7 +571,7 @@
 	}
 
 	- (SoapRequest*) GetCardStat: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -530,7 +609,7 @@
 	}
 
 	- (SoapRequest*) GetFavorites: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Hash: (NSString*) Hash
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -549,7 +628,11 @@
 	}
 
 	- (SoapRequest*) AddFavorite: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE favoriteId: (int) favoriteId favoriteName: (NSString*) favoriteName currency: (NSString*) currency currencyName: (NSString*) currencyName cardId: (int) cardId parameters: (NSString*) parameters summa: (NSDecimalNumber*) summa
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -574,7 +657,11 @@
 	}
 
 	- (SoapRequest*) ModifyFavorite: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE favoriteId: (int) favoriteId favoriteName: (NSString*) favoriteName cardId: (int) cardId parameters: (NSString*) parameters summa: (NSDecimalNumber*) summa
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -597,7 +684,11 @@
 	}
 
 	- (SoapRequest*) RemoveFavorite: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE favoriteId: (int) favoriteId
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -617,6 +708,10 @@
 
     - (SoapRequest*) RemoveFromFavorite: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE OpKey: (NSString *) OpKey
     {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
         NSMutableArray* _params = [NSMutableArray array];
     
         [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -635,7 +730,11 @@
 	}
 
 	- (SoapRequest*) SaveFavoritesOrder: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE orderList: (NSString*) orderList
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -654,7 +753,7 @@
 	}
 
 	- (SoapRequest*) GetCatalog: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE version: (int) version
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -710,7 +809,7 @@
 	}
 
 	- (SoapRequest*) GetParameters: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -729,7 +828,7 @@
 	}
 
 	- (SoapRequest*) GetIncParameters: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency checkId: (int) checkId
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -749,7 +848,7 @@
 	}
 
 	- (SoapRequest*) GetOperationState: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -769,6 +868,10 @@
 
     - (SoapRequest*) ApproveParameters: (id) target action: (SEL) action UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey parameters: (NSString*) parameters
     {
+        if ([self isDemoMode]) {
+            return [self demoRequest:target action:action];
+        }
+        
         NSMutableArray* _params = [NSMutableArray array];
     
         [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -788,7 +891,11 @@
 	}
 
 	- (SoapRequest*) StartOperation: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE cardId: (int) cardId summa: (NSDecimalNumber*) summa currency: (NSString*) currency parameters: (NSString*) parameters CVC: (NSString*) CVC
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -811,7 +918,7 @@
 	}
 
 	- (SoapRequest*) CalcSum: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency IsInc: (BOOL) IsInc summ: (NSDecimalNumber*) summ
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -832,7 +939,7 @@
 	}
 
 	- (SoapRequest*) CalcSumWithCard: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency IsInc: (BOOL) IsInc summ: (NSDecimalNumber*) summ cardId: (int) cardId
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -854,7 +961,11 @@
 	}
 
 	- (SoapRequest*) UpdateOperationGPS: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey Latitude: (NSDecimalNumber*) Latitude Longtitude: (NSDecimalNumber*) Longtitude
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -875,7 +986,7 @@
 	}
 
 	- (SoapRequest*) SendMessageToSupport: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Subject: (NSString*) Subject Body: (NSString*) Body
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -895,7 +1006,7 @@
 	}
 
 	- (SoapRequest*) StoreMessageToSupport: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Subject: (NSString*) Subject Body: (NSString*) Body OpKey: (NSString*) OpKey
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -916,7 +1027,7 @@
 	}
 
 	- (SoapRequest*) GetMessages: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -935,7 +1046,7 @@
 	}
 
 	- (SoapRequest*) GetHistory: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -948,18 +1059,19 @@
 
     // Returns svcWSResponse*
     /* Получение истории операций относительно указанного op_Id */
-    - (SoapRequest*) GetHistoryFromId: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count
+    - (SoapRequest*) GetHistoryFromId: (id <SoapDelegate>) handler UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count SearchText: (NSString*) SearchText
     {
-        return [self GetHistoryFromId: handler action: nil UNIQUE: UNIQUE Id: Id Count: Count];
+        return [self GetHistoryFromId: handler action: nil UNIQUE: UNIQUE Id: Id Count: Count SearchText: SearchText];
     }
 
-    - (SoapRequest*) GetHistoryFromId: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count
+    - (SoapRequest*) GetHistoryFromId: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Id: (int) Id Count: (int) Count SearchText: (NSString*) SearchText
     {
         NSMutableArray* _params = [NSMutableArray array];
     
         [_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
         [_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithInt: Id] forName: @"Id"]];
         [_params addObject: [[SoapParameter alloc] initWithValue: [NSNumber numberWithInt: Count] forName: @"Count"]];
+        [_params addObject: [[SoapParameter alloc] initWithValue: SearchText forName: @"SearchText"]];
         NSString* _envelope = [Soap createEnvelope: @"GetHistoryFromId" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
         SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"http://misc.roboxchange.com/External/iPhone/GetHistoryFromId" postData: _envelope deserializeTo: [svcWSResponse alloc]];
         [_request send];
@@ -974,7 +1086,11 @@
 	}
 
 	- (SoapRequest*) PayCheck: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE checkId: (int) checkId cardId: (int) cardId CVC: (NSString*) CVC
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -995,7 +1111,11 @@
 	}
 
 	- (SoapRequest*) CreateCheck: (id) _target action: (SEL) _action OpKey: (NSString*) OpKey Phone: (NSString*) Phone MerchantName: (NSString*) MerchantName MerchantOrder: (NSString*) MerchantOrder Sum: (NSDecimalNumber*) Sum
-		{
+	{
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: OpKey forName: @"OpKey"]];
@@ -1017,7 +1137,7 @@
 	}
 
 	- (SoapRequest*) DeclineCheck: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE checkId: (int) checkId
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1036,7 +1156,7 @@
 	}
 
 	- (SoapRequest*) GetCheck: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE checkId: (int) checkId
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1055,7 +1175,7 @@
 	}
 
 	- (SoapRequest*) GetChecks: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1073,7 +1193,11 @@
 	}
 
 	- (SoapRequest*) CreateCheckByOpKey: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE OpKey: (NSString*) OpKey
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1092,7 +1216,11 @@
 	}
 
 	- (SoapRequest*) PayCheckWithCurrency: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE checkId: (int) checkId currency: (NSString*) currency parameters: (NSString*) parameters
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1113,7 +1241,7 @@
 	}
 
 	- (SoapRequest*) CheckSum: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE currency: (NSString*) currency OutSumm: (NSDecimalNumber*) OutSumm card_Id: (int) card_Id
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1134,7 +1262,7 @@
 	}
 
 	- (SoapRequest*) GetShopCatalog: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1152,7 +1280,7 @@
 	}
 
 	- (SoapRequest*) GetShopsInCatalog: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE catalogId: (int) catalogId
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1171,7 +1299,7 @@
 	}
 
 	- (SoapRequest*) GetTerminalsNearCoord: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Latitude: (NSDecimalNumber*) Latitude Longtitude: (NSDecimalNumber*) Longtitude Delta: (NSDecimalNumber*) Delta
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1192,7 +1320,7 @@
 	}
 
 	- (SoapRequest*) GetTerminals: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1211,7 +1339,7 @@
 	}
 
 	- (SoapRequest*) GetCharity: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE charityId: (int) charityId
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1230,7 +1358,11 @@
 	}
 
 	- (SoapRequest*) PayCharity: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE charityId: (int) charityId cardId: (int) cardId summa: (NSDecimalNumber*) summa CVC: (NSString*) CVC PayerFIO: (NSString*) PayerFIO PayerAddress: (NSString*) PayerAddress
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1254,7 +1386,7 @@
 	}
 
 	- (SoapRequest*) GetCurrencyByPhone: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Phone: (NSString*) Phone
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1273,7 +1405,11 @@
 	}
 
 	- (SoapRequest*) VISAVirtuonCharge: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE virtuonId: (int) virtuonId FIO: (NSString*) FIO Summa: (NSDecimalNumber*) Summa Phone: (NSString*) Phone EMail: (NSString*) EMail cardId: (int) cardId CVC: (NSString*) CVC
-		{
+    {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1298,7 +1434,7 @@
 	}
 
 	- (SoapRequest*) GetRoumingMobileOperators: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE TIMESTAMP: (NSString*) TIMESTAMP
-		{
+	{
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1317,7 +1453,7 @@
 	}
 
 	- (SoapRequest*) Login: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE Login: (NSString*) Login Password: (NSString*) Password
-		{
+    {
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];
@@ -1338,6 +1474,10 @@
 
     - (SoapRequest*) Card2CardTransfer: (id) _target action: (SEL) _action UNIQUE: (NSString*) UNIQUE fromCardId: (int) fromCardId toCardId: (int) toCardId toCardNumber: (NSString *) toCardNumber summ: (NSDecimalNumber*) summ fromCardCVC : (NSString *) fromCardCVC
     {
+        if ([self isDemoMode]) {
+            return [self demoRequest:_target action:_action];
+        }
+        
 		NSMutableArray* _params = [NSMutableArray array];
 		
 		[_params addObject: [[SoapParameter alloc] initWithValue: UNIQUE forName: @"UNIQUE"]];

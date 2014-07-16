@@ -10,6 +10,9 @@
 
 @interface NSString (Checkers)
 
+- (BOOL)isRobodQRCommand;
+- (BOOL)isVCARD;
+- (BOOL)isURL;
 - (BOOL)isHTML;
 - (NSString *)HTMLWithSystemFont;
 - (BOOL)isPossibleMoscowGKU;

@@ -14,7 +14,7 @@
 @protocol EditFavoriteDelegate
 
 - (void)editFavorite:(UIViewController *)controller favorite:(svcFavorite *)favorite;
-- (void)cancelAddToFavorite:(UIViewController *)controller;
+- (void)cancelEditFavorite:(UIViewController *)controller;
 
 @end
 

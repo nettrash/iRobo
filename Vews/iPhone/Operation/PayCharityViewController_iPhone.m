@@ -45,48 +45,8 @@
         _card = nil;
         _comissionViewController = nil;
         _summa = _charity.charity_DefaultSum;
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         self.navigationItem.title = NSLocalizedString(@"PayCharity_Title", @"PayCharity_Title");
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"PayButton_Title", @"PayButton_Title") style:UIBarButtonItemStyleDone target:self action:@selector(chooseCard:)];
-        self.tfPayerLastName = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
-        self.tfPayerLastName.adjustsFontSizeToFitWidth = YES;
-        self.tfPayerLastName.textColor = [UIColor darkGrayColor];
-        self.tfPayerLastName.placeholder = NSLocalizedString(@"Payer_LastName", @"Payer_LastName");
-        self.tfPayerLastName.keyboardType = UIKeyboardTypeDefault;
-        self.tfPayerLastName.delegate = self;
-        self.tfPayerLastName.text = app.userProfile.lastName;
-        
-        self.tfPayerFirstName = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
-        self.tfPayerFirstName.adjustsFontSizeToFitWidth = YES;
-        self.tfPayerFirstName.textColor = [UIColor darkGrayColor];
-        self.tfPayerFirstName.placeholder = NSLocalizedString(@"Payer_FirstName", @"Payer_FirstName");
-        self.tfPayerFirstName.keyboardType = UIKeyboardTypeDefault;
-        self.tfPayerFirstName.delegate = self;
-        self.tfPayerFirstName.text = app.userProfile.firstName;
-        
-        self.tfPayerSecondName = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
-        self.tfPayerSecondName.adjustsFontSizeToFitWidth = YES;
-        self.tfPayerSecondName.textColor = [UIColor darkGrayColor];
-        self.tfPayerSecondName.placeholder = NSLocalizedString(@"Payer_SecondName", @"Payer_SecondName");
-        self.tfPayerSecondName.keyboardType = UIKeyboardTypeDefault;
-        self.tfPayerSecondName.delegate = self;
-        self.tfPayerSecondName.text = app.userProfile.secondName;
-        
-        self.tfPayerAddress = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
-        self.tfPayerAddress.adjustsFontSizeToFitWidth = YES;
-        self.tfPayerAddress.textColor = [UIColor darkGrayColor];
-        self.tfPayerAddress.placeholder = NSLocalizedString(@"Payer_Address", @"Payer_Address");
-        self.tfPayerAddress.keyboardType = UIKeyboardTypeDefault;
-        self.tfPayerAddress.delegate = self;
-        self.tfPayerAddress.text = app.userProfile.address;
-        
-        self.tfAdvSumma = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
-        self.tfAdvSumma.adjustsFontSizeToFitWidth = YES;
-        self.tfAdvSumma.textColor = [UIColor darkGrayColor];
-        self.tfAdvSumma.placeholder = NSLocalizedString(@"Adv_Summa", @"Adv_Summa");;
-        self.tfAdvSumma.keyboardType = UIKeyboardTypeDecimalPad;
-        self.tfAdvSumma.delegate = self;
-        self.tfAdvSumma.text = [NSString stringWithFormat:@"%.2f", [_charity.charity_DefaultSum doubleValue]];
     }
     return self;
 }
@@ -94,7 +54,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     _needToShowDoneButton = NO;
     
     self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
@@ -112,6 +74,46 @@
     [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateSelected];
     
     [self.doneButton addTarget:self.cvcView action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.tfPayerLastName = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
+    self.tfPayerLastName.adjustsFontSizeToFitWidth = YES;
+    self.tfPayerLastName.textColor = [UIColor darkGrayColor];
+    self.tfPayerLastName.placeholder = NSLocalizedString(@"Payer_LastName", @"Payer_LastName");
+    self.tfPayerLastName.keyboardType = UIKeyboardTypeDefault;
+    self.tfPayerLastName.delegate = self;
+    self.tfPayerLastName.text = app.userProfile.lastName;
+    
+    self.tfPayerFirstName = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
+    self.tfPayerFirstName.adjustsFontSizeToFitWidth = YES;
+    self.tfPayerFirstName.textColor = [UIColor darkGrayColor];
+    self.tfPayerFirstName.placeholder = NSLocalizedString(@"Payer_FirstName", @"Payer_FirstName");
+    self.tfPayerFirstName.keyboardType = UIKeyboardTypeDefault;
+    self.tfPayerFirstName.delegate = self;
+    self.tfPayerFirstName.text = app.userProfile.firstName;
+    
+    self.tfPayerSecondName = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
+    self.tfPayerSecondName.adjustsFontSizeToFitWidth = YES;
+    self.tfPayerSecondName.textColor = [UIColor darkGrayColor];
+    self.tfPayerSecondName.placeholder = NSLocalizedString(@"Payer_SecondName", @"Payer_SecondName");
+    self.tfPayerSecondName.keyboardType = UIKeyboardTypeDefault;
+    self.tfPayerSecondName.delegate = self;
+    self.tfPayerSecondName.text = app.userProfile.secondName;
+    
+    self.tfPayerAddress = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
+    self.tfPayerAddress.adjustsFontSizeToFitWidth = YES;
+    self.tfPayerAddress.textColor = [UIColor darkGrayColor];
+    self.tfPayerAddress.placeholder = NSLocalizedString(@"Payer_Address", @"Payer_Address");
+    self.tfPayerAddress.keyboardType = UIKeyboardTypeDefault;
+    self.tfPayerAddress.delegate = self;
+    self.tfPayerAddress.text = app.userProfile.address;
+    
+    self.tfAdvSumma = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
+    self.tfAdvSumma.adjustsFontSizeToFitWidth = YES;
+    self.tfAdvSumma.textColor = [UIColor darkGrayColor];
+    self.tfAdvSumma.placeholder = NSLocalizedString(@"Adv_Summa", @"Adv_Summa");;
+    self.tfAdvSumma.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tfAdvSumma.delegate = self;
+    self.tfAdvSumma.text = [NSString stringWithFormat:@"%.2f", [_charity.charity_DefaultSum doubleValue]];
 
     [self validate];
 }

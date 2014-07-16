@@ -21,6 +21,7 @@
 	@synthesize ErrorText = _ErrorText;
 	@synthesize card_Balance = _card_Balance;
 	@synthesize card_IsOCEAN = _card_IsOCEAN;
+    @synthesize card_NativeNumber = _card_NativeNumber;
 
 	- (id) init
 	{
@@ -34,7 +35,7 @@
 			self.card_Number = nil;
 			self.ErrorText = nil;
 			self.card_Balance = nil;
-
+            self.card_NativeNumber = nil;
 		}
 		return self;
 	}
@@ -63,6 +64,7 @@
 			self.ErrorText = [Soap getNodeValue: node withName: @"ErrorText"];
 			self.card_Balance = [NSDecimalNumber decimalNumberWithString: [Soap getNodeValue: node withName: @"card_Balance"]];
 			self.card_IsOCEAN = [[Soap getNodeValue: node withName: @"card_IsOCEAN"] boolValue];
+            self.card_NativeNumber = [Soap getNodeValue: node withName: @"card_NativeNumber"];
 		}
 		return self;
 	}
@@ -101,6 +103,7 @@
 		if (self.ErrorText != nil) [s appendFormat: @"<ErrorText>%@</ErrorText>", [[self.ErrorText stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 		if (self.card_Balance != nil) [s appendFormat: @"<card_Balance>%@</card_Balance>", [NSString stringWithFormat: @"%@", self.card_Balance]];
 		[s appendFormat: @"<card_IsOCEAN>%@</card_IsOCEAN>", (self.card_IsOCEAN)?@"true":@"false"];
+        if (self.card_NativeNumber != nil) [s appendFormat: @"<card_NativeNumber>%@</card_NativeNumber>", [[self.card_NativeNumber stringByReplacingOccurrencesOfString:@"\"" withString:@"&quot;"] stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"]];
 
 		return s;
 	}

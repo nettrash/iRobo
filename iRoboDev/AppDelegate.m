@@ -27,9 +27,11 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize userProfile = _userProfile;
 @synthesize audioPlayer = _audioPlayer;
+@synthesize registerAlertDelegate = _registerAlertDelegate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.registerAlertDelegate = [[UIAlertViewRegisterDelegate alloc] init];
     _firstInitialization = YES;
     _fromBackground = NO;
     _needToProcessLaunchURL = NO;
@@ -99,7 +101,7 @@
     }
     
     //Если строка наша, то да, иначе нет
-    if ([urlString hasPrefix:@"robokassa://"]) {
+    if ([urlString hasPrefix:@"robokassa://"] || [urlString hasPrefix:@"card2card://"]) {
         //Сохраняем команду для обработки
         _launchURL = [NSURL URLWithString:urlString];
         _needToProcessLaunchURL = YES;
@@ -272,6 +274,12 @@
         [self hideWait];
         [self showCheckPasswordView];
     }
+}
+
+- (void)demoModeAlert
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"DEMO MODE" message:NSLocalizedString(@"DEMO_MODE_MESSAGE", @"DEMO_MODE_MESSAGE") delegate:self.registerAlertDelegate cancelButtonTitle:NSLocalizedString(@"Button_Continue", @"Button_Continue") otherButtonTitles:NSLocalizedString(@"Button_Register", @"Button_Register"), nil];
+    [alert show];
 }
 
 #pragma mark - Audio
@@ -584,71 +592,85 @@
     
     _needToProcessLaunchURL = NO;
     //Обрабатываем команду
+    if ([[[_launchURL scheme] uppercaseString] isEqualToString:@"ROBOKASSA"]) {
+        //Просто открылись и все
+        if ([[[_launchURL host] uppercaseString] isEqualToString:@""]) {
+            UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
+            if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
+            {
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
+                [_revealViewController pushFrontViewController:navigationController animated:NO];
+            }
+            return;
+        }
     
-    //Просто открылись и все
-    if ([[[_launchURL host] uppercaseString] isEqualToString:@""]) {
+        //Нужна оплата счета
+        if ([[[_launchURL host] uppercaseString] isEqualToString:@"CHECK"]) {
+            UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
+            if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
+            {
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
+                [_revealViewController pushFrontViewController:navigationController animated:NO];
+            }
+            NSString *prm = [_launchURL parameterValue:@"checkId"];
+            if (prm && prm != nil)
+            {
+                [(MainViewController_iPhone *)frontNavigationController.topViewController payCheckById:[prm intValue]];
+                return;
+            }
+            prm = [_launchURL parameterValue:@"OpKey"];
+            if (prm && prm != nil)
+            {
+                [(MainViewController_iPhone *)frontNavigationController.topViewController payCheckByOpKey:prm];
+                return;
+            }
+            return;
+        }
+    
+        //Переходим в карты
+        if ([[[_launchURL host] uppercaseString] isEqualToString:@"CARDS"]) {
+            UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
+            if ( ![frontNavigationController.topViewController isKindOfClass:[CardsViewController_iPhone class]] )
+            {
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[CardsViewController_iPhone alloc] initWithNibName:@"CardsViewController_iPhone" bundle:nil showUnauthorizedCards:YES withFormType:CardsViewFormTypeFullView]];
+                [_revealViewController pushFrontViewController:navigationController animated:NO];
+            }
+            return;
+        }
+    
+        //Оплата благотворительности
+        if ([[[_launchURL host] uppercaseString] isEqualToString:@"CHARITY"]) {
+            UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
+            if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
+            {
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
+                [_revealViewController pushFrontViewController:navigationController animated:NO];
+            }
+            NSString *prm = [_launchURL parameterValue:@"CharityID"];
+            if (prm && prm != nil)
+            {
+                [(MainViewController_iPhone *)frontNavigationController.topViewController payCharity:prm];
+                return;
+            }
+            return;
+        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"URLCommand_Unsupported_Title", @"URLCommand_Unsupported_Title") message:NSLocalizedString(@"URLCommand_Unsupported_Message", @"URLCommand_Unsupported_Message") delegate:nil cancelButtonTitle:NSLocalizedString(@"Button_Continue", @"Button_Continue") otherButtonTitles:nil];
+        [alert show];
+    }
+    if ([[[_launchURL scheme] uppercaseString] isEqualToString:@"CARD2CARD"]) {
         UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
         if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
         {
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
             [_revealViewController pushFrontViewController:navigationController animated:NO];
         }
+        NSString *toCard = @"";
+        if ([[[_launchURL host] uppercaseString] isEqualToString:@"TO_CARD"]) {
+            toCard = [[_launchURL path] substringFromIndex:1];
+        }
+        [(MainViewController_iPhone *)frontNavigationController.topViewController c2cTransfer:toCard];
         return;
     }
-    
-    //Нужна оплата счета
-    if ([[[_launchURL host] uppercaseString] isEqualToString:@"CHECK"]) {
-        UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
-        if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
-        {
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
-            [_revealViewController pushFrontViewController:navigationController animated:NO];
-        }
-        NSString *prm = [_launchURL parameterValue:@"checkId"];
-        if (prm && prm != nil)
-        {
-            [(MainViewController_iPhone *)frontNavigationController.topViewController payCheckById:[prm intValue]];
-            return;
-        }
-        prm = [_launchURL parameterValue:@"OpKey"];
-        if (prm && prm != nil)
-        {
-            [(MainViewController_iPhone *)frontNavigationController.topViewController payCheckByOpKey:prm];
-            return;
-        }
-        return;
-    }
-    
-    //Переходим в карты
-    if ([[[_launchURL host] uppercaseString] isEqualToString:@"CARDS"]) {
-        UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
-        if ( ![frontNavigationController.topViewController isKindOfClass:[CardsViewController_iPhone class]] )
-        {
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[CardsViewController_iPhone alloc] initWithNibName:@"CardsViewController_iPhone" bundle:nil showUnauthorizedCards:YES withFormType:CardsViewFormTypeFullView]];
-            [_revealViewController pushFrontViewController:navigationController animated:NO];
-        }
-        return;
-    }
-    
-    //Оплата благотворительности
-    if ([[[_launchURL host] uppercaseString] isEqualToString:@"CHARITY"]) {
-        UINavigationController *frontNavigationController = (id)_revealViewController.frontViewController;
-        if ( ![frontNavigationController.topViewController isKindOfClass:[MainViewController_iPhone class]] )
-        {
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController_iPhone alloc] initWithNibName:@"MainViewController_iPhone" bundle:nil]];
-            [_revealViewController pushFrontViewController:navigationController animated:NO];
-        }
-        NSString *prm = [_launchURL parameterValue:@"CharityID"];
-        if (prm && prm != nil)
-        {
-            [(MainViewController_iPhone *)frontNavigationController.topViewController payCharity:prm];
-            return;
-        }
-        return;
-    }
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"URLCommand_Unsupported_Title", @"URLCommand_Unsupported_Title") message:NSLocalizedString(@"URLCommand_Unsupported_Message", @"URLCommand_Unsupported_Message") delegate:nil cancelButtonTitle:NSLocalizedString(@"Button_Continue", @"Button_Continue") otherButtonTitles:nil];
-    [alert show];
 }
 
 - (void)applyScanedURL:(NSURL *)url

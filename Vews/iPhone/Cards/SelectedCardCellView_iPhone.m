@@ -71,6 +71,10 @@
     for (UICardActivity *a in self.availibleActivities) {
         [self.svActivities addSubview:[a activityButtonWithIndex:idx++]];
     }
+
+    CGSize size = self.svActivities.contentSize;
+    size.width = 52 * idx;
+    self.svActivities.contentSize = size;
 }
 
 - (void)awakeFromNib

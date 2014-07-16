@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "EditFavoriteDelegate.h"
 
-@interface EditFavoriteViewController_iPhone : UIViewController
+@interface EditFavoriteViewController_iPhone : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withFavorite:(svcFavorite *)fav;
+
+@property (nonatomic, retain) id<EditFavoriteDelegate> delegate;
 
 @end
