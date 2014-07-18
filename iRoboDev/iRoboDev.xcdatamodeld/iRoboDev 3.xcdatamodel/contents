@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6198" systemVersion="14A283o" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="LocalCard" representedClassName="LocalCard" syncable="YES">
+        <attribute name="card_Id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cvc" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SavedParameters" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parameter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserProfileEntity" representedClassName="UserProfileEntity" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailApproved" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasPassword" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneApproved" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <fetchRequest name="UserProfile_Select" entity="UserProfileEntity"/>
+    <elements>
+        <element name="LocalCard" positionX="-54" positionY="36" width="128" height="75"/>
+        <element name="SavedParameters" positionX="-54" positionY="45" width="128" height="90"/>
+        <element name="UserProfileEntity" positionX="-63" positionY="-18" width="128" height="150"/>
+    </elements>
+</model>

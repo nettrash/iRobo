@@ -13,6 +13,7 @@
 @synthesize blurWhenBackground = _blurWhenBackground;
 @synthesize passwordTimeout = _passwordTimeout;
 @synthesize useSound = _useSound;
+@synthesize storeCVC = _storeCVC;
 
 - (void)loadSettings
 {
@@ -24,11 +25,23 @@
         self.useSound = [ud boolForKey:@"sound_preference"];
         if (self.passwordTimeout == 0)
             self.passwordTimeout = 1;
+        self.storeCVC = [ud boolForKey:@"store_cvc"];
     }
     else
     {
         self.blurWhenBackground = YES;
         self.passwordTimeout = 1;
+        self.useSound = YES;
+        self.storeCVC = YES;
+    }
+}
+
+- (void)setStoreCVCToNO
+{
+    self.storeCVC = NO;
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if ([ud synchronize]) {
+        [ud setValue:self.storeCVC ? @"YES" : @"NO" forKey:@"store_cvc"];
     }
 }
 

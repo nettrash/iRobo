@@ -360,3 +360,6 @@
 "SocialPost_AnyReqOperation" = "Крайне быстро совершил банковский перевод в приложении ROBOKASSA. Жуть как доволен!";
 "SocialPost_Twitter_Card2CardOperation" = "Мгновенно перевел денег с кары на карту в приложении ROBOKASSA. Доволен жуть!";
 "SocialPost_Twitter_AnyReqOperation" = "Крайне быстро совершил банковский перевод в приложении ROBOKASSA. Жуть как доволен!";
+"StoreCVC_Title" = "Сохранить CVC код?";
+"StoreCVC_Message" = "Сохранить CVC код на телефоне? Код сохранятеся на телефоне и более нигде кроме как на телефоне не хранится. Это безопасно и удобно.";
+"Button_NeverStoreCVC" = "ЗАБУДЬ ОБ ЭТОМ";

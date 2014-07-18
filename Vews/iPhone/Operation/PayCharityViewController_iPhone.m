@@ -265,6 +265,10 @@
 - (void)enterCVC
 {
     _needToShowDoneButton = YES;
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:YES animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = NO;
+    [self.cvcView applyCard:_card.card_Id];
     [self.cvcView performSelector:@selector(addToViewController:) withObject:self.navigationController.topViewController afterDelay:.1];
 }
 
@@ -632,7 +636,11 @@
 
 -(void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue
 {
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
     _needToShowDoneButton = NO;
+    [self removeDoneButtonFromNumberPadKeyboard];
     if (cvcEntered)
     {
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];
@@ -646,6 +654,16 @@
     {
         [self.delegate finishPay:self];
     }
+}
+
+- (void)cancelEnterCVC:(UIViewController *)controller
+{
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
+    _needToShowDoneButton = NO;
+    [self removeDoneButtonFromNumberPadKeyboard];
+    [self.delegate finishPay:self];
 }
 
 #pragma mark OperationStateDelegate

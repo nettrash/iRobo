@@ -31,7 +31,7 @@
             </tableView>
             <point key="canvasLocation" x="440" y="-257"/>
         </tableViewController>
-        <searchBar contentMode="redraw" text="На этой неделе" placeholder="В прошлом месяце примерно 1000" id="xNX-b3-au0">
+        <searchBar contentMode="redraw" placeholder="В прошлом месяце примерно 1000" id="xNX-b3-au0">
             <rect key="frame" x="0.0" y="23" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <textInputTraits key="textInputTraits"/>

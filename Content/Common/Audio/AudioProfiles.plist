@@ -4,8 +4,7 @@
 <dict>
 	<key>Persons</key>
 	<array>
-		<string>AudioProfile</string>
-		<string>AudioProfileAZhdanova</string>
+		<string>AudioProfileAll</string>
 	</array>
 </dict>
 </plist>

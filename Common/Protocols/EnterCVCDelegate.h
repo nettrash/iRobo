@@ -14,7 +14,8 @@
 
 @required
 
--(void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue;
+- (void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue;
+- (void)cancelEnterCVC:(UIViewController *)controller;
 
 @end
 

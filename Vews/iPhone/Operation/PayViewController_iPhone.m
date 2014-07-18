@@ -360,6 +360,8 @@
     
     for (svcParameter *p in _parameters)
     {
+        if ([_topCurrency.Label hasPrefix:@"OceanBankPayToAnyReq"] && [p.Name isEqualToString:@"ReceiverINN"] && [p.DefaultValue isEqualToString:@""]) continue;
+        if ([_topCurrency.Label hasPrefix:@"OceanBankPayToAnyReq"] && [p.Name isEqualToString:@"ReceiverKPP"] && [p.DefaultValue isEqualToString:@""]) continue;
         if (!p.DefaultValue || p.DefaultValue == nil || [p.DefaultValue isEqualToString:@""] || ![p.DefaultValue checkFormat:p.Format])
             bValidParams = NO;
     }
@@ -431,6 +433,10 @@
 - (void)enterCVC
 {
     _needToShowDoneButton = YES;
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:YES animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = NO;
+    [self.cvcView applyCard:_card.card_Id];
     [self.cvcView performSelector:@selector(addToViewController:) withObject:self.navigationController.topViewController afterDelay:.1];
 }
 
@@ -644,6 +650,9 @@
 
 -(void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue
 {
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
     _needToShowDoneButton = NO;
     [self removeDoneButtonFromNumberPadKeyboard];
     if (cvcEntered)
@@ -662,6 +671,16 @@
     {
         [self.delegate finishPay:self];
     }
+}
+
+- (void)cancelEnterCVC:(UIViewController *)controller
+{
+    _needToShowDoneButton = NO;
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
+    [self removeDoneButtonFromNumberPadKeyboard];
+    [self.delegate finishPay:self];
 }
 
 #pragma mark OperationStateDelegate

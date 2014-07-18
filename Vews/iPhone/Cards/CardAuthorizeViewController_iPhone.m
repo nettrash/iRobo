@@ -154,6 +154,10 @@
     self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
     self.cvcView.delegate = self;
     [self.doneButton addTarget:self.cvcView action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:YES animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = NO;
+    [self.cvcView applyCard:self.card_Id];
     [self.cvcView performSelector:@selector(addToViewController:) withObject:self afterDelay:.1];
 }
 
@@ -303,6 +307,10 @@
 
 -(void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue
 {
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
+    [self removeDoneButtonFromNumberPadKeyboard];
     if (cvcEntered)
     {
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];
@@ -312,6 +320,15 @@
     {
         [self.delegate finishAuthorizeAction:self];
     }
+}
+
+- (void)cancelEnterCVC:(UIViewController *)controller
+{
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
+    [self removeDoneButtonFromNumberPadKeyboard];
+    [self.delegate finishAuthorizeAction:self];
 }
 
 #pragma mark UIWebViewDelegate

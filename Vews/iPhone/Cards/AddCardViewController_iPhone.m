@@ -477,7 +477,7 @@
             }
         }
         case 1: {
-            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar/*NSCalendarIdentifierGregorian*/];
             NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
             return [NSString stringWithFormat:@"%i", [components year] + row];
         }
@@ -491,14 +491,14 @@
     switch (component) {
         case 0: {
             self.cardExpiryMonth = row + 1;
-            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar/*NSCalendarIdentifierGregorian*/];
             NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
             self.cardExpiryYear = [components year] + [pickerView selectedRowInComponent:1];
             [self showCardExpiry];
             break;
         }
         case 1: {
-            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar/*NSCalendarIdentifierGregorian*/];
             NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
             self.cardExpiryYear = [components year] + row;
             self.cardExpiryMonth = [pickerView selectedRowInComponent:0] + 1;

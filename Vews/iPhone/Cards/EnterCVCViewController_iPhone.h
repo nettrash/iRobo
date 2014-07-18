@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "EnterCVCDelegate.h"
 
-@interface EnterCVCViewController_iPhone : UIViewController
+@interface EnterCVCViewController_iPhone : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic, retain) id<EnterCVCDelegate> delegate;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withCard:(int)card_Id;
 - (void)addToViewController:(UIViewController *)controller;
 - (void)removeFromViewController;
 - (IBAction)doneButton:(id)sender;
+- (void)applyCard:(int)card_Id;
 
 @end

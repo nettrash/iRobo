@@ -36,7 +36,7 @@
     _fromBackground = NO;
     _needToProcessLaunchURL = NO;
     _launchURL = nil;
-    _waitingView_iPhone = [[WaitingViewController_iPhone alloc] initWithNibName:@"WaitingViewController_iPhone" bundle:nil];
+    _waitingView_iPhone = [[WaitingViewController_iPhone alloc] initWithNibName:(IS_IPHONE_5 ? @"WaitingViewController_iPhone" : @"WaitingViewController_iPhone4") bundle:nil];
     _checkPasswordView_iPhone = [[CheckPasswordViewController_iPhone alloc] initWithNibName:@"CheckPasswordViewController_iPhone" bundle:nil andDelegate:self];
     _noInternetConnectionView_iPhone = [[NoInternetConnectionViewController_iPhone alloc] initWithNibName:@"NoInternetConnectionViewController_iPhone" bundle:nil];
     _nowWaiting = NO;

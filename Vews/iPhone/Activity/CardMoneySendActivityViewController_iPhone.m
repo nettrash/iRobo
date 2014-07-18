@@ -216,6 +216,22 @@
     self.cvcView.delegate = self;
     [self.doneButton removeTarget:self action:@selector(btnDone_Click:) forControlEvents:UIControlEventTouchUpInside];
     [self.doneButton addTarget:self.cvcView action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:YES animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = NO;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = NO;
+    switch (_formType) {
+        case MoneySendFormTypeTransferBetween: {
+            svcCard *c = (svcCard *)[self.cards objectAtIndex:[self.pvCards selectedRowInComponent:0]];
+            [self.cvcView applyCard:c.card_Id];
+            break;
+        }
+        case MoneySendFormTypeSendOutside: {
+            [self.cvcView applyCard:self.card.card_Id];
+            break;
+        }
+        default:
+            break;
+    }
     [self.cvcView performSelector:@selector(addToViewController:) withObject:self afterDelay:.1];
 }
 
@@ -466,10 +482,14 @@
 
 -(void)finishEnterCVC:(UIViewController *)controller cvcEntered:(BOOL)cvcEntered cvcValue:(NSString*)cvcValue
 {
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
+    _needToShowDoneButton = NO;
+    [self removeDoneButtonFromNumberPadKeyboard];
+    
     if (cvcEntered)
     {
-        _needToShowDoneButton = NO;
-
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];
         
         [UIView animateWithDuration:0.5
@@ -494,6 +514,16 @@
     {
         [self performSelector:@selector(btnClose_Click:) withObject:nil afterDelay:.1];
     }
+}
+
+- (void)cancelEnterCVC:(UIViewController *)controller
+{
+    [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
+    self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
+    _needToShowDoneButton = NO;
+    [self removeDoneButtonFromNumberPadKeyboard];
+    [self performSelector:@selector(btnClose_Click:) withObject:nil afterDelay:.1];
 }
 
 #pragma mark - UIWebViewDelegate
