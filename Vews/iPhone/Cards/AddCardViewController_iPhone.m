@@ -479,7 +479,7 @@
         case 1: {
             NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar/*NSCalendarIdentifierGregorian*/];
             NSDateComponents *components = [calendar components:NSCalendarUnitYear fromDate:[NSDate date]];
-            return [NSString stringWithFormat:@"%i", [components year] + row];
+            return [NSString stringWithFormat:@"%li", (long)([components year] + row)];
         }
         default:
             return @"";

@@ -84,11 +84,11 @@
     UIImage *imgToPost = [UIImage imageNamed:@"ROBOKASSA.png"];
     NSURL *urlToPost = [NSURL URLWithString:@"http://www.robokassa.ru"];
     
-    NSString *dateStr = [[self.operation.op_RegDate operationDate] lowercaseString];
+    //NSString *dateStr = [[self.operation.op_RegDate operationDate] lowercaseString];
     NSString *agentStr = [self.operation.currName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([agentStr hasPrefix:@"RUR "])
         agentStr = [agentStr substringFromIndex:4];
-    NSString *summaStr = [self.operation.op_Sum numberWithCurrency];
+    //NSString *summaStr = [self.operation.op_Sum numberWithCurrency];
     NSString *stateStr = NSLocalizedString(@"OpInProgress", @"OpInProgress");
     
     if ([self.operation.process isEqualToString:@"Done"])

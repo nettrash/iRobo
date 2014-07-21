@@ -447,7 +447,7 @@
                 identifier = @"CheckPayParameterRefreshing";
             }
             else {
-                identifier = [NSString stringWithFormat:@"CheckPay_%i_%i", _selectedCurrency, indexPath.row];
+                identifier = [NSString stringWithFormat:@"CheckPay_%i_%li", _selectedCurrency, (long)indexPath.row];
             }
             break;
         default:
@@ -592,7 +592,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    _selectedCurrency = row - 1;
+    _selectedCurrency = (int)row - 1;
     switch (row) {
         case 0:
             self.tfMethod.text = NSLocalizedString(@"CheckPay_PayMethod_Card", @"CheckPay_PayMethod_Card");
