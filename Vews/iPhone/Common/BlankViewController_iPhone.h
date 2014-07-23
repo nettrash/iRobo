@@ -10,7 +10,7 @@
 #import "OperationBlankDelegate.h"
 #import "svcHistoryOperation.h"
 
-@interface BlankViewController_iPhone : UIViewController
+@interface BlankViewController_iPhone : UIViewController <UIGestureRecognizerDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, retain) id<OperationBlankDelegate> delegate;
 

@@ -69,7 +69,7 @@
     
     [mailController setSubject:NSLocalizedString(@"MailSubject_OceanSupport", @"MailSubject_OceanSupport")];
     [mailController setMessageBody:NSLocalizedString(@"MailBody_OceanSupport", @"MailBody_OceanSupport") isHTML:YES];
-    [mailController setToRecipients:[NSArray arrayWithObject:@"support@oceanbank.ru"]];
+    [mailController setToRecipients:[NSArray arrayWithObject:@"help@oceanbank.ru"]];
     
     mailController.mailComposeDelegate = self;
     

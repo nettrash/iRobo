@@ -119,7 +119,7 @@
 "RegisterCard_Error_Message" = "Мне не удалось зарегистрировать карту :( Попробуй ещё раз...";
 "AuthorizeCard_Title" = "АВТОРИЗАЦИЯ КАРТЫ";
 "CardDetail_NeedToAuthorize" = "АВТОРИЗУЙ МЕНЯ И Я ТЕБЕ ЕЩЁ ПРИГОЖУСЬ";
-"MailBody_OceanSupport" = "<h3>Доброго дня, любимый мой банк.</h3><p>Я охреневаю, дорогая редакция, хотя пишу вам в первый раз...</p><p>Пока ещё с уважением, <br/>твой клиент.</p>";
+"MailBody_OceanSupport" = "<h3>Доброго дня, любимый мой банк.</h3><p>[ТЕКСТ ОБРАЩЕНИЯ]</p><p>С уважением, <br/>твой преданный клиент.</p>";
 "Activity_Card_Authorize_Title" = "Докажи что твоя";
 "CardRemove_Wait_Message" = "Удаляю карту...";
 "RemoveCardFail_Title" = "Удаляла карту";

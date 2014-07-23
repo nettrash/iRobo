@@ -11,9 +11,14 @@
 @interface BlankViewController_iPhone ()
 
 @property (nonatomic, retain) svcHistoryOperation *operation;
-@property (nonatomic, retain) IBOutlet UIImageView *imgBlank;
+@property (nonatomic, strong) UIImageView *imgBlank;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *aiWait;
 @property (nonatomic, retain) IBOutlet UILabel *lblInfo;
+@property (nonatomic, retain) IBOutlet UIScrollView *svImage;
+
+- (void)centerScrollViewContents;
+- (void)scrollViewDoubleTapped:(UITapGestureRecognizer*)recognizer;
+- (void)scrollViewTwoFingerTapped:(UITapGestureRecognizer*)recognizer;
 
 @end
 
@@ -24,6 +29,7 @@
 @synthesize imgBlank = _imgBlank;
 @synthesize aiWait = _aiWait;
 @synthesize lblInfo = _lblInfo;
+@synthesize svImage = _svImage;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withOperation:(svcHistoryOperation *)op
 {
@@ -51,11 +57,16 @@
     [super didReceiveMemoryWarning];
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
 - (void)getBlank:(id)sender
 {
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://misc.roboxchange.com/External/iPhone/blank.ashx?OpKey=%@", self.operation.op_Key]]];
-    self.imgBlank.image = [UIImage imageWithData:data];
-    if (self.imgBlank.image == nil)
+    UIImage *blankImage = [UIImage imageWithData:data];
+    if (blankImage == nil)
     {
         self.lblInfo.text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     }
@@ -63,8 +74,90 @@
     {
         self.lblInfo.hidden = YES;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(saveToPhoto:)];
+
+        self.imgBlank = [[UIImageView alloc] initWithImage:blankImage];
+        self.imgBlank.frame = (CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=blankImage.size};
+        [self.imgBlank setContentMode:UIViewContentModeTopLeft];
+        [self.svImage addSubview:self.imgBlank];
+        
+        self.svImage.contentSize = blankImage.size;
+        
+        UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewDoubleTapped:)];
+        doubleTapRecognizer.numberOfTapsRequired = 2;
+        doubleTapRecognizer.numberOfTouchesRequired = 1;
+        [self.svImage addGestureRecognizer:doubleTapRecognizer];
+        
+        UITapGestureRecognizer *twoFingerTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewTwoFingerTapped:)];
+        twoFingerTapRecognizer.numberOfTapsRequired = 1;
+        twoFingerTapRecognizer.numberOfTouchesRequired = 2;
+        [self.svImage addGestureRecognizer:twoFingerTapRecognizer];
+        
+        UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewPinchDetected:)];
+        [self.svImage addGestureRecognizer:pinchRecognizer];
+    
+        CGRect scrollViewFrame = self.svImage.frame;
+        CGFloat scaleWidth = scrollViewFrame.size.width / self.svImage.contentSize.width;
+        CGFloat scaleHeight = scrollViewFrame.size.height / self.svImage.contentSize.height;
+        CGFloat minScale = MIN(scaleWidth, scaleHeight);
+        self.svImage.minimumZoomScale = minScale;
+        
+        self.svImage.maximumZoomScale = 3.0f;
+        self.svImage.zoomScale = minScale;
+        
+        [self centerScrollViewContents];
     }
     [self.aiWait stopAnimating];
+}
+
+- (void)centerScrollViewContents
+{
+    CGSize boundsSize = self.svImage.bounds.size;
+    CGRect contentsFrame = self.imgBlank.frame;
+    
+    if (contentsFrame.size.width < boundsSize.width) {
+        contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0f;
+    } else {
+        contentsFrame.origin.x = 0.0f;
+    }
+    
+    if (contentsFrame.size.height < boundsSize.height) {
+        contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2.0f;
+    } else {
+        contentsFrame.origin.y = 0.0f;
+    }
+    
+    self.imgBlank.frame = contentsFrame;
+}
+
+- (void)scrollViewDoubleTapped:(UITapGestureRecognizer*)recognizer
+{
+    CGPoint pointInView = [recognizer locationInView:self.imgBlank];
+    
+    CGFloat newZoomScale = self.svImage.zoomScale * 1.5f;
+    newZoomScale = MIN(newZoomScale, self.svImage.maximumZoomScale);
+    
+    CGSize scrollViewSize = self.svImage.bounds.size;
+    
+    CGFloat w = scrollViewSize.width / newZoomScale;
+    CGFloat h = scrollViewSize.height / newZoomScale;
+    CGFloat x = pointInView.x - (w / 2.0f);
+    CGFloat y = pointInView.y - (h / 2.0f);
+    
+    CGRect rectToZoomTo = CGRectMake(x, y, w, h);
+    
+    [self.svImage zoomToRect:rectToZoomTo animated:YES];
+}
+
+- (void)scrollViewTwoFingerTapped:(UITapGestureRecognizer *)recognizer
+{
+    CGFloat newZoomScale = self.svImage.zoomScale / 1.5f;
+    newZoomScale = MAX(newZoomScale, self.svImage.minimumZoomScale);
+    [self.svImage setZoomScale:newZoomScale animated:YES];
+}
+
+- (void)scrollViewPinchDetected:(UIPinchGestureRecognizer *)recognizer
+{
+    [self.svImage setZoomScale:[recognizer scale] animated:YES];
 }
 
 - (void)saveToPhoto:(id)sender
@@ -94,5 +187,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma marj UIScrollViewDelegate
+
+- (UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.imgBlank;
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    [self centerScrollViewContents];
+}
 
 @end
