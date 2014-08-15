@@ -28,7 +28,6 @@
     NSDecimalNumber *_summa;
     NSArray *_availibleSumms;
     BOOL _keyboardIsShowing;
-    BOOL _needToShowDoneButton;
     NSString *_opKey;
     NSString *_cvc;
     ComissionViewController_iPhone *_comissionViewController;
@@ -39,8 +38,5 @@
 - (void)keyboardWillShow:(NSNotification *)note;
 - (void)keyboardDidShow:(NSNotification *)note;
 - (void)keyboardWillHide:(NSNotification *)note;
-
-- (void)addDoneButtonToNumberPadKeyboard;
-- (void)removeDoneButtonFromNumberPadKeyboard;
 
 @end

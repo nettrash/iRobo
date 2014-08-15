@@ -21,7 +21,6 @@
 @property (nonatomic, retain) id<CardAuthorizeViewControllerDelegate> delegate;
 @property (nonatomic) int card_Id;
 @property (nonatomic) BOOL card_InAuthorize;
-@property (nonatomic, retain) UIButton *doneButton;
 @property (nonatomic, retain) UIWebView *wv3D;
 
 @end

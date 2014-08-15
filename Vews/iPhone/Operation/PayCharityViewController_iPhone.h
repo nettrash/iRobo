@@ -22,7 +22,6 @@
 
     BOOL _keyboardIsShowing;
     NSNumber *_keyboardHeight;
-    BOOL _needToShowDoneButton;
     
     svcCard *_card;
     NSString *_cvc;

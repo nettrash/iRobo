@@ -19,6 +19,7 @@
 #import "UIViewController+KeyboardExtensions.h"
 #import "CardsViewController_iPhone.h"
 #import "NSURL+Parameters.h"
+#import "Vars.h"
 
 @implementation AppDelegate
 
@@ -417,6 +418,49 @@
     self.vBlur = nil;
 }
 
+#pragma mark - Vars
+
+- (void)varSet:(NSString *)label value:(NSString *)value
+{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Vars" inManagedObjectContext:[self managedObjectContext]];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(label LIKE[c] %@)", label];
+    [request setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *array = [[self managedObjectContext] executeFetchRequest:request error:&error];
+    if (array == nil || [array count] == 0) {
+        Vars *v = [NSEntityDescription insertNewObjectForEntityForName:@"Vars" inManagedObjectContext:[self managedObjectContext]];
+        v.label = label;
+        v.value = value;
+    } else {
+        Vars *v = (Vars *)[array objectAtIndex:0];
+        v.value = value;
+    }
+    [self saveContext];
+}
+
+- (NSString *)varGet:(NSString *)label
+{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Vars" inManagedObjectContext:[self managedObjectContext]];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(label LIKE[c] %@)", label];
+    [request setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *array = [[self managedObjectContext] executeFetchRequest:request error:&error];
+    if (array == nil)
+        return nil;
+    else {
+        if ([array count] == 0) {
+            return nil;
+        } else {
+            Vars *v = (Vars *)[array objectAtIndex:0];
+            return v.value;
+        }
+    }
+}
+
 #pragma mark - Core Data stack
 
 // Returns the managed object context for the application.
@@ -459,7 +503,7 @@
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:@{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES} error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          

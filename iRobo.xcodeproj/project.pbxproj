@@ -392,6 +392,56 @@
 		E556D8C31907B9A5002BD048 /* NSString+RegEx.m in Sources */ = {isa = PBXBuildFile; fileRef = E556D8C21907B9A5002BD048 /* NSString+RegEx.m */; };
 		E556D8C81907DD67002BD048 /* OperationStateViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E556D8C61907DD67002BD048 /* OperationStateViewController_iPhone.m */; };
 		E556D8C91907DD67002BD048 /* OperationStateViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E556D8C71907DD67002BD048 /* OperationStateViewController_iPhone.xib */; };
+		E577855C19810173007B0716 /* NumberPad0.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854419810173007B0716 /* NumberPad0.png */; };
+		E577855D19810173007B0716 /* NumberPad0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854519810173007B0716 /* NumberPad0@2x.png */; };
+		E577855E19810173007B0716 /* NumberPad1.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854619810173007B0716 /* NumberPad1.png */; };
+		E577855F19810173007B0716 /* NumberPad1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854719810173007B0716 /* NumberPad1@2x.png */; };
+		E577856019810173007B0716 /* NumberPad2.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854819810173007B0716 /* NumberPad2.png */; };
+		E577856119810173007B0716 /* NumberPad2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854919810173007B0716 /* NumberPad2@2x.png */; };
+		E577856219810173007B0716 /* NumberPad3.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854A19810173007B0716 /* NumberPad3.png */; };
+		E577856319810173007B0716 /* NumberPad3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854B19810173007B0716 /* NumberPad3@2x.png */; };
+		E577856419810173007B0716 /* NumberPad4.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854C19810173007B0716 /* NumberPad4.png */; };
+		E577856519810173007B0716 /* NumberPad4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854D19810173007B0716 /* NumberPad4@2x.png */; };
+		E577856619810173007B0716 /* NumberPad5.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854E19810173007B0716 /* NumberPad5.png */; };
+		E577856719810173007B0716 /* NumberPad5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577854F19810173007B0716 /* NumberPad5@2x.png */; };
+		E577856819810173007B0716 /* NumberPad6.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855019810173007B0716 /* NumberPad6.png */; };
+		E577856919810173007B0716 /* NumberPad6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855119810173007B0716 /* NumberPad6@2x.png */; };
+		E577856A19810173007B0716 /* NumberPad7.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855219810173007B0716 /* NumberPad7.png */; };
+		E577856B19810173007B0716 /* NumberPad7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855319810173007B0716 /* NumberPad7@2x.png */; };
+		E577856C19810173007B0716 /* NumberPad8.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855419810173007B0716 /* NumberPad8.png */; };
+		E577856D19810173007B0716 /* NumberPad8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855519810173007B0716 /* NumberPad8@2x.png */; };
+		E577856E19810173007B0716 /* NumberPad9.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855619810173007B0716 /* NumberPad9.png */; };
+		E577856F19810173007B0716 /* NumberPad9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855719810173007B0716 /* NumberPad9@2x.png */; };
+		E577857019810173007B0716 /* NumberPadDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855819810173007B0716 /* NumberPadDelete.png */; };
+		E577857119810173007B0716 /* NumberPadDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855919810173007B0716 /* NumberPadDelete@2x.png */; };
+		E577857219810173007B0716 /* NumberPadOK.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855A19810173007B0716 /* NumberPadOK.png */; };
+		E577857319810173007B0716 /* NumberPadOK@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577855B19810173007B0716 /* NumberPadOK@2x.png */; };
+		E5778577198101A7007B0716 /* NumberPadViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E5778575198101A7007B0716 /* NumberPadViewController_iPhone.m */; };
+		E5778578198101A7007B0716 /* NumberPadViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5778576198101A7007B0716 /* NumberPadViewController_iPhone.xib */; };
+		E577859319811E9A007B0716 /* FlatNumberPad0.png in Resources */ = {isa = PBXBuildFile; fileRef = E577857B19811E9A007B0716 /* FlatNumberPad0.png */; };
+		E577859419811E9A007B0716 /* FlatNumberPad0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577857C19811E9A007B0716 /* FlatNumberPad0@2x.png */; };
+		E577859519811E9A007B0716 /* FlatNumberPad1.png in Resources */ = {isa = PBXBuildFile; fileRef = E577857D19811E9A007B0716 /* FlatNumberPad1.png */; };
+		E577859619811E9A007B0716 /* FlatNumberPad1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577857E19811E9A007B0716 /* FlatNumberPad1@2x.png */; };
+		E577859719811E9A007B0716 /* FlatNumberPad2.png in Resources */ = {isa = PBXBuildFile; fileRef = E577857F19811E9A007B0716 /* FlatNumberPad2.png */; };
+		E577859819811E9A007B0716 /* FlatNumberPad2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858019811E9A007B0716 /* FlatNumberPad2@2x.png */; };
+		E577859919811E9A007B0716 /* FlatNumberPad3.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858119811E9A007B0716 /* FlatNumberPad3.png */; };
+		E577859A19811E9A007B0716 /* FlatNumberPad3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858219811E9A007B0716 /* FlatNumberPad3@2x.png */; };
+		E577859B19811E9A007B0716 /* FlatNumberPad4.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858319811E9A007B0716 /* FlatNumberPad4.png */; };
+		E577859C19811E9A007B0716 /* FlatNumberPad4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858419811E9A007B0716 /* FlatNumberPad4@2x.png */; };
+		E577859D19811E9A007B0716 /* FlatNumberPad5.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858519811E9A007B0716 /* FlatNumberPad5.png */; };
+		E577859E19811E9A007B0716 /* FlatNumberPad5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858619811E9A007B0716 /* FlatNumberPad5@2x.png */; };
+		E577859F19811E9A007B0716 /* FlatNumberPad6.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858719811E9A007B0716 /* FlatNumberPad6.png */; };
+		E57785A019811E9A007B0716 /* FlatNumberPad6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858819811E9A007B0716 /* FlatNumberPad6@2x.png */; };
+		E57785A119811E9A007B0716 /* FlatNumberPad7.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858919811E9A007B0716 /* FlatNumberPad7.png */; };
+		E57785A219811E9A007B0716 /* FlatNumberPad7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858A19811E9A007B0716 /* FlatNumberPad7@2x.png */; };
+		E57785A319811E9A007B0716 /* FlatNumberPad8.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858B19811E9A007B0716 /* FlatNumberPad8.png */; };
+		E57785A419811E9A007B0716 /* FlatNumberPad8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858C19811E9A007B0716 /* FlatNumberPad8@2x.png */; };
+		E57785A519811E9A007B0716 /* FlatNumberPad9.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858D19811E9A007B0716 /* FlatNumberPad9.png */; };
+		E57785A619811E9A007B0716 /* FlatNumberPad9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858E19811E9A007B0716 /* FlatNumberPad9@2x.png */; };
+		E57785A719811E9A007B0716 /* FlatNumberPadDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = E577858F19811E9A007B0716 /* FlatNumberPadDelete.png */; };
+		E57785A819811E9A007B0716 /* FlatNumberPadDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577859019811E9A007B0716 /* FlatNumberPadDelete@2x.png */; };
+		E57785A919811E9A007B0716 /* FlatNumberPadOK.png in Resources */ = {isa = PBXBuildFile; fileRef = E577859119811E9A007B0716 /* FlatNumberPadOK.png */; };
+		E57785AA19811E9A007B0716 /* FlatNumberPadOK@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E577859219811E9A007B0716 /* FlatNumberPadOK@2x.png */; };
 		E599E98A18E760980019A74E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E599E98818E760980019A74E /* InfoPlist.strings */; };
 		E599E98C18E760980019A74E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E599E98B18E760980019A74E /* main.m */; };
 		E599E99018E760980019A74E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E599E98F18E760980019A74E /* AppDelegate.m */; };
@@ -555,6 +605,9 @@
 		E599ED4B18F5BFB00019A74E /* Success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E599ED4518F5BFB00019A74E /* Success@2x.png */; };
 		E599ED4E18F5F7600019A74E /* WWW.png in Resources */ = {isa = PBXBuildFile; fileRef = E599ED4C18F5F7600019A74E /* WWW.png */; };
 		E599ED4F18F5F7600019A74E /* WWW@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E599ED4D18F5F7600019A74E /* WWW@2x.png */; };
+		E5AEA70C1990DFFE00F44A96 /* QiwiS265.png in Resources */ = {isa = PBXBuildFile; fileRef = E5AEA70A1990DFFE00F44A96 /* QiwiS265.png */; };
+		E5AEA70D1990DFFE00F44A96 /* QiwiS265@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5AEA70B1990DFFE00F44A96 /* QiwiS265@2x.png */; };
+		E5AEA7131990F57F00F44A96 /* Vars.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AEA7121990F57F00F44A96 /* Vars.m */; };
 		E5B6F572190AA34A00EAA3C4 /* PhoneIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B6F570190AA34A00EAA3C4 /* PhoneIcon.png */; };
 		E5B6F573190AA34A00EAA3C4 /* PhoneIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B6F571190AA34A00EAA3C4 /* PhoneIcon@2x.png */; };
 		E5B6F576190AA54C00EAA3C4 /* EMailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B6F574190AA54C00EAA3C4 /* EMailIcon.png */; };
@@ -1379,6 +1432,57 @@
 		E556D8C51907DD67002BD048 /* OperationStateViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OperationStateViewController_iPhone.h; path = Vews/iPhone/Operation/OperationStateViewController_iPhone.h; sourceTree = "<group>"; };
 		E556D8C61907DD67002BD048 /* OperationStateViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OperationStateViewController_iPhone.m; path = Vews/iPhone/Operation/OperationStateViewController_iPhone.m; sourceTree = "<group>"; };
 		E556D8C71907DD67002BD048 /* OperationStateViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OperationStateViewController_iPhone.xib; path = Vews/iPhone/Operation/OperationStateViewController_iPhone.xib; sourceTree = "<group>"; };
+		E577854419810173007B0716 /* NumberPad0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad0.png; sourceTree = "<group>"; };
+		E577854519810173007B0716 /* NumberPad0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad0@2x.png"; sourceTree = "<group>"; };
+		E577854619810173007B0716 /* NumberPad1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad1.png; sourceTree = "<group>"; };
+		E577854719810173007B0716 /* NumberPad1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad1@2x.png"; sourceTree = "<group>"; };
+		E577854819810173007B0716 /* NumberPad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad2.png; sourceTree = "<group>"; };
+		E577854919810173007B0716 /* NumberPad2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad2@2x.png"; sourceTree = "<group>"; };
+		E577854A19810173007B0716 /* NumberPad3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad3.png; sourceTree = "<group>"; };
+		E577854B19810173007B0716 /* NumberPad3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad3@2x.png"; sourceTree = "<group>"; };
+		E577854C19810173007B0716 /* NumberPad4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad4.png; sourceTree = "<group>"; };
+		E577854D19810173007B0716 /* NumberPad4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad4@2x.png"; sourceTree = "<group>"; };
+		E577854E19810173007B0716 /* NumberPad5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad5.png; sourceTree = "<group>"; };
+		E577854F19810173007B0716 /* NumberPad5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad5@2x.png"; sourceTree = "<group>"; };
+		E577855019810173007B0716 /* NumberPad6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad6.png; sourceTree = "<group>"; };
+		E577855119810173007B0716 /* NumberPad6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad6@2x.png"; sourceTree = "<group>"; };
+		E577855219810173007B0716 /* NumberPad7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad7.png; sourceTree = "<group>"; };
+		E577855319810173007B0716 /* NumberPad7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad7@2x.png"; sourceTree = "<group>"; };
+		E577855419810173007B0716 /* NumberPad8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad8.png; sourceTree = "<group>"; };
+		E577855519810173007B0716 /* NumberPad8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad8@2x.png"; sourceTree = "<group>"; };
+		E577855619810173007B0716 /* NumberPad9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPad9.png; sourceTree = "<group>"; };
+		E577855719810173007B0716 /* NumberPad9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPad9@2x.png"; sourceTree = "<group>"; };
+		E577855819810173007B0716 /* NumberPadDelete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPadDelete.png; sourceTree = "<group>"; };
+		E577855919810173007B0716 /* NumberPadDelete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPadDelete@2x.png"; sourceTree = "<group>"; };
+		E577855A19810173007B0716 /* NumberPadOK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NumberPadOK.png; sourceTree = "<group>"; };
+		E577855B19810173007B0716 /* NumberPadOK@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NumberPadOK@2x.png"; sourceTree = "<group>"; };
+		E5778574198101A7007B0716 /* NumberPadViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberPadViewController_iPhone.h; path = Vews/iPhone/Common/NumberPadViewController_iPhone.h; sourceTree = "<group>"; };
+		E5778575198101A7007B0716 /* NumberPadViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberPadViewController_iPhone.m; path = Vews/iPhone/Common/NumberPadViewController_iPhone.m; sourceTree = "<group>"; };
+		E5778576198101A7007B0716 /* NumberPadViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumberPadViewController_iPhone.xib; path = Vews/iPhone/Common/NumberPadViewController_iPhone.xib; sourceTree = "<group>"; };
+		E577857B19811E9A007B0716 /* FlatNumberPad0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad0.png; sourceTree = "<group>"; };
+		E577857C19811E9A007B0716 /* FlatNumberPad0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad0@2x.png"; sourceTree = "<group>"; };
+		E577857D19811E9A007B0716 /* FlatNumberPad1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad1.png; sourceTree = "<group>"; };
+		E577857E19811E9A007B0716 /* FlatNumberPad1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad1@2x.png"; sourceTree = "<group>"; };
+		E577857F19811E9A007B0716 /* FlatNumberPad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad2.png; sourceTree = "<group>"; };
+		E577858019811E9A007B0716 /* FlatNumberPad2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad2@2x.png"; sourceTree = "<group>"; };
+		E577858119811E9A007B0716 /* FlatNumberPad3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad3.png; sourceTree = "<group>"; };
+		E577858219811E9A007B0716 /* FlatNumberPad3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad3@2x.png"; sourceTree = "<group>"; };
+		E577858319811E9A007B0716 /* FlatNumberPad4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad4.png; sourceTree = "<group>"; };
+		E577858419811E9A007B0716 /* FlatNumberPad4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad4@2x.png"; sourceTree = "<group>"; };
+		E577858519811E9A007B0716 /* FlatNumberPad5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad5.png; sourceTree = "<group>"; };
+		E577858619811E9A007B0716 /* FlatNumberPad5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad5@2x.png"; sourceTree = "<group>"; };
+		E577858719811E9A007B0716 /* FlatNumberPad6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad6.png; sourceTree = "<group>"; };
+		E577858819811E9A007B0716 /* FlatNumberPad6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad6@2x.png"; sourceTree = "<group>"; };
+		E577858919811E9A007B0716 /* FlatNumberPad7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad7.png; sourceTree = "<group>"; };
+		E577858A19811E9A007B0716 /* FlatNumberPad7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad7@2x.png"; sourceTree = "<group>"; };
+		E577858B19811E9A007B0716 /* FlatNumberPad8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad8.png; sourceTree = "<group>"; };
+		E577858C19811E9A007B0716 /* FlatNumberPad8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad8@2x.png"; sourceTree = "<group>"; };
+		E577858D19811E9A007B0716 /* FlatNumberPad9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPad9.png; sourceTree = "<group>"; };
+		E577858E19811E9A007B0716 /* FlatNumberPad9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPad9@2x.png"; sourceTree = "<group>"; };
+		E577858F19811E9A007B0716 /* FlatNumberPadDelete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPadDelete.png; sourceTree = "<group>"; };
+		E577859019811E9A007B0716 /* FlatNumberPadDelete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPadDelete@2x.png"; sourceTree = "<group>"; };
+		E577859119811E9A007B0716 /* FlatNumberPadOK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlatNumberPadOK.png; sourceTree = "<group>"; };
+		E577859219811E9A007B0716 /* FlatNumberPadOK@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FlatNumberPadOK@2x.png"; sourceTree = "<group>"; };
 		E585CD37197D634700CA4BE3 /* iRoboDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iRoboDev.entitlements; sourceTree = "<group>"; };
 		E599E98018E760980019A74E /* iRoboDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRoboDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E599E98718E760980019A74E /* iRoboDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRoboDev-Info.plist"; sourceTree = "<group>"; };
@@ -1461,6 +1565,11 @@
 		E599ED4518F5BFB00019A74E /* Success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Success@2x.png"; path = "Content/Common/Success@2x.png"; sourceTree = "<group>"; };
 		E599ED4C18F5F7600019A74E /* WWW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WWW.png; path = Content/Common/WWW.png; sourceTree = "<group>"; };
 		E599ED4D18F5F7600019A74E /* WWW@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WWW@2x.png"; path = "Content/Common/WWW@2x.png"; sourceTree = "<group>"; };
+		E5AEA70A1990DFFE00F44A96 /* QiwiS265.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QiwiS265.png; sourceTree = "<group>"; };
+		E5AEA70B1990DFFE00F44A96 /* QiwiS265@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QiwiS265@2x.png"; sourceTree = "<group>"; };
+		E5AEA7101990E5CA00F44A96 /* iRoboDev 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "iRoboDev 4.xcdatamodel"; sourceTree = "<group>"; };
+		E5AEA7111990F57F00F44A96 /* Vars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vars.h; path = DataModel/Vars.h; sourceTree = "<group>"; };
+		E5AEA7121990F57F00F44A96 /* Vars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vars.m; path = DataModel/Vars.m; sourceTree = "<group>"; };
 		E5B6F570190AA34A00EAA3C4 /* PhoneIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhoneIcon.png; path = Content/iPhone/PhoneIcon.png; sourceTree = "<group>"; };
 		E5B6F571190AA34A00EAA3C4 /* PhoneIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PhoneIcon@2x.png"; path = "Content/iPhone/PhoneIcon@2x.png"; sourceTree = "<group>"; };
 		E5B6F574190AA54C00EAA3C4 /* EMailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EMailIcon.png; path = Content/iPhone/EMailIcon.png; sourceTree = "<group>"; };
@@ -2081,6 +2190,7 @@
 		E50E657718E2D0F900D9883F /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				E577854319810173007B0716 /* NumberPadKeys */,
 				E5D96057192A7B44008AD81B /* OCEANComission.png */,
 				E5D96058192A7B44008AD81B /* OCEANComission@2x.png */,
 				E5B6F67C1923898900EAA3C4 /* iPhoneAppIcon.png */,
@@ -2245,6 +2355,70 @@
 			name = Operation;
 			sourceTree = "<group>";
 		};
+		E577854319810173007B0716 /* NumberPadKeys */ = {
+			isa = PBXGroup;
+			children = (
+				E577857A19811E9A007B0716 /* Flat */,
+				E577854419810173007B0716 /* NumberPad0.png */,
+				E577854519810173007B0716 /* NumberPad0@2x.png */,
+				E577854619810173007B0716 /* NumberPad1.png */,
+				E577854719810173007B0716 /* NumberPad1@2x.png */,
+				E577854819810173007B0716 /* NumberPad2.png */,
+				E577854919810173007B0716 /* NumberPad2@2x.png */,
+				E577854A19810173007B0716 /* NumberPad3.png */,
+				E577854B19810173007B0716 /* NumberPad3@2x.png */,
+				E577854C19810173007B0716 /* NumberPad4.png */,
+				E577854D19810173007B0716 /* NumberPad4@2x.png */,
+				E577854E19810173007B0716 /* NumberPad5.png */,
+				E577854F19810173007B0716 /* NumberPad5@2x.png */,
+				E577855019810173007B0716 /* NumberPad6.png */,
+				E577855119810173007B0716 /* NumberPad6@2x.png */,
+				E577855219810173007B0716 /* NumberPad7.png */,
+				E577855319810173007B0716 /* NumberPad7@2x.png */,
+				E577855419810173007B0716 /* NumberPad8.png */,
+				E577855519810173007B0716 /* NumberPad8@2x.png */,
+				E577855619810173007B0716 /* NumberPad9.png */,
+				E577855719810173007B0716 /* NumberPad9@2x.png */,
+				E577855819810173007B0716 /* NumberPadDelete.png */,
+				E577855919810173007B0716 /* NumberPadDelete@2x.png */,
+				E577855A19810173007B0716 /* NumberPadOK.png */,
+				E577855B19810173007B0716 /* NumberPadOK@2x.png */,
+			);
+			name = NumberPadKeys;
+			path = Content/iPhone/NumberPadKeys;
+			sourceTree = "<group>";
+		};
+		E577857A19811E9A007B0716 /* Flat */ = {
+			isa = PBXGroup;
+			children = (
+				E577857B19811E9A007B0716 /* FlatNumberPad0.png */,
+				E577857C19811E9A007B0716 /* FlatNumberPad0@2x.png */,
+				E577857D19811E9A007B0716 /* FlatNumberPad1.png */,
+				E577857E19811E9A007B0716 /* FlatNumberPad1@2x.png */,
+				E577857F19811E9A007B0716 /* FlatNumberPad2.png */,
+				E577858019811E9A007B0716 /* FlatNumberPad2@2x.png */,
+				E577858119811E9A007B0716 /* FlatNumberPad3.png */,
+				E577858219811E9A007B0716 /* FlatNumberPad3@2x.png */,
+				E577858319811E9A007B0716 /* FlatNumberPad4.png */,
+				E577858419811E9A007B0716 /* FlatNumberPad4@2x.png */,
+				E577858519811E9A007B0716 /* FlatNumberPad5.png */,
+				E577858619811E9A007B0716 /* FlatNumberPad5@2x.png */,
+				E577858719811E9A007B0716 /* FlatNumberPad6.png */,
+				E577858819811E9A007B0716 /* FlatNumberPad6@2x.png */,
+				E577858919811E9A007B0716 /* FlatNumberPad7.png */,
+				E577858A19811E9A007B0716 /* FlatNumberPad7@2x.png */,
+				E577858B19811E9A007B0716 /* FlatNumberPad8.png */,
+				E577858C19811E9A007B0716 /* FlatNumberPad8@2x.png */,
+				E577858D19811E9A007B0716 /* FlatNumberPad9.png */,
+				E577858E19811E9A007B0716 /* FlatNumberPad9@2x.png */,
+				E577858F19811E9A007B0716 /* FlatNumberPadDelete.png */,
+				E577859019811E9A007B0716 /* FlatNumberPadDelete@2x.png */,
+				E577859119811E9A007B0716 /* FlatNumberPadOK.png */,
+				E577859219811E9A007B0716 /* FlatNumberPadOK@2x.png */,
+			);
+			path = Flat;
+			sourceTree = "<group>";
+		};
 		E599E98518E760980019A74E /* iRoboDev */ = {
 			isa = PBXGroup;
 			children = (
@@ -2301,6 +2475,8 @@
 				E599EA1D18E76AE30019A74E /* UserProfileEntity.m */,
 				E5BEB1A51976F98500CE1231 /* LocalCard.h */,
 				E5BEB1A61976F98500CE1231 /* LocalCard.m */,
+				E5AEA7111990F57F00F44A96 /* Vars.h */,
+				E5AEA7121990F57F00F44A96 /* Vars.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -2520,6 +2696,8 @@
 		E5B6F61F191A631A00EAA3C4 /* Currencies */ = {
 			isa = PBXGroup;
 			children = (
+				E5AEA70A1990DFFE00F44A96 /* QiwiS265.png */,
+				E5AEA70B1990DFFE00F44A96 /* QiwiS265@2x.png */,
 				E51FFEFE196ADD060025F5A6 /* QiwiS3075.png */,
 				E51FFEFF196ADD060025F5A6 /* QiwiS3075@2x.png */,
 				E51FFF00196ADD060025F5A6 /* QiwiS3076.png */,
@@ -3016,6 +3194,9 @@
 				E5EEC4741974126B00409E80 /* QRViewController_iPhone.h */,
 				E5EEC4751974126B00409E80 /* QRViewController_iPhone.m */,
 				E5EEC4761974126B00409E80 /* QRViewController_iPhone.xib */,
+				E5778574198101A7007B0716 /* NumberPadViewController_iPhone.h */,
+				E5778575198101A7007B0716 /* NumberPadViewController_iPhone.m */,
+				E5778576198101A7007B0716 /* NumberPadViewController_iPhone.xib */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -3380,10 +3561,12 @@
 				E5F58E391977C8DB00A286A7 /* welcome59.m4a in Resources */,
 				E52A78FE19657C920038FA65 /* HistoryBlankActivityMiniIcon@2x.png in Resources */,
 				E5DA38341976F0F50028DDE5 /* welcome4.m4a in Resources */,
+				E57785A719811E9A007B0716 /* FlatNumberPadDelete.png in Resources */,
 				E51FFEEB196AC9DB0025F5A6 /* QiwiS2343@2x.png in Resources */,
 				E51FFFEE196ADD070025F5A6 /* QiwiS5959.png in Resources */,
 				E5F58E4C1977C8DB00A286A7 /* welcome78.m4a in Resources */,
 				E5448B4419091EC20025C9E7 /* SettingsMaxTimeoutForPassword.png in Resources */,
+				E577856919810173007B0716 /* NumberPad6@2x.png in Resources */,
 				E5B6F669191BDAFE00EAA3C4 /* SearchCatalogViewController_iPhone.xib in Resources */,
 				E599ECFE18F581370019A74E /* Stat.png in Resources */,
 				E51F0027196ADD070025F5A6 /* QiwiS7831@2x.png in Resources */,
@@ -3400,6 +3583,8 @@
 				E5EEC47C197428DB00409E80 /* MainQRIcon@2x.png in Resources */,
 				E51FFFCD196ADD070025F5A6 /* QiwiS5231@2x.png in Resources */,
 				E51FFEEE196AC9DB0025F5A6 /* QiwiS2345.png in Resources */,
+				E577859E19811E9A007B0716 /* FlatNumberPad5@2x.png in Resources */,
+				E577859319811E9A007B0716 /* FlatNumberPad0.png in Resources */,
 				E51F001B196ADD070025F5A6 /* QiwiS7825@2x.png in Resources */,
 				E5DA38251976F0F50028DDE5 /* welcome26.m4a in Resources */,
 				E5EEC4841974627600409E80 /* CardQRActivityMiniIcon@2x.png in Resources */,
@@ -3434,6 +3619,7 @@
 				E599ED2318F5A6470019A74E /* TerminalsViewController_iPhone.xib in Resources */,
 				E51FFFD6196ADD070025F5A6 /* QiwiS5236.png in Resources */,
 				E5B6F5C5190E7E6C00EAA3C4 /* MainCheckIcon.png in Resources */,
+				E577855F19810173007B0716 /* NumberPad1@2x.png in Resources */,
 				E51FFEC1196AC9DB0025F5A6 /* QiwiS2318@2x.png in Resources */,
 				E599ED2F18F5A76C0019A74E /* HistoryViewController_iPhone.xib in Resources */,
 				E599ED0A18F583140019A74E /* Support.png in Resources */,
@@ -3441,6 +3627,7 @@
 				E51FFEAF196AC9DB0025F5A6 /* QiwiS2307@2x.png in Resources */,
 				E599E9D918E768A00019A74E /* Loading_Round_Orange.png in Resources */,
 				E51FFFB1196ADD070025F5A6 /* QiwiS4138@2x.png in Resources */,
+				E57785A619811E9A007B0716 /* FlatNumberPad9@2x.png in Resources */,
 				E51FFEA5196AC9DB0025F5A6 /* QiwiS2302@2x.png in Resources */,
 				E51FFEFD196AC9DB0025F5A6 /* QiwiS10666@2x.png in Resources */,
 				E5DA38181976F0F50028DDE5 /* welcome14.m4a in Resources */,
@@ -3468,11 +3655,13 @@
 				E599ECE318F469B20019A74E /* MainViewController_iPhone.xib in Resources */,
 				E51F0004196ADD070025F5A6 /* QiwiS6062.png in Resources */,
 				E5B6F5D7190FC7C600EAA3C4 /* Card2CardTransferViewController_iPhone.xib in Resources */,
+				E577859B19811E9A007B0716 /* FlatNumberPad4.png in Resources */,
 				E5DA38401976F0F50028DDE5 /* welcome50.m4a in Resources */,
 				E51F001C196ADD070025F5A6 /* QiwiS7826.png in Resources */,
 				E51FFED1196AC9DB0025F5A6 /* QiwiS2326@2x.png in Resources */,
 				E54420AF197965E900A4FCD9 /* mum1.m4a in Resources */,
 				E51F002F196ADD070025F5A6 /* QiwiS7835@2x.png in Resources */,
+				E577855D19810173007B0716 /* NumberPad0@2x.png in Resources */,
 				E51FFEF6196AC9DB0025F5A6 /* QiwiS10098.png in Resources */,
 				E51FFF98196ADD070025F5A6 /* QiwiS3075.png in Resources */,
 				E51FFEA9196AC9DB0025F5A6 /* QiwiS2304@2x.png in Resources */,
@@ -3488,23 +3677,28 @@
 				E5B6F6841923898900EAA3C4 /* iPhoneSplashPortrait.png in Resources */,
 				E51FFE8E196AC9DB0025F5A6 /* QiwiS2291.png in Resources */,
 				E51FFEB8196AC9DB0025F5A6 /* QiwiS2312.png in Resources */,
+				E5AEA70C1990DFFE00F44A96 /* QiwiS265.png in Resources */,
 				E51FFFEF196ADD070025F5A6 /* QiwiS5959@2x.png in Resources */,
 				E51FFFCC196ADD070025F5A6 /* QiwiS5231.png in Resources */,
 				E51FFFE1196ADD070025F5A6 /* QiwiS5798@2x.png in Resources */,
 				E51FFFC1196ADD070025F5A6 /* QiwiS4703@2x.png in Resources */,
 				E51FFFA8196ADD070025F5A6 /* QiwiS3084.png in Resources */,
 				E5F58E501977C8DB00A286A7 /* welcome82.m4a in Resources */,
+				E57785A319811E9A007B0716 /* FlatNumberPad8.png in Resources */,
 				E5B6F6831923898900EAA3C4 /* iPhoneSettingsIcon.png in Resources */,
 				E51F44AE1925301600A9D6EB /* LampOff.png in Resources */,
 				E5DA381D1976F0F50028DDE5 /* welcome19.m4a in Resources */,
 				E51FFEAA196AC9DB0025F5A6 /* QiwiS2305.png in Resources */,
 				E5DA381C1976F0F50028DDE5 /* welcome18.m4a in Resources */,
+				E577856F19810173007B0716 /* NumberPad9@2x.png in Resources */,
 				E5DA38391976F0F50028DDE5 /* welcome44.m4a in Resources */,
 				E51FFDF3196AC9C80025F5A6 /* QiwiS31@2x.png in Resources */,
 				E5DA38151976F0F50028DDE5 /* welcome11.m4a in Resources */,
 				E51FFE89196AC9DB0025F5A6 /* QiwiS2288@2x.png in Resources */,
 				E51FFFA5196ADD070025F5A6 /* QiwiS3082@2x.png in Resources */,
 				E53552A5196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon.png in Resources */,
+				E577859419811E9A007B0716 /* FlatNumberPad0@2x.png in Resources */,
+				E577856B19810173007B0716 /* NumberPad7@2x.png in Resources */,
 				E5DA38361976F0F50028DDE5 /* welcome41.m4a in Resources */,
 				E51FFFA2196ADD070025F5A6 /* QiwiS3081.png in Resources */,
 				E599ECF018F553340019A74E /* MenuViewController_iPhone.xib in Resources */,
@@ -3525,7 +3719,9 @@
 				E556D8BC19067E8C002BD048 /* MoneySendBackground@2x.png in Resources */,
 				E51FFE9E196AC9DB0025F5A6 /* QiwiS2299.png in Resources */,
 				E5DA38301976F0F50028DDE5 /* welcome36.m4a in Resources */,
+				E577859D19811E9A007B0716 /* FlatNumberPad5.png in Resources */,
 				E51FFEAC196AC9DB0025F5A6 /* QiwiS2306.png in Resources */,
+				E577859F19811E9A007B0716 /* FlatNumberPad6.png in Resources */,
 				E535529D196413B500BB4F4A /* HistoryRequestSupportActivityMiniIcon.png in Resources */,
 				E51FFE83196AC9DB0025F5A6 /* QiwiS2285@2x.png in Resources */,
 				E51FFE94196AC9DB0025F5A6 /* QiwiS2294.png in Resources */,
@@ -3537,6 +3733,7 @@
 				E51F000B196ADD070025F5A6 /* QiwiS6065@2x.png in Resources */,
 				E51FFFBD196ADD070025F5A6 /* QiwiS4701@2x.png in Resources */,
 				E5DA38241976F0F50028DDE5 /* welcome25.m4a in Resources */,
+				E577857319810173007B0716 /* NumberPadOK@2x.png in Resources */,
 				E51FFECC196AC9DB0025F5A6 /* QiwiS2324.png in Resources */,
 				E599E9DB18E768A90019A74E /* Oferta(Ru).rtf in Resources */,
 				E51FFEAD196AC9DB0025F5A6 /* QiwiS2306@2x.png in Resources */,
@@ -3552,6 +3749,7 @@
 				E5DA38291976F0F50028DDE5 /* welcome3.m4a in Resources */,
 				E5DA383F1976F0F50028DDE5 /* welcome5.m4a in Resources */,
 				E5B6F62A191A67C100EAA3C4 /* QiwiSMegafon.png in Resources */,
+				E577856C19810173007B0716 /* NumberPad8.png in Resources */,
 				E51FFE87196AC9DB0025F5A6 /* QiwiS2287@2x.png in Resources */,
 				E5B6F5DC1911121F00EAA3C4 /* MoneyTransferViewController_iPhone.xib in Resources */,
 				E51F0025196ADD070025F5A6 /* QiwiS7830@2x.png in Resources */,
@@ -3561,6 +3759,7 @@
 				E5D96061192BA7E6008AD81B /* AdditionalParametersViewController_iPhone.xib in Resources */,
 				E51FFFEB196ADD070025F5A6 /* QiwiS5957@2x.png in Resources */,
 				E599ED1218F5882F0019A74E /* Terminals.png in Resources */,
+				E577856119810173007B0716 /* NumberPad2@2x.png in Resources */,
 				E51FFEF5196AC9DB0025F5A6 /* QiwiS2348@2x.png in Resources */,
 				E51FFEFA196AC9DB0025F5A6 /* QiwiS10665.png in Resources */,
 				E52A79191966A3750038FA65 /* FavoriteFail.png in Resources */,
@@ -3571,6 +3770,7 @@
 				E599ED4A18F5BFB00019A74E /* Success.png in Resources */,
 				E599ED4618F5BFB00019A74E /* Fail.png in Resources */,
 				E5448B6D1909AD600025C9E7 /* AudioProfiles.plist in Resources */,
+				E5AEA70D1990DFFE00F44A96 /* QiwiS265@2x.png in Resources */,
 				E51FFEA6196AC9DB0025F5A6 /* QiwiS2303.png in Resources */,
 				E5DA38271976F0F50028DDE5 /* welcome28.m4a in Resources */,
 				E599ED1718F58AD90019A74E /* Payments@2x.png in Resources */,
@@ -3606,6 +3806,7 @@
 				E51FFE91196AC9DB0025F5A6 /* QiwiS2292@2x.png in Resources */,
 				E5DA38221976F0F50028DDE5 /* welcome23.m4a in Resources */,
 				E599ED1318F5882F0019A74E /* Terminals@2x.png in Resources */,
+				E577857119810173007B0716 /* NumberPadDelete@2x.png in Resources */,
 				E51F0003196ADD070025F5A6 /* QiwiS6061@2x.png in Resources */,
 				E51FFFB5196ADD070025F5A6 /* QiwiS4658@2x.png in Resources */,
 				E51FFED0196AC9DB0025F5A6 /* QiwiS2326.png in Resources */,
@@ -3642,6 +3843,7 @@
 				E51FFE8B196AC9DB0025F5A6 /* QiwiS2289@2x.png in Resources */,
 				E51FFE81196AC9DB0025F5A6 /* QiwiS2284@2x.png in Resources */,
 				E51F0009196ADD070025F5A6 /* QiwiS6064@2x.png in Resources */,
+				E577856319810173007B0716 /* NumberPad3@2x.png in Resources */,
 				E5EEC4811974627600409E80 /* CardQRActivityIcon.png in Resources */,
 				E51FFED6196AC9DB0025F5A6 /* QiwiS2332.png in Resources */,
 				E51FFFDC196ADD070025F5A6 /* QiwiS5239.png in Resources */,
@@ -3658,14 +3860,18 @@
 				E51FFE7F196AC9DB0025F5A6 /* QiwiS2283@2x.png in Resources */,
 				E556D89B1901745D002BD048 /* EnterCVCBackground.png in Resources */,
 				E51F0015196ADD070025F5A6 /* QiwiS6602@2x.png in Resources */,
+				E577856219810173007B0716 /* NumberPad3.png in Resources */,
 				E51FFEC2196AC9DB0025F5A6 /* QiwiS2319.png in Resources */,
 				E51FFE85196AC9DB0025F5A6 /* QiwiS2286@2x.png in Resources */,
+				E57785A419811E9A007B0716 /* FlatNumberPad8@2x.png in Resources */,
 				E51FFFE7196ADD070025F5A6 /* QiwiS5891@2x.png in Resources */,
 				E51FFEA4196AC9DB0025F5A6 /* QiwiS2302.png in Resources */,
 				E53552931962E1DD00BB4F4A /* RequestSupportViewController_iPhone.xib in Resources */,
 				E5EE653C19004C6A0013819A /* CardMoneySendActivityIcon.png in Resources */,
+				E577855C19810173007B0716 /* NumberPad0.png in Resources */,
 				E5B6F626191A668B00EAA3C4 /* QiwiS2.png in Resources */,
 				E5448B4019091CDB0025C9E7 /* SettingsMinTimeoutForPassword.png in Resources */,
+				E577856A19810173007B0716 /* NumberPad7.png in Resources */,
 				E51FFEFC196AC9DB0025F5A6 /* QiwiS10666.png in Resources */,
 				E599ED3518F5A7EE0019A74E /* StatViewController_iPhone.xib in Resources */,
 				E51FFEB7196AC9DB0025F5A6 /* QiwiS2311@2x.png in Resources */,
@@ -3673,6 +3879,8 @@
 				E51F0007196ADD070025F5A6 /* QiwiS6063@2x.png in Resources */,
 				E51FFEF1196AC9DB0025F5A6 /* QiwiS2346@2x.png in Resources */,
 				E5DA382A1976F0F50028DDE5 /* welcome30.m4a in Resources */,
+				E577859919811E9A007B0716 /* FlatNumberPad3.png in Resources */,
+				E577856719810173007B0716 /* NumberPad5@2x.png in Resources */,
 				E5B6F5F719183D9C00EAA3C4 /* CardCellActivityBorder.png in Resources */,
 				E5F58E431977C8DB00A286A7 /* welcome69.m4a in Resources */,
 				E51FFED8196AC9DB0025F5A6 /* QiwiS2333.png in Resources */,
@@ -3688,6 +3896,7 @@
 				E556D8BB19067E8C002BD048 /* MoneySendBackground.png in Resources */,
 				E599E9D418E768810019A74E /* AcceptOfertaViewController_iPhone.xib in Resources */,
 				E5B6F5CB190EA46800EAA3C4 /* PayPhoneViewController_iPhone.xib in Resources */,
+				E577859A19811E9A007B0716 /* FlatNumberPad3@2x.png in Resources */,
 				E51FFFD4196ADD070025F5A6 /* QiwiS5235.png in Resources */,
 				E5B6F6151918CC4000EAA3C4 /* CardRequestSupportActivityMiniIcon.png in Resources */,
 				E5B6F5C2190E7A5D00EAA3C4 /* MainNoChecksIcon@2x.png in Resources */,
@@ -3695,6 +3904,7 @@
 				E51FFFCB196ADD070025F5A6 /* QiwiS5230@2x.png in Resources */,
 				E51FFE9D196AC9DB0025F5A6 /* QiwiS2298@2x.png in Resources */,
 				E51FFFA3196ADD070025F5A6 /* QiwiS3081@2x.png in Resources */,
+				E577856819810173007B0716 /* NumberPad6.png in Resources */,
 				E599ED0B18F583140019A74E /* Support@2x.png in Resources */,
 				E51FFF9E196ADD070025F5A6 /* QiwiS3078.png in Resources */,
 				E599E9D618E768950019A74E /* Loading_Round_Orange@2x.png in Resources */,
@@ -3725,6 +3935,7 @@
 				E51FFEE5196AC9DB0025F5A6 /* QiwiS2340@2x.png in Resources */,
 				E5EE653B19004C6A0013819A /* CardCallSupportActivityIcon@2x.png in Resources */,
 				E51F0021196ADD070025F5A6 /* QiwiS7828@2x.png in Resources */,
+				E577855E19810173007B0716 /* NumberPad1.png in Resources */,
 				E51FFEC3196AC9DB0025F5A6 /* QiwiS2319@2x.png in Resources */,
 				E5F58E4F1977C8DB00A286A7 /* welcome81.m4a in Resources */,
 				E51FFEA2196AC9DB0025F5A6 /* QiwiS2301.png in Resources */,
@@ -3734,11 +3945,13 @@
 				E51FFEE3196AC9DB0025F5A6 /* QiwiS2338@2x.png in Resources */,
 				E5EE653D19004C6A0013819A /* CardMoneySendActivityIcon@2x.png in Resources */,
 				E5B6F637191B58FE00EAA3C4 /* CatalogSearchIcon@2x.png in Resources */,
+				E57785A819811E9A007B0716 /* FlatNumberPadDelete@2x.png in Resources */,
 				E5B6F622191A631A00EAA3C4 /* QiwiOutOceanR.png in Resources */,
 				E51FFFDB196ADD070025F5A6 /* QiwiS5238@2x.png in Resources */,
 				E51FFEC8196AC9DB0025F5A6 /* QiwiS2322.png in Resources */,
 				E51F001D196ADD070025F5A6 /* QiwiS7826@2x.png in Resources */,
 				E5EE6549190050660013819A /* CardMoneySendActivityViewController_iPhone.xib in Resources */,
+				E5778578198101A7007B0716 /* NumberPadViewController_iPhone.xib in Resources */,
 				E5F58E3E1977C8DB00A286A7 /* welcome64.m4a in Resources */,
 				E51FFFA1196ADD070025F5A6 /* QiwiS3079@2x.png in Resources */,
 				E53552B719649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon.png in Resources */,
@@ -3793,11 +4006,13 @@
 				E5DA383C1976F0F50028DDE5 /* welcome47.m4a in Resources */,
 				E5B6F62B191A67C100EAA3C4 /* QiwiSMegafon@2x.png in Resources */,
 				E51F44AF1925301600A9D6EB /* LampOff@2x.png in Resources */,
+				E577859819811E9A007B0716 /* FlatNumberPad2@2x.png in Resources */,
 				E599E98A18E760980019A74E /* InfoPlist.strings in Resources */,
 				E5F58E3C1977C8DB00A286A7 /* welcome62.m4a in Resources */,
 				E51FFEBF196AC9DB0025F5A6 /* QiwiS2317@2x.png in Resources */,
 				E5C4948E195DD5AE00330CEA /* HistoryCellView_iPhone.xib in Resources */,
 				E5B6F6131918CC4000EAA3C4 /* CardRefreshBalanceActivityMiniIcon.png in Resources */,
+				E577857019810173007B0716 /* NumberPadDelete.png in Resources */,
 				E599ECFA18F580270019A74E /* History.png in Resources */,
 				E51FFFA4196ADD070025F5A6 /* QiwiS3082.png in Resources */,
 				E5EEC4781974126B00409E80 /* QRViewController_iPhone.xib in Resources */,
@@ -3834,6 +4049,7 @@
 				E5DA38261976F0F50028DDE5 /* welcome27.m4a in Resources */,
 				E51FFEBD196AC9DB0025F5A6 /* QiwiS2316@2x.png in Resources */,
 				E5DA38191976F0F50028DDE5 /* welcome15.m4a in Resources */,
+				E57785A219811E9A007B0716 /* FlatNumberPad7@2x.png in Resources */,
 				E5B6F573190AA34A00EAA3C4 /* PhoneIcon@2x.png in Resources */,
 				E51F0016196ADD070025F5A6 /* QiwiS6603.png in Resources */,
 				E51FFFFD196ADD070025F5A6 /* QiwiS6057@2x.png in Resources */,
@@ -3849,10 +4065,13 @@
 				E5B6F5F819183D9C00EAA3C4 /* CardCellActivityBorder@2x.png in Resources */,
 				E51F0026196ADD070025F5A6 /* QiwiS7831.png in Resources */,
 				E5F58E371977C8DB00A286A7 /* welcome57.m4a in Resources */,
+				E577856419810173007B0716 /* NumberPad4.png in Resources */,
 				E51FFEB9196AC9DB0025F5A6 /* QiwiS2312@2x.png in Resources */,
 				E599ED4918F5BFB00019A74E /* Information@2x.png in Resources */,
 				E5B6F60B1918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon.png in Resources */,
+				E577857219810173007B0716 /* NumberPadOK.png in Resources */,
 				E51FFEE0196AC9DB0025F5A6 /* QiwiS2337.png in Resources */,
+				E577859719811E9A007B0716 /* FlatNumberPad2.png in Resources */,
 				E54420B2197965E900A4FCD9 /* mum4.m4a in Resources */,
 				E5B6F5B9190E74CF00EAA3C4 /* MainCard2CardIcon.png in Resources */,
 				E51FFE7D196AC9DB0025F5A6 /* QiwiS2282@2x.png in Resources */,
@@ -3867,6 +4086,7 @@
 				E599E9DC18E768AC0019A74E /* Intro(Ru).rtf in Resources */,
 				E53552B819649E4500BB4F4A /* HistoryPostToFacebookActivityMiniIcon@2x.png in Resources */,
 				E51FFE88196AC9DB0025F5A6 /* QiwiS2288.png in Resources */,
+				E577856619810173007B0716 /* NumberPad5.png in Resources */,
 				E5B6F5C1190E7A5D00EAA3C4 /* MainNoChecksIcon.png in Resources */,
 				E52A79431967165F0038FA65 /* QiwiS330@2x.png in Resources */,
 				E5B6F5B5190E70AB00EAA3C4 /* MainPhoneIcon.png in Resources */,
@@ -3874,6 +4094,7 @@
 				E51FFFC6196ADD070025F5A6 /* QiwiS5227.png in Resources */,
 				E599ECF618F558DF0019A74E /* MessagesViewController_iPhone.xib in Resources */,
 				E5F58E361977C8DB00A286A7 /* welcome56.m4a in Resources */,
+				E577856D19810173007B0716 /* NumberPad8@2x.png in Resources */,
 				E5448B4119091CDB0025C9E7 /* SettingsMinTimeoutForPassword@2x.png in Resources */,
 				E5DA38311976F0F50028DDE5 /* welcome37.m4a in Resources */,
 				E51F0014196ADD070025F5A6 /* QiwiS6602.png in Resources */,
@@ -3892,6 +4113,7 @@
 				E52A78FB19657C920038FA65 /* HistoryBlankActivityIcon.png in Resources */,
 				E5B6F60E1918CC4000EAA3C4 /* CardCallSupportActivityMiniIcon@2x.png in Resources */,
 				E53552A6196426F600BB4F4A /* HistoryRepeatPaymentActivityMiniIcon@2x.png in Resources */,
+				E577859519811E9A007B0716 /* FlatNumberPad1.png in Resources */,
 				E51F0031196ADD070025F5A6 /* QiwiS7836@2x.png in Resources */,
 				E5B6F630191A689300EAA3C4 /* PayViewController_iPhone.xib in Resources */,
 				E5EE654019004C6A0013819A /* CardRefreshBalanceActivityIcon.png in Resources */,
@@ -3900,8 +4122,10 @@
 				E5EEC4821974627600409E80 /* CardQRActivityIcon@2x.png in Resources */,
 				E51FFEE1196AC9DB0025F5A6 /* QiwiS2337@2x.png in Resources */,
 				E51FFFBB196ADD070025F5A6 /* QiwiS4662@2x.png in Resources */,
+				E57785AA19811E9A007B0716 /* FlatNumberPadOK@2x.png in Resources */,
 				E5DA38351976F0F50028DDE5 /* welcome40.m4a in Resources */,
 				E5F58E4D1977C8DB00A286A7 /* welcome79.m4a in Resources */,
+				E577859619811E9A007B0716 /* FlatNumberPad1@2x.png in Resources */,
 				E51FFE90196AC9DB0025F5A6 /* QiwiS2292.png in Resources */,
 				E5F58E3A1977C8DB00A286A7 /* welcome60.m4a in Resources */,
 				E599ED0E18F5855C0019A74E /* Cards.png in Resources */,
@@ -3914,12 +4138,14 @@
 				E599E9D018E768720019A74E /* EnterPasswordViewController_iPhone.xib in Resources */,
 				E51FFFF2196ADD070025F5A6 /* QiwiS5986.png in Resources */,
 				E52A7914196590F20038FA65 /* HistoryPostToTwitterActivityMiniIcon@2x.png in Resources */,
+				E57785A519811E9A007B0716 /* FlatNumberPad9.png in Resources */,
 				E599E9D718E768980019A74E /* Loading_Round_Red.png in Resources */,
 				E5DA38161976F0F50028DDE5 /* welcome12.m4a in Resources */,
 				E51FFFBA196ADD070025F5A6 /* QiwiS4662.png in Resources */,
 				E51FFE8A196AC9DB0025F5A6 /* QiwiS2289.png in Resources */,
 				E51F44B11925301600A9D6EB /* LampOn@2x.png in Resources */,
 				E5B6F67A1921427700EAA3C4 /* MessageCell_iPhone.xib in Resources */,
+				E57785A119811E9A007B0716 /* FlatNumberPad7.png in Resources */,
 				E5DA38121976F0F50028DDE5 /* AudioProfileAll.plist in Resources */,
 				E5F58E4B1977C8DB00A286A7 /* welcome77.m4a in Resources */,
 				E5B6F5C6190E7E6C00EAA3C4 /* MainCheckIcon@2x.png in Resources */,
@@ -3939,6 +4165,7 @@
 				E51FFEEA196AC9DB0025F5A6 /* QiwiS2343.png in Resources */,
 				E51FFECF196AC9DB0025F5A6 /* QiwiS2325@2x.png in Resources */,
 				E51FFEA1196AC9DB0025F5A6 /* QiwiS2300@2x.png in Resources */,
+				E577859C19811E9A007B0716 /* FlatNumberPad4@2x.png in Resources */,
 				E556D8BF1906BBE0002BD048 /* close.png in Resources */,
 				E51FFED3196AC9DB0025F5A6 /* QiwiS2330@2x.png in Resources */,
 				E5DA38481976F0F50028DDE5 /* welcome9.m4a in Resources */,
@@ -3951,6 +4178,7 @@
 				E51FFEDF196AC9DB0025F5A6 /* QiwiS2336@2x.png in Resources */,
 				E599ED0218F581F70019A74E /* Favorites.png in Resources */,
 				E5DA381F1976F0F50028DDE5 /* welcome20.m4a in Resources */,
+				E577856519810173007B0716 /* NumberPad4@2x.png in Resources */,
 				E51FFFE2196ADD070025F5A6 /* QiwiS5799.png in Resources */,
 				E51F002D196ADD070025F5A6 /* QiwiS7834@2x.png in Resources */,
 				E5B6F576190AA54C00EAA3C4 /* EMailIcon.png in Resources */,
@@ -3958,17 +4186,21 @@
 				E535529B196413B500BB4F4A /* HistoryRequestSupportActivityIcon.png in Resources */,
 				E54420B1197965E900A4FCD9 /* mum3.m4a in Resources */,
 				E51FFEA8196AC9DB0025F5A6 /* QiwiS2304.png in Resources */,
+				E577856E19810173007B0716 /* NumberPad9.png in Resources */,
 				E52A7908196581150038FA65 /* BlankViewController_iPhone.xib in Resources */,
 				E556D8A119044D03002BD048 /* CardAuthorizeActivityIcon@2x.png in Resources */,
 				E51FFEEF196AC9DB0025F5A6 /* QiwiS2345@2x.png in Resources */,
 				E52A79311966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityMiniIcon.png in Resources */,
 				E52A792F1966CC6E0038FA65 /* HistoryRemoveFromFavoritesActivityIcon.png in Resources */,
 				E52A791A1966A3750038FA65 /* FavoriteFail@2x.png in Resources */,
+				E577856019810173007B0716 /* NumberPad2.png in Resources */,
 				E5B6F6121918CC4000EAA3C4 /* CardReceiveMoneyActivityMiniIcon@2x.png in Resources */,
 				E51FFFAE196ADD070025F5A6 /* QiwiS4137.png in Resources */,
+				E57785A019811E9A007B0716 /* FlatNumberPad6@2x.png in Resources */,
 				E5B6F60C1918CC4000EAA3C4 /* CardAuthorizeActivityMiniIcon@2x.png in Resources */,
 				E51F0029196ADD070025F5A6 /* QiwiS7832@2x.png in Resources */,
 				E51FFEC4196AC9DB0025F5A6 /* QiwiS2320.png in Resources */,
+				E57785A919811E9A007B0716 /* FlatNumberPadOK.png in Resources */,
 				E599ED4F18F5F7600019A74E /* WWW@2x.png in Resources */,
 				E51FFE7A196AC9DB0025F5A6 /* QiwiS2281.png in Resources */,
 				E599ED1D18F5A58E0019A74E /* FavoritesViewController_iPhone.xib in Resources */,
@@ -3990,6 +4222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5778577198101A7007B0716 /* NumberPadViewController_iPhone.m in Sources */,
 				E599E9E118E768CF0019A74E /* svcArrayOfDeviceStatItem.m in Sources */,
 				E599E9D318E7687E0019A74E /* AcceptOfertaViewController_iPhone.m in Sources */,
 				E5B6F5CA190EA46800EAA3C4 /* PayPhoneViewController_iPhone.m in Sources */,
@@ -4124,6 +4357,7 @@
 				E599EA0618E7696D0019A74E /* SoapFault.m in Sources */,
 				E599ECE218F469B20019A74E /* MainViewController_iPhone.m in Sources */,
 				E599E98C18E760980019A74E /* main.m in Sources */,
+				E5AEA7131990F57F00F44A96 /* Vars.m in Sources */,
 				E5EEC4701974115E00409E80 /* split.c in Sources */,
 				E599E9D118E768760019A74E /* VerifyPasswordViewController_iPhone.m in Sources */,
 				E599E9FC18E769310019A74E /* svcSudzc.m in Sources */,
@@ -4277,8 +4511,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ivan Alekseev (66GEEZD33H)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRoboDev/iRoboDev-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4319,8 +4553,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ZAO Internet Payment Center (9J4X6PJX56)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ZAO Internet Payment Center (9J4X6PJX56)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRoboDev/iRoboDev-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -4428,11 +4662,12 @@
 		E599E99118E760980019A74E /* iRoboDev.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				E5AEA7101990E5CA00F44A96 /* iRoboDev 4.xcdatamodel */,
 				E5DA384B1976F8420028DDE5 /* iRoboDev 3.xcdatamodel */,
 				E5B6F672191F6FC200EAA3C4 /* iRoboDev 2.xcdatamodel */,
 				E599E99218E760980019A74E /* iRoboDev.xcdatamodel */,
 			);
-			currentVersion = E5DA384B1976F8420028DDE5 /* iRoboDev 3.xcdatamodel */;
+			currentVersion = E5AEA7101990E5CA00F44A96 /* iRoboDev 4.xcdatamodel */;
 			path = iRoboDev.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

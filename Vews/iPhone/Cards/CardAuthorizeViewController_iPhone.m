@@ -23,7 +23,6 @@
 @synthesize delegate = _delegate;
 @synthesize card_Id = _card_Id;
 @synthesize card_InAuthorize = _card_InAuthorize;
-@synthesize doneButton = _doneButton;
 @synthesize cvcView = _cvcView;
 @synthesize wv3D = _wv3D;
 
@@ -33,17 +32,6 @@
     if (self) {
         self.navigationItem.title = NSLocalizedString(@"AuthorizeCard_Title", @"AuthorizeCard_Title");
         [self.navigationItem setHidesBackButton:YES animated:YES];
-
-        self.doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.doneButton.frame = CGRectMake(0, 163, 106, 53);
-        self.doneButton.adjustsImageWhenHighlighted = NO;
-        
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateApplication];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateDisabled];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateHighlighted];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateNormal];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateReserved];
-        [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateSelected];
         _3DShowed = NO;
         _Stoped = NO;
         _failtocheckcount = 0;
@@ -54,6 +42,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
+    self.cvcView.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -93,20 +83,11 @@
 - (void)keyboardWillShow : (NSNotification *) note
 {
 	if (_keyboardIsShowing) return;
-    if (_3DShowed)
-        [self removeDoneButtonFromNumberPadKeyboard];
-    else
-        [self addDoneButtonToNumberPadKeyboard];
-    
 	_keyboardIsShowing = YES;
 }
 
 - (void)keyboardDidShow : (NSNotification *) note
 {
-    if (_3DShowed)
-        [self removeDoneButtonFromNumberPadKeyboard];
-    else
-        [self addDoneButtonToNumberPadKeyboard];
 }
 
 - (void)keyboardWillHide : (NSNotification *) note
@@ -116,44 +97,8 @@
 	}
 }
 
-- (void)addDoneButtonToNumberPadKeyboard
-{
-    UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-    UIView* keyboard;
-    for (int i=0; i<[tempWindow.subviews count]; i++) {
-        keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-            if([[keyboard description] hasPrefix:@"<UIInputSetContainerView"] == YES) {
-                NSArray *a = [(UIView *)keyboard subviews];
-                [(UIView *)[a objectAtIndex:0] addSubview:self.doneButton];
-                [(UIView *)[a objectAtIndex:0] bringSubviewToFront:self.doneButton];
-            }
-        } else {
-            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-                if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES) {
-                    [keyboard addSubview:self.doneButton];
-                    [keyboard bringSubviewToFront:self.doneButton];
-                }
-            } else {
-                if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                    [keyboard addSubview:self.doneButton];
-            }
-        }
-    }
-}
-
-- (void)removeDoneButtonFromNumberPadKeyboard
-{
-    if (!_keyboardIsShowing) return;
-    
-    [self.doneButton removeFromSuperview];
-}
-
 - (void)enterCVC
 {
-    self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
-    self.cvcView.delegate = self;
-    [self.doneButton addTarget:self.cvcView action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.topViewController.navigationItem setHidesBackButton:YES animated:YES];
     self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = NO;
     self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = NO;
@@ -285,12 +230,13 @@
 {
     _3DShowed = YES;
     self.wv3D = [[UIWebView alloc] initWithFrame:self.view.frame];
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"https://auth.robokassa.ru/Payment/Verify.aspx?Id=%i", [cdId intValue]]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"https://auth.robokassa.ru/Processing/Payment/Verify?Id=%i", [cdId intValue]]];
     NSURLRequest *rq = [NSURLRequest requestWithURL:URL];
     self.wv3D.delegate = self;
     [self.wv3D loadRequest:rq];
     [self.view addSubview:self.wv3D];
     [self.view bringSubviewToFront:self.wv3D];
+    _Stoped = YES;
 }
 
 - (void)authRequestSum
@@ -310,7 +256,6 @@
     [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
     self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
     self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
-    [self removeDoneButtonFromNumberPadKeyboard];
     if (cvcEntered)
     {
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];
@@ -327,7 +272,6 @@
     [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
     self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
     self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
-    [self removeDoneButtonFromNumberPadKeyboard];
     [self.delegate finishAuthorizeAction:self];
 }
 
@@ -339,7 +283,7 @@
     NSString *slURL = webView.request.URL.absoluteString;
     if ([slURL isEqualToString:@""]) return;
     if (([slURL rangeOfString:@"auth.robokassa.ru"].location != NSNotFound &&
-         [slURL rangeOfString:@"Verify.aspx"].location == NSNotFound) ||
+         [slURL rangeOfString:@"Verify"].location == NSNotFound) ||
         ([slURL rangeOfString:@"misc.roboxchange.com"].location != NSNotFound &&
          [slURL rangeOfString:@"secureDone.aspx"].location != NSNotFound))
     {
@@ -357,7 +301,7 @@
     NSString *slURL = webView.request.URL.absoluteString;
     if ([slURL isEqualToString:@""]) return;
     if (([slURL rangeOfString:@"auth.robokassa.ru"].location != NSNotFound &&
-         [slURL rangeOfString:@"Verify.aspx"].location == NSNotFound) ||
+         [slURL rangeOfString:@"Verify"].location == NSNotFound) ||
         ([slURL rangeOfString:@"misc.roboxchange.com"].location != NSNotFound &&
          [slURL rangeOfString:@"secureDone.aspx"].location != NSNotFound))
     {

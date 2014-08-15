@@ -212,21 +212,74 @@
 
 - (void)loadUserDataFromCloud
 {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSString *v = nil;
+    NSString *ln = nil;
+    NSString *fn = nil;
+    NSString *sn = nil;
+    NSString *a = nil;
+    v = [app varGet:@"OfertaAccepted"];
+    ln = [app varGet:@"LastName"];
+    fn = [app varGet:@"FirstName"];
+    sn = [app varGet:@"SecondName"];
+    a = [app varGet:@"Address"];
     @try {
-        self.lastName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"lastName"];
-        self.firstName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"firstName"];
-        self.secondName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"secondName"];
-        self.address = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"address"];
-        self.ofertaAccepted = [[[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"ofertaAccepted"] isEqualToString:@"YES"];
-//        self.ofertaAccepted = YES;
-//        [self storeUserDataToCloud];
+        if (v == nil) {
+            self.ofertaAccepted = [[[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"ofertaAccepted"] isEqualToString:@"YES"];
+        }
+        else
+            self.ofertaAccepted = [v isEqualToString:@"YES"];
     }
     @catch (NSException *exception) {
-        self.lastName = @"";
-        self.firstName = @"";
-        self.secondName = @"";
-        self.address = @"";
-        self.ofertaAccepted = NO;
+        self.ofertaAccepted = v ? [v isEqualToString:@"YES"] : NO;
+    }
+    @finally {
+    }
+    @try {
+        if (ln == nil) {
+            self.lastName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"lastName"];
+        }
+        else
+            self.lastName = ln;
+    }
+    @catch (NSException *exception) {
+        self.lastName = ln ? ln : @"";
+    }
+    @finally {
+    }
+    @try {
+        if (fn == nil) {
+            self.firstName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"firstName"];
+        }
+        else
+            self.firstName = fn;
+    }
+    @catch (NSException *exception) {
+        self.firstName = fn ? fn : @"";
+    }
+    @finally {
+    }
+    @try {
+        if (sn == nil) {
+            self.secondName = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"secondName"];
+        }
+        else
+            self.secondName = sn;
+    }
+    @catch (NSException *exception) {
+        self.secondName = sn ? sn : @"";
+    }
+    @finally {
+    }
+    @try {
+        if (a == nil) {
+            self.address = [[NSUbiquitousKeyValueStore defaultStore] stringForKey:@"address"];
+        }
+        else
+            self.address = a;
+    }
+    @catch (NSException *exception) {
+        self.address = a ? a : @"";
     }
     @finally {
     }
@@ -236,11 +289,17 @@
 {
     if (self.isDemoMode) return;
     @try {
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [app varSet:@"OfertaAccepted" value:([self ofertaAccepted] ? @"YES" : @"NO")];
+        [app varSet:@"LastName" value:[self lastName]];
+        [app varSet:@"FirstName" value:[self firstName]];
+        [app varSet:@"SecondName" value:[self secondName]];
+        [app varSet:@"Address" value:[self address]];
+        [[NSUbiquitousKeyValueStore defaultStore] setString:[self ofertaAccepted] ? @"YES" : @"NO" forKey:@"ofertaAccepted"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self lastName] forKey:@"lastName"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self firstName] forKey:@"firstName"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self secondName] forKey:@"secondName"];
         [[NSUbiquitousKeyValueStore defaultStore] setString:[self address] forKey:@"address"];
-        [[NSUbiquitousKeyValueStore defaultStore] setString:[self ofertaAccepted] ? @"YES" : @"NO" forKey:@"ofertaAccepted"];
     }
     @catch (NSException *exception) {
     }

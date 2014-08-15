@@ -12,7 +12,6 @@
 {
     BOOL _keyboardIsShowing;
     NSNumber *_keyboardHeight;
-//    BOOL _needToShowDoneButton;
 }
 
 @end

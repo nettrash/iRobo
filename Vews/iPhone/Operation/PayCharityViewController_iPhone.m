@@ -24,7 +24,6 @@
 @property (nonatomic, retain) UITextField *tfPayerAddress;
 @property (nonatomic, retain) UITextField *tfAdvSumma;
 @property (nonatomic, retain) EnterCVCViewController_iPhone *cvcView;
-@property (nonatomic, retain) UIButton *doneButton;
 
 @end
 
@@ -57,23 +56,8 @@
 
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
-    _needToShowDoneButton = NO;
-    
     self.cvcView = [[EnterCVCViewController_iPhone alloc] initWithNibName:@"EnterCVCViewController_iPhone" bundle:nil];
     self.cvcView.delegate = self;
-    
-    self.doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.doneButton.frame = CGRectMake(0, 163, 106, 53);
-    self.doneButton.adjustsImageWhenHighlighted = NO;
-    
-    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateApplication];
-    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateDisabled];
-    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateHighlighted];
-    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateNormal];
-    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateReserved];
-    [self.doneButton setTitle:NSLocalizedString(@"OK", @"OK") forState:UIControlStateSelected];
-    
-    [self.doneButton addTarget:self.cvcView action:@selector(doneButton:) forControlEvents:UIControlEventTouchUpInside];
 
     self.tfPayerLastName = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, 280, 30)];
     self.tfPayerLastName.adjustsFontSizeToFitWidth = YES;
@@ -164,11 +148,6 @@
 	
 	_keyboardIsShowing = YES;
     
-    if (_needToShowDoneButton)
-        [self addDoneButtonToNumberPadKeyboard];
-    else
-        [self removeDoneButtonFromNumberPadKeyboard];
-    
 	CGRect frame = self.tblCharity.view.frame;
 	frame.size.height -= [_keyboardHeight floatValue];
 	
@@ -183,16 +162,11 @@
 
 - (void)keyboardDidShow : (NSNotification *) note
 {
-    if (_needToShowDoneButton)
-        [self addDoneButtonToNumberPadKeyboard];
-    else
-        [self removeDoneButtonFromNumberPadKeyboard];
 }
 
 - (void)keyboardWillHide : (NSNotification *) note
 {
     if (_keyboardIsShowing) {
-        [self removeDoneButtonFromNumberPadKeyboard];
         _keyboardIsShowing = NO;
         CGRect frame = self.tblCharity.view.frame;
         frame.size.height += [_keyboardHeight floatValue];
@@ -205,39 +179,6 @@
 		
         [UIView commitAnimations];
 	}
-}
-
-- (void)addDoneButtonToNumberPadKeyboard
-{
-    UIWindow* tempWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:1];
-    UIView* keyboard;
-    for (int i=0; i<[tempWindow.subviews count]; i++) {
-        keyboard = [tempWindow.subviews objectAtIndex:i];
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
-            if([[keyboard description] hasPrefix:@"<UIInputSetContainerView"] == YES) {
-                NSArray *a = [(UIView *)keyboard subviews];
-                [(UIView *)[a objectAtIndex:0] addSubview:self.doneButton];
-                [(UIView *)[a objectAtIndex:0] bringSubviewToFront:self.doneButton];
-            }
-        } else {
-            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
-                if([[keyboard description] hasPrefix:@"<UIPeripheralHost"] == YES) {
-                    [keyboard addSubview:self.doneButton];
-                    [keyboard bringSubviewToFront:self.doneButton];
-                }
-            } else {
-                if([[keyboard description] hasPrefix:@"<UIKeyboard"] == YES)
-                    [keyboard addSubview:self.doneButton];
-            }
-        }
-    }
-}
-
-- (void)removeDoneButtonFromNumberPadKeyboard
-{
-    if (!_keyboardIsShowing) return;
-    
-    [self.doneButton removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning
@@ -264,7 +205,6 @@
 
 - (void)enterCVC
 {
-    _needToShowDoneButton = YES;
     [self.navigationController.topViewController.navigationItem setHidesBackButton:YES animated:YES];
     self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = NO;
     self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = NO;
@@ -287,7 +227,6 @@
     _comissionViewController.delegate = self;
     [_comissionViewController performSelector:@selector(addToViewController:) withObject:self.navigationController.topViewController afterDelay:.1];
 }
-
 
 - (void)startOperation:(NSString *)cvc
 {
@@ -639,8 +578,6 @@
     [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
     self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
     self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
-    _needToShowDoneButton = NO;
-    [self removeDoneButtonFromNumberPadKeyboard];
     if (cvcEntered)
     {
         [(EnterCVCViewController_iPhone *)controller removeFromViewController];
@@ -661,8 +598,6 @@
     [self.navigationController.topViewController.navigationItem setHidesBackButton:NO animated:YES];
     self.navigationController.topViewController.navigationItem.leftBarButtonItem.enabled = YES;
     self.navigationController.topViewController.navigationItem.rightBarButtonItem.enabled = YES;
-    _needToShowDoneButton = NO;
-    [self removeDoneButtonFromNumberPadKeyboard];
     [self.delegate finishPay:self];
 }
 

@@ -147,10 +147,12 @@
                 {
                     [self performSelector:@selector(getChecks:) withObject:nil afterDelay:5];
                 }
+                [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[_checks count]];
             }
             else
             {
                 _checks = nil;
+                [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
             }
         }
         else
@@ -481,7 +483,7 @@
             break;
         }
         case 2: {
-            if (!_topCatalogRefreshing) {
+            if (!_topCatalogRefreshing && _topCatalog && [_topCatalog count] > 0) {
                 svcTopCurrency *curr = (svcTopCurrency *)[_topCatalog objectAtIndex:indexPath.row];
                 PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:curr];
                 pp.delegate = self;
@@ -672,13 +674,140 @@
                 picker.title = NSLocalizedString(@"QRPerson", @"QRPerson");
                 [self.navigationController pushViewController:picker animated:YES];
                 return;
-            }
-            //Проверяем на тип URL
-            if ([resultText isURL]) {
-                _openURLDelegate = [UIAlertWithOpenURLDelegate initWithText:resultText];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"OpenURL_Title", @"OpenURL_Title") message:[NSString stringWithFormat:NSLocalizedString(@"OpenURL_Message", @"OpenURL_Message"), _openURLDelegate.url.host] delegate:_openURLDelegate cancelButtonTitle:NSLocalizedString(@"Button_Cancel", @"Button_Cancel") otherButtonTitles:NSLocalizedString(@"Button_OpenURL", @"Button_OpenURL"), nil];
-                [alert show];
-                return;
+            } else {
+                if ([resultText isST00011]) {
+                    svcTopCurrency *c = [svcTopCurrency alloc];
+                    c.Label = @"OceanBankPayToAnyReqR";
+                    c.Name = @"Платёж на свободные реквизиты";
+
+                    NSData *data = [resultText dataUsingEncoding:NSWindowsCP1252StringEncoding allowLossyConversion:YES];
+                    resultText = [[NSString alloc] initWithData:data encoding:NSWindowsCP1251StringEncoding];
+                    NSArray *parts = [resultText componentsSeparatedByString:@"|"];
+                    NSMutableDictionary *prms = [[NSMutableDictionary alloc] init];
+                    for (NSString *part in parts) {
+                        NSArray *a = [part componentsSeparatedByString:@"="];
+                        if (a && [a count] == 2) {
+                            [prms setValue:(NSString *)[a objectAtIndex:1] forKey:[(NSString *)[a objectAtIndex:0] uppercaseString]];
+                        }
+                    }
+                    NSMutableArray *prmsArray = [NSMutableArray arrayWithCapacity:0];
+                    
+                    //PayerName
+                    if ([prms objectForKey:@"FIRSTNAME"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"PayerName:%@", (NSString *)[prms objectForKey:@"FIRSTNAME"]]];
+                    } else {
+                        [prmsArray addObject:@"PayerName:"];
+                    }
+                    //PayerLastName
+                    if ([prms objectForKey:@"LASTNAME"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"PayerLastName:%@", (NSString *)[prms objectForKey:@"LASTNAME"]]];
+                    } else {
+                        [prmsArray addObject:@"PayerLastName:"];
+                    }
+                    //PayerSurName
+                    if ([prms objectForKey:@"MIDDLENAME"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"PayerSurName:%@", (NSString *)[prms objectForKey:@"MIDDLENAME"]]];
+                    } else {
+                        [prmsArray addObject:@"PayerSurName:"];
+                    }
+                    //PayerAddressReg
+                    if ([prms objectForKey:@"PAYERADDRESS"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"PayerAddressReg:%@", (NSString *)[prms objectForKey:@"PAYERADDRESS"]]];
+                    } else {
+                        [prmsArray addObject:@"PayerAddressReg:"];
+                    }
+                    //ReceiverAccount
+                    if ([prms objectForKey:@"PERSONALACC"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"ReceiverAccount:%@", (NSString *)[prms objectForKey:@"PERSONALACC"]]];
+                    } else {
+                        [prmsArray addObject:@"ReceiverAccount:"];
+                    }
+                    //ReceiverName
+                    if ([prms objectForKey:@"NAME"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"ReceiverName:%@", (NSString *)[prms objectForKey:@"NAME"]]];
+                    } else {
+                        [prmsArray addObject:@"ReceiverName:"];
+                    }
+                    //ReceiverBIK
+                    if ([prms objectForKey:@"BIC"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"ReceiverBIK:%@", (NSString *)[prms objectForKey:@"BIC"]]];
+                    } else {
+                        [prmsArray addObject:@"ReceiverBIK:"];
+                    }
+                    //ReceiverINN
+                    if ([prms objectForKey:@"PAYEEINN"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"ReceiverINN:%@", (NSString *)[prms objectForKey:@"PAYEEINN"]]];
+                    } else {
+                        [prmsArray addObject:@"ReceiverINN:"];
+                    }
+                    //ReceiverKPP
+                    if ([prms objectForKey:@"KPP"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"ReceiverKPP:%@", (NSString *)[prms objectForKey:@"KPP"]]];
+                    } else {
+                        [prmsArray addObject:@"ReceiverKPP:"];
+                    }
+                    //PurposeOfPayment
+                    if ([prms objectForKey:@"PURPOSE"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"PurposeOfPayment:%@", (NSString *)[prms objectForKey:@"PURPOSE"]]];
+                    } else {
+                        [prmsArray addObject:@"PurposeOfPayment:"];
+                    }
+                    //ReceiverOKATO (OKTMO)
+                    if ([prms objectForKey:@"OKTMO"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"ReceiverOKATO:%@", (NSString *)[prms objectForKey:@"OKTMO"]]];
+                    } else {
+                        [prmsArray addObject:@"ReceiverOKATO:"];
+                    }
+                    //ReceiverKBK
+                    if ([prms objectForKey:@"CBC"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"ReceiverKBK:%@", (NSString *)[prms objectForKey:@"CBC"]]];
+                    } else {
+                        [prmsArray addObject:@"ReceiverKBK:"];
+                    }
+                    //BIStatus
+                    //BIPaymentType
+                    if ([prms objectForKey:@"TAXPAYTKIND"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"BIPaymentType:%@", (NSString *)[prms objectForKey:@"TAXPAYTKIND"]]];
+                    }
+                    //BIPurpose
+                    if ([prms objectForKey:@"PAYTREASON"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"BIPurpose:%@", (NSString *)[prms objectForKey:@"PAYTREASON"]]];
+                    }
+                    //BITaxPeriod
+                    if ([prms objectForKey:@"TAXPERIOD"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"BITaxPeriod:%@", (NSString *)[prms objectForKey:@"TAXPERIOD"]]];
+                    }
+                    //BITaxDocNumber
+                    if ([prms objectForKey:@"DOCNO"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"BITaxDocNumber:%@", (NSString *)[prms objectForKey:@"DOCNO"]]];
+                    }
+                    //BITaxDocDate
+                    if ([prms objectForKey:@"DOCDATE"]) {
+                        [prmsArray addObject:[NSString stringWithFormat:@"BITaxDocDate:%@", (NSString *)[prms objectForKey:@"DOCDATE"]]];
+                    }
+                    
+                    c.Parameters = [prmsArray componentsJoinedByString:@";"];
+                    
+                    if ([prms objectForKey:@"SUM"]) {
+                        NSString *s = (NSString *)[prms objectForKey:@"SUM"];
+                        c.OutPossibleValues = [NSString stringWithFormat:@"%@.%@;", [s substringToIndex:[s length] - 2], [s substringFromIndex:[s length] - 2]];
+                    }
+                    
+                    [self.navigationController popToRootViewControllerAnimated:NO];
+                    
+                    PayViewController_iPhone *pp = [[PayViewController_iPhone alloc] initWithNibName:@"PayViewController_iPhone" bundle:nil withTopCurrency:c];
+                    pp.delegate = self;
+                    [self.navigationController pushViewController:pp animated:YES];
+                    return;
+                } else {
+                    //Проверяем на тип URL
+                    if ([resultText isURL]) {
+                        _openURLDelegate = [UIAlertWithOpenURLDelegate initWithText:resultText];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"OpenURL_Title", @"OpenURL_Title") message:[NSString stringWithFormat:NSLocalizedString(@"OpenURL_Message", @"OpenURL_Message"), _openURLDelegate.url.host] delegate:_openURLDelegate cancelButtonTitle:NSLocalizedString(@"Button_Cancel", @"Button_Cancel") otherButtonTitles:NSLocalizedString(@"Button_OpenURL", @"Button_OpenURL"), nil];
+                        [alert show];
+                        return;
+                    }
+                }
             }
         }
     }

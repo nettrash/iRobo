@@ -23,7 +23,6 @@
     NSNumber *_keyboardHeight;
     svcCard *_card;
     NSString *_cvc;
-    BOOL _needToShowDoneButton;
     BOOL _parameterRefreshing;
     NSMutableDictionary *_parameters;
 }

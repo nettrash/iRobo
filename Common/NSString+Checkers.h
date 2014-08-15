@@ -19,5 +19,6 @@
 - (BOOL)isPossibleMGTS;
 - (BOOL)isPossibleMosenergosbut;
 - (BOOL)isPossibleGIBDD;
+- (BOOL)isST00011;
 
 @end

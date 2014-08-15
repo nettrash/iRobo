@@ -31,8 +31,6 @@
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(btnCancel_Click:)];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(btnDone_Click:)];
         _parameters = parameters;
-        _needToShowDoneButton = NO;
-
     }
     return self;
 }
@@ -87,11 +85,6 @@
 	
 	_keyboardIsShowing = YES;
 	
-    if (_needToShowDoneButton)
-        [self addDoneButtonToNumberPadKeyboard];
-    else
-        [self removeDoneButtonFromNumberPadKeyboard];
-    
 	CGRect frame = self.tblPrms.view.frame;
 	frame.size.height -= [_keyboardHeight floatValue];
 	
@@ -106,16 +99,11 @@
 
 - (void)keyboardDidShow : (NSNotification *) note
 {
-    if (_needToShowDoneButton)
-        [self addDoneButtonToNumberPadKeyboard];
-    else
-        [self removeDoneButtonFromNumberPadKeyboard];
 }
 
 - (void)keyboardWillHide : (NSNotification *) note
 {
     if (_keyboardIsShowing) {
-        [self removeDoneButtonFromNumberPadKeyboard];
         _keyboardIsShowing = NO;
         CGRect frame = self.tblPrms.view.frame;
         frame.size.height += [_keyboardHeight floatValue];
@@ -128,15 +116,6 @@
 		
         [UIView commitAnimations];
 	}
-}
-
-- (void)addDoneButtonToNumberPadKeyboard
-{
-}
-
-- (void)removeDoneButtonFromNumberPadKeyboard
-{
-	if (!_keyboardIsShowing) return;
 }
 
 - (void)didReceiveMemoryWarning

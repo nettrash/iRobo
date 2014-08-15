@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EnterCVCDelegate.h"
 
-@interface EnterCVCViewController_iPhone : UIViewController <UIAlertViewDelegate>
+@interface EnterCVCViewController_iPhone : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, retain) id<EnterCVCDelegate> delegate;
 

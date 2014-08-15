@@ -76,4 +76,9 @@
     return self && self != nil && [self length] == 20 && [self checkFormat:@"^\\d{20}$"];
 }
 
+- (BOOL)isST00011
+{
+    return [self hasPrefix:@"ST00011|"];
+}
+
 @end

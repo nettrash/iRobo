@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "AppSettings.h"
 #import "LocalCard.h"
+#import "NumberPadViewController_iPhone.h"
 
 @interface EnterCVCViewController_iPhone ()
 
@@ -17,6 +18,7 @@
 @property (nonatomic) int cardId;
 @property (nonatomic, retain) NSString *storedCVC;
 @property (nonatomic, retain) AppSettings *settings;
+@property (nonatomic, retain) NumberPadViewController_iPhone *numberPadKeyboard;
 
 @end
 
@@ -26,11 +28,13 @@
 @synthesize delegate = _delegate;
 @synthesize cardId = _cardId;
 @synthesize settings = _settings;
+@synthesize numberPadKeyboard = _numberPadKeyboard;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.numberPadKeyboard = [[NumberPadViewController_iPhone alloc] initWithNibName:@"NumberPadViewController_iPhone" bundle:nil];
         self.settings = [[AppSettings alloc] init];
         [self.settings loadSettings];
     }
@@ -41,6 +45,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.numberPadKeyboard = [[NumberPadViewController_iPhone alloc] initWithNibName:@"NumberPadViewController_iPhone" bundle:nil];
         self.cardId = card_Id;
         self.settings = [[AppSettings alloc] init];
         [self.settings loadSettings];
@@ -53,6 +58,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tfCVC setInputView:self.numberPadKeyboard.view];
+    self.numberPadKeyboard.textField = self.tfCVC;
+    self.numberPadKeyboard.target = self;
+    self.numberPadKeyboard.action = @selector(doneButton:);
+    self.tfCVC.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -203,6 +213,19 @@
             break;
         }
     }
+}
+
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSString *str = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    UITextRange *prevTextRange = [textField selectedTextRange];
+    NSUInteger offset = [string isEqualToString:@""] ? -1 : range.length + 1;
+    textField.text = str;
+    UITextPosition *cursorPosition = [textField positionFromPosition:prevTextRange.start offset:offset];
+    [textField setSelectedTextRange:[textField textRangeFromPosition:cursorPosition toPosition:cursorPosition]];
+    return NO;
 }
 
 @end

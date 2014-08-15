@@ -111,22 +111,7 @@
 
 - (void)centerScrollViewContents
 {
-    CGSize boundsSize = self.svImage.bounds.size;
-    CGRect contentsFrame = self.imgBlank.frame;
-    
-    if (contentsFrame.size.width < boundsSize.width) {
-        contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0f;
-    } else {
-        contentsFrame.origin.x = 0.0f;
-    }
-    
-    if (contentsFrame.size.height < boundsSize.height) {
-        contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2.0f;
-    } else {
-        contentsFrame.origin.y = 0.0f;
-    }
-    
-    self.imgBlank.frame = contentsFrame;
+    //Центровать не надо
 }
 
 - (void)scrollViewDoubleTapped:(UITapGestureRecognizer*)recognizer

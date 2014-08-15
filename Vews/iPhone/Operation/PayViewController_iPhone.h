@@ -27,7 +27,6 @@
     NSNumber *_keyboardHeight;
     svcCard *_card;
     NSString *_cvc;
-    BOOL _needToShowDoneButton;
     ComissionViewController_iPhone *_comissionViewController;
     NSDecimalNumber *_summa;
     BOOL _activateSummaField;

@@ -114,11 +114,6 @@
 	
 	_keyboardIsShowing = YES;
     
-//    if (_needToShowDoneButton)
-//        [self addDoneButtonToNumberPadKeyboard];
-//    else
-//        [self removeDoneButtonFromNumberPadKeyboard];
-    
 	CGRect frame = self.tblProfile.view.frame;
 	frame.size.height -= [_keyboardHeight floatValue];
 	
@@ -133,16 +128,11 @@
 
 - (void)keyboardDidShow : (NSNotification *) note
 {
-//    if (_needToShowDoneButton)
-//        [self addDoneButtonToNumberPadKeyboard];
-//    else
-//        [self removeDoneButtonFromNumberPadKeyboard];
 }
 
 - (void)keyboardWillHide : (NSNotification *) note
 {
     if (_keyboardIsShowing) {
-//        [self removeDoneButtonFromNumberPadKeyboard];
         _keyboardIsShowing = NO;
         CGRect frame = self.tblProfile.view.frame;
         frame.size.height += [_keyboardHeight floatValue];

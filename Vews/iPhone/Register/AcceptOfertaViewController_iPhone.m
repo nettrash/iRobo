@@ -113,6 +113,7 @@
             [app.userProfile saveChanges];
             [app.userProfile storeToCloud];
             app.userProfile.ofertaAccepted = YES;
+            [app varSet:@"OfertaAccepted" value:@"YES"];
             [app.userProfile storeUserDataToCloud];
             [app hideWait];
             [app performSelector:@selector(getScenario) withObject:nil afterDelay:.1];

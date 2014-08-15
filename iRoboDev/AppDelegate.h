@@ -92,4 +92,7 @@
 
 - (void)demoModeAlert;
 
+- (void)varSet:(NSString *)label value:(NSString *)value;
+- (NSString *)varGet:(NSString *)label;
+
 @end

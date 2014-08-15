@@ -14,7 +14,6 @@
     NSArray *_parameters;
     BOOL _keyboardIsShowing;
     NSNumber *_keyboardHeight;
-    BOOL _needToShowDoneButton;
 }
 
 @property (nonatomic, retain) id<AdditionalParametersDelegate> delegate;

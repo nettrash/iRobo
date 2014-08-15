@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberPadViewController_iPhone">
+            <connections>
+                <outlet property="btnNumPad0" destination="Ost-RF-goQ" id="C3V-Me-46f"/>
+                <outlet property="btnNumPad1" destination="5Mq-Yl-ii6" id="a6m-9y-hZZ"/>
+                <outlet property="btnNumPad2" destination="sje-1E-7Zz" id="vZg-uQ-tQ7"/>
+                <outlet property="btnNumPad3" destination="FmE-zU-tWr" id="JLU-Tj-WSe"/>
+                <outlet property="btnNumPad4" destination="5nH-Ti-oZT" id="UAI-eX-63U"/>
+                <outlet property="btnNumPad5" destination="tW8-U1-HHW" id="Htr-jA-Zi5"/>
+                <outlet property="btnNumPad6" destination="orV-Ze-REi" id="Xmt-2a-kQU"/>
+                <outlet property="btnNumPad7" destination="zN3-6a-UP2" id="Kkb-lq-dQ4"/>
+                <outlet property="btnNumPad8" destination="Kom-4i-J6I" id="ccf-hl-DlN"/>
+                <outlet property="btnNumPad9" destination="zFC-mE-Idw" id="R9g-qH-cM6"/>
+                <outlet property="btnNumPadDelete" destination="HqQ-yy-2Nd" id="uoj-9l-NOb"/>
+                <outlet property="btnNumPadOK" destination="LO1-5e-zah" id="b5h-sj-j0p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mq-Yl-ii6">
+                    <rect key="frame" x="0.0" y="0.0" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad1.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad1_Click:" destination="-1" eventType="touchUpInside" id="1Pj-pJ-WXO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmE-zU-tWr">
+                    <rect key="frame" x="214" y="0.0" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad3.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad3_Click:" destination="-1" eventType="touchUpInside" id="1t0-Bj-qrG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-Ti-oZT">
+                    <rect key="frame" x="0.0" y="54" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad4.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad4_Click:" destination="-1" eventType="touchUpInside" id="yiA-Dv-vx1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orV-Ze-REi">
+                    <rect key="frame" x="214" y="54" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad6.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad6_Click:" destination="-1" eventType="touchUpInside" id="Gbp-P7-UPD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zN3-6a-UP2">
+                    <rect key="frame" x="0.0" y="108" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad7.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad7_Click:" destination="-1" eventType="touchUpInside" id="KOs-ob-jxK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFC-mE-Idw">
+                    <rect key="frame" x="214" y="108" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad9.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad9_Click:" destination="-1" eventType="touchUpInside" id="mlo-3z-gA7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LO1-5e-zah">
+                    <rect key="frame" x="0.0" y="162" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPadOK.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPadOK_Click:" destination="-1" eventType="touchUpInside" id="Nwb-Fd-rcv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqQ-yy-2Nd">
+                    <rect key="frame" x="214" y="162" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPadDelete.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPadDelete_Click:" destination="-1" eventType="touchUpInside" id="YHO-l7-Dga"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sje-1E-7Zz">
+                    <rect key="frame" x="107" y="0.0" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad2.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad2_Click:" destination="-1" eventType="touchUpInside" id="L8v-SK-964"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tW8-U1-HHW">
+                    <rect key="frame" x="107" y="54" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad5.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad5_Click:" destination="-1" eventType="touchUpInside" id="g0h-m6-7oa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-4i-J6I">
+                    <rect key="frame" x="107" y="108" width="106" height="53"/>
+                    <state key="normal" image="FlatNumberPad8.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad8_Click:" destination="-1" eventType="touchUpInside" id="yQP-SV-zeF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ost-RF-goQ">
+                    <rect key="frame" x="107" y="162" width="106" height="55"/>
+                    <state key="normal" image="FlatNumberPad0.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNumPad0_Click:" destination="-1" eventType="touchUpInside" id="qsc-th-94R"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="255" y="-63"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="FlatNumberPad0.png" width="106" height="55"/>
+        <image name="FlatNumberPad1.png" width="106" height="53"/>
+        <image name="FlatNumberPad2.png" width="106" height="53"/>
+        <image name="FlatNumberPad3.png" width="106" height="53"/>
+        <image name="FlatNumberPad4.png" width="106" height="53"/>
+        <image name="FlatNumberPad5.png" width="106" height="53"/>
+        <image name="FlatNumberPad6.png" width="106" height="53"/>
+        <image name="FlatNumberPad7.png" width="106" height="53"/>
+        <image name="FlatNumberPad8.png" width="106" height="53"/>
+        <image name="FlatNumberPad9.png" width="106" height="53"/>
+        <image name="FlatNumberPadDelete.png" width="106" height="53"/>
+        <image name="FlatNumberPadOK.png" width="106" height="53"/>
+    </resources>
+</document>
